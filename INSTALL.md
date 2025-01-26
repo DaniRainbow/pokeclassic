@@ -422,7 +422,7 @@ To build **pokeemerald.gba** (Note: to speed up builds, see [Parallel builds](#p
 ```bash
 make
 ```
-If it has built successfully you will have the output file **pokeemerald.gba** in your project folder.
+If it has built successfully you will have the output file **pokeemerald.gba** in your project folder. Congratulations! You've reached the end of this tutorial.
 <details>
 <summary>Note for Windows...</summary>
 > If you switched terminals since the last build (e.g. from msys2 to WSL1), you must run `make clean-tools` once before any subsequent `make` commands.
@@ -579,5 +579,6 @@ Note that this is not necessary for a non-modern build since those are built wit
 # Useful additional tools
 
 * [porymap](https://github.com/huderlem/porymap) for viewing and editing maps
+	**Please note that you will need to use Porymap 4.5.0 with PokeClassic. Anything newer may cause issues as the newer tool wasn't designed to work with older versions of PRET's pokeemerald**
 * [poryscript](https://github.com/huderlem/poryscript) for scripting ([VS Code extension](https://marketplace.visualstudio.com/items?itemName=karathan.poryscript))
 * [Tilemap Studio](https://github.com/Rangi42/tilemap-studio) for viewing and editing tilemaps

@@ -234,7 +234,7 @@ ViridianCity_Text_UsedToGetGrumpy:
 	.string "It was a whole thing...\p"
 	.string "So my granddaughter made me give up\n"
 	.string "the stuff.\p"
-	.string "Now I get refreshed by talking walks!$"
+	.string "Now I get refreshed by taking walks!$"
 
 ViridianCity_EventScript_Youngster::
 	lock

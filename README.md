@@ -1,5 +1,5 @@
 # PokeClassic
-## Status: Version 1 released!
+## Status: Version 1.3 released!
 
 PokeClassic is a recreation of Pokemon Yellow, recreated in the Pokemon Emerald engine. Revisit your classic adventures through Kanto with new features, questlines, and post game content!
 

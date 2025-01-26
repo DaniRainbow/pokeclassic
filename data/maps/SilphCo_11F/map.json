@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
-      "in_connection": false,
       "x": 6,
       "y": 11,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
+      "flag": "FLAG_HIDE_SAFFRON_ROCKETS",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "in_connection": false,
       "x": 9,
       "y": 9,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SilphCo_11F_EventScript_President",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "in_connection": false,
       "x": 11,
       "y": 9,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SilphCo_11F_EventScript_Secretary",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 16,
       "y": 12,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "SilphCo_11F_EventScript_Grunt1",
-      "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
+      "flag": "FLAG_HIDE_SAFFRON_ROCKETS",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
-      "in_connection": false,
       "x": 2,
       "y": 14,
       "elevation": 3,
@@ -82,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "SilphCo_11F_EventScript_Grunt2",
-      "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
+      "flag": "FLAG_HIDE_SAFFRON_ROCKETS",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_JESSIE",
-      "in_connection": false,
       "x": 7,
       "y": 19,
       "elevation": 3,
@@ -96,11 +95,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_SILPH_ROCKETDUO"
+      "flag": "FLAG_HIDE_SILPH_ROCKETDUO",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_JAMES",
-      "in_connection": false,
       "x": 7,
       "y": 18,
       "elevation": 3,
@@ -110,11 +109,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_SILPH_ROCKETDUO"
+      "flag": "FLAG_HIDE_SILPH_ROCKETDUO",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 16,
       "y": 18,
       "elevation": 3,
@@ -124,11 +123,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SilphCo_11F_EventScript_ItemZinc",
-      "flag": "FLAG_HIDE_SILPH_CO_11F_ZINC"
+      "flag": "FLAG_HIDE_SILPH_CO_11F_ZINC",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 9,
       "y": 10,
       "elevation": 3,
@@ -138,11 +137,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SilphCo_11F_EventScript_PostgameRocket",
-      "flag": "FLAG_HIDE_SILPH_POSTGAME_ROCKET"
+      "flag": "FLAG_HIDE_SILPH_POSTGAME_ROCKET",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LOOKER",
-      "in_connection": false,
       "x": 5,
       "y": 17,
       "elevation": 3,
@@ -152,7 +151,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_SILPH_POSTGAME_LOOKER"
+      "flag": "FLAG_HIDE_SILPH_POSTGAME_LOOKER",
+      "in_connection": ""
     }
   ],
   "warp_events": [
@@ -256,6 +256,14 @@
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SilphCo_11F_EventScript_Door"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SilphCo_11F_EventScript_FloorSign"
     }
   ]
 }
