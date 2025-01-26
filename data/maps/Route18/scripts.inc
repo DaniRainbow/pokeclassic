@@ -103,8 +103,8 @@ Route18_EventScript_RegisterWiltonAfterBattle::
 
 Route18_Text_WiltonRegister:
 	.string "You're working on a PokéDex?\p"
-	.string "Call me if you find any good\l"
-	.string "spots to catch Pokémon!"
+	.string "Call me if you find any good\n"
+	.string "spots to catch Pokémon!$"
 
 Route18_EventScript_WiltonRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_BIRD_KEEPER_WILTON_1, Route18_Text_WiltonRematchIntro, Route18_Text_WiltonDefeat
