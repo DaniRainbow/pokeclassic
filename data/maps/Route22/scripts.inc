@@ -140,12 +140,14 @@ Route22_EventScript_LateRivalTriggerBottom::
 	end
 
 Route22_EventScript_LateRival::
+	setvar VAR_ROUTE_22_RIVAL_STATE, 2
 	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	clearflag FLAG_HIDE_RIVAL_ROUTE_22
 	addobject LOCALID_RIVAL
 	applymovement LOCALID_RIVAL, Movement_RivalApproach
 	waitmovement 1
 	delay 6
+	msgbox Route22_Text_LateRivalIntro
 	goto_if_eq VAR_RIVAL_WINRATE, 2, Route22_EventScript_LateRival_Jolteon
 	goto_if_eq VAR_RIVAL_WINRATE, 1, Route22_EventScript_LateRival_Flareon
 	goto Route22_EventScript_LateRival_Vaporeon
@@ -162,6 +164,16 @@ Route22_EventScript_LateRival_Flareon::
 Route22_EventScript_LateRival_Vaporeon::
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_VAPOREON, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
+
+Route22_Text_LateRivalIntro::
+	.string "{RIVAL}: Hey! {PLAYER}!\p"
+	.string "What a surprise to see you here!\p"
+	.string "So you're going to the Pokémon\n"
+	.string "League?\p"
+	.string "You collected all the BADGES too?\n"
+	.string "That's cool!\p"
+	.string "{PLAYER}, let's warm up\n"
+	.string "for the Pokémon League! Come on!$"
 
 Route22_Text_LateRivalDefeat::
 	.string "What!?\p"

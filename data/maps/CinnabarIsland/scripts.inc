@@ -133,8 +133,6 @@ CinnabarIsland_EventScript_Text_LetsSail:
 
 Movement_CaptainEnterShip::
 	walk_up
-	walk_up
-	walk_up
 	face_right
 	walk_in_place_faster_right
 	walk_in_place_faster_right
@@ -160,8 +158,6 @@ CinnabarIsland_EventScript_PlayerWest::
 Movement_PlayerEnterShipNorth::
 	walk_up
 	walk_up
-	walk_up
-	walk_up
 	face_right
 	walk_in_place_faster_right
 	walk_in_place_faster_right
@@ -169,8 +165,6 @@ Movement_PlayerEnterShipNorth::
 	step_end
 
 Movement_PlayerEnterShipSouth::
-	walk_up
-	walk_up
 	face_right
 	walk_in_place_faster_right
 	walk_in_place_faster_right
@@ -180,8 +174,6 @@ Movement_PlayerEnterShipSouth::
 Movement_PlayerEnterShipEast::
 	walk_right
 	walk_up
-	walk_up
-	walk_up
 	face_right
 	walk_in_place_faster_right
 	walk_in_place_faster_right
@@ -190,8 +182,6 @@ Movement_PlayerEnterShipEast::
 
 Movement_PlayerEnterShipWest::
 	walk_left
-	walk_up
-	walk_up
 	walk_up
 	face_right
 	walk_in_place_faster_right

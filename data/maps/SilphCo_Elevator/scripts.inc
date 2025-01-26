@@ -119,7 +119,7 @@ SilphCo_Elevator_EventScript_2F::
 
 SilphCo_Elevator_EventScript_1F::
 	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_1F
-	setdynamicwarp MAP_SILPH_CO_4F, 22, 3
+	setdynamicwarp MAP_SILPH_CO_1F, 22, 4
 	goto_if_eq VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_1F, SilphCo_Elevator_EventScript_ExitFloorSelect
 	call SilphCo_Elevator_EventScript_MoveElevator
 	setvar VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_1F
