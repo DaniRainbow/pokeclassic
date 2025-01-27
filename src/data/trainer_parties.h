@@ -698,7 +698,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalSilphCoJolteon[] = {
     },
     {
     .iv = 250,
-    .lvl = 24,
+    .lvl = 40,
     .species = SPECIES_JOLTEON,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_DOUBLE_KICK, MOVE_PIN_MISSILE}
@@ -736,7 +736,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalSilphCoFlareon[] = {
     },
     {
     .iv = 250,
-    .lvl = 24,
+    .lvl = 40,
     .species = SPECIES_FLAREON,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_FLAMETHROWER, MOVE_SAND_ATTACK, MOVE_BITE, MOVE_WILL_O_WISP}
@@ -774,10 +774,10 @@ static const struct TrainerMonItemCustomMoves sParty_RivalSilphCoVaporeon[] = {
     },
     {
     .iv = 250,
-    .lvl = 24,
-    .species = SPECIES_FLAREON,
+    .lvl = 40,
+    .species = SPECIES_VAPOREON,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_FLAMETHROWER, MOVE_SAND_ATTACK, MOVE_BITE, MOVE_WILL_O_WISP}
+    .moves = {MOVE_WATER_PULSE, MOVE_SAND_ATTACK, MOVE_QUICK_ATTACK, MOVE_ACID_ARMOR}
     }
 };
 

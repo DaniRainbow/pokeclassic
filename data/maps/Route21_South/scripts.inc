@@ -17,7 +17,7 @@ Route21_South_EventScript_Johan::
 	trainerbattle_single REMATCHABLE_TRAINER_JUGGLER_JOHAN_1, Route21_South_Text_JohanIntro, Route21_South_Text_JohanDefeat, Route21_South_EventScript_RegisterJohanAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route21_South_EventScript_JohanRematch
-	msgbox Route21_South_Text_JohanPostBattle, MSGBOX_DEFAULT
+	msgbox Route21_South_Text_JohanPostBattle
 	release
 	end
 
@@ -41,8 +41,8 @@ Route21_South_EventScript_RegisterJohanAfterBattle::
 	end
 
 Route21_South_Text_JohanRegister:
-	.string "I teleported out here..\p"
-	.string "but  I'm out of PP...\p"
+	.string "I teleported out here\n"
+	.string "but I'm out of PP.\p"
 	.string "Can I call you for a ride later?$"
 
 Route21_South_EventScript_JohanRematch::

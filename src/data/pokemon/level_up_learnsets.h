@@ -464,8 +464,8 @@ static const struct LevelUpMove sPikachuLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sPikachuPartnerLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 1, MOVE_THUNDER_SHOCK),
+	LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 5, MOVE_GROWL),
     LEVEL_UP_MOVE( 7, MOVE_PLAY_NICE),
     LEVEL_UP_MOVE(10, MOVE_QUICK_ATTACK),
@@ -2602,6 +2602,7 @@ static const struct LevelUpMove sGyaradosLevelUpLearnset[] = {
     // LEVEL_UP_MOVE( 0, MOVE_BITE),
     LEVEL_UP_MOVE( 1, MOVE_BITE),
     LEVEL_UP_MOVE( 1, MOVE_THRASH),
+	LEVEL_UP_MOVE( 1, MOVE_DRAGON_RAGE),
 	LEVEL_UP_MOVE(20, MOVE_BITE),
     LEVEL_UP_MOVE(21, MOVE_LEER),
     LEVEL_UP_MOVE(24, MOVE_TWISTER),

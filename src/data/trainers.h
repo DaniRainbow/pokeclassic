@@ -4853,6 +4853,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_CoolTrainerAnri3),
         .party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri3}
     },
+	//[REMATCHABLE_TRAINER_JUGGLER_JOHAN_1] = {
+		//.partyFlags = 0,
+        //.trainerClass = TRAINER_CLASS_COOLTRAINER,
+        //.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        //.trainerPic = TRAINER_PIC_COOLTRAINER_F,
+        //.trainerName = _("Anri"),
+        //.items = {},
+        //.doubleBattle = FALSE,
+        //.aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY,
+        //.partySize = ARRAY_COUNT(sParty_CoolTrainerAnri1),
+        //.party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri1}
+	//},
 //Pokemon Mansion
     [TRAINER_SCIENTIST_TED] = {
         .partyFlags = 0,
