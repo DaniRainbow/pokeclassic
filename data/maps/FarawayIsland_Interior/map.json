@@ -26,7 +26,7 @@
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FarawayIsland_Interior_EventScript_Mew",
       "flag": "FLAG_HIDE_MEW",
-      "in_connection": false
+      "in_connection": ""
     }
   ],
   "warp_events": [
@@ -35,14 +35,14 @@
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_FARAWAY_ISLAND_ENTRANCE",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     },
     {
       "x": 13,
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_FARAWAY_ISLAND_ENTRANCE",
-      "dest_warp_id": "1"
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

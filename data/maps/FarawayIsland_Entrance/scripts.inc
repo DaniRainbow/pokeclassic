@@ -9,16 +9,6 @@ FarawayIsland_Entrance_OnTransition:
 	setflag FLAG_ARRIVED_ON_FARAWAY_ISLAND
 	end
 
-FarawayIsland_Entrance_EventScript_SetCloudsWeather::
-	setweather WEATHER_SUNNY_CLOUDS
-	doweather
-	end
-
-FarawayIsland_Entrance_EventScript_ClearWeather::
-	setweather WEATHER_NONE
-	doweather
-	end
-
 FarawayIsland_Entrance_EventScript_Sailor::
 	lock
 	faceplayer
