@@ -945,8 +945,9 @@ CinnabarIsland_Gym_EventScript_LeaderRematch_PostGameTeam::
 CinnabarIsland_Gym_Text_RematchPostgame::
 	.string "The Cinnabar Island volcano seems quite\n"
 	.string "active today!\p" 
-	.string "Which means that my Fire-type Pokémon will\n"
-	.string "be in top shape today, too! Let's go! Hah!$"
+	.string "Which means that my Fire-type Pokémon\n"
+	.string "will be in top shape today, too!\l" 
+	.string "Let's go! Hah!$"
 
 CinnabarIsland_Gym_EventScript_DefeatedLeaderRematch::
 	setflag FLAG_DAILY_BLAINE_REMATCH

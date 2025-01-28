@@ -95,7 +95,7 @@ CeruleanCity_House1_Text_GetWailmerPail::
 
 CeruleanCity_House1_Text_WifeAndIGrowBerries::
 	.string "You may not know this, but Kanto\n"
-	.string "didn't aways have Berries!\p"
+	.string "didn't always have Berries!\p"
 	.string "They can be really hard to grow\n"
 	.string "and people didn't really know\l"
 	.string "about berries back then.\p"
