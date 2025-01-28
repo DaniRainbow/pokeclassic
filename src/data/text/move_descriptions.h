@@ -2310,8 +2310,9 @@ static const u8 sKingsShieldDescription[] = _(
     "reduces Attack if struck.");
 
 static const u8 sPlayNiceDescription[] = _(
-    "Befriend the foe, lowering\n"
-    "its Attack without fail.");
+    "Befriends the foe,\n"
+    "lowering its Attack\n"
+	"without fail.");
 
 static const u8 sConfideDescription[] = _(
     "Shares a secret with the\n"
@@ -4726,7 +4727,7 @@ static const u8 sMoveFourLineDescription_Moonblast[] = _("The power of the\nmoon
 static const u8 sMoveFourLineDescription_Boomburst[] = _("An explosively loud\nsound is let out,\nhitting all that\nsurrounds it.");
 static const u8 sMoveFourLineDescription_FairyLock[] = _("For 1 turn, the\nuser locks down\nthe battlefield and\nprevents fleeing.");
 static const u8 sMoveFourLineDescription_KingsShield[] = _("A protective stance\nis assumed. Contact\nby the foe harshly\nlowers its Attack.");
-static const u8 sMoveFourLineDescription_PlayNice[] = _("Befriend the foe, lowering\nits Attack without fail.");
+static const u8 sMoveFourLineDescription_PlayNice[] = _("Befriends the foe,\nlowering its Attack\nwithout fail.");
 static const u8 sMoveFourLineDescription_Confide[] = _("The foe's Sp. Atk\ndrops after being\ntold a secret by\nthe user.");
 static const u8 sMoveFourLineDescription_DiamondStorm[] = _("A storm of diamonds\npelts the foes.\nThis may raise the\nuser's Defense.");
 static const u8 sMoveFourLineDescription_SteamEruption[] = _("The foe is immersed\nin superheated\nsteam that may\nleave them burned.");

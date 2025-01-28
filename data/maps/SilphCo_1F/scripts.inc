@@ -45,7 +45,7 @@ SilphCo_1F_Text_PostgameGrunt2Intro::
     .string "was defeatd in Viridian.$"
 
 SilphCo_1F_Text_PostgameGrunt2Defeat::
-    .string "Maybe I shoudl quit...$"
+    .string "Maybe I should quit...$"
 
 SilphCo_1F_Text_PostgameGrunt2PostBattle::
     .string "I'll never give up!\n"
