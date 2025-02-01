@@ -27,7 +27,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "in_connection": false,
       "x": 16,
       "y": 26,
       "elevation": 3,
@@ -37,11 +36,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route21_North_EventScript_Wade",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "in_connection": false,
       "x": 7,
       "y": 27,
       "elevation": 3,
@@ -51,11 +50,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route21_North_EventScript_Ronald",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "in_connection": false,
       "x": 14,
       "y": 35,
       "elevation": 1,
@@ -65,11 +64,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route21_North_EventScript_Lil",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_SWIMMING",
-      "in_connection": false,
       "x": 15,
       "y": 35,
       "elevation": 1,
@@ -79,11 +78,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route21_North_EventScript_Ian",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "in_connection": false,
       "x": 12,
       "y": 44,
       "elevation": 1,
@@ -93,11 +92,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route21_North_EventScript_Spencer",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_F",
-      "in_connection": false,
       "x": 17,
       "y": 41,
       "elevation": 3,
@@ -107,11 +106,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route21_North_EventScript_Anri",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 14,
       "y": 8,
       "elevation": 3,
@@ -121,7 +120,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route21_RocketFugitive",
-      "flag": "FLAG_ROCKET_FUGITIVE_PALLET_2"
+      "flag": "FLAG_ROCKET_FUGITIVE_PALLET_2",
+      "in_connection": ""
     }
   ],
   "warp_events": [

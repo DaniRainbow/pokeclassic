@@ -7,16 +7,15 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
-  "allow_cycling": false,
+  "allow_cycling": true,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_POLICE",
-      "in_connection": false,
       "x": 6,
       "y": 2,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route11_EastEntrance_1F_EventScript_TopGuard",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLICE",
-      "in_connection": false,
       "x": 4,
       "y": 10,
       "elevation": 0,
@@ -40,7 +39,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route11_EastEntrance_1F_EventScript_BottomGuard",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     }
   ],
   "warp_events": [

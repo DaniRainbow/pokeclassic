@@ -9,14 +9,13 @@
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ENGINEER",
-      "in_connection": false,
       "x": 5,
       "y": 11,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_Engineer",
-      "flag": "FLAG_HIDE_GAME_CORNER_ENGINEER"
+      "flag": "FLAG_HIDE_GAME_CORNER_ENGINEER",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
-      "in_connection": false,
       "x": 4,
       "y": 2,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_InfoClerk",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN",
-      "in_connection": false,
       "x": 6,
       "y": 2,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_CoinsClerk",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "in_connection": false,
       "x": 1,
       "y": 6,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_BaldingMan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
-      "in_connection": false,
       "x": 1,
       "y": 8,
       "elevation": 3,
@@ -82,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_Woman1",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "in_connection": false,
       "x": 7,
       "y": 10,
       "elevation": 3,
@@ -96,11 +95,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_Maniac",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "in_connection": false,
       "x": 10,
       "y": 9,
       "elevation": 3,
@@ -110,11 +109,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_OldMan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
-      "in_connection": false,
       "x": 16,
       "y": 10,
       "elevation": 3,
@@ -124,11 +123,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_Gentleman",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "in_connection": false,
       "x": 4,
       "y": 6,
       "elevation": 3,
@@ -138,11 +137,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_Fisher",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "in_connection": false,
       "x": 7,
       "y": 8,
       "elevation": 3,
@@ -152,11 +151,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_Woman2",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 16,
       "y": 2,
       "elevation": 3,
@@ -166,11 +165,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GAME_CORNER_ROCKET"
+      "flag": "FLAG_HIDE_GAME_CORNER_ROCKET",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCOTT",
-      "in_connection": false,
       "x": 13,
       "y": 7,
       "elevation": 3,
@@ -180,7 +179,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GameCorner_EventScript_Scott",
-      "flag": "FLAG_BADGE04_GET"
+      "flag": "FLAG_BADGE04_GET",
+      "in_connection": ""
     }
   ],
   "warp_events": [

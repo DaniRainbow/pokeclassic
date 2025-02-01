@@ -316,3 +316,51 @@ PlayersHouse_2F_EventScript_Console::
 PlayersHouse_2F_Text_Console:
 	.string "It's an old game console.\p"
 	.string "Retro-gaming is all the rage!$"
+
+PlayersHouse_2F_EventScript_ChangeClock::
+	lock
+	msgbox PlayersHouse_2F_ChangeClockText
+	fadescreen FADE_TO_BLACK
+	special StartWallClock
+	waitstate
+	releaseall
+	end
+	
+PlayersHouse_2F_ChangeClockText:
+	.string "Times are changing.\n"
+	.string "Let's change the time.$"
+	return
+
+PlayersHouse_2F_EventScript_CheckWallClock2::
+	lock
+	msgbox PlayersHouse_2F_BeautifulView
+	incrementgamestat GAME_STAT_CHECKED_CLOCK
+	fadescreen FADE_TO_BLACK
+	special Special_ViewWallClock
+	waitstate
+	releaseall
+	end
+	
+PlayersHouse_2F_BeautifulView:
+	.string "Pokemon play in the forest.\n"
+	.string "You smile and check the time.$"
+	return
+	
+PlayersHouse_2F_WelcomeNewPlayers::
+	msgbox PlayersHouse_2F_WelcomeNewPlayersText
+	releaseall
+	end
+	
+PlayersHouse_2F_WelcomeNewPlayersText:	
+	.string "Press START to access the Main Menu.\n"
+	.string "Save often as you advance your story.\p"
+	.string "To check the time, you may look out\n"
+	.string "the window on the right. If you find\l"
+	.string "a need to change the time, inspect\l"
+	.string "the magic left curtain.\p"
+	.string "You may change your clothes using\n"
+	.string "the dresser left of your shelves.\p"
+	.string "Finally, sit at your desk any time\n"
+	.string "to enjoy your own PC!$"
+	return
+
