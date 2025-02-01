@@ -127,3 +127,11 @@ BattleTower_Exterior_BattleTowerHouse::
 
 BattleTower_Exterior_Text_BattleTowerHouse::
     .string "Scott's House$"
+	
+BattleTower_Exterior_BattleTowerExitSign::
+	msgbox BattleTower_Exterior_Text_BattleTowerExitSign, MSGBOX_SIGN
+	end
+
+BattleTower_Exterior_Text_BattleTowerExitSign::
+    .string "Battle Tower   <--\n"
+    .string "Pokemon Center -->$"

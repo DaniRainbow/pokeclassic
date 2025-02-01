@@ -22,7 +22,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 20,
       "y": 17,
       "elevation": 3,
@@ -32,11 +31,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_BATTLE_TOWER_SOIL_1",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 21,
       "y": 17,
       "elevation": 3,
@@ -46,11 +45,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_BATTLE_TOWER_SOIL_2",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 22,
       "y": 17,
       "elevation": 3,
@@ -60,11 +59,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_BATTLE_TOWER_SOIL_3",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 23,
       "y": 17,
       "elevation": 3,
@@ -74,11 +73,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_BATTLE_TOWER_SOIL_4",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_M",
-      "in_connection": false,
       "x": 15,
       "y": 10,
       "elevation": 3,
@@ -88,11 +87,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_CoolTrainer1",
-      "flag": "FLAG_SYS_GAME_CLEAR"
+      "flag": "FLAG_SYS_GAME_CLEAR",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_F",
-      "in_connection": false,
       "x": 15,
       "y": 11,
       "elevation": 3,
@@ -102,11 +101,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_CoolTrainer2",
-      "flag": "FLAG_SYS_GAME_CLEAR"
+      "flag": "FLAG_SYS_GAME_CLEAR",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_JENNY",
-      "in_connection": false,
       "x": 13,
       "y": 15,
       "elevation": 3,
@@ -116,11 +115,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_Jenny",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "in_connection": false,
       "x": 15,
       "y": 12,
       "elevation": 3,
@@ -130,11 +129,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_Trainer3",
-      "flag": "FLAG_SYS_GAME_CLEAR"
+      "flag": "FLAG_SYS_GAME_CLEAR",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 23,
       "y": 10,
       "elevation": 3,
@@ -144,11 +143,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_Youngster",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUEBALL",
-      "in_connection": false,
       "x": 6,
       "y": 11,
       "elevation": 3,
@@ -158,11 +157,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_Punk",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 17,
       "y": 20,
       "elevation": 3,
@@ -172,11 +171,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_Lass",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLIWRATH",
-      "in_connection": false,
       "x": 16,
       "y": 20,
       "elevation": 3,
@@ -186,7 +185,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleTower_Exterior_Poliwrath",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     }
   ],
   "warp_events": [
@@ -224,6 +224,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "BattleTower_Exterior_BattleTowerHouse"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BattleTower_Exterior_BattleTowerExitSign"
     }
   ]
 }

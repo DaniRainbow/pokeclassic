@@ -3439,9 +3439,9 @@
                 "species": "SPECIES_WEEPINBELL"
               },
               {
-                "min_level": 30,
+                "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_PIDGEOTTO"
+                "species": "SPECIES_EEVEE"
               },
               {
                 "min_level": 30,
@@ -5092,7 +5092,7 @@
               {
                 "min_level": 21,
                 "max_level": 23,
-                "species": "SPECIES_PIDGEY"
+                "species": "SPECIES_EEVEE"
               },
               {
                 "min_level": 30,
@@ -9443,7 +9443,7 @@
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_KOFFING"
+                "species": "SPECIES_DITTO"
               },
               {
                 "min_level": 39,

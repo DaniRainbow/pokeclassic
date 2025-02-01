@@ -9,14 +9,13 @@
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MOM",
-      "in_connection": false,
       "x": 9,
       "y": 2,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_MOM_PLAYERS_ROOM"
+      "flag": "FLAG_HIDE_MOM_PLAYERS_ROOM",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "in_connection": false,
       "x": 0,
       "y": 0,
       "elevation": 0,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_1"
+      "flag": "FLAG_DECORATION_1",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_6",
-      "in_connection": false,
       "x": 1,
       "y": 0,
       "elevation": 0,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_7"
+      "flag": "FLAG_DECORATION_7",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
-      "in_connection": false,
       "x": 0,
       "y": 1,
       "elevation": 0,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_2"
+      "flag": "FLAG_DECORATION_2",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_7",
-      "in_connection": false,
       "x": 1,
       "y": 1,
       "elevation": 0,
@@ -82,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_8"
+      "flag": "FLAG_DECORATION_8",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_2",
-      "in_connection": false,
       "x": 0,
       "y": 2,
       "elevation": 3,
@@ -96,11 +95,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_3"
+      "flag": "FLAG_DECORATION_3",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_8",
-      "in_connection": false,
       "x": 1,
       "y": 2,
       "elevation": 3,
@@ -110,11 +109,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_9"
+      "flag": "FLAG_DECORATION_9",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_3",
-      "in_connection": false,
       "x": 0,
       "y": 3,
       "elevation": 3,
@@ -124,11 +123,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_4"
+      "flag": "FLAG_DECORATION_4",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_9",
-      "in_connection": false,
       "x": 1,
       "y": 3,
       "elevation": 3,
@@ -138,11 +137,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_10"
+      "flag": "FLAG_DECORATION_10",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_4",
-      "in_connection": false,
       "x": 0,
       "y": 4,
       "elevation": 0,
@@ -152,11 +151,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_5"
+      "flag": "FLAG_DECORATION_5",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_A",
-      "in_connection": false,
       "x": 1,
       "y": 4,
       "elevation": 3,
@@ -166,11 +165,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_11"
+      "flag": "FLAG_DECORATION_11",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_5",
-      "in_connection": false,
       "x": 0,
       "y": 5,
       "elevation": 4,
@@ -180,11 +179,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_6"
+      "flag": "FLAG_DECORATION_6",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VAR_B",
-      "in_connection": false,
       "x": 1,
       "y": 5,
       "elevation": 0,
@@ -194,7 +193,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_DECORATION_12"
+      "flag": "FLAG_DECORATION_12",
+      "in_connection": ""
     }
   ],
   "warp_events": [
@@ -286,6 +286,30 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_Dresser"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_2F_EventScript_ChangeClock"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_2F_EventScript_CheckWallClock2"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_2F_WelcomeNewPlayers"
     }
   ]
 }
