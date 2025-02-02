@@ -4,7 +4,8 @@ RocketHideout_B1F_MapScripts::
 	.byte 0
 
 RocketHideout_B1F_OnLoad::
-	call_if_not_defeated TRAINER_BOSS_GIOVANNI, RocketHideout_B1F_EventScript_SetBarrier
+	call_if_not_defeated TRAINER_TEAM_ROCKET_GRUNT_12, RocketHideout_B1F_EventScript_SetBarrier
+	call_if_set FLAG_HIDE_CELADON_ROCKETS, RocketHideout_B1F_EventScript_RemoveBarrier
 	end
 
 RocketHideout_B1F_OnTransition::
