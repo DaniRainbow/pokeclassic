@@ -9,14 +9,13 @@
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": true,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "in_connection": false,
       "x": 11,
       "y": 4,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "PokemonTower_5F_EventScript_Ruth",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "in_connection": false,
       "x": 19,
       "y": 7,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "PokemonTower_5F_EventScript_Tammy",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "in_connection": false,
       "x": 12,
       "y": 8,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonTower_5F_EventScript_Channeler",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "in_connection": false,
       "x": 7,
       "y": 12,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "PokemonTower_5F_EventScript_Karina",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "in_connection": false,
       "x": 11,
       "y": 16,
       "elevation": 3,
@@ -82,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "PokemonTower_5F_EventScript_Janae",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 6,
       "y": 16,
       "elevation": 3,
@@ -96,11 +95,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonTower_5F_EventScript_ItemNugget",
-      "flag": "FLAG_HIDE_POKEMON_TOWER_5F_NUGGET"
+      "flag": "FLAG_HIDE_POKEMON_TOWER_5F_NUGGET",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 11,
       "y": 9,
       "elevation": 3,
@@ -110,7 +109,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonTower_5F_EventScript_ItemCleanseTag",
-      "flag": "FLAG_HIDE_POKEMON_TOWER_5F_CLEANSE_TAG"
+      "flag": "FLAG_HIDE_POKEMON_TOWER_5F_CLEANSE_TAG",
+      "in_connection": ""
     }
   ],
   "warp_events": [

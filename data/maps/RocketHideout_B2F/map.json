@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 20,
       "y": 6,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "RocketHideout_B2F_EventScript_Grunt",
-      "flag": "FLAG_HIDE_CELADON_ROCKETS"
+      "flag": "FLAG_HIDE_CELADON_ROCKETS",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 15,
       "y": 3,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B2F_EventScript_ItemXSpeed",
-      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_X_SPEED"
+      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_X_SPEED",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GREAT_BALL",
-      "in_connection": false,
       "x": 5,
       "y": 7,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B2F_EventScript_ItemTM12",
-      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_TM12"
+      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_TM12",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 2,
       "y": 5,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B2F_EventScript_ItemMoonStone",
-      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_MOON_STONE"
+      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_MOON_STONE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 0,
       "y": 14,
       "elevation": 3,
@@ -82,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B2F_EventScript_ItemSuperPotion",
-      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_SUPER_POTION"
+      "flag": "FLAG_HIDE_ROCKET_HIDEOUT_B2F_SUPER_POTION",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BURGLAR",
-      "in_connection": false,
       "x": 22,
       "y": 16,
       "elevation": 3,
@@ -96,7 +95,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_Burglars_TM24",
-      "flag": "FLAG_HIDE_ROCKET_BURGLARS"
+      "flag": "FLAG_HIDE_ROCKET_BURGLARS",
+      "in_connection": ""
     }
   ],
   "warp_events": [

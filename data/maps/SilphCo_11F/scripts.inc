@@ -503,10 +503,10 @@ SilphCo_11F_LookerMovement_Exit1::
 	walk_left
 	walk_left
 	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 SilphCo_11F_RocketMovement_Exit2::
