@@ -168,12 +168,12 @@ Route22_EventScript_LateRival_Vaporeon::
 Route22_Text_LateRivalIntro::
 	.string "{RIVAL}: Hey! {PLAYER}!\p"
 	.string "What a surprise to see you here!\p"
-	.string "So you're going to the Pokémon\n"
-	.string "League?\p"
+	.string "So, you're on your way to the\n"
+	.string "Pokémon League?\p"
 	.string "You collected all the BADGES too?\n"
 	.string "That's cool!\p"
-	.string "{PLAYER}, let's warm up\n"
-	.string "for the Pokémon League! Come on!$"
+	.string "Then I will whip you {PLAYER} as a warm up\n"
+	.string "for the Pokémon League! Come on!$" 
 
 Route22_Text_LateRivalDefeat::
 	.string "What!?\p"

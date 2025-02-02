@@ -16,7 +16,6 @@ ViridianCity_Gym_ResetRematchFlags::
 	return
 
 ViridianCity_Gym_EventScript_Giovanni::
-	msgbox ViridianCity_Gym_Text_GiovanniSpeech, MSGBOX_NPC
 	trainerbattle_single TRAINER_LEADER_GIOVANNI, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni
 	goto_if_unset FLAG_GOT_GIOVANNI_REWARD, ViridianCity_Gym_EventScript_GiveTM26
 	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
@@ -27,16 +26,14 @@ ViridianCity_Gym_EventScript_Giovanni::
 	release
 	end
 
-ViridianCity_Gym_Text_GiovanniSpeech::
+ViridianCity_Gym_Text_GiovanniIntro::
     .string "Fwahahaha!\n"
     .string "Welcome to my hideout!\p"
     .string "It shall be so until I can restore\n"
     .string "Team Rocket to its former glory.\p"
     .string "But, you have found me again.\n"
-    .string "So be it.$"
-
-ViridianCity_Gym_Text_GiovanniIntro::
-    .string "This time, I'm not holding back!\p"
+    .string "So be it.\p"
+	.string "This time, I'm not holding back!\p"
     .string "Once more, you shall face\n"
     .string "Giovanni, the greatest Trainer!$"
 
@@ -324,6 +321,7 @@ ViridianCity_Gym_EventScript_Rival::
 	waitmovement 2
 	msgbox ViridianCity_Gym_Text_RivalSpeech, MSGBOX_NPC
 	setflag FLAG_RIVAL_REMATCHED
+
 ViridianCity_Gym_EventScript_SkipRivalSpeech::
 	msgbox ViridianCity_Gym_Text_RematchLeader, MSGBOX_DEFAULT
 	goto_if_eq VAR_RIVAL_WINRATE, 2, ViridianCity_Gym_EventScript_RivalJolteon
@@ -376,6 +374,7 @@ ViridianCity_Gym_Text_RivalDefeat::
 
 ViridianCity_Gym_EventScript_DefeatedRival::
 	setflag FLAG_DAILY_RIVAL_REMATCH
+
 ViridianCity_Gym_EventScript_RivalPostBattle::
 	msgbox ViridianCity_Gym_Text_RivalPostBattle, MSGBOX_DEFAULT
 	call_if_unset FLAG_GOT_GIOVANNI_REWARD, ViridianCity_Gym_EventScript_RivalFoundTM

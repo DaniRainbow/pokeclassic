@@ -250,7 +250,7 @@
       "elevation": 0,
       "var": "VAR_SECRET_BATTLE_CLEAR",
       "var_value": "1",
-      "script": "PlayersHouse_2F_EventScript_PostGame2"
+      "script": "PlayersHouse_2F_EventScript_PostGame3"
     },
     {
       "type": "trigger",
@@ -259,7 +259,7 @@
       "elevation": 0,
       "var": "VAR_SECRET_BATTLE_CLEAR",
       "var_value": "1",
-      "script": "PlayersHouse_2F_EventScript_PostGame3"
+      "script": "PlayersHouse_2F_EventScript_PostGame2"
     }
   ],
   "bg_events": [
