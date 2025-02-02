@@ -197,7 +197,7 @@ SaffronCity_Gym_Text_GetBadge::
     .string "Marsh Badge.$"
 
 SaffronCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Soul\n"
+	.string "{PLAYER} received the Marsh\n"
     .string "Badge from Sabrina!$"
 
 SaffronCity_Gym_Text_ExplainBadge::

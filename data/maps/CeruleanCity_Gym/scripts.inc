@@ -182,7 +182,7 @@ CeruleanCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 
 CeruleanCity_Gym_Text_RematchPostgame::
 	.string "My adorable Pokémon are ready\n" 
-	.string " to take you on!\p" 
+	.string "to take you on!\p" 
 	.string "The ultimate offense of\n" 
 	.string "Water-type Pokémon!\p" 
 	.string "I hope you're ready!$"

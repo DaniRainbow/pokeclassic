@@ -362,12 +362,13 @@ VermilionCity_Gym_EventScript_RematchLeader::
 	end
 
 VermilionCity_Gym_Text_RematchLeader::
-	.string "Hey there, kid! Pretty shocking you made\n"
-	.string "it this far in your journey!\p"
-	.string "No doubt some Electric-type Pokémon had\n"
-	.string "a pretty big hand in that, right?\p"
-	.string "All right, then. How about a rematch to\n"
-	.string "show me what kind of Pokémon you've raised?$"
+	.string "Hey there, kid! Pretty shocking you\n"
+	.string "made it this far in your journey!\p"
+	.string "No doubt some Electric-type Pokémon\n"
+	.string "had a pretty big hand in that, right?\p"
+	.string "All right, then.\p" 
+	.string "How about a rematch to show me what\n"
+	.string "kind of Pokémon you've raised?$"
 
 VermilionCity_Gym_EventScript_DeclineRematch::
 	msgbox VermilionCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
@@ -402,7 +403,7 @@ VermilionCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 
 VermilionCity_Gym_Text_RematchPostgame::
 	.string "No need for introductions this time!\n" 
-	.string "Trainers like us have no need for words!\p" 
+	.string "Champions have no need for words!\p" 
 	.string "Let's go, kid!$"
 
 VermilionCity_Gym_EventScript_DefeatedLeaderRematch::

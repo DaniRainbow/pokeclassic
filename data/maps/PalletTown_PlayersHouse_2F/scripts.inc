@@ -342,7 +342,7 @@ PlayersHouse_2F_EventScript_CheckWallClock2::
 	end
 	
 PlayersHouse_2F_BeautifulView:
-	.string "Pokemon play in the forest.\n"
+	.string "Pokémon play in the forest.\n"
 	.string "You smile and check the time.$"
 	return
 	
