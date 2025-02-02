@@ -7,7 +7,7 @@ This fork was created to address the unfixed issues with the original repository
 # Getting PokeClassic
 This repository builds the following ROM:
 
-* pokeemerald.gba `sha1: 3E4983BADEC574547D7097AC1B3960D1A46489BF`
+* pokeemerald.gba `sha1: D77939F35F8BACA26893D444DA8478347A39699D`
 
 **updated 2/02/2025**
 

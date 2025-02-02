@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BURGLAR",
-      "in_connection": false,
       "x": 5,
       "y": 23,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "PokemonMansion_2F_EventScript_Arnie",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 18,
       "y": 23,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_2F_EventScript_ItemZinc",
-      "flag": "FLAG_HIDE_POKEMON_MANSION_2F_ZINC"
+      "flag": "FLAG_HIDE_POKEMON_MANSION_2F_ZINC",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 35,
       "y": 17,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_2F_EventScript_ItemHPUp",
-      "flag": "FLAG_HIDE_POKEMON_MANSION_2F_HP_UP"
+      "flag": "FLAG_HIDE_POKEMON_MANSION_2F_HP_UP",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 36,
       "y": 8,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_2F_EventScript_ItemCalcium",
-      "flag": "FLAG_HIDE_POKEMON_MANSION_2F_CALCIUM"
+      "flag": "FLAG_HIDE_POKEMON_MANSION_2F_CALCIUM",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
-      "in_connection": false,
       "x": 20,
       "y": 17,
       "elevation": 3,
@@ -82,7 +81,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_2F_EventScript_CharizarditeX",
-      "flag": "FLAG_HIDE_CHARIZARDITE_X"
+      "flag": "FLAG_HIDE_CHARIZARDITE_X",
+      "in_connection": ""
     }
   ],
   "warp_events": [

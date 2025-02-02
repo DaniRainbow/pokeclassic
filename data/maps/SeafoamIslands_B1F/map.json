@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 22,
       "y": 8,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_1",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_1"
+      "flag": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_1",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 30,
       "y": 8,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_2"
+      "flag": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_2",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 24,
       "y": 14,
       "elevation": 4,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B1F_EventScript_ItemRevive",
-      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B1F_REVIVE"
+      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B1F_REVIVE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 19,
       "y": 18,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B1F_EventScript_ItemWaterStone",
-      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B1F_WATER_STONE"
+      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B1F_WATER_STONE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
-      "in_connection": false,
       "x": 13,
       "y": 3,
       "elevation": 3,
@@ -82,7 +81,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B1F_EventScript_Gyaradosite",
-      "flag": "FLAG_HIDE_GYARDOSITE"
+      "flag": "FLAG_HIDE_GYARDOSITE",
+      "in_connection": ""
     }
   ],
   "warp_events": [

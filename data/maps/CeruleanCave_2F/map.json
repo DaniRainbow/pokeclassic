@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 33,
       "y": 12,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCave_2F_EventScript_ItemFullRestore",
-      "flag": "FLAG_HIDE_CERULEAN_CAVE_2F_FULL_RESTORE"
+      "flag": "FLAG_HIDE_CERULEAN_CAVE_2F_FULL_RESTORE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 29,
       "y": 16,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCave_2F_EventScript_ItemUltraBall",
-      "flag": "FLAG_HIDE_CERULEAN_CAVE_2F_ULTRA_BALL"
+      "flag": "FLAG_HIDE_CERULEAN_CAVE_2F_ULTRA_BALL",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 9,
       "y": 18,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCave_2F_EventScript_ItemPPUp",
-      "flag": "FLAG_HIDE_CERULEAN_CAVE_2F_PP_UP"
+      "flag": "FLAG_HIDE_CERULEAN_CAVE_2F_PP_UP",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 4,
       "y": 12,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_1A"
+      "flag": "FLAG_TEMP_1A",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 9,
       "y": 13,
       "elevation": 3,
@@ -82,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_17"
+      "flag": "FLAG_TEMP_17",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 10,
       "y": 20,
       "elevation": 3,
@@ -96,11 +95,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_1B"
+      "flag": "FLAG_TEMP_1B",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 13,
       "y": 6,
       "elevation": 3,
@@ -110,11 +109,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_19"
+      "flag": "FLAG_TEMP_19",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 23,
       "y": 16,
       "elevation": 3,
@@ -124,11 +123,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_18"
+      "flag": "FLAG_TEMP_18",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 25,
       "y": 11,
       "elevation": 3,
@@ -138,11 +137,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_14"
+      "flag": "FLAG_TEMP_14",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 28,
       "y": 20,
       "elevation": 3,
@@ -152,11 +151,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_15"
+      "flag": "FLAG_TEMP_15",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 30,
       "y": 20,
       "elevation": 3,
@@ -166,11 +165,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_16"
+      "flag": "FLAG_TEMP_16",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 33,
       "y": 10,
       "elevation": 3,
@@ -180,11 +179,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_12"
+      "flag": "FLAG_TEMP_12",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 33,
       "y": 9,
       "elevation": 3,
@@ -194,11 +193,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_13"
+      "flag": "FLAG_TEMP_13",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
-      "in_connection": false,
       "x": 4,
       "y": 8,
       "elevation": 3,
@@ -208,11 +207,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCave_2F_EventScript_MewtoniteX",
-      "flag": "FLAG_HIDE_MEWTONITE_X"
+      "flag": "FLAG_HIDE_MEWTONITE_X",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
-      "in_connection": false,
       "x": 19,
       "y": 20,
       "elevation": 3,
@@ -222,7 +221,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCave_2F_EventScript_MewtoniteY",
-      "flag": "FLAG_HIDE_MEWTONITE_Y"
+      "flag": "FLAG_HIDE_MEWTONITE_Y",
+      "in_connection": ""
     }
   ],
   "warp_events": [

@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 8,
       "y": 18,
       "elevation": 1,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_SEAFOAM_B4F_BOULDER_1"
+      "flag": "FLAG_HIDE_SEAFOAM_B4F_BOULDER_1",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 9,
       "y": 18,
       "elevation": 1,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_SEAFOAM_B4F_BOULDER_2"
+      "flag": "FLAG_HIDE_SEAFOAM_B4F_BOULDER_2",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 22,
       "y": 19,
       "elevation": 4,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B4F_EventScript_ItemUltraBall",
-      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B4F_ULTRA_BALL"
+      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B4F_ULTRA_BALL",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ARTICUNO",
-      "in_connection": false,
       "x": 9,
       "y": 2,
       "elevation": 4,
@@ -68,7 +67,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B4F_EventScript_Articuno",
-      "flag": "FLAG_HIDE_ARTICUNO"
+      "flag": "FLAG_HIDE_ARTICUNO",
+      "in_connection": ""
     }
   ],
   "warp_events": [

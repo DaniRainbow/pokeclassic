@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 7,
       "y": 26,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "MtMoon_1F_EventScript_Kent",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 20,
       "y": 26,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "MtMoon_1F_EventScript_Iris",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "in_connection": false,
       "x": 30,
       "y": 35,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "MtMoon_1F_EventScript_Jovan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 36,
       "y": 30,
       "elevation": 3,
@@ -68,11 +67,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "MtMoon_1F_EventScript_Robby",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "in_connection": false,
       "x": 7,
       "y": 10,
       "elevation": 3,
@@ -82,11 +81,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "MtMoon_1F_EventScript_Macros",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 33,
       "y": 4,
       "elevation": 3,
@@ -96,11 +95,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "MtMoon_1F_EventScript_Miriam",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 13,
       "y": 17,
       "elevation": 3,
@@ -110,11 +109,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "MtMoon_1F_EventScript_Josh",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 3,
       "y": 2,
       "elevation": 3,
@@ -124,11 +123,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_ItemMoonStone",
-      "flag": "FLAG_HIDE_MT_MOON_1F_MOON_STONE"
+      "flag": "FLAG_HIDE_MT_MOON_1F_MOON_STONE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 44,
       "y": 21,
       "elevation": 3,
@@ -138,11 +137,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_ItemEscapeRope",
-      "flag": "FLAG_HIDE_MT_MOON_1F_ESCAPE_ROPE"
+      "flag": "FLAG_HIDE_MT_MOON_1F_ESCAPE_ROPE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 42,
       "y": 35,
       "elevation": 3,
@@ -152,11 +151,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_ItemRareCandy",
-      "flag": "FLAG_HIDE_MT_MOON_1F_RARE_CANDY"
+      "flag": "FLAG_HIDE_MT_MOON_1F_RARE_CANDY",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 26,
       "y": 32,
       "elevation": 3,
@@ -166,11 +165,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_ItemPotion",
-      "flag": "FLAG_HIDE_MT_MOON_1F_POTION"
+      "flag": "FLAG_HIDE_MT_MOON_1F_POTION",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GREAT_BALL",
-      "in_connection": false,
       "x": 11,
       "y": 35,
       "elevation": 3,
@@ -180,11 +179,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_ItemTM09",
-      "flag": "FLAG_HIDE_MT_MOON_1F_TM09"
+      "flag": "FLAG_HIDE_MT_MOON_1F_TM09",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 2,
       "y": 22,
       "elevation": 3,
@@ -194,11 +193,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_ItemParalyzeHeal",
-      "flag": "FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL"
+      "flag": "FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
-      "in_connection": false,
       "x": 42,
       "y": 7,
       "elevation": 3,
@@ -208,11 +207,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtMoon_1F_EventScript_BaldingMan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 40,
       "y": 9,
       "elevation": 3,
@@ -222,11 +221,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_13"
+      "flag": "FLAG_TEMP_13",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 40,
       "y": 7,
       "elevation": 3,
@@ -236,11 +235,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_12"
+      "flag": "FLAG_TEMP_12",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "in_connection": false,
       "x": 43,
       "y": 9,
       "elevation": 3,
@@ -250,7 +249,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_14"
+      "flag": "FLAG_TEMP_14",
+      "in_connection": ""
     }
   ],
   "warp_events": [

@@ -16,7 +16,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 22,
       "y": 8,
       "elevation": 3,
@@ -26,11 +25,11 @@
       "trainer_type": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_1",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_1"
+      "flag": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_1",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 30,
       "y": 8,
       "elevation": 3,
@@ -40,11 +39,11 @@
       "trainer_type": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_2",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_StrengthBoulder",
-      "flag": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2"
+      "flag": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 18,
       "y": 15,
       "elevation": 3,
@@ -54,11 +53,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B2F_EventScript_ItemBigPearl",
-      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL"
+      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 12,
       "y": 9,
       "elevation": 3,
@@ -68,7 +67,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B2F_EventScript_ItemPowerStone",
-      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B2F_POWER_STONE"
+      "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B2F_POWER_STONE",
+      "in_connection": ""
     }
   ],
   "warp_events": [

@@ -133,13 +133,6 @@
 
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 59,
-      "y": 48,
-      "elevation": 3,
-      "item": "ITEM_HM06_ROCK_SMASH",
-      "flag": "FLAG_TEMP_1"
-    }
+
   ]
 }
