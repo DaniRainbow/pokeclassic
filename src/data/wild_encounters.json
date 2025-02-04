@@ -10620,14 +10620,14 @@
                 "species": "SPECIES_SEAKING"
               },
               {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_SEAKING"
-              },
-              {
                 "min_level": 10,
                 "max_level": 20,
                 "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_DRAGONAIR"
               }
             ]
           }
@@ -10709,14 +10709,14 @@
                 "species": "SPECIES_POLIWHIRL"
               },
               {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_POLIWHIRL"
-              },
-              {
                 "min_level": 10,
                 "max_level": 20,
                 "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 30,
+                "max_level": 40,
+                "species": "SPECIES_DRAGONAIR"
               }
             ]
           }
@@ -12696,6 +12696,75 @@
         {
           "map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR",
           "base_label": "gCeladonCity_DepartmentStore_Elevator"
+        },
+        {
+          "map": "MAP_FARAWAY_ISLAND_INTERIOR",
+          "base_label": "gFarawayIsland_Interior0",
+          "land_mons": {
+            "encounter_rate": 1,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_GROWLITHE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_BELLSPROUT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_FARFETCHD"
+              },
+              {
+                "min_level": 5,
+                "max_level": 20,
+                "species": "SPECIES_DITTO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 20,
+                "species": "SPECIES_SNORLAX"
+              },
+              {
+                "min_level": 24,
+                "max_level": 31,
+                "species": "SPECIES_PARASECT"
+              },
+              {
+                "min_level": 21,
+                "max_level": 31,
+                "species": "SPECIES_GLOOM"
+              },
+              {
+                "min_level": 5,
+                "max_level": 25,
+                "species": "SPECIES_EEVEE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 42,
+                "species": "SPECIES_GENGAR"
+              }
+            ]
+          }
         }
       ]
     },

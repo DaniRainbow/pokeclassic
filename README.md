@@ -1,15 +1,15 @@
 # PokeClassic
 ## Status: Version 1.3 released!
-### DaniRainbow's fork: prereleasev1.3.1 available to test!
+### DaniRainbow's fork: prereleasev1.3.2 available to test!
 
 PokeClassic is a recreation of Pokemon Yellow, recreated in the Pokemon Emerald engine. Revisit your classic adventures through Kanto with new features, questlines, and post game content!
 This fork was created to address the unfixed issues with the original repository and is working towards an eventual PokeClassic 1.4 release. Once accomplished, this fork may build from PokeClassic into something new.
 # Getting PokeClassic
 This repository builds the following ROM:
 
-* pokeemerald.gba `sha1: FFA8572389716280B444E6D096ADB57DAA82C5D2`
+* pokeemerald.gba `sha1: F1B3D783089689DDA1F2405B3E2E58FD4AEA455E`
 
-**updated 2/02/2025**
+**updated 2/03/2025**
 
 To compile this ROM yourself, see [Pret's Installation Guide](https://github.com/pret/pokeemerald/blob/master/INSTALL.md) on how to get started with the decompilations. Then, clone this branch and build the ROM by changing "pokeemerald" to "pokeclassic" in the instructions.
 
