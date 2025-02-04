@@ -3,6 +3,7 @@ Route4_PokemonCenter_2F_MapScripts::
 
 Route4_PokemonCenter_2F_Hiker::
 	lockall
+	faceplayer
 	goto_if_set FLAG_GOT_HM06, Route4_PokemonCenter_2F_HikerRockSmash
 	msgbox Route4_PokemonCenter_2F_Text_RockSmash, MSGBOX_DEFAULT
 	giveitem ITEM_HM06

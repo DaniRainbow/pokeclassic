@@ -37,7 +37,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "in_connection": false,
       "x": 9,
       "y": 23,
       "elevation": 3,
@@ -47,11 +46,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_BaldingMan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LADY",
-      "in_connection": false,
       "x": 12,
       "y": 30,
       "elevation": 3,
@@ -61,11 +60,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Woman",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "in_connection": false,
       "x": 34,
       "y": 22,
       "elevation": 3,
@@ -75,11 +74,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Youngster",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 33,
       "y": 29,
       "elevation": 3,
@@ -89,11 +88,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Lass",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_JENNY",
-      "in_connection": false,
       "x": 31,
       "y": 12,
       "elevation": 3,
@@ -103,11 +102,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Police",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 33,
       "y": 6,
       "elevation": 3,
@@ -117,11 +116,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Grunt",
-      "flag": "FLAG_HIDE_CERULEAN_ROCKET"
+      "flag": "FLAG_HIDE_CERULEAN_ROCKET",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "in_connection": false,
       "x": 16,
       "y": 21,
       "elevation": 3,
@@ -131,11 +130,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_LittleBoy",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "in_connection": false,
       "x": 26,
       "y": 32,
       "elevation": 3,
@@ -145,11 +144,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_13"
+      "flag": "FLAG_TEMP_13",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SLOWBRO",
-      "in_connection": false,
       "x": 32,
       "y": 29,
       "elevation": 3,
@@ -159,11 +158,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Slowbro",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
-      "in_connection": false,
       "x": 22,
       "y": 0,
       "elevation": 3,
@@ -173,11 +172,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_CERULEAN_RIVAL"
+      "flag": "FLAG_HIDE_CERULEAN_RIVAL",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_M",
-      "in_connection": false,
       "x": 1,
       "y": 13,
       "elevation": 3,
@@ -187,11 +186,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_CeruleanCaveGuard",
-      "flag": "FLAG_HIDE_CERULEAN_CAVE_GUARD"
+      "flag": "FLAG_HIDE_CERULEAN_CAVE_GUARD",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GREAT_BALL",
-      "in_connection": false,
       "x": 33,
       "y": 6,
       "elevation": 3,
@@ -201,11 +200,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_StolenTM",
-      "flag": "FLAG_HIDE_CERULEAN_TM28"
+      "flag": "FLAG_HIDE_CERULEAN_TM28",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREEDER_F",
-      "in_connection": false,
       "x": 14,
       "y": 6,
       "elevation": 3,
@@ -215,11 +214,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_BulbasaurBreeder",
-      "flag": "FLAG_GOT_BULBASAUR"
+      "flag": "FLAG_GOT_BULBASAUR",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BULBASAUR",
-      "in_connection": false,
       "x": 13,
       "y": 6,
       "elevation": 3,
@@ -229,11 +228,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Bulbasaur",
-      "flag": "FLAG_GOT_BULBASAUR"
+      "flag": "FLAG_GOT_BULBASAUR",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "in_connection": true,
       "x": 50,
       "y": 18,
       "elevation": 1,
@@ -243,11 +242,11 @@
       "trainer_type": "18",
       "trainer_sight_or_berry_tree_id": "6",
       "script": "0x0",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 18,
       "y": 6,
       "elevation": 3,
@@ -257,11 +256,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_CERULEAN_NANAB",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 19,
       "y": 6,
       "elevation": 3,
@@ -271,11 +270,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_CERULEAN_PINAP",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 17,
       "y": 6,
       "elevation": 3,
@@ -285,11 +284,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_CERULEAN_WEPEAR",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_AMBER",
-      "in_connection": false,
       "x": 9,
       "y": 6,
       "elevation": 3,
@@ -299,7 +298,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_EventScript_Venusaurite",
-      "flag": "FLAG_HIDE_VENUSAURITE"
+      "flag": "FLAG_HIDE_VENUSAURITE",
+      "in_connection": ""
     }
   ],
   "warp_events": [

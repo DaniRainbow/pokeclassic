@@ -214,6 +214,7 @@ TitleMatch_EventScript_Victory::
 
 TitleMatch_EventScript_Defeat::
 	msgbox TitleMatch_Text_TitleMatchVictory, MSGBOX_DEFAULT
+
 TitleMatch_EventScript_Exit::
 	waitmessage
 	closemessage
@@ -234,6 +235,7 @@ TitleMatch_Text_TitleMatchDefeated::
 	.string "Kanto has a new champion!$"
 
 TitleMatch_Steph::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_STEPH, TitleMatch_Text_StephIntro, TitleMatch_Text_StephDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -244,6 +246,7 @@ TitleMatch_Text_StephDefeated::
 	.string "Alright, I'm gonna head out.$"
 
 TitleMatch_Liz::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_LIZ, TitleMatch_Text_LizIntro, TitleMatch_Text_LizDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -254,6 +257,7 @@ TitleMatch_Text_LizDefeated::
 	.string "Oh no!$"
 
 TitleMatch_Mike::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_MIKE, TitleMatch_Text_MikeIntro, TitleMatch_Text_MikeDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -265,6 +269,7 @@ TitleMatch_Text_MikeDefeated::
 	.string "as he loses.$"
 
 TitleMatch_Chris::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_CHRIS, TitleMatch_Text_ChrisIntro, TitleMatch_Text_ChrisDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -275,6 +280,7 @@ TitleMatch_Text_ChrisDefeated::
 	.string "Too scared!"
 
 TitleMatch_Kev::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_KEV, TitleMatch_Text_KevIntro, TitleMatch_Text_KevDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -286,6 +292,7 @@ TitleMatch_Text_KevDefeated::
 	.string "No! I should have used my full power!$"
 
 TitleMatch_Meghan::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_MEGHAN, TitleMatch_Text_MeghanIntro, TitleMatch_Text_MeghanDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -296,6 +303,7 @@ TitleMatch_Text_MeghanDefeated::
 	.string "Hit the bricks!$"
 
 TitleMatch_Steve::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_STEVE, TitleMatch_Text_SteveIntro, TitleMatch_Text_SteveDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -306,6 +314,7 @@ TitleMatch_Text_SteveDefeated::
 	.string "Today was not my day.$"
 
 TitleMatch_M::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_M, TitleMatch_Text_MIntro, TitleMatch_Text_MDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -316,6 +325,7 @@ TitleMatch_Text_MDefeated::
 	.string "Leave me alone!$"
 
 TitleMatch_Bean::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_BEAN, TitleMatch_Text_BeanIntro, TitleMatch_Text_BeanDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -326,6 +336,7 @@ TitleMatch_Text_BeanDefeated::
 	.string "You're tough! I like that!$"
 
 TitleMatch_Annie::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_ANNIE, TitleMatch_Text_AnnieIntro, TitleMatch_Text_AnnieDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -336,6 +347,7 @@ TitleMatch_Text_AnnieDefeated::
 	.string "Wahhhhhhh! I want my mommy!$"
 
 TitleMatch_Brock::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_BROCK, TitleMatch_Text_BrockIntro, TitleMatch_Text_BrockDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -346,6 +358,7 @@ TitleMatch_Text_BrockDefeated::
 	.string "You've come a long way, {PLAYER}.$"
 
 TitleMatch_Misty::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_MISTY, TitleMatch_Text_MistyIntro, TitleMatch_Text_MistyDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -359,6 +372,7 @@ TitleMatch_Text_MistyDefeated::
 	.string "to you again!$"
 
 TitleMatch_Surge::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_SURGE, TitleMatch_Text_SurgeIntro, TitleMatch_Text_SurgeDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -370,6 +384,7 @@ TitleMatch_Text_SurgeDefeated::
 	.string "Back to basic training!$"
 
 TitleMatch_Erika::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_ERIKA, TitleMatch_Text_ErikaIntro, TitleMatch_Text_ErikaDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -381,6 +396,7 @@ TitleMatch_Text_ErikaDefeated::
 	.string "Looks like I lost again...$"
 
 TitleMatch_Sabrina::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_SABRINA, TitleMatch_Text_SabrinaIntro, TitleMatch_Text_SabrinaDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -391,6 +407,7 @@ TitleMatch_Text_SabrinaDefeated::
 	.string "I knew it would end this way...$"
 
 TitleMatch_Koga::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_KOGA, TitleMatch_Text_KogaIntro, TitleMatch_Text_KogaDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -403,6 +420,7 @@ TitleMatch_Text_KogaDefeated::
 	.string "I am still unworthy$"
 
 TitleMatch_Blaine::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_BLAINE, TitleMatch_Text_BlaineIntro, TitleMatch_Text_BlaineDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -413,6 +431,7 @@ TitleMatch_Text_BlaineDefeated::
 	.string "Not hot enough!$"
 
 TitleMatch_Rocket::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_ROCKET, TitleMatch_Text_RocketIntro, TitleMatch_Text_RocketDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -427,6 +446,7 @@ TitleMatch_Text_RocketDefeated::
 	.string "all the terrible things I've done.$"
 
 TitleMatch_Daisy::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_DAISY, TitleMatch_Text_DaisyIntro, TitleMatch_Text_DaisyDefeated, TitleMatch_BattleOutcome
 	end
 
@@ -446,14 +466,17 @@ TitleMatch_Rival::
 	goto TitleMatch_Rival_Vaporeon
 
 TitleMatch_Rival_Jolteon::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_RIVAL_JOLTEON, TitleMatch_Text_RivalIntro, TitleMatch_Text_RivalDefeated, TitleMatch_BattleOutcome
 	end
 
 TitleMatch_Rival_Flareon::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_RIVAL_FLAREON, TitleMatch_Text_RivalIntro, TitleMatch_Text_RivalDefeated, TitleMatch_BattleOutcome
 	end
 
 TitleMatch_Rival_Vaporeon::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TITLE_MATCH_RIVAL_VAPOREON, TitleMatch_Text_RivalIntro, TitleMatch_Text_RivalDefeated, TitleMatch_BattleOutcome
 	end
 
