@@ -27,7 +27,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BREEDER_F",
-      "in_connection": false,
       "x": 27,
       "y": 25,
       "elevation": 3,
@@ -37,11 +36,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route5_EventScript_DaycareWoman",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NIDORAN_M",
-      "in_connection": false,
       "x": 27,
       "y": 23,
       "elevation": 3,
@@ -51,11 +50,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
-      "in_connection": false,
       "x": 23,
       "y": 20,
       "elevation": 3,
@@ -65,11 +64,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREEDER_M",
-      "in_connection": false,
       "x": 18,
       "y": 30,
       "elevation": 3,
@@ -79,11 +78,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route5_EventScript_BerryGuy",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 26,
       "y": 16,
       "elevation": 3,
@@ -93,11 +92,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_5_TAMATO",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 25,
       "y": 16,
       "elevation": 3,
@@ -107,11 +106,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_5_GREPA",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 24,
       "y": 16,
       "elevation": 3,
@@ -121,11 +120,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_5_QUALOT",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 23,
       "y": 16,
       "elevation": 3,
@@ -135,11 +134,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_5_HONDEW",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 22,
       "y": 16,
       "elevation": 3,
@@ -149,11 +148,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_5_KELPSY",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 21,
       "y": 16,
       "elevation": 3,
@@ -163,11 +162,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_5_POMEG",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 24,
       "y": 8,
       "elevation": 3,
@@ -177,7 +176,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route5_RocketFugitive",
-      "flag": "FLAG_ROCKET_FUGITIVE_CERULEAN_3"
+      "flag": "FLAG_ROCKET_FUGITIVE_CERULEAN_3",
+      "in_connection": ""
     }
   ],
   "warp_events": [
