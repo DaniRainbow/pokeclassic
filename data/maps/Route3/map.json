@@ -27,7 +27,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 70,
       "y": 13,
       "elevation": 3,
@@ -37,11 +36,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route3_EventScript_Youngster",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 19,
       "y": 9,
       "elevation": 3,
@@ -51,11 +50,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Route3_EventScript_Janice",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 12,
       "y": 6,
       "elevation": 3,
@@ -65,11 +64,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route3_EventScript_Colton",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 17,
       "y": 4,
       "elevation": 3,
@@ -79,11 +78,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route3_EventScript_Ben",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 25,
       "y": 4,
       "elevation": 3,
@@ -93,11 +92,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route3_EventScript_Greg",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 30,
       "y": 3,
       "elevation": 3,
@@ -107,11 +106,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Route3_EventScript_Sally",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 32,
       "y": 6,
       "elevation": 3,
@@ -121,11 +120,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "Route3_EventScript_James",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 29,
       "y": 10,
       "elevation": 3,
@@ -135,11 +134,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Route3_EventScript_Calvin",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 40,
       "y": 11,
       "elevation": 3,
@@ -149,11 +148,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route3_EventScript_Robin",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 63,
       "y": 15,
       "elevation": 3,
@@ -163,11 +162,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_3_PERSIM",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 65,
       "y": 15,
       "elevation": 3,
@@ -177,11 +176,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_3_ORAN",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 64,
       "y": 15,
       "elevation": 3,
@@ -191,7 +190,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_3_PECHA",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     }
   ],
   "warp_events": [

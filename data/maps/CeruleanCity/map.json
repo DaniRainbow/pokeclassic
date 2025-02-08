@@ -232,20 +232,6 @@
       "in_connection": ""
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 50,
-      "y": 18,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "18",
-      "trainer_sight_or_berry_tree_id": "6",
-      "script": "0x0",
-      "flag": "0",
-      "in_connection": ""
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 18,
       "y": 6,
