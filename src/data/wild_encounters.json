@@ -12700,68 +12700,23 @@
         {
           "map": "MAP_FARAWAY_ISLAND_INTERIOR",
           "base_label": "gFarawayIsland_Interior0",
-          "land_mons": {
-            "encounter_rate": 1,
+          "hidden_mons": {
+            "encounter_rate": 0,
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_PARAS"
+                "max_level": 5,
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_ODDISH"
+                "max_level": 5,
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_GROWLITHE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_BELLSPROUT"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_SLOWPOKE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_FARFETCHD"
-              },
-              {
-                "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_DITTO"
-              },
-              {
-                "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_SNORLAX"
-              },
-              {
-                "min_level": 24,
-                "max_level": 31,
-                "species": "SPECIES_PARASECT"
-              },
-              {
-                "min_level": 21,
-                "max_level": 31,
-                "species": "SPECIES_GLOOM"
-              },
-              {
-                "min_level": 5,
-                "max_level": 25,
-                "species": "SPECIES_EEVEE"
-              },
-              {
-                "min_level": 42,
-                "max_level": 42,
-                "species": "SPECIES_GENGAR"
+                "max_level": 5,
+                "species": "SPECIES_NONE"
               }
             ]
           }

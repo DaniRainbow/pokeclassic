@@ -560,7 +560,6 @@ BattleTower_Entrance_EventScript_EndCancelChallenge::
 	end
 
 BattleTower_Entrance_EventScript_EnterElevator::
-	special SavePlayerParty
 	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_PARTY_ORDER
 	call BattleTower_Entrance_EventScript_GetPartySize
 	special CallFrontierUtilFunc

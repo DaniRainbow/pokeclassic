@@ -79,6 +79,11 @@ BattleTower_Basement_EventScript_LostChallenge::
 	factory_save 0
 	playse SE_SAVE
 	waitse
+	msgbox BattleTower_Basement_Text_LookForwardToNextVisit, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_TEMP_0, 255
+	releaseall
+	end
 
 BattleTower_Basement_EventScript_ResumeChallenge::
 	lockall
@@ -134,6 +139,7 @@ BattleTower_Basement_EventScript_DoublesAttendant::
 	end
 
 BattleTower_Basement_EventScript_StartChallenge::
+	lock
 	special SavePlayerParty
 	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleTower_Basement_EventScript_TakeSinglesChallenge
 	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleTower_Basement_EventScript_TakeDoublesChallenge
@@ -163,7 +169,6 @@ BattleTower_Basement_EventScript_SaveBeforeChallenge::
 	goto_if_eq VAR_RESULT, 0, BattleTower_Basement_EventScript_CancelChallengeSaveFailed
 	setvar VAR_0x8006, 0
 BattleTower_Basement_EventScript_EnterChallenge::
-	special SavePlayerParty
 	msgbox BattleTower_Basement_Text_StepThisWay, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_FACTORY_ATTENDANT, BattleFactoryLobby_Movement_AttendantApproachPlayer

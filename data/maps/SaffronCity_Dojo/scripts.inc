@@ -235,8 +235,6 @@ SaffronCity_Dojo_EventScript_FreshWater::
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_Dojo_EventScript_CouldUseADrink
 	msgbox SaffronCity_Dojo_Text_CanIHaveThat, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SaffronCity_Dojo_EventScript_CouldUseADrink
-	playse MUS_RG_HEAL
-	waitse
 	removeitem ITEM_FRESH_WATER
 	return
 
@@ -259,7 +257,9 @@ SaffronCity_Dojo_Text_CouldUseADrink:
 
 SaffronCity_Dojo_Text_HitsThatSpot:
 	.string "Wow, thanks!\p"
-	.string "GLUG GLUG GLUG\p"
+	.string "GLUG GLUG GLUG$"
+
+SaffronCity_Dojo_Text_AhhMuchBetter:
 	.string "Ahhhhhhh....\p"
 	.string "That really hits the spot!\p"
 	.string "I feel ready for another battle!$"
@@ -398,7 +398,11 @@ SaffronCity_Dojo_EventScript_AttackPupilThirsty::
 	clearflag FLAG_DOJO_ATTACK
 	cleartrainerflag SPARRING_PARTNER_ATTACK
 	msgbox SaffronCity_Dojo_Text_HitsThatSpot, MSGBOX_DEFAULT
-	goto SaffronCity_Dojo_EventScript_AttackPupil
+	playfanfare MUS_HEAL
+	waitfanfare
+	playbgm MUS_B_DOME, 0
+	msgbox SaffronCity_Dojo_Text_AhhMuchBetter, MSGBOX_DEFAULT
+	release
 	end
 
 SaffronCity_Dojo_EventScript_SpAttackPupilThirsty::
@@ -406,6 +410,10 @@ SaffronCity_Dojo_EventScript_SpAttackPupilThirsty::
 	clearflag FLAG_DOJO_SPATTACK
 	cleartrainerflag SPARRING_PARTNER_SPATTACK
 	msgbox SaffronCity_Dojo_Text_HitsThatSpot, MSGBOX_DEFAULT
+	playfanfare MUS_HEAL
+	waitfanfare
+	playbgm MUS_B_DOME, 0
+	msgbox SaffronCity_Dojo_Text_AhhMuchBetter, MSGBOX_DEFAULT
 	release
 	end
 
@@ -414,6 +422,10 @@ SaffronCity_Dojo_EventScript_SpeedPupilThirsty::
 	clearflag FLAG_DOJO_SPEED
 	cleartrainerflag SPARRING_PARTNER_SPEED
 	msgbox SaffronCity_Dojo_Text_HitsThatSpot, MSGBOX_DEFAULT
+	playfanfare MUS_HEAL
+	waitfanfare
+	playbgm MUS_B_DOME, 0
+	msgbox SaffronCity_Dojo_Text_AhhMuchBetter, MSGBOX_DEFAULT
 	release
 	end
 
@@ -422,6 +434,10 @@ SaffronCity_Dojo_EventScript_DefensePupilThirsty::
 	clearflag FLAG_DOJO_DEFENSE
 	cleartrainerflag SPARRING_PARTNER_DEFENSE
 	msgbox SaffronCity_Dojo_Text_HitsThatSpot, MSGBOX_DEFAULT
+	playfanfare MUS_HEAL
+	waitfanfare
+	playbgm MUS_B_DOME, 0
+	msgbox SaffronCity_Dojo_Text_AhhMuchBetter, MSGBOX_DEFAULT
 	release
 	end
 
@@ -430,6 +446,10 @@ SaffronCity_Dojo_EventScript_SpDefensePupilThirsty::
 	clearflag FLAG_DOJO_SPDEFENSE
 	cleartrainerflag SPARRING_PARTNER_SPDEFENSE
 	msgbox SaffronCity_Dojo_Text_HitsThatSpot, MSGBOX_DEFAULT
+	playfanfare MUS_HEAL
+	waitfanfare
+	playbgm MUS_B_DOME, 0
+	msgbox SaffronCity_Dojo_Text_AhhMuchBetter, MSGBOX_DEFAULT
 	release
 	end
 
@@ -438,6 +458,10 @@ SaffronCity_Dojo_EventScript_HpPupilThirsty::
 	clearflag FLAG_DOJO_HP
 	cleartrainerflag SPARRING_PARTNER_HP
 	msgbox SaffronCity_Dojo_Text_HitsThatSpot, MSGBOX_DEFAULT
+	playfanfare MUS_HEAL
+	waitfanfare
+	playbgm MUS_B_DOME, 0
+	msgbox SaffronCity_Dojo_Text_AhhMuchBetter, MSGBOX_DEFAULT
 	release
 	end
 

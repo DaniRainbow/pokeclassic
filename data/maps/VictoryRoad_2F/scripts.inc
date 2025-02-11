@@ -149,3 +149,10 @@ VictoryRoad_2F_EventScript_ItemTM07::
 	finditem ITEM_TM07, 1
 	release
 	end
+	
+//VictoryRoad_2F_Text_WarmthInCrater::
+//    .string "There are scratch marks in\n"
+//	.string "the crater and berry stems.\p"
+//    .string "The air is oddly warmer here$"
+	
+
