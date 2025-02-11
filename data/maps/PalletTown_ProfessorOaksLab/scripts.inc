@@ -875,11 +875,12 @@ PalletTown_ProfessorOaksLab_Text_CatchingCharmReward::
 	.string "This should help you complete your Pokédex!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedCatchingCharm::
-	.string "{PLAYER} earned the Catching Charm!"
+	.string "{PLAYER} earned the Catching Charm!$"
 
 PalletTown_ProfessorOaksLab_EventScript_GetOvalCharm::
 	goto_if_unset FLAG_CLEARED_SECRET_BATTLE, PalletTown_ProfessorOaksLab_EventScript_CedarCheckNext
 	msgbox PalletTown_ProfessorOaksLab_Text_OvalCharmReward
+	waitmessage
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message PalletTown_ProfessorOaksLab_Text_ReceivedOvalCharm
 	waitmessage
@@ -898,12 +899,13 @@ PalletTown_ProfessorOaksLab_Text_OvalCharmReward::
 	.string "This should help you raise new Pokémon!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedOvalCharm::
-	.string "{PLAYER} earned the Oval Charm!"
+	.string "{PLAYER} earned the Oval Charm!$"
 
 PalletTown_ProfessorOaksLab_EventScript_GetShinyCharm::
 	specialvar VAR_RESULT, HasAllHoennMons
 	goto_if_eq VAR_RESULT, FALSE, PalletTown_ProfessorOaksLab_EventScript_CedarMaybeMoreItems
 	msgbox PalletTown_ProfessorOaksLab_Text_ShinyCharmReward
+	waitmessage
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message PalletTown_ProfessorOaksLab_Text_ReceivedShinyCharm
 	waitmessage
@@ -923,7 +925,7 @@ PalletTown_ProfessorOaksLab_Text_ShinyCharmReward::
 	.string "This might help you find them!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedShinyCharm::
-	.string "{PLAYER} earned the Shiny Charm!"
+	.string "{PLAYER} earned the Shiny Charm!$"
 
 Cedar_CheckCharms::
 	goto_if_unset FLAG_RECEIVED_CATCHING_CHARM, Common_EventScript_Return

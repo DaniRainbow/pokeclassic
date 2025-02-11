@@ -369,11 +369,11 @@ PalletTown_EventScript_PlayersHouseSign::
 	end
 
 PalletTown_Text_PlayersHouse::
-    .string "{PLAYER}'s house$"
+    .string "{PLAYER}'s House$"
 
 PalletTown_EventScript_RivalsHouseSign::
 	msgbox PalletTown_Text_RivalsHouse, MSGBOX_SIGN
 	end
 
 PalletTown_Text_RivalsHouse::
-    .string "{RIVAL}'s house$"
+    .string "{RIVAL}'s House$"
