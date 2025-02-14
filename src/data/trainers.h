@@ -4840,8 +4840,8 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_CoolTrainerAnri2),
         .party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri2}
-    },
-    [REMATCHABLE_TRAINER_COOLTRAINER_ANRI_3] = {
+	},
+	[REMATCHABLE_TRAINER_COOLTRAINER_ANRI_3] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_COOLTRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
@@ -4853,18 +4853,42 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_CoolTrainerAnri3),
         .party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri3}
     },
-	//[REMATCHABLE_TRAINER_JUGGLER_JOHAN_1] = {
-		//.partyFlags = 0,
-        //.trainerClass = TRAINER_CLASS_COOLTRAINER,
-        //.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        //.trainerPic = TRAINER_PIC_COOLTRAINER_F,
-        //.trainerName = _("Anri"),
-        //.items = {},
-        //.doubleBattle = FALSE,
-        //.aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY,
-        //.partySize = ARRAY_COUNT(sParty_CoolTrainerAnri1),
-        //.party = {.NoItemDefaultMoves = sParty_CoolTrainerAnri1}
-	//},
+	[REMATCHABLE_TRAINER_JUGGLER_JOHAN_1] = {
+		.partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+		.trainerClass = TRAINER_CLASS_JUGGLER,
+		.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+		.trainerPic = TRAINER_PIC_JUGGLER,
+		.trainerName = _("Johan"),
+		.items = {},
+		.doubleBattle = FALSE,
+		.aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY,
+		.partySize = 3,
+		.party = {.ItemCustomMoves = sParty_JugglerJohan1}
+	},
+	[REMATCHABLE_TRAINER_JUGGLER_JOHAN_2] = {
+		.partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+		.trainerClass = TRAINER_CLASS_JUGGLER,
+		.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+		.trainerPic = TRAINER_PIC_JUGGLER,
+		.trainerName = _("Johan"),
+		.items = {},
+		.doubleBattle = FALSE,
+		.aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY,
+		.partySize = ARRAY_COUNT(sParty_JugglerJohan2),
+		.party = {.ItemCustomMoves = sParty_JugglerJohan2}
+	},
+	[REMATCHABLE_TRAINER_JUGGLER_JOHAN_3] = {
+		.partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+		.trainerClass = TRAINER_CLASS_JUGGLER,
+		.encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+		.trainerPic = TRAINER_PIC_JUGGLER,
+		.trainerName = _("Johan"),
+		.items = {},
+		.doubleBattle = FALSE,
+		.aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY,
+		.partySize = ARRAY_COUNT(sParty_JugglerJohan3),
+		.party = {.ItemCustomMoves = sParty_JugglerJohan3}
+	},
 //Pokemon Mansion
     [TRAINER_SCIENTIST_TED] = {
         .partyFlags = 0,

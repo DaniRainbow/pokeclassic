@@ -27,10 +27,16 @@ Route21_South_Text_JohanIntro::
 
 Route21_South_Text_JohanDefeat::
     .string "I dropped my balls...$"
+	
+Route21_South_Text_JohanDefeat2::
+    .string "I dropped my balls... again.$"
 
 Route21_South_Text_JohanPostBattle::
-    .string "Only the strongest trainers\n"
-    .string "can make it to the Elite Four.$"
+    .string "How come other trainers get to go back\n"
+    .string "to a Pokémon Center if they\l"
+	.string "lose their battles but I'm stuck?\p"
+	.string "I wish I brought an Ether in my bag\n"
+	.string "for my Abra. Lesson learned.$"
 
 Route21_South_EventScript_RegisterJohanAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -41,12 +47,12 @@ Route21_South_EventScript_RegisterJohanAfterBattle::
 	end
 
 Route21_South_Text_JohanRegister:
-	.string "I teleported out here\n"
-	.string "but I'm out of PP.\p"
+	.string "I teleported out here on a whim\n"
+	.string "but my Abra is out of PP.\p"
 	.string "Can I call you for a ride later?$"
 
 Route21_South_EventScript_JohanRematch::
-	trainerbattle_rematch REMATCHABLE_TRAINER_JUGGLER_JOHAN_1, Route21_South_Text_JohanRematchIntro, Route21_South_Text_JohanDefeat
+	trainerbattle_rematch REMATCHABLE_TRAINER_JUGGLER_JOHAN_1, Route21_South_Text_JohanRematchIntro, Route21_South_Text_JohanDefeat2
 	msgbox Route21_South_Text_JohanRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 

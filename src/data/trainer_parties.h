@@ -6742,41 +6742,74 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CoolTrainerAnri3[] = {
         .species = SPECIES_MAGNETON,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_JugglerJohan1[] = {
-    {
-        .iv = 0,
-        .lvl = 32,
-        .species = SPECIES_JYNX,
-    },
-    {
-        .iv = 0,
-        .lvl = 32,
-        .species = SPECIES_MR_MIME,
-    },
+static const struct TrainerMonItemCustomMoves sParty_JugglerJohan1[] = {
+	{
+		.iv = 0,
+		.lvl = 16,
+		.species = SPECIES_ABRA,
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+	},
+	{
+		.iv = 0,
+		.lvl = 32,
+		.species = SPECIES_MR_MIME,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_DOUBLE_SLAP, MOVE_ENCORE, MOVE_ENDURE, MOVE_POUND}
+	},
+	{
+		.iv = 0,
+		.lvl = 32,
+		.species = SPECIES_DROWZEE,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_REST, MOVE_SNORE, MOVE_SLEEP_TALK, MOVE_CALM_MIND}
+	}
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_JugglerJohan2[] = {
-    {
-        .iv = 0,
-        .lvl = 42,
-        .species = SPECIES_JYNX,
-    },
-    {
-        .iv = 0,
-        .lvl = 42,
-        .species = SPECIES_MR_MIME,
-    },
+static const struct TrainerMonItemCustomMoves sParty_JugglerJohan2[] = {
+	{
+		.iv = 0,
+		.lvl = 16,
+		.species = SPECIES_ABRA,
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+	},
+	{
+		.iv = 0,
+		.lvl = 46,
+		.species = SPECIES_MR_MIME,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_DOUBLE_SLAP, MOVE_BATON_PASS, MOVE_ENDURE, MOVE_POUND}
+	},
+	{
+		.iv = 0,
+		.lvl = 46,
+		.species = SPECIES_DROWZEE,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_REST, MOVE_SNORE, MOVE_SLEEP_TALK, MOVE_CALM_MIND}
+	}
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_JugglerJohan3[] = {
-    {
-        .iv = 0,
-        .lvl = 52,
-        .species = SPECIES_JYNX,
-    },
-    {
-        .iv = 0,
-        .lvl = 52,
-        .species = SPECIES_MR_MIME,
-    },
+static const struct TrainerMonItemCustomMoves sParty_JugglerJohan3[] = {
+	{
+		.iv = 0,
+		.lvl = 16,
+		.species = SPECIES_ABRA,
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+	},
+	{
+		.iv = 0,
+		.lvl = 52,
+		.species = SPECIES_MR_MIME,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_DOUBLE_SLAP, MOVE_BATON_PASS, MOVE_ENDURE, MOVE_POUND}
+	},
+	{
+		.iv = 0,
+		.lvl = 52,
+		.species = SPECIES_HYPNO,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYCHIC, MOVE_CALM_MIND}
+	}
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_FishermanRonald[] = {
     {
