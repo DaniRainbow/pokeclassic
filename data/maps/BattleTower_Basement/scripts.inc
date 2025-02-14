@@ -102,29 +102,49 @@ BattleTower_Basement_EventScript_FactoryTrigger::
 	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFactory_Movement_PlayerFaceTowerKiosk
 	turnobject LOCALID_FACTORY_ATTENDANT, DIR_WEST
-	msgbox BattleFactoryLobby_Text_Welcome, MSGBOX_DEFAULT
-BattleFactoryLobby_EventScript_ChooseBattleTowerMode::
-	multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
-	switch VAR_RESULT
-	case 0, BattleTower_Basement_EventScript_SinglesAttendant
-	case 1, BattleTower_Basement_EventScript_DoublesAttendant
-	case 2, BattleTower_Basement_EventScript_ExplainChallenge
-	case 3, BattleTower_Basement_EventScript_CancelChallenge
-	case MULTI_B_PRESSED, BattleTower_Basement_EventScript_CancelChallenge
+	msgbox BattleFactoryLobby_Text_WelcomeOOPS, MSGBOX_DEFAULT
+	release
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
+	waitmovement 0
+	release
 	end
+
+//BattleTower_Basement_EventScript_FactoryTrigger::
+	//lock
+	//goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
+	//applymovement OBJ_EVENT_ID_PLAYER, BattleFactory_Movement_PlayerFaceTowerKiosk
+	//turnobject LOCALID_FACTORY_ATTENDANT, DIR_WEST
+	//msgbox BattleFactoryLobby_Text_Welcome, MSGBOX_DEFAULT
+//BattleFactoryLobby_EventScript_ChooseBattleTowerMode::
+	//multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
+	//switch VAR_RESULT
+	//case 0, BattleTower_Basement_EventScript_SinglesAttendant
+	//case 1, BattleTower_Basement_EventScript_DoublesAttendant
+	//case 2, BattleTower_Basement_EventScript_ExplainChallenge
+	//case 3, BattleTower_Basement_EventScript_CancelChallenge
+	//case MULTI_B_PRESSED, BattleTower_Basement_EventScript_CancelChallenge
+	//end
 
 BattleFactory_Movement_PlayerFaceTowerKiosk::
 	face_right
 	step_end
 
-BattleFactoryLobby_Text_Welcome:
-	.string "Welcome to the Battle Factory,\n"
-	.string "where the intelligence of Trainers\l"
-	.string "is put to the test!\p"
-	.string "I am your guide to the Battle Swap\n"
-	.string "Tournament.\p"
-	.string "Which type of tournament will\n"
-	.string "you be participating in today?$"
+BattleFactoryLobby_Text_WelcomeOOPS::
+	.string "I'm very sorry but this tower\n"
+	.string "will steal your Pokemon if\l"
+	.string "you participate in battles.\p"
+	.string "For the saftey of your little\n"
+	.string "friends, the Battle Tower is\l"
+	.string "closed indefinitely.$"
+
+//BattleFactoryLobby_Text_Welcome:
+	//.string "Welcome to the Battle Factory,\n"
+	//.string "where the intelligence of Trainers\l"
+	//.string "is put to the test!\p"
+	//.string "I am your guide to the Battle Swap\n"
+	//.string "Tournament.\p"
+	//.string "Which type of tournament will\n"
+	//.string "you be participating in today?$"
 
 BattleTower_Basement_EventScript_SinglesAttendant::
 	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_FACTORY
@@ -221,11 +241,11 @@ BattleTower_Basement_Text_TakeDoublesChallenge:
 	.string "So you'll be taking the Battle\n"
 	.string "Swap Double challenge?$"
 
-BattleTower_Basement_EventScript_ExplainChallenge::
-	msgbox BattleTower_Basement_Text_ExplainChallenge, MSGBOX_DEFAULT
-	waitmessage
-	goto BattleFactoryLobby_EventScript_ChooseBattleTowerMode
-	end
+//BattleTower_Basement_EventScript_ExplainChallenge::
+	//msgbox BattleTower_Basement_Text_ExplainChallenge, MSGBOX_DEFAULT
+	//waitmessage
+	//goto BattleFactoryLobby_EventScript_ChooseBattleTowerMode
+	//end
 
 BattleTower_Basement_Text_ExplainChallenge:
 	.string "The Battle Swap Tournament is a \n"
