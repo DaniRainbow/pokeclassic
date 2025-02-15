@@ -4696,7 +4696,7 @@ int MoveToHM(u16 move)
     case FIELD_MOVE_FLY:
         item = ITEM_HM02;
         break;
-    case FIELD_MOVE_SURF:
+    case MOVE_SURF:
         item = ITEM_HM03;
         break;
     case MOVE_STRENGTH:
