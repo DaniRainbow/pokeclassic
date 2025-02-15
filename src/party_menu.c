@@ -2543,9 +2543,9 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             {
                 // If Mon already knows FLY and the HM is in the bag, prevent it from being added to action list
                 if (sFieldMoves[j] != FIELD_MOVE_FLY || !CheckBagHasItem(ITEM_HM02_FLY, 1)){
-                    // If Mon already knows FLASH and the HM is in the bag, prevent it from being added to action list
-                    if (sFieldMoves[j] != MOVE_FLASH || !CheckBagHasItem(ITEM_HM05_FLASH, 1)){ 
-                        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+					// If Mon already knows FLASH and the HM is in the bag, prevent it from being added to action list
+					if (sFieldMoves[j] != MOVE_FLASH || !CheckBagHasItem(ITEM_HM05_FLASH, 1)){ 
+						AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
                     }
                 }
                 break;
@@ -2559,6 +2559,9 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     // If Mon can learn HM05 and action list consists of < 4 moves, add FLASH to action list
     if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM05 - ITEM_TM01) && CheckBagHasItem(ITEM_HM05_FLASH, 1)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 1 + MENU_FIELD_MOVES);
+    // If Mon can learn HM06 and action list consists of <4 moves, add ROCK SMASH to action list
+	//if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM06 - ITEM_TM01) && CheckBagHasItem(ITEM_HM06_ROCK_SMASH, 1)) 
+		//AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
 	
 	if (!InBattlePike())
     {
@@ -4693,7 +4696,7 @@ int MoveToHM(u16 move)
     case MOVE_CUT:
         item = ITEM_HM01;
         break;
-    case FIELD_MOVE_FLY:
+    case MOVE_FLY:
         item = ITEM_HM02;
         break;
     case MOVE_SURF:
@@ -4705,7 +4708,7 @@ int MoveToHM(u16 move)
     case MOVE_FLASH:
         item = ITEM_HM05;
         break;
-    case FIELD_MOVE_ROCK_SMASH:
+    case MOVE_ROCK_SMASH:
         item = ITEM_HM06;
         break;
     case MOVE_WATERFALL:
