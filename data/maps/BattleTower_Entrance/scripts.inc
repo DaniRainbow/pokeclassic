@@ -364,7 +364,7 @@ BattleTower_Entrance_EventScript_BattleTowerTrigger::
 	
 BattleTower_Entrance_Text_TowerWelcomeOOPS::
 	.string "I'm very sorry but this tower\n"
-	.string "will steal your Pokemon if\l"
+	.string "will steal your Pokémon if\l"
 	.string "you participate in battles.\p"
 	.string "For the saftey of your little\n"
 	.string "friends, the Battle Tower is\l"

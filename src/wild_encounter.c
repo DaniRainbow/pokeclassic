@@ -1124,8 +1124,13 @@ static void ApplyFluteEncounterRateMod(u32 *encRate)
 
 static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 {
-    if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
-        *encRate = *encRate * 2 / 3;
+    int i;
+	for (i = 0; i < PARTY_SIZE; i++){
+		if (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG){
+			*encRate = 0;
+			break;
+		}
+	}
 }
 
 bool8 TryDoDoubleWildBattle(void)
