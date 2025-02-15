@@ -822,10 +822,10 @@ static const u16 sFieldMoves[] =
 {
     MOVE_FLASH, 
     MOVE_CUT, 
-    MOVE_FLY, 
+    MOVE_ROCK_SMASH, 
     MOVE_STRENGTH, 
     MOVE_SURF, 
-    MOVE_ROCK_SMASH, 
+    MOVE_FLY, 
     MOVE_DIVE, 
     MOVE_WATERFALL, 
     MOVE_TELEPORT,
