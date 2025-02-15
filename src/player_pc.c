@@ -230,7 +230,7 @@ static const struct ItemSlot sNewGamePCItems[] =
 	{ ITEM_LAVA_COOKIE, 5 },
 	{ ITEM_ESCAPE_ROPE, 1 },
 	{ ITEM_NUGGET, 2 },
-    { ITEM_NONE, 0 }
+	{ ITEM_NONE, 0 }
 };
 
 const struct MenuAction gMailboxMailOptions[] =
