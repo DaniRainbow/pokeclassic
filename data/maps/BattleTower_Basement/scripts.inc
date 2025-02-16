@@ -435,8 +435,7 @@ BattleTower_Basement_EventScript_Blocker::
 BattleTower_Basement_Text_Blocker::
 	.string "Oh! Only participants in the Battle\n"
 	.string "Swap Tournament can go that way.\p"
-	.string "Please come speak to me if you\n"
-	.string "are interested in entering!$"
+	.string "I'm sorry, but we are closed.$"
 
 BattleTower_Basement_EventScript_Attendant::
 	lock
@@ -450,8 +449,7 @@ BattleTower_Basement_EventScript_Attendant::
 BattleTower_Basement_Text_JoinBattleSwap::
 	.string "This is where we conduct the Battle Swap\n"
 	.string "tournaments.\p"
-	.string "Please come around to the front if you\n"
-	.string "are interested in joining.$"
+	.string "I'm sorry, but we are closed.$"
 
 BattleTower_Basement_EventScript_Woman::
 	msgbox BattleTower_Basement_Text_NeedKnowledgeOfMonsMoves, MSGBOX_NPC

@@ -146,7 +146,39 @@ BattleTower_Entrance_ThisIsIt::
 	.string "It's been a blast watching you get\n"
 	.string "get here!\p"
 	.string "I'd probably have to go around the\n"
-	.string "world to find another trainer like you...$"
+	.string "world to find another trainer like you.\p"
+	.string "Bzzzzz Bzzzzz Bzzzzz\p"
+	.string "Oh I'm sorry, champ. I gotta take this.\p"
+	.string "boop Hey, this is Scott! How can I-\n"
+	.string "... uhh, what do you mean by 'they are\l"
+	.string "being devoured'?\p"
+	.string "...\p"
+	.string "No, that can't be possible. Check the\n"
+	.string "live feeds. They have to be there.\p"
+	.string "...\p"
+	.string "What? All that was left on their ball-belt\n"
+	.string "was a Bad Egg? You do know this sounds\l"
+	.string "farfetch'd, Jerold?\p"
+	.string "...\p"
+	.string "No, I... no I'm not trying to downplay...\n"
+	.string "Of course I care about the safety of my\l"
+	.string "clients and their Pokémon.\p"
+	.string "...\p"
+	.string "... fine. Close it up. All battles must\n"
+	.string "be stopped. Please close access\l"
+	.string "to the the Battle Tower matches.\p"
+	.string "boop...\p"
+	.string "Sorry about that, champ. Apparently some\n"
+	.string "trainers have lost a Pokémon they left\l"
+	.string "at the counters. Our clerks aren't sure\l"
+	.string "where they are. It seems someone may be\l"
+	.string "stealing Pokémon and replacing them with\l"
+	.string "Bad Eggs. I wonder if Team Rocket is...\p"
+	.string "...\p"
+	.string "Oh, thank you for giving me Looker's\n"
+	.string "cell number. I'll give him a call.\p"
+	.string "For now... I can't permit you to\n"
+	.string "compete at the Battle Tower.$"
 
 BattleTower_Entrance_CoolTrainerM::
 	lock
@@ -348,7 +380,7 @@ BattleTower_Entrance_EventScript_BattleTowerAttendant::
 BattleTower_Entrance_Text_ChallengeBattleTower::
 	.string "Oh! Are you interested in challenging\n"
 	.string "the Battle Tower?\p"
-	.string "Please come around to the front if so!$"
+	.string "I'm sorry, but we are closed.$"
 
 BattleTower_Entrance_EventScript_BattleTowerTrigger::
 	lock
@@ -403,7 +435,7 @@ BattleTower_Entrance_EventScript_BattleTowerBlocker::
 BattleTower_Entrance_Text_ChallengeBattleTowerBlocker::
 	.string "Oh! Are you interested in challenging\n"
 	.string "the Battle Tower?\p"
-	.string "Please come speak to me if so!$"
+	.string "I'm sorry, but we are closed.$"
 
 BattleFrontier_Movement_PlayerFaceTowerKiosk::
 	face_left
@@ -799,4 +831,3 @@ BattleTower_Entrance_Text_CanLeaveUntilLossOrSevenWins:
 	.string "or you beat seven Trainers in a row.\p"
 	.string "You'd best be certain that you're up\n"
 	.string "to the challenge.$"
-
