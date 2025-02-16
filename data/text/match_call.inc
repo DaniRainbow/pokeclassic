@@ -1180,12 +1180,13 @@ MatchCall_PersonalizedText19::
 	.string "It is {STR_VAR_1} here.\p"
 	.string "I have continued with my studies\n"
 	.string "in the art of juggling.\p"
-	.string "But I have not been too successful.\p"
-	.string "Sometimes I feel like my life is\l"
-	.string "is just like my juggling balls...p"
+	.string "I have not been too successful.\n"
+	.string "Similar to training Abra...\p"
+	.string "Sometimes I feel like my life is\n"
+	.string "exactly like my juggling balls...p"
 	.string "Dropped on the ground, bouncing\n"
 	.string "everywhere in chaos.\p"
-	.string "Farewell!$"
+	.string "Farewell, {PLAYER}!$"
 
 MatchCall_PersonalizedText20::
 	.string "Hello, this is {STR_VAR_1}…\p"
