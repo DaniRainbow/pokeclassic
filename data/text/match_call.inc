@@ -1183,7 +1183,7 @@ MatchCall_PersonalizedText19::
 	.string "I have not been too successful.\n"
 	.string "Similar to training Abra...\p"
 	.string "Sometimes I feel like my life is\n"
-	.string "exactly like my juggling balls...p"
+	.string "exactly like my juggling balls...\p"
 	.string "Dropped on the ground, bouncing\n"
 	.string "everywhere in chaos.\p"
 	.string "Farewell, {PLAYER}!$"
