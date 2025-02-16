@@ -364,3 +364,84 @@ PlayersHouse_2F_WelcomeNewPlayersText:
 	.string "to enjoy your own PC!$"
 	return
 
+PlayersHouse_2F_LetterFromDad::
+	lock
+	faceplayer
+	msgbox Text_LetterOnTower, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq LetterOnTower_PlayerAnsweredNo
+	msgbox Text_HappyBirthdayLetter, MSGBOX_DEFAULT
+	release
+	end
+
+LetterOnTower_PlayerAnsweredNo::
+	msgbox Text_NoTimeToRead, MSGBOX_DEFAULT
+	release
+	end
+
+Text_LetterOnTower:
+	.string "An envelope is taped to the side\n"
+	.string "of your computer tower. It reads\l"
+	.string "'From Dad' on the outside.\p"
+	.string "Would you like to read it?$"
+
+Text_HappyBirthdayLetter:
+	.string "Dad: Hey {PLAYER}!\n"
+	.string "Happy Birthday, kiddo!\p"
+	.string "I can't believe you're old enough to\n"
+	.string "go out on your own Pokémon Journey.\p"
+	.string "It's a scary and thrilling experience.\p"
+	.string "I'm very sorry that due to my business\n"
+	.string "trip in Hoenn I can't be there with\l"
+	.string "your mother to send you off.\p"
+	.string "I left some items for you with Mom and\n"
+	.string "she will put them in your PC storage in\l"
+	.string "time for you to grab before you leave.\p"
+	.string "These items are great when you are\n"
+	.string "first starting out. My Mom gave them\l"
+	.string "to me when I tried to get into Pokémon\l"
+	.string "training at 10 years old.\p"
+	.string "During my journey I found two golden\n"
+	.string "Nuggets and kept them for a rainy day\l"
+	.string "if I was short on money and potions.\p"
+	.string "I've held onto them all these years and\n"
+	.string "now I pass them on to you for your\l"
+	.string "rainy days.\p"
+	.string "Treat your Pokémon with love and\n"
+	.string "kindness for Pokémon will return what\l"
+	.string "they are given.\p"
+	.string "Camping is fun until your clothes get\n"
+	.string "wet, so pick your camping grounds\l"
+	.string "carefully and always use the rain\l"
+	.string "cover on your tent.\p"
+	.string "Hold true to your friends and help\n"
+	.string "others who may be without friends of\l"
+	.string "their own.\p"
+	.string "There will be unexpected things you\n"
+	.string "need to overcome along your journey but\l"
+	.string "be patient with yourself. Give yourself\l"
+	.string "grace as you learn new things.\p" 
+	.string "You cannot control what others will do\n"
+	.string "but you are responsible for how you\l"
+	.string "choose to respond.\p"
+	.string "Don’t waste your time bearing grudges,\n"
+	.string "and live life with love in your heart.\p"
+	.string "A destination is a good goal to have,\n"
+	.string	"but don’t forget to enjoy the journey.\p"
+	.string "Never give up chasing your dreams.\p"
+	.string "Understand that your dreams may change,\n"
+	.string "and that’s okay.\p"
+	.string "I am so proud of the person you have\n"
+	.string "become and I know you will go far.\p"
+	.string "With Love,\n"
+	.string "Dad\p"
+	.string "P.S\n"
+	.string "I hope you enjoy the cookies!\p"
+	.string "They are a Hoenn speciality. I got the\n"
+	.string "recipe from a very kind woman when I\l"
+	.string "went hiking up by Lavaridge Town.$"
+	
+
+Text_NoTimeToRead:
+	.string "Not now, you have places to be!$"
+
