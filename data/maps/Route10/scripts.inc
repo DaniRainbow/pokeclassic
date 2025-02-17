@@ -6,6 +6,7 @@ Route10_MapScripts::
 	.byte 0
 
 Route10_OnTransition:
+	setflag FLAG_VISITED_ROUTE_10
 	call Common_EventScript_GetDayOrNight
 	end
 

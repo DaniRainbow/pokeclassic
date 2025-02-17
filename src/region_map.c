@@ -316,7 +316,7 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_LAVENDER_TOWN] = {MAP_GROUP(LAVENDER_TOWN), MAP_NUM(LAVENDER_TOWN), HEAL_LOCATION_LAVENDER_TOWN},
     [MAPSEC_BATTLE_FRONTIER] = {MAP_GROUP(BATTLE_TOWER_EXTERIOR), MAP_NUM(BATTLE_TOWER_EXTERIOR), HEAL_LOCATION_BATTLE_TOWER_EXTERIOR},
     [MAPSEC_INDIGO_PLATEAU] = {MAP_GROUP(INDIGO_PLATEAU_EXTERIOR), MAP_NUM(INDIGO_PLATEAU_EXTERIOR), HEAL_LOCATION_INDIGO_PLATEAU},
-
+	[MAPSEC_ROCK_TUNNEL] = {MAP_GROUP(ROUTE10), MAP_NUM(ROUTE10), HEAL_LOCATION_ROUTE_10},
 };
 
 static const u8 *const sEverGrandeCityNames[] =
@@ -1183,6 +1183,8 @@ static u8 GetMapsecType(u16 mapSecId)
         return FlagGet(FLAG_VISITED_INDIGO_PLATEAU) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     case MAPSEC_BATTLE_FRONTIER:
         return FlagGet(FLAG_SYS_FRONTIER_PASS) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+	case MAPSEC_ROCK_TUNNEL:
+		return FlagGet (FLAG_VISITED_ROUTE_10) ? MAPSECTYPE_ROUTE_CANFLY : MAPSECTYPE_ROUTE;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -1971,7 +1973,7 @@ static void CB_HandleFlyMapInput(void)
             DrawFlyDestTextWindow();
             break;
         case MAP_INPUT_A_BUTTON:
-            if (sFlyMap->regionMap.mapSecType == MAPSECTYPE_CITY_CANFLY || sFlyMap->regionMap.mapSecType == MAPSECTYPE_BATTLE_FRONTIER)
+            if (sFlyMap->regionMap.mapSecType == MAPSECTYPE_CITY_CANFLY || sFlyMap->regionMap.mapSecType == MAPSECTYPE_ROUTE_CANFLY || sFlyMap->regionMap.mapSecType == MAPSECTYPE_BATTLE_FRONTIER)
             {
                 m4aSongNumStart(SE_SELECT);
                 sFlyMap->choseFlyLocation = TRUE;

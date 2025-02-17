@@ -1373,7 +1373,7 @@
 #define FLAG_VISITED_CINNABAR_ISLAND                (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_INDIGO_PLATEAU                 (SYSTEM_FLAGS + 0x19)
 #define FLAG_VISITED_BATTLE_FRONTIER                (SYSTEM_FLAGS + 0x1A) // Might be unncessary
-#define FLAG_VISITED_UNUSED_2                  		(SYSTEM_FLAGS + 0x1B)
+#define FLAG_VISITED_ROUTE_10                 		(SYSTEM_FLAGS + 0x1B)
 #define FLAG_VISITED_UNUSED_3                  		(SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_UNUSED_4                		(SYSTEM_FLAGS + 0x1D)
 #define FLAG_VISITED_UNUSED_5              			(SYSTEM_FLAGS + 0x1E)
