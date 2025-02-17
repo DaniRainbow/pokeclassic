@@ -427,7 +427,7 @@ Text_HappyBirthdayLetter:
 	.string "Don’t waste your time bearing grudges,\n"
 	.string "and live life with love in your heart.\p"
 	.string "A destination is a good goal to have,\n"
-	.string	"but don’t forget to enjoy the journey.\p"
+	.string "but don’t forget to enjoy the journey.\p"
 	.string "Never give up chasing your dreams.\p"
 	.string "Understand that your dreams may change,\n"
 	.string "and that’s okay.\p"
