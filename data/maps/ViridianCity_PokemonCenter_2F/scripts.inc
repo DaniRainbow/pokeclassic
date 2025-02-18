@@ -11,4 +11,7 @@ ViridianCity_PokemonCenter_2F_LittleGirl::
 ViridianCity_PokemonCenter_2F_Text_Rank::
 	.string "That man won't let me buy stuff!\n"
 	.string "He says I'm not a high enough rank!\p"
-	.string "What's that even mean?$"
+	.string "What's that even mean?\p"
+	.string "I guess I'll check the next town\n"
+	.string "over and try my luck there.$"
+
