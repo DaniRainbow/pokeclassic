@@ -177,6 +177,8 @@ CeruleanCity_Gym_Text_RematchOriginal::
 	.string "Let's go!$"
 
 CeruleanCity_Gym_EventScript_LeaderRematch_PostGameTeam::
+	setvar VAR_0x8003, 1
+	setvar VAR_0x8004, 20
 	trainerbattle_single LEADER_REMATCH_MISTY_POSTGAME, CeruleanCity_Gym_Text_RematchPostgame, CeruleanCity_Gym_Text_RematchDefeat, CeruleanCity_Gym_EventScript_DefeatedLeaderRematch
 	end
 

@@ -43,6 +43,8 @@ PokemonLeague_SecretBattle_EventScript_EnterRoom::
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
 	savebgm MUS_RG_VICTORY_GYM_LEADER
+	setvar VAR_0x8003, 1
+	setvar VAR_0x8004, 100
 	trainerbattle_no_intro SECRET_BATTLE_OAK, PokemonLeague_SecretBattle_Text_Defeat
 	setflag FLAG_TEMP_4
 	clearflag FLAG_TEMP_5
