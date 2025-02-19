@@ -628,8 +628,9 @@
 #define STRINGID_PLAYERWHITEOUT3					  625
 #define STRINGID_PLAYERPAIDPRIZEMONEYNOWHITEOUT		  626
 #define STRINGID_PLAYERDROPPEDMONEYNOWHITEOUT		  627
+#define STRINGID_PLAYERGOTBP                          628
 
-#define BATTLESTRINGS_COUNT                           628
+#define BATTLESTRINGS_COUNT                           629
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
