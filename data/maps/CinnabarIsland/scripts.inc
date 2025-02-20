@@ -188,3 +188,20 @@ Movement_PlayerEnterShipWest::
 	walk_in_place_faster_right
 	set_invisible
 	step_end
+
+CinnabarIsland_EventScript_GamblerRyan::
+	lock
+	faceplayer
+	msgbox CinnabarIsland_Text_HiIAmOnVacation MSGBOX_DEFAULT
+	releaseall
+	end
+
+CinnabarIsland_Text_HiIAmOnVacation:
+	.string "Hi, my name is Ryan!\p"
+	.string "I'm on vacation but I needed some\n"
+	.string "peace and quiet.\p"
+	.string "I left my Pokémon back at the\n"
+	.string "restort, but come back later if\l"
+	.string "you want to battle!$"
+	return
+

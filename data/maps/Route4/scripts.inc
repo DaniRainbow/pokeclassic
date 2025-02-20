@@ -235,3 +235,18 @@ Route4_RocketFugitiveM::
 	waitse
 	fadescreen FADE_FROM_BLACK
 	end
+
+Route4_EventScript_PicnickerSolana::
+	lock
+	faceplayer
+	msgbox Route4_Text_HiIAmSolana MSGBOX_DEFAULT
+	releaseall
+	end
+
+Route4_Text_HiIAmSolana:
+	.string "Hi, my name is Solana!\p"
+	.string "I don't have any Pokémon yet\n"
+	.string "but I'm still strong!\p"
+	.string "Think you can beat me?\n"
+	.string "As if!$"
+	return
