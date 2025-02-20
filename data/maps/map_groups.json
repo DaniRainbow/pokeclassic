@@ -697,7 +697,8 @@
     "BattleFrontier_ScottsHouse",
     "BattleFrontier_ReceptionGate",
     "FarawayIsland_Entrance",
-    "FarawayIsland_Interior"
+    "FarawayIsland_Interior",
+    "ViridianForest_Erin_House"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

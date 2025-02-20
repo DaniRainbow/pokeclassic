@@ -225,6 +225,13 @@
       "elevation": 0,
       "dest_map": "MAP_VIRIDIAN_FOREST_SOUTH_ENTRANCE",
       "dest_warp_id": 1
+    },
+    {
+      "x": 29,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_FOREST_ERIN_HOUSE",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

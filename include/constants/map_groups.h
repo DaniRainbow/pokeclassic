@@ -666,6 +666,7 @@
 #define MAP_BATTLE_FRONTIER_RECEPTION_GATE                  (55 | (8 << 8))
 #define MAP_FARAWAY_ISLAND_ENTRANCE                         (56 | (8 << 8))
 #define MAP_FARAWAY_ISLAND_INTERIOR                         (57 | (8 << 8))
+#define MAP_VIRIDIAN_FOREST_ERIN_HOUSE                      (58 | (8 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (9 << 8))
