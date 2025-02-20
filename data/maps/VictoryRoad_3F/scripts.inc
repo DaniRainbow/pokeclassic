@@ -163,4 +163,5 @@ VictoryRoad_3F_Text_HiIAmOrion:
 	.string "I blend in the shadows!\p"
 	.string "Once I get my own Pokémon team,\n"
 	.string "come at me, bro!$"
+	return
 

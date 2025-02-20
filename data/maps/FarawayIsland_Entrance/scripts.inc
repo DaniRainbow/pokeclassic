@@ -43,3 +43,17 @@ FarawayIsland_Entrance_EventScript_Sign::
 	msgbox FarawayIsland_Entrance_Text_Sign, MSGBOX_SIGN
 	end
 
+FarawayIsland_Entrance_EventScript_LassKairi::
+	lock
+	faceplayer
+	msgbox FarawayIsland_Entrance_Text_HiIAmKairi MSGBOX_DEFAULT
+	release
+	end
+
+FarawayIsland_Entrance_Text_HiIAmKairi:
+	.string "Hi, I'm Kairi! How do you do?\p"
+	.string "A lovely day for a battle, isn't it?\n"
+	.string "Sorry I don't have my team yet but I\l"
+	.string "look forward to facing you soon!$"
+	return
+
