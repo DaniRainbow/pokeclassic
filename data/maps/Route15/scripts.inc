@@ -262,3 +262,16 @@ Route15_EventScript_ItemTM18::
 	finditem ITEM_TM18, 1
 	release
 	end
+
+Route15_EventScript_SchoolKidConan::
+    lock
+    faceplayer
+    msgbox Route15_Text_HiIAmConan MSGBOX_DEFAULT
+    release
+    end
+
+Route15_Text_HiIAmConan:
+    .string "Hi there! I'm Conan!\p"
+    .string "My Omastar is so cool!\n"
+    .string "Come back later to play with me!$"
+    return
