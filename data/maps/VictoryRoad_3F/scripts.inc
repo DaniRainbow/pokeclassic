@@ -150,3 +150,17 @@ VictoryRoad_3F_EventScript_ItemPowerStone::
 	finditem ITEM_POWER_STONE, 1
 	release
 	end
+
+VictoryRoad_3F_EventScript_NinjaOrion::
+	lock
+	faceplayer
+	msgbox VictoryRoad_3F_Text_HiIAmOrion MSGBOX_DEFAULT
+	release
+	end
+
+VictoryRoad_3F_Text_HiIAmOrion:
+	.string "Hi, my name is Orion!\n"
+	.string "I blend in the shadows!\p"
+	.string "Once I get my own Pokémon team,\n"
+	.string "come at me, bro!$"
+

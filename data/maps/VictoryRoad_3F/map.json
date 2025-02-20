@@ -279,6 +279,19 @@
       "script": "VictoryRoad_3F_EventScript_ItemPowerStone",
       "flag": "FLAG_HIDE_VICTORY_ROAD_3F_POWER_STONE",
       "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 10,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VictoryRoad_3F_EventScript_NinjaOrion",
+      "flag": "0"
     }
   ],
   "warp_events": [
