@@ -14,4 +14,22 @@ ViridianForest_Erin_House_Text_HiIAmErin:
 	.string "Come visit me when you are the Champ!$"
 	return
 
+ViridianForest_Erin_House_EventScript_Clefairy::
+	lock
+	faceplayer
+	msgbox ViridianForest_Erin_House_Text_Clefairy MSGBOX_DEFAULT
+	waitmessage
+	msgbox ViridianForest_Erin_House_Text_ClefairyBerryGiven MSGBOX_DEFAULT
+	waitmessage
+	giveitem ITEM_ORAN_BERRY, 1
+	release
+	end
+
+ViridianForest_Erin_House_Text_Clefairy:
+	.string "Clefairy?$"
+	return
+
+ViridianForest_Erin_House_Text_ClefairyBerryGiven:
+	.string "Clef fairy!$"	
+	return
 
