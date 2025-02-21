@@ -1508,6 +1508,23 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LassCrissy[] = {
     },
 };
 
+static const struct TrainerMonItemCustomMoves sParty_PicnickerSolana[] = {
+	{
+		.iv = 50,
+		.lvl = 18,
+		.species = SPECIES_SQUIRTLE,
+		.heldItem = ITEM_ORAN_BERRY,
+		.moves = {MOVE_BUBBLE, MOVE_WITHDRAW, MOVE_RAIN_DANCE, MOVE_ICE_BEAM}
+	},
+	{
+		.iv = 50,
+		.lvl = 18,
+		.species = SPECIES_JIGGLYPUFF,
+		.heldItem = ITEM_ORAN_BERRY,
+		.moves = {MOVE_DOUBLE_SLAP, MOVE_SING, MOVE_DIG, MOVE_WATER_PULSE}
+	},
+};
+
 //Mt Moon
 static const struct TrainerMonNoItemDefaultMoves sParty_HikerMarcos[] = {
     {
@@ -7053,7 +7070,52 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BurglarLewis[] = {
     },
 };
 
-// Cinnabar Gym
+// Cinnabar and Cinnabar Gym
+static const struct TrainerMonItemCustomMoves sParty_GamblerRyan[] = {
+	{
+		.iv = 100,
+		.lvl = 36,
+		.species = SPECIES_VENOMOTH,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_GUST, MOVE_PSYBEAM, MOVE_SLEEP_POWDER, MOVE_SILVER_WIND}
+	},
+    {
+		.iv = 100,
+		.lvl = 32,
+		.species = SPECIES_TENTACOOL,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_WHIRLPOOL, MOVE_TOXIC, MOVE_BIND, MOVE_WATER_PULSE}
+	},
+    {
+		.iv = 100,
+		.lvl = 32,
+		.species = SPECIES_WEEPINBELL,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_GIGA_DRAIN, MOVE_ACID, MOVE_VINE_WHIP, MOVE_SLEEP_POWDER}
+	},
+    {
+		.iv = 100,
+		.lvl = 32,
+		.species = SPECIES_KOFFING,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_SLUDGE, MOVE_TACKLE, MOVE_SMOKESCREEN, MOVE_GYRO_BALL}
+	},
+    {
+		.iv = 100,
+		.lvl = 32,
+		.species = SPECIES_ZUBAT,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_WING_ATTACK, MOVE_LEECH_LIFE, MOVE_QUICK_ATTACK, MOVE_ASTONISH}
+	},
+	{
+		.iv = 250,
+		.lvl = 42,
+		.species = SPECIES_GENGAR,
+		.heldItem = ITEM_SPELL_TAG,
+		.moves = {MOVE_HYPNOSIS, MOVE_DREAM_EATER, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT}
+	},
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdErik[] = {
     {
         .iv = 0,
@@ -7535,6 +7597,23 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerWarren[] = {
 };
 
 //Victory Road
+static const struct TrainerMonItemCustomMoves sParty_NinjaBoyOrion[] = {
+	{
+		.iv = 250,
+		.lvl = 45,
+		.species = SPECIES_RAICHU,
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_THUNDER, MOVE_TOXIC, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM}
+	},
+	{
+		.iv = 250,
+		.lvl = 45,
+		.species = SPECIES_BLASTOISE,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_SURF, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_AVALANCHE}
+	},
+};
+
 static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerNaomi[] = {
     {
         .iv = 100,

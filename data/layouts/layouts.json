@@ -8220,6 +8220,18 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/CinnabarIsland_House/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarIsland_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_FOREST_ERIN_HOUSE",
+      "name": "ViridianForest_Erin_House_Layout",
+      "width": 14,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/ViridianForest_Erin_House/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianForest_Erin_House/map.bin"
     }
   ]
 }

@@ -742,6 +742,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_LassCrissy),
         .party = {.NoItemDefaultMoves = sParty_LassCrissy}
     },
+    [TRAINER_PICNICKER_SOLANA] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Solana"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PicnickerSolana),
+        .party = {.ItemCustomMoves = sParty_PicnickerSolana}
+	},
 
 //Mt Moon
     [TRAINER_HIKER_MARCOS] = {
@@ -4974,7 +4986,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_YoungsterJohnson),
         .party = {.NoItemDefaultMoves = sParty_YoungsterJohnson}
     },
-//Cinnabar Gym
+//Cinnabar and Cinnabar Gym
     [TRAINER_LEADER_BLAINE] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_LEADER,
@@ -4987,6 +4999,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_LeaderBlaine),
         .party = {.NoItemCustomMoves = sParty_LeaderBlaine}
     },
+    [TRAINER_GAMBLER_RYAN] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GAMBLER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_GAMBLER,
+        .trainerName = _("Ryan"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_GamblerRyan),
+        .party = {.ItemCustomMoves = sParty_GamblerRyan}
+	},
     [TRAINER_SUPER_NERD_ERIK] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_SUPER_NERD,
@@ -5194,6 +5218,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_CooltrainerRolando),
         .party = {.NoItemCustomMoves = sParty_CooltrainerRolando}
     },
+    [TRAINER_NINJABOY_ORION] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_NINJA_BOY,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_NINJA_BOY,
+        .trainerName = _("Orion"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_NinjaBoyOrion),
+        .party = {.ItemCustomMoves = sParty_NinjaBoyOrion}
+	},
     [TRAINER_COOLTRAINER_NAOMI] = {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_COOLTRAINER,

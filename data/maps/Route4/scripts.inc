@@ -235,3 +235,27 @@ Route4_RocketFugitiveM::
 	waitse
 	fadescreen FADE_FROM_BLACK
 	end
+
+Route4_EventScript_PicnickerSolana::
+	trainerbattle_double TRAINER_PICNICKER_SOLANA, Route4_Text_SolanaIntro, Route4_Text_SolanaDefeat, Route4_Text_SolanaNotEnoughMons
+	msgbox Route4_Text_SolanaPostBattle MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Route4_Text_SolanaIntro:
+	.string "Think you can beat me?\n"
+	.string "As if!$"
+	return
+
+Route4_Text_SolanaDefeat:
+	.string "Oh no! Are you two okay?$"
+
+Route4_Text_SolanaPostBattle:
+	.string "Even though we lost, I'm\n"
+	.string "very proud of my Pokémon.\p"
+	.string "You're an incredible trainer!$"	
+
+Route4_Text_SolanaNotEnoughMons::
+    .string "You have just one Pokémon?\n"
+    .string "How did you manage Mt. Moon?$"
+

@@ -602,13 +602,14 @@
 #define	TRAINER_FUGITIVE_F							492
 #define	TRAINER_FUGITIVE_JESSIE_JAMES				493
 
-#define	TRAINER_UNUSED_494	494
-#define	TRAINER_UNUSED_495	495
-#define	TRAINER_UNUSED_496	496
-#define	TRAINER_UNUSED_497	497
-#define	TRAINER_UNUSED_498	498
-#define	TRAINER_UNUSED_499	499
-#define	TRAINER_UNUSED_500	500
+//Custom Trainers
+#define	TRAINER_PICNICKER_SOLANA                    494
+#define	TRAINER_BLACKBELT_JIRAIYA                   495
+#define	TRAINER_LASS_KAIRI	                        496
+#define	TRAINER_COOLTRAINER_ERIN	                497
+#define	TRAINER_GAMBLER_RYAN	                    498
+#define	TRAINER_NINJABOY_ORION	                    499
+#define	TRAINER_SCHOOLKID_CONAN	                    500
 #define	TRAINER_UNUSED_501	501
 #define	TRAINER_UNUSED_502	502
 #define	TRAINER_UNUSED_503	503

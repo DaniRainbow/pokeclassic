@@ -188,3 +188,23 @@ Movement_PlayerEnterShipWest::
 	walk_in_place_faster_right
 	set_invisible
 	step_end
+
+CinnabarIsland_EventScript_GamblerRyan::
+	trainerbattle_single TRAINER_GAMBLER_RYAN, CinnabarIsland_3F_Text_RyanIntro, CinnabarIsland_3F_Text_RyanDefeat
+	msgbox CinnabarIsland_3F_Text_RyanPostBattle MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+CinnabarIsland_3F_Text_RyanIntro:
+	.string "I never expected someone would surf\n"
+	.string "over and find me here.$"
+
+CinnabarIsland_3F_Text_RyanDefeat:
+	.string "Ha ha ha, so much for relaxation!$"
+
+CinnabarIsland_3F_Text_RyanPostBattle:
+	.string "I came out here holding on to my\n"
+	.string "Tentacool for some peace and quiet\l"
+	.string "on my vacation.\p"
+	.string "Thanks for the battle!$"
+

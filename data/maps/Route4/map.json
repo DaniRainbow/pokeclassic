@@ -248,6 +248,19 @@
       "script": "Route4_RocketFugitiveM",
       "flag": "FLAG_ROCKET_FUGITIVE_CERULEAN_1",
       "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 67,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "Route4_EventScript_PicnickerSolana",
+      "flag": "0"
     }
   ],
   "warp_events": [

@@ -666,6 +666,7 @@
 #define MAP_BATTLE_FRONTIER_RECEPTION_GATE                  (55 | (8 << 8))
 #define MAP_FARAWAY_ISLAND_ENTRANCE                         (56 | (8 << 8))
 #define MAP_FARAWAY_ISLAND_INTERIOR                         (57 | (8 << 8))
+#define MAP_VIRIDIAN_FOREST_ERIN_HOUSE                      (58 | (8 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (9 << 8))
@@ -855,6 +856,6 @@
 
 #define MAP_GROUPS_COUNT 35
 
-// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 38, 82, 58, 4, 6, 8, 10, 6, 8, 20, 10, 9, 10, 10, 6, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
+// static const u8 MAP_GROUP_COUNT[] = {57, 107, 103, 100, 38, 61, 38, 82, 59, 4, 6, 8, 10, 6, 8, 20, 10, 9, 10, 10, 6, 4, 2, 2, 1, 1, 1, 2, 2, 3, 2, 3, 2, 1, 1, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

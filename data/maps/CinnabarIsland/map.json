@@ -122,6 +122,19 @@
       "script": "CinnabarIsland_EventScript_LightClay",
       "flag": "FLAG_GOT_LIGHT_CLAY",
       "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 59,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 6,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "CinnabarIsland_EventScript_GamblerRyan",
+      "flag": "0"
     }
   ],
   "warp_events": [
