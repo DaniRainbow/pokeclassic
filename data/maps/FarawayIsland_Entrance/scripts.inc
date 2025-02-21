@@ -58,13 +58,15 @@ FarawayIsland_Entrance_EventScript_LassKairi::
 	end
 
 FarawayIsland_Entrance_Text_KairiIntro:
-	.string "First impressions\n"
-	.string "are important.$"
+	.string "Hi, I'm Kairi! How do you do?\p"
+	.string "You're friends with Mew, too?\n"
+	.string "Okay, don't hold back!$"
 
 FarawayIsland_Entrance_Text_KairiDefeat:
-	.string "What you want to say!$"
+	.string "I see why a Mew chose you.$"
 
 FarawayIsland_Entrance_Text_KairiPostBattle:
-	.string "What you want to say!$"
+	.string "Pokémon battling is fun, but\n"
+	.string "I aspire to be an artist!$"
 
 

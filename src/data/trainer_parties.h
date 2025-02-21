@@ -1190,45 +1190,45 @@ static const struct TrainerMonItemCustomMoves sParty_RivalPostGameVaporeon[] = {
 static const struct TrainerMonItemCustomMoves sParty_LassKairi[] = {
 	{
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_WARTORTLE,
-		.heldItem = ITEM_KINGS_ROCK,
-		.moves = {MOVE_IRON_DEFENSE, MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_SKULL_BASH}
+		.lvl = 75,
+		.species = SPECIES_VAPOREON,
+		.heldItem = ITEM_NEVER_MELT_ICE,
+		.moves = {MOVE_BLIZZARD, MOVE_CALM_MIND, MOVE_HYDRO_PUMP, MOVE_ICE_BEAM}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
-		.species = SPECIES_HAUNTER,
-		.heldItem = ITEM_SPELL_TAG,
-		.moves = {MOVE_SUBSTITUTE, MOVE_SHADOW_CLAW, MOVE_CONFUSE_RAY, MOVE_DARKEST_LARIAT}
+		.species = SPECIES_MEW,
+		.heldItem = ITEM_LIFE_ORB,
+		.moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_RECOVER, MOVE_HEALING_WISH}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
-		.species = SPECIES_CLEFAIRY,
-		.heldItem = ITEM_WHITE_HERB,
-		.moves = {MOVE_HEALING_WISH, MOVE_METEOR_MASH, MOVE_MOONLIGHT, MOVE_BODY_SLAM}
+		.species = SPECIES_AERODACTYL,
+		.heldItem = ITEM_ROCKY_HELMET,
+		.moves = {MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_OBLIVION_WING, MOVE_HYPER_BEAM}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
-		.species = SPECIES_JOLTEON,
+		.species = SPECIES_CHARIZARD,
 		.heldItem = ITEM_QUICK_CLAW,
-		.moves = {MOVE_AGILITY, MOVE_LAST_RESORT, MOVE_THUNDER_FANG, MOVE_QUICK_ATTACK}
+		.moves = {MOVE_DIG, MOVE_WING_ATTACK, MOVE_FLAMETHROWER, MOVE_HONE_CLAWS}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
-		.species = SPECIES_FLAREON,
-		.heldItem = ITEM_CHARCOAL,
-		.moves = {MOVE_LAVA_PLUME, MOVE_BABY_DOLL_EYES, MOVE_FLARE_BLITZ, MOVE_IRON_TAIL}
+		.species = SPECIES_BUTTERFREE,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_TOXIC_SPIKES, MOVE_WING_ATTACK, MOVE_PSYBEAM, MOVE_MOONLIGHT}
 	},
 	{
 		.iv = 250,
-		.lvl = 72,
-		.species = SPECIES_VAPOREON,
-		.heldItem = ITEM_MYSTIC_WATER,
-		.moves = {MOVE_MUDDY_WATER, MOVE_CALM_MIND, MOVE_HYDRO_PUMP, MOVE_ICE_BEAM}
+		.lvl = 65,
+		.species = SPECIES_JIGGLYPUFF,
+		.heldItem = ITEM_RED_CARD,
+		.moves = {MOVE_HYPER_VOICE, MOVE_SING, MOVE_ROLLOUT, MOVE_RETURN}
 	},
 };
 
