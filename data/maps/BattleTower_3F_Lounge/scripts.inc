@@ -18,3 +18,19 @@ BattleTower_3F_Lounge_Text_HiIAmJiraiya:
 	.string "I'm the best there ever was!$"
 	return
 
+BattleTower_3F_Lounge_EventScript_Mewtwo::
+	lock
+	faceplayer
+	msgbox BattleTower_3F_Lounge_Text_Mewtwo MSGBOX_DEFAULT
+	release
+	end
+
+BattleTower_3F_Lounge_Text_Mewtwo:
+	.string "What's up, {PLAYER}?\p"
+	.string "I should warn you, the Pokémon on our\n"
+	.string "team are capable of Mega Evolution.\p" 
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+	return
+
+
