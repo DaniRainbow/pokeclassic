@@ -40,3 +40,4 @@ ViridianForest_Erin_House_Text_ErinPostBattle:
 	.string "achieved. Clefairy and I have\l"
 	.string "always believed you would go far.$"
 
+

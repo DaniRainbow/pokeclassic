@@ -42,4 +42,3 @@ BattleTower_3F_Lounge_Text_JiraiyaDefeat:
 BattleTower_3F_Lounge_Text_JiraiyaPostBattle:
 	.string "What you want to say!$"
 
-

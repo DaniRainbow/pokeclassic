@@ -27,7 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 7,
+      "x": 15,
       "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -41,7 +41,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 8,
+      "x": 16,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 10,
+      "x": 18,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -69,7 +69,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 16,
+      "x": 24,
       "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -83,7 +83,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 7,
+      "x": 15,
       "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -97,7 +97,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 7,
+      "x": 15,
       "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -111,7 +111,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 7,
+      "x": 15,
       "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -125,7 +125,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 10,
+      "x": 18,
       "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
@@ -139,7 +139,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 18,
+      "x": 27,
       "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -153,7 +153,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 7,
+      "x": 15,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -167,7 +167,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 12,
+      "x": 20,
       "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -181,7 +181,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 13,
+      "x": 21,
       "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -195,7 +195,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 1,
+      "x": 9,
       "y": 47,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -204,12 +204,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_14",
-      "in_connection": ""
+      "flag": "FLAG_TEMP_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 19,
+      "x": 27,
       "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -223,7 +222,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 18,
+      "x": 26,
       "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
@@ -237,7 +236,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 11,
+      "x": 19,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -251,7 +250,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
-      "x": 9,
+      "x": 17,
       "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -273,7 +272,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 17,
+      "x": 25,
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -281,7 +280,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 9,
+      "x": 17,
       "y": 20,
       "elevation": 3,
       "item": "ITEM_ZINC",
@@ -289,7 +288,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 19,
+      "x": 27,
       "y": 53,
       "elevation": 3,
       "item": "ITEM_PINAP_BERRY",

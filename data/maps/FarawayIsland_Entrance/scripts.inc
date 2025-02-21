@@ -67,3 +67,4 @@ FarawayIsland_Entrance_Text_KairiDefeat:
 FarawayIsland_Entrance_Text_KairiPostBattle:
 	.string "What you want to say!$"
 
+
