@@ -3862,6 +3862,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_CrushKinRonMya),
         .party = {.ItemDefaultMoves = sParty_CrushKinRonMya}
     },
+    [TRAINER_SCHOOLKID_CONAN] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_SCHOOL_KID,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_SCHOOL_KID_M,
+        .trainerName = _("Conan"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_SchoolKidConan),
+        .party = {.ItemCustomMoves = sParty_SchoolKidConan}
+	},
 //Saffron Dojo
     [SPARRING_PARTNER_ATTACK] = {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM,

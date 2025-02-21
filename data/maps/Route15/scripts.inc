@@ -263,15 +263,25 @@ Route15_EventScript_ItemTM18::
 	release
 	end
 
-Route15_EventScript_SchoolKidConan::
-    lock
-    faceplayer
-    msgbox Route15_Text_HiIAmConan MSGBOX_DEFAULT
-    release
-    end
+//Route15_Text_HiIAmConan:
+    //.string "Hi there! I'm Conan!\p"
+    //.string "My Omastar is so cool!\n"
+    //.string "Come back later to play with me!$"
+   // return
 
-Route15_Text_HiIAmConan:
-    .string "Hi there! I'm Conan!\p"
-    .string "My Omastar is so cool!\n"
-    .string "Come back later to play with me!$"
-    return
+Route15_EventScript_SchoolKidConan::
+	trainerbattle_single TRAINER_SCHOOLKID_CONAN, Route15_Text_ConanIntro, Route15_Text_ConanDefeat
+	msgbox Route15_Text_ConanPostBattle MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Route15_Text_ConanIntro:
+	.string "I hope you're ready!$"
+
+Route15_Text_ConanDefeat:
+	.string "Woah!$"
+
+Route15_Text_ConanPostBattle:
+	.string "Thanks for playing with us!$"
+    
+

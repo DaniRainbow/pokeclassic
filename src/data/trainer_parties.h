@@ -5449,6 +5449,50 @@ static const struct TrainerMonItemDefaultMoves sParty_CrushKinRonMya[] = {
         .heldItem = ITEM_BLACK_BELT,
     },
 };
+static const struct TrainerMonItemCustomMoves sParty_SchoolKidConan[] = {
+	{
+		.iv = 250,
+		.lvl = 29,
+		.species = SPECIES_BULBASAUR,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_VINE_WHIP, MOVE_RAZOR_LEAF, MOVE_LEECH_SEED, MOVE_SYNTHESIS}
+	},
+    {
+		.iv = 250,
+		.lvl = 29,
+		.species = SPECIES_SQUIRTLE,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_WATER_PULSE, MOVE_PROTECT, MOVE_BITE, MOVE_ICE_FANG}
+	},
+    {
+		.iv = 250,
+		.lvl = 29,
+		.species = SPECIES_CHARMANDER,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_FIRE_FANG, MOVE_HONE_CLAWS, MOVE_METAL_CLAW, MOVE_DIG}
+	},
+    {
+		.iv = 250,
+		.lvl = 29,
+		.species = SPECIES_PONYTA,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_AGILITY, MOVE_FIRE_SPIN, MOVE_HEADBUTT, MOVE_EMBER}
+	},
+    {
+		.iv = 250,
+		.lvl = 29,
+		.species = SPECIES_KRABBY,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_GUILLOTINE, MOVE_WATER_GUN, MOVE_WITHDRAW, MOVE_CRUSH_CLAW}
+	},
+	{
+		.iv = 250,
+		.lvl = 40,
+		.species = SPECIES_OMASTAR,
+		.heldItem = ITEM_NONE,
+		.moves = {MOVE_MUDDY_WATER, MOVE_HYDRO_PUMP, MOVE_ROLLOUT, MOVE_SKULL_BASH}
+    },
+};
 //Saffron Dojo
 static const struct TrainerMonNoItemDefaultMoves sParty_DojoMaster[] = {
     {
