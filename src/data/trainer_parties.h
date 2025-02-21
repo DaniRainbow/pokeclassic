@@ -1259,6 +1259,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherCharlie[] = {
     },
 };
 
+static const struct TrainerMonItemCustomMoves sParty_CoolTrainerErin[] = {
+	{
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_WARTORTLE,
+		.heldItem = ITEM_KINGS_ROCK,
+		.moves = {MOVE_IRON_DEFENSE, MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_SKULL_BASH}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_HAUNTER,
+		.heldItem = ITEM_SPELL_TAG,
+		.moves = {MOVE_SUBSTITUTE, MOVE_SHADOW_CLAW, MOVE_CONFUSE_RAY, MOVE_DARKEST_LARIAT}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_CLEFAIRY,
+		.heldItem = ITEM_WHITE_HERB,
+		.moves = {MOVE_HEALING_WISH, MOVE_METEOR_MASH, MOVE_MOONLIGHT, MOVE_MOONBLAST}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_JOLTEON,
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_AGILITY, MOVE_LAST_RESORT, MOVE_THUNDER_FANG, MOVE_PIN_MISSILE}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_FLAREON,
+		.heldItem = ITEM_CHARCOAL,
+		.moves = {MOVE_LAVA_PLUME, MOVE_BABY_DOLL_EYES, MOVE_FLARE_BLITZ, MOVE_IRON_TAIL}
+	},
+	{
+		.iv = 250,
+		.lvl = 72,
+		.species = SPECIES_VAPOREON,
+		.heldItem = ITEM_MYSTIC_WATER,
+		.moves = {MOVE_MUDDY_WATER, MOVE_CALM_MIND, MOVE_HYDRO_PUMP, MOVE_ICE_BEAM}
+	},
+};
+
 //Pewter Gym
 static const struct TrainerMonNoItemCustomMoves sParty_CamperLiam[] = {
     {
