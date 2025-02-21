@@ -190,18 +190,21 @@ Movement_PlayerEnterShipWest::
 	step_end
 
 CinnabarIsland_EventScript_GamblerRyan::
-	lock
-	faceplayer
-	msgbox CinnabarIsland_Text_HiIAmOnVacation MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_GAMBLER_RYAN, CinnabarIsland_3F_Text_RyanIntro, CinnabarIsland_3F_Text_RyanDefeat
+	msgbox CinnabarIsland_3F_Text_RyanPostBattle MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
-CinnabarIsland_Text_HiIAmOnVacation:
-	.string "Hi, my name is Ryan!\p"
-	.string "I'm on vacation but I needed some\n"
-	.string "peace and quiet.\p"
-	.string "I left my Pokémon back at the\n"
-	.string "restort, but come back later if\l"
-	.string "you want to battle!$"
-	return
+CinnabarIsland_3F_Text_RyanIntro:
+	.string "I never expected someone would surf\n"
+	.string "over and find me here.$"
+
+CinnabarIsland_3F_Text_RyanDefeat:
+	.string "Ha ha ha, so much for relaxation!$"
+
+CinnabarIsland_3F_Text_RyanPostBattle:
+	.string "I came out here holding on to my\n"
+	.string "Tentacool for some peace and quiet\l"
+	.string "on my vacation.\p"
+	.string "Thanks for the battle!$"
 
