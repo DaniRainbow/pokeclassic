@@ -5988,5 +5988,29 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_FugitiveJessieJames),
         .party = {.NoItemDefaultMoves = sParty_FugitiveJessieJames}
     },
+    [TRAINER_BLACKBELT_JIRAIYA] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_BLACK_BELT,
+        .trainerName = _("Jiraiya"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_BlackBeltJiraiya),
+        .party = {.ItemCustomMoves = sParty_BlackBeltJiraiya}
+	},
+    [TRAINER_LASS_KAIRI] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Kairi"),
+        .items = {ITEM_FULL_RESTORE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_LassKairi),
+        .party = {.ItemCustomMoves = sParty_LassKairi}
+	},
 
 };
