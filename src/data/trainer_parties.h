@@ -7552,6 +7552,23 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerWarren[] = {
 };
 
 //Victory Road
+static const struct TrainerMonItemCustomMoves sParty_NinjaBoyOrion[] = {
+	{
+		.iv = 250,
+		.lvl = 45,
+		.species = SPECIES_RAICHU,
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_THUNDER, MOVE_TOXIC, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM}
+	},
+	{
+		.iv = 250,
+		.lvl = 45,
+		.species = SPECIES_BLASTOISE,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_SURF, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_AVALANCHE}
+	},
+};
+
 static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerNaomi[] = {
     {
         .iv = 100,

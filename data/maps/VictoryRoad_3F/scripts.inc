@@ -152,16 +152,27 @@ VictoryRoad_3F_EventScript_ItemPowerStone::
 	end
 
 VictoryRoad_3F_EventScript_NinjaOrion::
-	lock
-	faceplayer
-	msgbox VictoryRoad_3F_Text_HiIAmOrion MSGBOX_DEFAULT
-	release
+	trainerbattle_double TRAINER_NINJABOY_ORION, VictoryRoad_3F_Text_OrionIntro, VictoryRoad_3F_Text_OrionDefeat, VictoryRoad_3F_Text_OrionNotEnoughMons
+	msgbox VictoryRoad_3F_Text_OrionPostBattle MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
-VictoryRoad_3F_Text_HiIAmOrion:
-	.string "Hi, my name is Orion!\n"
-	.string "I blend in the shadows!\p"
-	.string "Once I get my own Pokémon team,\n"
-	.string "come at me, bro!$"
-	return
+VictoryRoad_3F_Text_OrionIntro:
+	.string "Come at me, bro!$"
+
+VictoryRoad_3F_Text_OrionDefeat:
+	.string "Such power! How is this possible?$"
+
+VictoryRoad_3F_Text_OrionPostBattle:
+	.string "I may have lost this battle\n"
+	.string "but it remains to be seen if\l"
+	.string "you can win this war!\p"
+	.string "Raichu, Blastoise, and I will\n"
+	.string "train harder than ever.\p"
+	.string "That's our Ninja Way!$"	
+
+VictoryRoad_3F_Text_OrionNotEnoughMons::
+    .string "You are either very brave or\n"
+    .string "very foolish to walk around\l"
+	.string "here with only one Pokémon.$"
 
