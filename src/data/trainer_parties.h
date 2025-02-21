@@ -1508,6 +1508,23 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LassCrissy[] = {
     },
 };
 
+static const struct TrainerMonItemCustomMoves sParty_PicnickerSolana[] = {
+	{
+		.iv = 50,
+		.lvl = 18,
+		.species = SPECIES_SQUIRTLE,
+		.heldItem = ITEM_ORAN_BERRY,
+		.moves = {MOVE_BUBBLE, MOVE_WITHDRAW, MOVE_RAIN_DANCE, MOVE_ICE_BEAM}
+	},
+	{
+		.iv = 50,
+		.lvl = 18,
+		.species = SPECIES_JIGGLYPUFF,
+		.heldItem = ITEM_ORAN_BERRY,
+		.moves = {MOVE_DOUBLE_SLAP, MOVE_SING, MOVE_DIG, MOVE_WATER_PULSE}
+	},
+};
+
 //Mt Moon
 static const struct TrainerMonNoItemDefaultMoves sParty_HikerMarcos[] = {
     {

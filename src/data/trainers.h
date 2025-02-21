@@ -742,6 +742,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_LassCrissy),
         .party = {.NoItemDefaultMoves = sParty_LassCrissy}
     },
+    [TRAINER_PICNICKER_SOLANA] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PICNICKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = _("Solana"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_PicnickerSolana),
+        .party = {.ItemCustomMoves = sParty_PicnickerSolana}
+	},
 
 //Mt Moon
     [TRAINER_HIKER_MARCOS] = {
