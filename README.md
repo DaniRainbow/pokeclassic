@@ -7,9 +7,9 @@ This fork was created to address the unfixed issues with the original repository
 # Getting PokeClassic
 This repository builds the following ROM:
 
-* pokeemerald.gba `sha1: 1D45F8CEC8BA750AC6024B0BB7F6CF2C430635E2`
+* pokeemerald.gba `sha1: 59E781AAE5CFC69B40E557D58E1D5265817BD41F`
 
-**updated 2/20/2025**
+**updated 2/21/2025**
 
 To compile this ROM yourself, see [Pret's Installation Guide](https://github.com/pret/pokeemerald/blob/master/INSTALL.md) on how to get started with the decompilations. Then, clone this branch and build the ROM by changing "pokeemerald" to "pokeclassic" in the instructions.
 
