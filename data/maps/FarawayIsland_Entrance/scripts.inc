@@ -52,7 +52,7 @@ FarawayIsland_Entrance_EventScript_Sign::
 	//return
 
 FarawayIsland_Entrance_EventScript_LassKairi::
-	trainerbattle_single TRAINER_LASS_KAIRI, FarawayIsland_Entrance_Text_KairiIntro, FarawayIsland_Entrance_Text_KairiDefeat
+	trainerbattle_double TRAINER_LASS_KAIRI, FarawayIsland_Entrance_Text_KairiIntro, FarawayIsland_Entrance_Text_KairiDefeat, FarawayIsland_Entrance_Text_KairiNotEnoughMons
 	msgbox FarawayIsland_Entrance_Text_KairiPostBattle MSGBOX_AUTOCLOSE
 	releaseall
 	end
@@ -69,4 +69,6 @@ FarawayIsland_Entrance_Text_KairiPostBattle:
 	.string "Pokémon battling is fun, but\n"
 	.string "I aspire to be an artist!$"
 
+FarawayIsland_Entrance_Text_KairiNotEnoughMons::
+	.string "You only have one Pokémon.$"
 
