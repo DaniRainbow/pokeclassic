@@ -6007,7 +6007,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_LASS,
         .trainerName = _("Kairi"),
         .items = {ITEM_FULL_RESTORE},
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
         .partySize = ARRAY_COUNT(sParty_LassKairi),
         .party = {.ItemCustomMoves = sParty_LassKairi}
