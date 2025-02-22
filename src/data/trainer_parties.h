@@ -1235,45 +1235,45 @@ static const struct TrainerMonItemCustomMoves sParty_LassKairi[] = {
 static const struct TrainerMonItemCustomMoves sParty_BlackBeltJiraiya[] = {
 	{
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_WARTORTLE,
-		.heldItem = ITEM_KINGS_ROCK,
-		.moves = {MOVE_IRON_DEFENSE, MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_SKULL_BASH}
+		.lvl = 80,
+		.species = SPECIES_PIKACHU,
+		.heldItem = ITEM_LIGHT_BALL,
+		.moves = {MOVE_VOLT_TACKLE, MOVE_ELECTRO_BALL, MOVE_SLAM, MOVE_AGILITY}
 	},
     {
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_HAUNTER,
-		.heldItem = ITEM_SPELL_TAG,
-		.moves = {MOVE_SUBSTITUTE, MOVE_SHADOW_CLAW, MOVE_CONFUSE_RAY, MOVE_DARKEST_LARIAT}
+		.lvl = 80,
+		.species = SPECIES_WIGGLYTUFF,
+		.heldItem = ITEM_SILK_SCARF,
+		.moves = {MOVE_HYPER_VOICE, MOVE_ROLLOUT, MOVE_SING, MOVE_EARTHQUAKE}
 	},
     {
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_CLEFAIRY,
-		.heldItem = ITEM_WHITE_HERB,
-		.moves = {MOVE_HEALING_WISH, MOVE_METEOR_MASH, MOVE_MOONLIGHT, MOVE_BODY_SLAM}
+		.lvl = 80,
+		.species = SPECIES_MACHAMP,
+		.heldItem = ITEM_FOCUS_BAND,
+		.moves = {MOVE_DUAL_CHOP, MOVE_SEISMIC_TOSS, MOVE_FOCUS_ENERGY, MOVE_FIRE_PUNCH}
 	},
     {
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_JOLTEON,
-		.heldItem = ITEM_QUICK_CLAW,
-		.moves = {MOVE_AGILITY, MOVE_LAST_RESORT, MOVE_THUNDER_FANG, MOVE_QUICK_ATTACK}
+		.lvl = 80,
+		.species = SPECIES_ZAPDOS,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_AGILITY, MOVE_THUNDER, MOVE_HURRICANE, MOVE_THUNDERBOLT}
 	},
     {
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_FLAREON,
-		.heldItem = ITEM_CHARCOAL,
-		.moves = {MOVE_LAVA_PLUME, MOVE_BABY_DOLL_EYES, MOVE_FLARE_BLITZ, MOVE_IRON_TAIL}
+		.lvl = 80,
+		.species = SPECIES_MEWTWO_MEGA_X,
+		.heldItem = ITEM_MEWTWONITE_X,
+		.moves = {MOVE_AMNESIA, MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_RECOVER}
 	},
 	{
 		.iv = 250,
-		.lvl = 72,
-		.species = SPECIES_VAPOREON,
-		.heldItem = ITEM_MYSTIC_WATER,
-		.moves = {MOVE_MUDDY_WATER, MOVE_CALM_MIND, MOVE_HYDRO_PUMP, MOVE_ICE_BEAM}
+		.lvl = 85,
+		.species = SPECIES_CHARIZARD,
+		.heldItem = ITEM_HEAT_ROCK,
+		.moves = {MOVE_FLY, MOVE_LAVA_PLUME, MOVE_DUAL_WINGBEAT, MOVE_FIRE_BLAST}
 	},
 };
 //Viridian Forest

@@ -33,12 +33,11 @@ BattleTower_3F_Lounge_EventScript_BlackBeltJiraiya::
 	end
 
 BattleTower_3F_Lounge_Text_JiraiyaIntro:
-	.string "First impressions\n"
-	.string "are important.$"
+	.string "I wanna be the very best!$"
 
 BattleTower_3F_Lounge_Text_JiraiyaDefeat:
-	.string "What you want to say!$"
+	.string "Incredible... how...?$"
 
 BattleTower_3F_Lounge_Text_JiraiyaPostBattle:
-	.string "What you want to say!$"
+	.string "I don't know what to say yet.$"
 
