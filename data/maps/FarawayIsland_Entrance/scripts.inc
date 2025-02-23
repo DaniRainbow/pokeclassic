@@ -52,6 +52,8 @@ FarawayIsland_Entrance_EventScript_Sign::
 	//return
 
 FarawayIsland_Entrance_EventScript_LassKairi::
+	lock
+	faceplayer
 	trainerbattle_double TRAINER_LASS_KAIRI, FarawayIsland_Entrance_Text_KairiIntro, FarawayIsland_Entrance_Text_KairiDefeat, FarawayIsland_Entrance_Text_KairiNotEnoughMons
 	msgbox FarawayIsland_Entrance_Text_KairiPostBattle MSGBOX_AUTOCLOSE
 	releaseall
@@ -70,5 +72,5 @@ FarawayIsland_Entrance_Text_KairiPostBattle:
 	.string "I aspire to be an artist!$"
 
 FarawayIsland_Entrance_Text_KairiNotEnoughMons::
-	.string "You only have one Pokémon.$"
+	.string "Where are your Pokémon friends?$"
 

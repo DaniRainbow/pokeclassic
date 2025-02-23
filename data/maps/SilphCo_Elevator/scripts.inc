@@ -8,7 +8,7 @@ SilphCo_Elevator_EventScript_FloorSelect::
 	call_if_unset FLAG_TEMP_2, SilphCo_Elevator_EventScript_SetFloor
 	copyvar VAR_0x8005, VAR_DEPT_STORE_FLOOR
 	special ShowDeptStoreElevatorFloorSelect
-	message Text_WhichFloorWillYouPick
+	message Text_SilphWhichFloorWillYouPick
 	waitmessage
 	multichoicegrid 0, 0, MULTI_SILPH_FLOORS, 2, FALSE
 	switch VAR_RESULT
@@ -26,6 +26,9 @@ SilphCo_Elevator_EventScript_FloorSelect::
 	case 11 SilphCo_Elevator_EventScript_ExitFloorSelect
 	case MULTI_B_PRESSED, SilphCo_Elevator_EventScript_ExitFloorSelect
 	end
+
+Text_SilphWhichFloorWillYouPick::
+	.string "Which floor will you pick?$"
 
 SilphCo_Elevator_EventScript_11F::
 	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_11F

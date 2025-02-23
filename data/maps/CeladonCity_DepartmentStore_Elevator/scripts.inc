@@ -8,9 +8,8 @@ CeladonCity_DepartmentStore_Elevator_EventScript_FloorSelect::
 	call_if_unset FLAG_TEMP_2, CeladonCity_DepartmentStore_Elevator_EventScript_SetFloor
 	copyvar VAR_0x8005, VAR_DEPT_STORE_FLOOR
 	special ShowDeptStoreElevatorFloorSelect
-	message gText_WhichFloorWouldYouLike
+	message Text_DepartmentWhichFloorWillYouPick
 	waitmessage
-	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, GetDeptStoreDefaultFloorChoice
 	switch VAR_RESULT
 	case 0, CeladonCity_DepartmentStore_Elevator_EventScript_ChooseFloorFrom5th
@@ -19,6 +18,9 @@ CeladonCity_DepartmentStore_Elevator_EventScript_FloorSelect::
 	case 3, CeladonCity_DepartmentStore_Elevator_EventScript_ChooseFloorFrom2nd
 	case 4, CeladonCity_DepartmentStore_Elevator_EventScript_ChooseFloorFrom1st
 	end
+
+Text_DepartmentWhichFloorWillYouPick::
+	.string "Which floor will you pick?$"
 
 @ Below scripts ensure the cursor for floor select always starts on the current floor
 CeladonCity_DepartmentStore_Elevator_EventScript_ChooseFloorFrom5th::

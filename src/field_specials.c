@@ -1768,7 +1768,6 @@ void SetDeptStoreFloor(void)
     }
     if (gSaveBlock1Ptr->dynamicWarp.mapGroup == MAP_GROUP(CELADON_CITY_DEPARTMENT_STORE_1F))
     {
-        u16 floor = 4;
         switch (gSaveBlock1Ptr->dynamicWarp.mapNum)
         {
         case MAP_NUM(CELADON_CITY_DEPARTMENT_STORE_1F):

@@ -1,15 +1,14 @@
 BattleTower_3F_Lounge_MapScripts::
 	.byte 0
 
-//BattleTower_3F_Lounge_Text_HiIAmJiraiya:
-	//.string "UGH it's infuriating, I tell you!\p"
-	//.string "I came all this way for a battle\n"
-	//.string "against the finest Trainers Kanto\l"
-	//.string "has to offer and the owner shut\l"
-	//.string "down all the matches!\p"
-	//.string "Come back later and I will prove\n"
-	//.string "I'm the best there ever was!$"
-	//return
+BattleTower_3F_Lounge_Text_HiIAmJiraiya:
+	.string "UGH it's infuriating, I tell you!\p"
+	.string "I came all this way for a battle\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer and the owner shut\l"
+	.string "down all the matches!\p"
+	.string "... what's that? Are you saying\n"
+	.string "you will battle me?$"
 
 BattleTower_3F_Lounge_EventScript_Mewtwo::
 	lock
@@ -27,6 +26,11 @@ BattleTower_3F_Lounge_Text_Mewtwo:
 	return
 
 BattleTower_3F_Lounge_EventScript_BlackBeltJiraiya::
+	lock
+	faceplayer
+	msgbox BattleTower_3F_Lounge_Text_HiIAmJiraiya, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq BlackBeltDeclined
 	trainerbattle_single TRAINER_BLACKBELT_JIRAIYA, BattleTower_3F_Lounge_Text_JiraiyaIntro, BattleTower_3F_Lounge_Text_JiraiyaDefeat
 	msgbox BattleTower_3F_Lounge_Text_JiraiyaPostBattle MSGBOX_AUTOCLOSE
 	releaseall
@@ -41,3 +45,11 @@ BattleTower_3F_Lounge_Text_JiraiyaDefeat:
 BattleTower_3F_Lounge_Text_JiraiyaPostBattle:
 	.string "I don't know what to say yet.$"
 
+BlackBeltDeclined::
+	msgbox	Text_IWouldNotEither, MSGBOX_DEFAULT
+	release
+	end
+
+Text_IWouldNotEither:
+	.string "Heh, I wouldn't want to fight\n"
+	.string "me either. Move on, then.$"
