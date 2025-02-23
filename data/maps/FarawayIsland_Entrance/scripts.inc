@@ -43,17 +43,7 @@ FarawayIsland_Entrance_EventScript_Sign::
 	msgbox FarawayIsland_Entrance_Text_Sign, MSGBOX_SIGN
 	end
 
-
-//FarawayIsland_Entrance_Text_HiIAmKairi:
-	//.string "Hi, I'm Kairi! How do you do?\p"
-	//.string "A lovely day for a battle, isn't it?\n"
-	//.string "Sorry I don't have my team yet but I\l"
-	//.string "look forward to facing you soon!$"
-	//return
-
 FarawayIsland_Entrance_EventScript_LassKairi::
-	lock
-	faceplayer
 	trainerbattle_double TRAINER_LASS_KAIRI, FarawayIsland_Entrance_Text_KairiIntro, FarawayIsland_Entrance_Text_KairiDefeat, FarawayIsland_Entrance_Text_KairiNotEnoughMons
 	msgbox FarawayIsland_Entrance_Text_KairiPostBattle MSGBOX_AUTOCLOSE
 	releaseall
