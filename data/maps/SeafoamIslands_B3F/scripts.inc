@@ -93,3 +93,21 @@ SeafoamIslands_B3F_Movement_RideCurrentClose::
 	walk_fast_down
 	walk_fast_down
 	step_end
+
+SeafoamISlands_B3F_EventScript_BlackBeltMichael::
+	trainerbattle_single TRAINER_BLACKBELT_MICHAEL SeafoamISlands_B3F_Text_MichaelIntro, SeafoamISlands_B3F_Text_MichaelDefeat
+	msgbox SeafoamISlands_B3F_Text_MichaelPostBattle MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+SeafoamISlands_B3F_Text_MichaelIntro:
+	.string "I usually am alone training here.\n"
+	.string "Come at us with all you got!$"
+
+SeafoamISlands_B3F_Text_MichaelDefeat:
+	.string "You're impressive!$"
+
+SeafoamISlands_B3F_Text_MichaelPostBattle:
+	.string "That was a great fight!\p"
+	.string "My team and I are going to\n"
+	.string "train harder than before!$"

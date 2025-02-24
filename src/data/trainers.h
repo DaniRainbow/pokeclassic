@@ -4743,6 +4743,19 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_SwimmerMaleDarrin),
         .party = {.NoItemDefaultMoves = sParty_SwimmerMaleDarrin}
     },
+//Seafoam Islands
+    [TRAINER_BLACKBELT_MICHAEL] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_BLACK_BELT,
+        .trainerName = _("Michael"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_BlackBeltMichael),
+        .party = {.ItemCustomMoves = sParty_BlackBeltMichael}
+},
 //Route 21
     [TRAINER_FISHERMAN_RONALD] = {
         .partyFlags = 0,

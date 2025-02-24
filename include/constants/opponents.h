@@ -610,7 +610,7 @@
 #define	TRAINER_GAMBLER_RYAN	                    498
 #define	TRAINER_NINJABOY_ORION	                    499
 #define	TRAINER_SCHOOLKID_CONAN	                    500
-#define	TRAINER_UNUSED_501	501
+#define	TRAINER_BLACKBELT_MICHAEL                   501
 #define	TRAINER_UNUSED_502	502
 #define	TRAINER_UNUSED_503	503
 #define	TRAINER_UNUSED_504	504
