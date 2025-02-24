@@ -5,8 +5,8 @@ FuchsiaCity_MapScripts::
 
 FuchsiaCity_OnTransition:
 	setflag FLAG_VISITED_FUCHSIA_CITY
-	call_if_eq VAR_FOSSIL_SELECTION, 2, FuchsiaCity_EventScript_SetOmanyteGfx
-	call_if_ne VAR_FOSSIL_SELECTION, 2, FuchsiaCity_EventScript_SetKabutoGfx
+	call_if_ne VAR_FOSSIL_SELECTION, 2, FuchsiaCity_EventScript_SetOmanyteGfx
+	call_if_eq VAR_FOSSIL_SELECTION, 2, FuchsiaCity_EventScript_SetKabutoGfx
 	call Common_EventScript_GetDayOrNight
 	end
 
@@ -24,7 +24,7 @@ FuchsiaCity_EventScript_SetKabutoGfx::
 
 FuchsiaCity_EventScript_FossilMonSign::
 	lockall
-	goto_if_eq VAR_FOSSIL_SELECTION, 2, FuchsiaCity_EventScript_OmanyteSign
+	goto_if_ne VAR_FOSSIL_SELECTION, 2, FuchsiaCity_EventScript_OmanyteSign
 	setvar VAR_0x8004, SPECIES_KABUTO
 	special SetSeenMon
 	showmonpic SPECIES_KABUTO, 10, 3
