@@ -5314,7 +5314,36 @@ static const struct TrainerMonNoItemCustomMoves sParty_BikerGerald[] = {
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
 };
-
+static const struct TrainerMonItemCustomMoves sParty_HexManiacCamran[] = {
+	{
+		.iv = 250,
+		.lvl = 32,
+		.species = SPECIES_FLAREON,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_EMBER, MOVE_BITE, MOVE_FIRE_FANG, MOVE_FIRE_SPIN}
+	},
+    {
+		.iv = 250,
+		.lvl = 32,
+		.species = SPECIES_JOLTEON,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_SHOCK, MOVE_THUNDER_FANG, MOVE_PIN_MISSILE}
+	},
+    {
+		.iv = 250,
+		.lvl = 32,
+		.species = SPECIES_VAPOREON,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_WATER_PULSE, MOVE_TAIL_WHIP, MOVE_AURORA_BEAM, MOVE_AQUA_RING}
+	},
+    {
+		.iv = 250,
+		.lvl = 35,
+		.species = SPECIES_EEVEE,
+		.heldItem = ITEM_SILK_SCARF,
+		.moves = {MOVE_FACADE, MOVE_SECRET_POWER, MOVE_TAKE_DOWN, MOVE_SWIFT}
+	},
+};
 //Route 15
 static const struct TrainerMonNoItemDefaultMoves sParty_BeautyOlivia1[] = {
     {
@@ -6868,6 +6897,44 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerFemaleShirley[] =
         .lvl = 30,
         .species = SPECIES_SEADRA,
     },
+};
+//Seafoam Islands
+static const struct TrainerMonItemCustomMoves sParty_BlackBeltMichael[] = {
+	{
+		.iv = 250,
+		.lvl = 50,
+		.species = SPECIES_PIKACHU,
+		.heldItem = ITEM_LIGHT_BALL,
+		.moves = {MOVE_VOLT_TACKLE, MOVE_ELECTRO_BALL, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM}
+	},
+    {
+		.iv = 250,
+		.lvl = 50,
+		.species = SPECIES_RAPIDASH,
+		.heldItem = ITEM_CHARCOAL,
+		.moves = {MOVE_BOUNCE, MOVE_FLARE_BLITZ, MOVE_AGILITY, MOVE_STOMP}
+	},
+    {
+		.iv = 250,
+		.lvl = 50,
+		.species = SPECIES_ARCANINE,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_CRUNCH, MOVE_HEAT_WAVE, MOVE_EXTREME_SPEED, MOVE_FLARE_BLITZ}
+	},
+    {
+		.iv = 250,
+		.lvl = 50,
+		.species = SPECIES_CHARIZARD,
+		.heldItem = ITEM_HEAT_ROCK,
+		.moves = {MOVE_WING_ATTACK, MOVE_LAVA_PLUME, MOVE_DUAL_WINGBEAT, MOVE_FIRE_BLAST}
+	},
+	{
+		.iv = 250,
+		.lvl = 55,
+		.species = SPECIES_NINETALES,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_INFERNO, MOVE_EXTRASENSORY, MOVE_CAPTIVATE, MOVE_FLAMETHROWER}
+	},
 };
 //Route 21
 static const struct TrainerMonNoItemDefaultMoves sParty_CoolTrainerAnri1[] = {
