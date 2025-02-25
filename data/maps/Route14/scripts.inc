@@ -255,3 +255,21 @@ Route14_RocketFugitive::
     fadescreen FADE_FROM_BLACK
     end
 
+Route14_EventScript_HexManiacCamran::
+	trainerbattle_single TRAINER_HEXMANIAC_CAMRAN, Route14_Text_CamranIntro, Route14_Text_CamranDefeat
+	msgbox Route14_Text_CamranPostBattle MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+Route14_Text_CamranIntro:
+	.string "Don't step in the CatFood!\p"
+    .string "Stop it!\n"
+	.string "We don't want germs in the CatFood!$"
+
+Route14_Text_CamranDefeat:
+	.string "... next time don't hurt my kitties... sigh$"
+
+Route14_Text_CamranPostBattle:
+	.string "These kitties mean so much to me...\p"
+    .string "I can't live without them.$"
+

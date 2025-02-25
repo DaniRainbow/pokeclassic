@@ -5314,7 +5314,36 @@ static const struct TrainerMonNoItemCustomMoves sParty_BikerGerald[] = {
         .moves = {MOVE_SCREECH, MOVE_MINIMIZE, MOVE_SLUDGE, MOVE_DISABLE},
     },
 };
-
+static const struct TrainerMonItemCustomMoves sParty_HexManiacCamran[] = {
+	{
+		.iv = 250,
+		.lvl = 32,
+		.species = SPECIES_FLAREON,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_EMBER, MOVE_BITE, MOVE_FIRE_FANG, MOVE_FIRE_SPIN}
+	},
+    {
+		.iv = 250,
+		.lvl = 32,
+		.species = SPECIES_JOLTEON,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_SHOCK, MOVE_THUNDER_FANG, MOVE_PIN_MISSILE}
+	},
+    {
+		.iv = 250,
+		.lvl = 32,
+		.species = SPECIES_VAPOREON,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_WATER_PULSE, MOVE_TAIL_WHIP, MOVE_AURORA_BEAM, MOVE_AQUA_RING}
+	},
+    {
+		.iv = 250,
+		.lvl = 35,
+		.species = SPECIES_EEVEE,
+		.heldItem = ITEM_SILK_SCARF,
+		.moves = {MOVE_FACADE, MOVE_SECRET_POWER, MOVE_TAKE_DOWN, MOVE_SWIFT}
+	},
+};
 //Route 15
 static const struct TrainerMonNoItemDefaultMoves sParty_BeautyOlivia1[] = {
     {
