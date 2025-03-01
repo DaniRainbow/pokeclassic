@@ -22,7 +22,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "in_connection": false,
       "x": 11,
       "y": 4,
       "elevation": 3,
@@ -32,11 +31,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "Route25_EventScript_Franklin",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 18,
       "y": 2,
       "elevation": 3,
@@ -46,11 +45,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route25_EventScript_Joey",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "in_connection": false,
       "x": 17,
       "y": 7,
       "elevation": 3,
@@ -60,11 +59,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route25_EventScript_Wayne",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 22,
       "y": 4,
       "elevation": 3,
@@ -74,11 +73,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route25_EventScript_Dan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "in_connection": false,
       "x": 28,
       "y": 9,
       "elevation": 3,
@@ -88,11 +87,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route25_EventScript_Kelsey",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "in_connection": false,
       "x": 22,
       "y": 8,
       "elevation": 3,
@@ -102,11 +101,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route25_EventScript_Nob",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "in_connection": false,
       "x": 28,
       "y": 4,
       "elevation": 3,
@@ -116,11 +115,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route25_EventScript_Flint",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "in_connection": false,
       "x": 36,
       "y": 4,
       "elevation": 3,
@@ -130,11 +129,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route25_EventScript_Chad",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 42,
       "y": 5,
       "elevation": 3,
@@ -144,11 +143,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route25_EventScript_Haley",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
-      "in_connection": false,
       "x": 49,
       "y": 10,
       "elevation": 3,
@@ -158,11 +157,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route25_EventScript_Beauty",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "in_connection": false,
       "x": 49,
       "y": 11,
       "elevation": 3,
@@ -172,7 +171,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route25_EventScript_Man",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     }
   ],
   "warp_events": [
