@@ -6289,12 +6289,12 @@
               {
                 "min_level": 20,
                 "max_level": 30,
-                "species": "SPECIES_GOLDEEN"
+                "species": "SPECIES_POLIWHIRL"
               },
               {
                 "min_level": 20,
                 "max_level": 30,
-                "species": "SPECIES_GOLDEEN"
+                "species": "SPECIES_POLIWHIRL"
               },
               {
                 "min_level": 20,
@@ -6463,12 +6463,12 @@
               {
                 "min_level": 20,
                 "max_level": 30,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_SEAKING"
               },
               {
                 "min_level": 20,
                 "max_level": 30,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_SEAKING"
               },
               {
                 "min_level": 20,
@@ -6622,7 +6622,7 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_GOLDEEN"
+                "species": "SPECIES_PSYDUCK"
               },
               {
                 "min_level": 10,
@@ -6632,7 +6632,7 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_GOLDEEN"
+                "species": "SPECIES_PSYDUCK"
               },
               {
                 "min_level": 20,
@@ -6657,7 +6657,7 @@
               {
                 "min_level": 20,
                 "max_level": 30,
-                "species": "SPECIES_SEAKING"
+                "species": "SPECIES_GOLDUCK"
               }
             ]
           },
@@ -6796,12 +6796,12 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_STARYU"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_STARYU"
               },
               {
                 "min_level": 10,
@@ -6831,7 +6831,7 @@
               {
                 "min_level": 20,
                 "max_level": 30,
-                "species": "SPECIES_POLIWHIRL"
+                "species": "SPECIES_STARMIE"
               }
             ]
           },
@@ -12530,6 +12530,30 @@
         {
           "map": "MAP_FARAWAY_ISLAND_INTERIOR",
           "base_label": "gFarawayIsland_Interior0",
+          "hidden_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_BATTLE_TOWER_EXTERIOR",
+          "base_label": "gBattleTower_Exterior0",
           "hidden_mons": {
             "encounter_rate": 0,
             "mons": [

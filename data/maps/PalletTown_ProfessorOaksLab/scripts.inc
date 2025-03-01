@@ -113,6 +113,7 @@ PalletTown_ProfessorOaksLab_EventScript_ApproachPokeBallBehindDesk::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerReturnToOakFar
 	waitmovement 0
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
+	releaseall
 	end
 
 Movement_RivalMoveToDesk2::
@@ -172,6 +173,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalStealEevee::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerReturnToOak
 	waitmovement 0
 	goto PalletTown_ProfessorOaksLab_EventScript_GetPartnerPikachu
+	releaseall
 	end
 
 Movement_RivalMoveToDesk::
@@ -357,6 +359,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalWantsToBattle::
 	waitmovement 2
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	trainerbattle_no_whiteout_continue_script TRAINER_RIVAL_FIRST_BATTLE,PalletTown_ProfessorOaksLab_Text_RivalBattleIntro,PalletTown_ProfessorOaksLab_Text_RivalDefeated,PalletTown_ProfessorOaksLab_EventScript_RivalBattleOutcome
+	releaseall
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
@@ -574,7 +577,7 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	setvar VAR_OAK_LAB_STATE, 7
 	setvar VAR_ADVENTURE_BEGINS, 6
 	setvar VAR_ROUTE_22_RIVAL_STATE, 1
-	release
+	releaseall
 	end
 
 Movement_PlayerApproachOak:
@@ -994,6 +997,7 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	goto_if_eq VAR_OAK_LAB_STATE, 7, PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait
 	goto_if_unset FLAG_REGISTERED_PROF_OAK, EventScript_RegisterProfOak
 	goto ProfOak_EventScript_AskRatePokedex
+	release
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball::
