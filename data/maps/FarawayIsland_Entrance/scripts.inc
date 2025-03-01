@@ -7,8 +7,14 @@ FarawayIsland_Entrance_MapScripts::
 
 FarawayIsland_Entrance_OnTransition:
 	setflag FLAG_ARRIVED_ON_FARAWAY_ISLAND
+	setflag FLAG_HIDE_KAIRI
+	goto_if_set FLAG_CAUGHT_MEW, FarawayIsland_Entrance_KairiAppear
 	end
 
+FarawayIsland_Entrance_KairiAppear::
+	clearflag FLAG_HIDE_KAIRI
+	return
+	
 FarawayIsland_Entrance_EventScript_Sailor::
 	lock
 	faceplayer
