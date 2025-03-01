@@ -1,14 +1,14 @@
 BattleTower_3F_Lounge_MapScripts::
 	.byte 0
 
-BattleTower_3F_Lounge_Text_HiIAmJiraiya:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "... what's that? Are you saying\n"
-	.string "you will battle me?$"
+//BattleTower_3F_Lounge_Text_HiIAmJiraiya:
+	//.string "I came to the Battle Tower to fight\n"
+	//.string "against the finest Trainers Kanto\l"
+	//.string "has to offer.\p"
+	//.string "Now that it is closed, I meditate\n"
+	//.string "to prepare myself for a challenger.\p"
+	//.string "... what's that? Are you saying\n"
+	//.string "you will battle me?$"
 
 BattleTower_3F_Lounge_EventScript_Mewtwo::
 	lock
@@ -27,9 +27,6 @@ BattleTower_3F_Lounge_EventScript_BlackBeltJiraiya::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_JIRAIYA, BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated
-	msgbox BattleTower_3F_Lounge_Text_HiIAmJiraiya, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_eq BlackBeltDeclined
 	trainerbattle_single TRAINER_BLACKBELT_JIRAIYA, BattleTower_3F_Lounge_Text_JiraiyaIntro, BattleTower_3F_Lounge_Text_JiraiyaDefeat
 	setflag FLAG_DEFEATED_JIRAIYA
 	msgbox BattleTower_3F_Lounge_Text_JiraiyaPostBattle MSGBOX_AUTOCLOSE
@@ -37,6 +34,11 @@ BattleTower_3F_Lounge_EventScript_BlackBeltJiraiya::
 	end
 
 BattleTower_3F_Lounge_Text_JiraiyaIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
 	.string "We are strong in mind and body.$"
 
 BattleTower_3F_Lounge_Text_JiraiyaDefeat:
@@ -45,14 +47,14 @@ BattleTower_3F_Lounge_Text_JiraiyaDefeat:
 BattleTower_3F_Lounge_Text_JiraiyaPostBattle:
 	.string "Is this a dream?$"
 
-BlackBeltDeclined::
-	msgbox	Text_IWouldNotEither, MSGBOX_DEFAULT
-	release
-	end
+//BlackBeltDeclined::
+	//msgbox	Text_IWouldNotEither, MSGBOX_DEFAULT
+	//release
+	//end
 
-Text_IWouldNotEither:
-	.string "Do not interrupt my meditation.\n"
-	.string "Move on, then.$"
+//Text_IWouldNotEither:
+	//.string "Do not interrupt my meditation.\n"
+	//.string "Move on, then.$"
 
 BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated::
 	msgbox JiraiyaDefeated MSGBOX_DEFAULT

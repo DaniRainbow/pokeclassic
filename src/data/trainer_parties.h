@@ -1198,9 +1198,9 @@ static const struct TrainerMonItemCustomMoves sParty_LassKairi[] = {
     {
 		.iv = 250,
 		.lvl = 65,
-		.species = SPECIES_MEW,
-		.heldItem = ITEM_LIFE_ORB,
-		.moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_RECOVER, MOVE_HEALING_WISH}
+		.species = SPECIES_JIGGLYPUFF,
+		.heldItem = ITEM_RED_CARD,
+		.moves = {MOVE_HYPER_VOICE, MOVE_SING, MOVE_ROLLOUT, MOVE_RETURN}
 	},
     {
 		.iv = 250,
@@ -1223,12 +1223,12 @@ static const struct TrainerMonItemCustomMoves sParty_LassKairi[] = {
 		.heldItem = ITEM_NONE,
 		.moves = {MOVE_TOXIC_SPIKES, MOVE_WING_ATTACK, MOVE_PSYBEAM, MOVE_MOONLIGHT}
 	},
-	{
+    {
 		.iv = 250,
 		.lvl = 65,
-		.species = SPECIES_JIGGLYPUFF,
-		.heldItem = ITEM_RED_CARD,
-		.moves = {MOVE_HYPER_VOICE, MOVE_SING, MOVE_ROLLOUT, MOVE_RETURN}
+		.species = SPECIES_MEW,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_RECOVER, MOVE_HEALING_WISH}
 	},
 };
 
