@@ -13,25 +13,25 @@ BattleTower_3F_Lounge_Text_HiIAmJiraiya:
 BattleTower_3F_Lounge_EventScript_Mewtwo::
 	lock
 	faceplayer
+	goto_if_set FLAG_DEFEATED_JIRAIYA, BattleTower_3F_Lounge_EventScript_MewtwoDefeated
 	msgbox BattleTower_3F_Lounge_Text_Mewtwo MSGBOX_DEFAULT
 	release
 	end
 
 BattleTower_3F_Lounge_Text_Mewtwo:
-	.string "What's up, {PLAYER}?\p"
-	.string "I should warn you, the Pokémon on our\n"
-	.string "team are capable of Mega Evolution.\p" 
+	.string "{PLAYER}.\p"
 	.string "I have surpassed my natural limits.\n"
 	.string "If you dare to challenge us, good luck.$"
-	return
 
 BattleTower_3F_Lounge_EventScript_BlackBeltJiraiya::
 	lock
 	faceplayer
+	goto_if_set FLAG_DEFEATED_JIRAIYA, BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated
 	msgbox BattleTower_3F_Lounge_Text_HiIAmJiraiya, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq BlackBeltDeclined
 	trainerbattle_single TRAINER_BLACKBELT_JIRAIYA, BattleTower_3F_Lounge_Text_JiraiyaIntro, BattleTower_3F_Lounge_Text_JiraiyaDefeat
+	setflag FLAG_DEFEATED_JIRAIYA
 	msgbox BattleTower_3F_Lounge_Text_JiraiyaPostBattle MSGBOX_AUTOCLOSE
 	releaseall
 	end
@@ -53,3 +53,23 @@ BlackBeltDeclined::
 Text_IWouldNotEither:
 	.string "Heh, I wouldn't want to fight\n"
 	.string "me either. Move on, then.$"
+
+BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated::
+	msgbox JiraiyaDefeated MSGBOX_DEFAULT
+	releaseall
+	end
+
+JiraiyaDefeated:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+
+BattleTower_3F_Lounge_EventScript_MewtwoDefeated::
+	msgbox MewtwoDefeated MSGBOX_DEFAULT
+	releaseall
+	end
+
+MewtwoDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"
+

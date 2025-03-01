@@ -177,9 +177,9 @@
 #define FLAG_DOJO_DEFENSE_1 				0x9F
 #define FLAG_DOJO_DEFENSE_2              	0xA0
 #define FLAG_DOJO_DEFENSE_3            		0xA1
-#define FLAG_UNUSED_0x0A2              		0xA2
-#define FLAG_UNUSED_0x0A3             		0xA3
-#define FLAG_UNUSED_0x0A4            		0xA4
+#define FLAG_HIDE_KAIRI              		0xA2
+#define FLAG_DEFEATED_ERIN             		0xA3
+#define FLAG_DEFEATED_JIRAIYA            	0xA4
 #define FLAG_UNUSED_0x0A5                   0xA5
 #define FLAG_UNUSED_0x0A6                  	0xA6
 #define FLAG_UNUSED_0x0A7                  	0xA7

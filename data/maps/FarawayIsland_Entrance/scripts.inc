@@ -7,7 +7,13 @@ FarawayIsland_Entrance_MapScripts::
 
 FarawayIsland_Entrance_OnTransition:
 	setflag FLAG_ARRIVED_ON_FARAWAY_ISLAND
+	setflag FLAG_HIDE_KAIRI
+	goto_if_set FLAG_CAUGHT_MEW, FarawayIsland_Entrance_KairiAppear
 	end
+
+FarawayIsland_Entrance_KairiAppear::
+	clearflag FLAG_HIDE_KAIRI
+	return
 
 FarawayIsland_Entrance_EventScript_Sailor::
 	lock
@@ -44,15 +50,31 @@ FarawayIsland_Entrance_EventScript_Sign::
 	end
 
 FarawayIsland_Entrance_EventScript_LassKairi::
+	lock
+	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, FarawayIsland_Entrance_EventScript_LassKairiBattle
+	msgbox FarawayIsland_Entrance_Text_KairiNoBattle MSGBOX_DEFAULT
+	releaseall
+	end
+
+FarawayIsland_Entrance_Text_KairiNoBattle:
+	.string "Hi, I'm Kairi! How do you do?\p"
+	.string "You're friends with Mew, too?\n"
+	.string "That's wonderful!\p"
+	.string "I sense you are on a grand\n"
+	.string "adventure, yes?\p"
+	.string "Please visit any time you like.$"
+
+FarawayIsland_Entrance_EventScript_LassKairiBattle::
 	trainerbattle_double TRAINER_LASS_KAIRI, FarawayIsland_Entrance_Text_KairiIntro, FarawayIsland_Entrance_Text_KairiDefeat, FarawayIsland_Entrance_Text_KairiNotEnoughMons
 	msgbox FarawayIsland_Entrance_Text_KairiPostBattle MSGBOX_AUTOCLOSE
 	releaseall
 	end
 
 FarawayIsland_Entrance_Text_KairiIntro:
-	.string "Hi, I'm Kairi! How do you do?\p"
-	.string "You're friends with Mew, too?\n"
-	.string "Okay, don't hold back!$"
+	.string "Hello {PLAYER}, welcome back!\p"
+	.string "... you've become Champion???\n"
+	.string "Wow, I wonder if you can beat me?$"
 
 FarawayIsland_Entrance_Text_KairiDefeat:
 	.string "I see why a Mew chose you.$"
