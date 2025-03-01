@@ -2,11 +2,11 @@ BattleTower_3F_Lounge_MapScripts::
 	.byte 0
 
 BattleTower_3F_Lounge_Text_HiIAmJiraiya:
-	.string "UGH it's infuriating, I tell you!\p"
-	.string "I came all this way for a battle\n"
+	.string "I came to the Battle Tower to fight\n"
 	.string "against the finest Trainers Kanto\l"
-	.string "has to offer and the owner shut\l"
-	.string "down all the matches!\p"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
 	.string "... what's that? Are you saying\n"
 	.string "you will battle me?$"
 
@@ -37,13 +37,13 @@ BattleTower_3F_Lounge_EventScript_BlackBeltJiraiya::
 	end
 
 BattleTower_3F_Lounge_Text_JiraiyaIntro:
-	.string "I wanna be the very best!$"
+	.string "We are strong in mind and body.$"
 
 BattleTower_3F_Lounge_Text_JiraiyaDefeat:
 	.string "Incredible... how...?$"
 
 BattleTower_3F_Lounge_Text_JiraiyaPostBattle:
-	.string "I don't know what to say yet.$"
+	.string "Is this a dream?$"
 
 BlackBeltDeclined::
 	msgbox	Text_IWouldNotEither, MSGBOX_DEFAULT
@@ -51,8 +51,8 @@ BlackBeltDeclined::
 	end
 
 Text_IWouldNotEither:
-	.string "Heh, I wouldn't want to fight\n"
-	.string "me either. Move on, then.$"
+	.string "Do not interrupt my meditation.\n"
+	.string "Move on, then.$"
 
 BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated::
 	msgbox JiraiyaDefeated MSGBOX_DEFAULT
