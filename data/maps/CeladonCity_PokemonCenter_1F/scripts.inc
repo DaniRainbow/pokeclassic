@@ -7,7 +7,14 @@ CeladonCity_PokemonCenter_1F_MapScripts::
 
 CeladonCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_CELADON_CITY
+	call_if_unset FLAG_DAILY_ROCKET_FUGITIVE, CeladonCity_PokemonCenter_1F_ResetFugitiveFlags
 	end
+
+CeladonCity_PokemonCenter_1F_ResetFugitiveFlags::
+	clearflag FLAG_LOOKER_EXPLAINED_QUESTS
+	clearflag FLAG_LOOKER_ASSIGNMENT_ACTIVE
+	clearflag FLAG_ROCKET_FUGITIVE_CAPTURED
+	return
 
 CeladonCity_PokemonCenter_1F_EventScript_Nurse::
 	lock
