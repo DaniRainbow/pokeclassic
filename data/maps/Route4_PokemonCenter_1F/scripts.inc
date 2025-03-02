@@ -38,7 +38,9 @@ Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
     .string "Team Rocket attacks Cerulean\n"
     .string "citizens…\p"
     .string "Not a day goes by without Team\n"
-    .string "Rocket being in the news.$"
+    .string "Rocket being in the news.\p"
+	.string "We need more kind people in the world.\n"
+	.string "Like the Hiker I met upstairs!$"
 
 Route4_PokemonCenter_1F_EventScript_Youngster::
 	msgbox Route4_PokemonCenter_1F_Text_ShouldStoreMonsUsingPC, MSGBOX_NPC
