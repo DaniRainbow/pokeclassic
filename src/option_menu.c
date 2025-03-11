@@ -519,7 +519,7 @@ static void Sound_DrawChoices(u8 selection)
     DrawOptionMenuChoice(gText_SoundMono, 104, YPOS_SOUND, styles[0]);
     DrawOptionMenuChoice(gText_SoundStereo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SoundStereo, 198), YPOS_SOUND, styles[1]);
 }
-
+//IF YOU WANT ANY FOLLOWER FROM THE BEGINNING, CHANGE THE "ELSE" to match the "IF"
 static u8 FollowerType_ProcessInput(u8 selection)
 {
     if (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE)
@@ -555,7 +555,7 @@ static u8 FollowerType_ProcessInput(u8 selection)
         return selection;
     }
 }
-
+//IF YOU WANT ANY FOLLOWER FROM THE BEGINNING, CHANGE THE "ELSE" to match the "IF"
 static void FollowerType_DrawChoices(u8 selection)
 {
     if (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE)

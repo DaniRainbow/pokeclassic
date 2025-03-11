@@ -2164,7 +2164,7 @@ u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevati
     }
     return spriteId;
 }
-
+//IF YOU WANT ANY FOLLOWER FROM THE BEGINNING, CHANGE THE "ELSE" to match the "IF"
 struct Pokemon * GetFirstLiveMon(void) { // Return address of first conscious party mon or NULL
   u8 i;
   for (i=0; i<PARTY_SIZE;i++) 
