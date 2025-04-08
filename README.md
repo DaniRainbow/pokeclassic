@@ -9,7 +9,7 @@ This repository builds the following ROM:
 
 * pokeemerald.gba `sha1: F54D617A759F42077FDB3B4DB3093DBABCECAA0B`
 
-**updated 4/7/2025**
+**updated 4/08/2025**
 
 To compile this ROM yourself, see [Pret's Installation Guide](https://github.com/pret/pokeemerald/blob/master/INSTALL.md) on how to get started with the decompilations. Then, clone this branch and build the ROM by changing "pokeemerald" to "pokeclassic" in the instructions.
 
@@ -34,6 +34,6 @@ All individuals who submit relevant issues or have their pull request merged wil
 # Credits
 Special thanks to  Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXaman, Ghoulslash, citrusbolt, asparaguseduardo, exposeed, surskitty, GriffinR, & the Pret Discord.
 
-DaniRainbow would also like to say thank you to ShadowXeen, Jaizu, Dani96sp, MrMazzone, Rorydaredking, khurram1192, Bamboozaler, voloved, Eduardo Quezada D'Ottone, Fyreire, and Hiroshi Sotomura. Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, FiascoFinn, MeekRhino, Josh, and Ketsuban. Thank you to RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara. 
+DaniRainbow would also like to say thank you to ShadowXeen, Jaizu, Dani96sp, MrMazzone, Rorydaredking, khurram1192, Bamboozaler, voloved, Eduardo Quezada D'Ottone, Fyreire, and Hiroshi Sotomura. Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, FiascoFinn, MeekRhino, Josh, and Ketsuban. Thank you to RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara. Thank you to Reddit user Fantom6464.
 
 Special thanks to Black Belt Jiraiya for helping with Hex Maniac Camran. :D
