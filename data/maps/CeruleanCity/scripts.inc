@@ -476,6 +476,7 @@ CeruleanCity_EventScript_Grunt::
 	faceplayer
 	goto_if_defeated TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_EventScript_GruntDefeated
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_Text_GruntIntro, CeruleanCity_Text_GruntDefeat, CeruleanCity_EventScript_GruntDefeated
+	releaseall
 	end
 
 CeruleanCity_Text_GruntIntro::
@@ -502,7 +503,7 @@ CeruleanCity_EventScript_GruntDefeated::
 	waitse
 	fadescreen FADE_FROM_BLACK
 	release
-	end
+	return
 
 CeruleanCity_Text_OkayIllReturnStolenTM::
     .string "…Fine! Here!\p"
