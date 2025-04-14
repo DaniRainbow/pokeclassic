@@ -36,6 +36,6 @@ Special thanks to  Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXama
 
 DaniRainbow would also like to say thank you to ShadowXeen, Jaizu, Dani96sp, MrMazzone, Rorydaredking, khurram1192, Bamboozaler, voloved, Eduardo Quezada D'Ottone, Fyreire, and Hiroshi Sotomura. Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, FiascoFinn, MeekRhino, Josh, and Ketsuban. Thank you to RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara.
 
-Bug Catchers: Fantom6464, JaxterHawk, Nadamari
+Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos
 
 Special thanks to Black Belt Jiraiya for helping with Hex Maniac Camran. :D
