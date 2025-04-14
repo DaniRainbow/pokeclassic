@@ -20,7 +20,9 @@ PokemonTower_1F_EventScript_CueBall::
 	goto_if_set FLAG_GOT_TM42, PokemonTower_1F_EventScript_CueBall2
 	msgbox PokemonTower_1F_Text_IDontNeedThis, MSGBOX_NPC
 	giveitem ITEM_TM42, 1
-	release
+	waitmessage
+	setflag FLAG_GOT_TM42	
+	releaseall
 	end
 
 PokemonTower_1F_Text_IDontNeedThis::
