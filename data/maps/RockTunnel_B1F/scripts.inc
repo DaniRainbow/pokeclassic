@@ -180,4 +180,4 @@ RockTunnel_B1F_EventScript_HelmetGuy2::
 
 RockTunnel_B1F_Text_Helmet2::
     .string "Sometimes, rocks will contain items.\n"
-    .string "But they could also contian Pokémon!$"
+    .string "But they could also contain Pokémon!$"
