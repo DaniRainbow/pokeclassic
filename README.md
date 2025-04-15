@@ -32,10 +32,12 @@ Please use the following template when you submit a new issue:
 ---
 All individuals who submit relevant issues or have their pull request merged will be credited below.
 # Credits
-Special thanks to  Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXaman, Ghoulslash, citrusbolt, asparaguseduardo, exposeed, surskitty, GriffinR, & the Pret Discord.
+Danenders: Special thanks to  Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXaman, Ghoulslash, citrusbolt, asparaguseduardo, exposeed, surskitty, GriffinR, & the Pret Discord.
 
-DaniRainbow would also like to say thank you to ShadowXeen, Jaizu, Dani96sp, MrMazzone, Rorydaredking, khurram1192, Bamboozaler, voloved, Eduardo Quezada D'Ottone, Fyreire, and Hiroshi Sotomura. Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, FiascoFinn, MeekRhino, Josh, and Ketsuban. Thank you to RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara.
+DaniRainbow: I would like to say thank you to ShadowXeen, Jaizu, Dani96sp, MrMazzone, Rorydaredking, khurram1192, Bamboozaler, voloved, Eduardo Quezada D'Ottone, Fyreire, and Hiroshi Sotomura for previous contributions that allowed me to create a firm foundation to start from. 
+##Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, FiascoFinn, MeekRhino, Josh, and Ketsuban. 
+##Thank you to RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara.
 
-Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos
+##Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos
 
 Special thanks to Black Belt Jiraiya for helping with Hex Maniac Camran. :D
