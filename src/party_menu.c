@@ -2563,7 +2563,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     //Dive          = 6
     //Waterfall     = 7
     //Teleport      = 8
-    //Dig           = 9
+    //Dig           = 9     FLAG_RECOVERED_STOLEN_TM
     //Secret Power  = 10
     //Milk Drink    = 11
     //Soft-Boiled   = 12

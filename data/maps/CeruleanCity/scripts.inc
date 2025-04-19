@@ -736,7 +736,7 @@ CeruleanCity_EventScript_BillCallsPlayer::
 
 CeruleanCity_Text_DexNavCall::
 	.string "???: Hey, is this {PLAYER}?\p"
-	.string "Bill: Yeah, it's BilL!\p"
+	.string "Bill: Yeah, it's Bill!\p"
 	.string "I had to email Prof. Oak for your\n"
 	.string "number, I hope that's OK!\p"
 	.string "My brain must have been a little\n"
