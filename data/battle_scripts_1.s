@@ -6256,7 +6256,7 @@ BattleScript_LocalBattleWonBP::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 BattleScript_LocalBattleWonReward::
-	jumpifbyte CMP_EQUAL, gSpecialVar_0x8003, 1, BattleScript_LocalBattleWonBP
+	jumpifbyte CMP_EQUAL, gSpecialVar_0x800B, 1, BattleScript_LocalBattleWonBP
 	getmoneyreward
 	printstring STRINGID_PLAYERGOTMONEY
 	waitmessage B_WAIT_TIME_LONG
