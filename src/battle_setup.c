@@ -775,7 +775,7 @@ u8 GetTrainerBattleTransition(void)
     u8 enemyLevel;
     u8 playerLevel;
 
-    if (VarGet(gSpecialVar_0x800B) == 1)
+    if (VarGet(gSpecialVar_0x8003) == 1)
         return RANDOM_TRANSITION(sBattleTransitionTable_BattleFrontier);
 
     if (gTrainerBattleOpponent_A == TRAINER_SECRET_BASE)
