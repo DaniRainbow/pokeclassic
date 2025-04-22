@@ -39,7 +39,7 @@ static const struct LevelUpMove sIvysaurLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sVenusaurLevelUpLearnset[] = {
-    // LEVEL_UP_MOVE( 0, MOVE_PETAL_DANCE),
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_PETAL_DANCE),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
@@ -56,6 +56,7 @@ static const struct LevelUpMove sVenusaurLevelUpLearnset[] = {
     LEVEL_UP_MOVE(28, MOVE_GROWTH),
     LEVEL_UP_MOVE(31, MOVE_DOUBLE_EDGE),
 	LEVEL_UP_MOVE(32, MOVE_PETAL_DANCE),
+    LEVEL_UP_MOVE(37, MOVE_SEED_BOMB),
     LEVEL_UP_MOVE(39, MOVE_WORRY_SEED),
     LEVEL_UP_MOVE(45, MOVE_SYNTHESIS),
     LEVEL_UP_MOVE(50, MOVE_PETAL_BLIZZARD),
