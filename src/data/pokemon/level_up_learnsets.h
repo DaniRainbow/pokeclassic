@@ -382,6 +382,7 @@ static const struct LevelUpMove sSpearowLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sFearowLevelUpLearnset[] = {
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_DRILL_RUN),
     LEVEL_UP_MOVE( 1, MOVE_PLUCK),
     LEVEL_UP_MOVE( 1, MOVE_PECK),
