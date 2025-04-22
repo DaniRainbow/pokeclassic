@@ -875,6 +875,7 @@ static const struct LevelUpMove sZubatLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sGolbatLevelUpLearnset[] = {
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_SCREECH),
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_SUPERSONIC),
