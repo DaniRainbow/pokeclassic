@@ -343,7 +343,7 @@ static const struct LevelUpMove sRattataLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sRaticateLevelUpLearnset[] = {
-    // LEVEL_UP_MOVE( 0, MOVE_SCARY_FACE),
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE( 1, MOVE_SWORDS_DANCE),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
