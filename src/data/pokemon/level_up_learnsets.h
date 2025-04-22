@@ -1070,7 +1070,7 @@ static const struct LevelUpMove sDiglettLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sDugtrioLevelUpLearnset[] = {
-    // LEVEL_UP_MOVE( 0, MOVE_SAND_TOMB),
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_SAND_TOMB),
     LEVEL_UP_MOVE( 1, MOVE_ROTOTILLER),
     LEVEL_UP_MOVE( 1, MOVE_NIGHT_SLASH),
