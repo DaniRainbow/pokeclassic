@@ -163,6 +163,7 @@ static const struct LevelUpMove sWartortleLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sBlastoiseLevelUpLearnset[] = {
+    //FML Complete
     LEVEL_UP_MOVE( 1, MOVE_FLASH_CANNON),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
