@@ -1558,6 +1558,7 @@ static const struct LevelUpMove sTentacoolLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sTentacruelLevelUpLearnset[] = {
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_REFLECT_TYPE),
     LEVEL_UP_MOVE( 1, MOVE_WRING_OUT),
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
