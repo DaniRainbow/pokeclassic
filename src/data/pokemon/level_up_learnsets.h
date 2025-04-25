@@ -2609,6 +2609,7 @@ static const struct LevelUpMove sGoldeenLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sSeakingLevelUpLearnset[] = {
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_MEGAHORN),
     LEVEL_UP_MOVE( 1, MOVE_POISON_JAB),
     LEVEL_UP_MOVE( 1, MOVE_PECK),
