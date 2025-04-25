@@ -2844,7 +2844,7 @@ static const struct LevelUpMove sMagikarpLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sGyaradosLevelUpLearnset[] = {
-    // LEVEL_UP_MOVE( 0, MOVE_BITE),
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_BITE),
     LEVEL_UP_MOVE( 1, MOVE_THRASH),
 	LEVEL_UP_MOVE( 1, MOVE_DRAGON_RAGE),
@@ -2853,6 +2853,7 @@ static const struct LevelUpMove sGyaradosLevelUpLearnset[] = {
     LEVEL_UP_MOVE(24, MOVE_TWISTER),
     LEVEL_UP_MOVE(27, MOVE_ICE_FANG),
     LEVEL_UP_MOVE(30, MOVE_AQUA_TAIL),
+    LEVEL_UP_MOVE(30, MOVE_FLAIL),
     LEVEL_UP_MOVE(33, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE(39, MOVE_CRUNCH),
     LEVEL_UP_MOVE(42, MOVE_HYDRO_PUMP),
