@@ -2570,6 +2570,7 @@ static const struct LevelUpMove sHorseaLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sSeadraLevelUpLearnset[] = {
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_HYDRO_PUMP),
     LEVEL_UP_MOVE( 1, MOVE_BUBBLE),
     LEVEL_UP_MOVE( 1, MOVE_SMOKESCREEN),
