@@ -1882,7 +1882,7 @@ static const struct LevelUpMove sSeelLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sDewgongLevelUpLearnset[] = {
-    // LEVEL_UP_MOVE( 0, MOVE_SHEER_COLD),
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_SHEER_COLD),
     LEVEL_UP_MOVE( 1, MOVE_HEADBUTT),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
@@ -1890,6 +1890,7 @@ static const struct LevelUpMove sDewgongLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ICY_WIND),
     LEVEL_UP_MOVE( 3, MOVE_GROWL),
     LEVEL_UP_MOVE( 7, MOVE_SIGNAL_BEAM),
+    LEVEL_UP_MOVE( 7, MOVE_WATER_SPORT),
     LEVEL_UP_MOVE(11, MOVE_ICY_WIND),
     LEVEL_UP_MOVE(13, MOVE_ENCORE),
     LEVEL_UP_MOVE(17, MOVE_ICE_SHARD),
