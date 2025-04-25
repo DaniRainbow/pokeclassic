@@ -3328,6 +3328,7 @@ static const struct LevelUpMove sMewLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+//NOT IN POKEMON CLASSIC
 static const struct LevelUpMove sChikoritaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
