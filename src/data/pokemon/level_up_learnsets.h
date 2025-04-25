@@ -2465,7 +2465,7 @@ static const struct LevelUpMove sRhyhornLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sRhydonLevelUpLearnset[] = {
-    // LEVEL_UP_MOVE( 0, MOVE_HAMMER_ARM),
+    //FEL COMPLETE
     LEVEL_UP_MOVE( 1, MOVE_HAMMER_ARM),
     LEVEL_UP_MOVE( 1, MOVE_HORN_DRILL),
     LEVEL_UP_MOVE( 1, MOVE_HORN_ATTACK),
