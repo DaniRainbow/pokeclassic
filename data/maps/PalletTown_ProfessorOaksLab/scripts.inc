@@ -798,13 +798,116 @@ PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints::
 PalletTown_ProfessorOaksLab_EventScript_Aide1::
 	lock
 	faceplayer
-	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
+	goto_if_unset FLAG_REGISTERED_AIDE, PalletTown_ProfessorOaksLab_StudyAsOaksAide
+	goto_if_unset FLAG_RECEIVED_HM05, PalletTown_ProfessorOaksLab_NOFlash
+	goto_if_unset FLAG_RECEIVED_AIDE_EVERSTONE, PalletTown_ProfessorOaksLab_NOEverstone
+	goto_if_unset FLAG_RECEIVED_ITEMFINDER, PalletTown_ProfessorOaksLab_NOItemfinder
+	goto_if_unset FLAG_RECEIVED_AIDE_AMULET_COIN, PalletTown_ProfessorOaksLab_NOAmuletCoin
+	goto_if_unset FLAG_RECEIVED_EXP_SHARE, PalletTown_ProfessorOaksLab_NOExpShare
+	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide2, MSGBOX_NPC
+	waitmessage
+	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_StudyAsOaksAide::
+    msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide, MSGBOX_NPC
 	release
 	end
 
-PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
+PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide:
     .string "I study Pokémon as Prof. Oak's\n"
     .string "Aide.$"
+
+PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide2:
+    .string "I know what you're going to ask.\n"
+	.string "She's here, go say hi to Cedar!\p"
+	.string "Let's face it, I didn't have much\n"
+	.string "to say before and that has not\l"
+	.string "changed. Enjoy your stay.$"
+
+PalletTown_ProfessorOaksLab_NOFlash::
+	msgbox PalletTown_ProfessorOaksLab_Text_NOFlash, MSGBOX_NPC
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NOFlash:
+	.string "... what's that?\n"
+	.string "You're looking for Cedar?\p"
+	.string "I'm afraid she's not here but\n"
+	.string "I do know where she should be.\p"
+	.string "She was told to head to Route 2.\n"
+	.string "She's east of the regrowing CUT trees.\p"
+	.string "You can't CUT trees without the proper\n"
+	.string "badge, but you can get behind them if\l"
+	.string "you take Diglett Cave from Vermillion.$"
+
+PalletTown_ProfessorOaksLab_NOEverstone::
+	msgbox PalletTown_ProfessorOaksLab_Text_NOEverstone, MSGBOX_NPC
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NOEverstone:
+	.string "... what's that?\n"
+	.string "You're looking for Cedar?\p"
+	.string "I'm afraid she's not here but\n"
+	.string "I do know where she should be.\p"
+	.string "She was told to head to Rock Tunnel.\n"
+	.string "It's a hard tunnel to get through.\p"
+	.string "Try checking the PokéCenter outside\n"
+	.string "the north entrance.\p"
+	.string "Have you picked up FLY? If so, please\n"
+	.string "FLY on over to Rock Tunnel.$"
+
+PalletTown_ProfessorOaksLab_NOItemfinder::
+	msgbox PalletTown_ProfessorOaksLab_Text_NOItemfinder, MSGBOX_NPC
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NOItemfinder::
+	.string "... what's that?\n"
+	.string "You're looking for Cedar?\p"
+	.string "I'm afraid she's not here but\n"
+	.string "I do know where she should be.\p"
+	.string "She was told to head to Route 11.\n"
+	.string "I suspect she would rest at the\l"
+	.string "checkpoint to the east of there.$"
+
+PalletTown_ProfessorOaksLab_NOAmuletCoin::
+	msgbox PalletTown_ProfessorOaksLab_Text_NOAmuletCoin, MSGBOX_NPC
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NOAmuletCoin::
+	.string "... what's that?\n"
+	.string "You're looking for Cedar?\p"
+	.string "I'm afraid she's not here but\n"
+	.string "I do know where she should be.\p"
+	.string "She was told to head to Route 16.\n"
+	.string "She called to say a Snorlax fell\l"
+	.string "asleep which blocked her path back\l"
+	.string "to Celadon City.\p"
+	.string "So... without a bike in her posession\n"
+	.string "she would be stuck at the checkpoint\l"
+	.string "until Snorlax is encouraged to move.$"
+
+PalletTown_ProfessorOaksLab_NOExpShare::
+	msgbox PalletTown_ProfessorOaksLab_Text_NOExpShare, MSGBOX_NPC
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NOExpShare:
+	.string "... what's that?\n"
+	.string "You're looking for Cedar?\p"
+	.string "I'm afraid she's not here but\n"
+	.string "I do know where she should be.\p"
+	.string "She was told to head to Route 15.\n"
+	.string "That being said, she has always\l"
+	.string "talked about going to the Safari\l"
+	.string "Zone if given the chance.\p"
+	.string "I am starting to sound like a\n"
+	.string "broken record at this point,\l"
+	.string "but my hunch is she is resting\l"
+	.string "at the Route 15 checkpoint.$"
 
 PalletTown_ProfessorOaksLab_EventScript_Aide2::
 	lock
@@ -875,7 +978,7 @@ PalletTown_ProfessorOaksLab_Text_CatchingCharmReward::
 	.string "That's quite an accomplishment!\p"
 	.string "You know, there's still more Pokémon\n"
 	.string "to see out there.\p"
-	.string "This should help you complete your Pokédex!$"
+	.string "This will help you complete your Pokédex!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedCatchingCharm::
 	.string "{PLAYER} earned the Catching Charm!$"
@@ -967,7 +1070,7 @@ PalletTown_ProfessorOaksLab_Text_WhatAJourney::
 	.string "But, following your journey was also\n"
 	.string "an adventure for me!\p"
 	.string "I saw so much of Kanto, and got to\n"
-	.string "what life as a Trainer must be like.\p"
+	.string "see what life as a Trainer is like.\p"
 	.string "I see now why Prof. Oak gave me that\n"
 	.string "assignment.\p"
 	.string "So, thanks for the adventure!$"

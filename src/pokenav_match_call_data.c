@@ -242,6 +242,7 @@ static const match_call_text_data_t sAideTextScripts[] = {
     { MatchCall_Text_AideOnMyWayRoute16,  FLAG_AIDE_LOCATION_4,      0xFFFF },
     { MatchCall_Text_AideOnMyWayRoute15,  FLAG_AIDE_LOCATION_5,      0xFFFF },
     { MatchCall_Text_AideGameClear,       FLAG_SYS_GAME_CLEAR,       0xFFFF },
+    { MatchCall_Text_AideAllCharms,       FLAG_RECEIVED_ALL_CHARMS,  0xFFFF },
     { NULL,                               0xFFFF,                    0xFFFF }
 };
 
