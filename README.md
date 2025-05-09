@@ -40,6 +40,6 @@ Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, Fiasco
 
 Thank you to RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara.
 
-Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos
+Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos, raoul_duke1337
 
 Special thanks to Black Belt Jiraiya for helping with Hex Maniac Camran. :D
