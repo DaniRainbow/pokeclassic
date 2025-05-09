@@ -497,11 +497,31 @@ MatchCall_Text_AideOnMyWayRoute15::
 	.string "I tried to catch a super rare\n"
 	.string "Pokémon, but it ran away!$"
 
+MatchCall_Text_AideAllCharms::
+	.string "Cedar: Oh, {PLAYER}!\n"
+	.string "Thanks for calling.\p"
+	.string "You know, when I joined Prof. Oak's\n"
+	.string "Lab, I wasn't happy that I'd spend so\l"
+	.string "much time travelling away from it!\p"
+	.string "But, following your journey was also\n"
+	.string "an adventure for me!\p"
+	.string "I saw so much of Kanto, and got to\n"
+	.string "see what life as a Trainer is like.\p"
+	.string "I see now why Prof. Oak gave me that\n"
+	.string "assignment.\p"
+	.string "So, thanks for the adventure!$"
+
 MatchCall_Text_AideGameClear::
 	.string "Cedar: Ah, hello {PLAYER}!\p"
 	.string "Congratulations on becoming\n"
 	.string "the champion!\p"
-	.string "I hope my rewards were helpful!$"
+	.string "I still have some things\n"
+	.string "from the professor for you.\p"
+	.string "If I'm not at Oak's lab you\n"
+	.string "can speak to the assistant\l"
+	.string "to the left of the entrance\l"
+	.string "and they can tell you my\l"
+	.string "location. Au revoir!$"
 
 MatchCall_Text_RegisteredLooker:
 	.string "Looker registered their info in\n"
