@@ -922,7 +922,7 @@ PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar2:
 	.string "have a current task so she's taking\l"
 	.string "a break.\p"
 	.string "She's talked about swimming out to\n"
-	.string "the Seafoam Caverns last time she.\l"
+	.string "the Seafoam Caverns last time she\l"
 	.string "had tea with her fellow Aides.\p"
 	.string "When Professor Oak assigns a new\n"
 	.string "task, Cedar will be sure to call.$"
