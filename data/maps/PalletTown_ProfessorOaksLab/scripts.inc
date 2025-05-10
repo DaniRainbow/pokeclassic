@@ -802,7 +802,9 @@ PalletTown_ProfessorOaksLab_EventScript_Aide1::
 	goto_if_unset FLAG_RECEIVED_HM05, PalletTown_ProfessorOaksLab_NOFlash
 	goto_if_unset FLAG_RECEIVED_AIDE_EVERSTONE, PalletTown_ProfessorOaksLab_NOEverstone
 	goto_if_unset FLAG_RECEIVED_ITEMFINDER, PalletTown_ProfessorOaksLab_NOItemfinder
+	goto_if_unset FLAG_BADGE05_GET, PalletTown_ProfessorOaksLab_NoUpdateOnCedar1
 	goto_if_unset FLAG_RECEIVED_AIDE_AMULET_COIN, PalletTown_ProfessorOaksLab_NOAmuletCoin
+	goto_if_unset FLAG_BADGE06_GET, PalletTown_ProfessorOaksLab_NoUpdateOnCedar2
 	goto_if_unset FLAG_RECEIVED_EXP_SHARE, PalletTown_ProfessorOaksLab_NOExpShare
 	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide2, MSGBOX_NPC
 	waitmessage
@@ -872,6 +874,23 @@ PalletTown_ProfessorOaksLab_Text_NOItemfinder::
 	.string "I suspect she would rest at the\l"
 	.string "checkpoint to the east of there.$"
 
+PalletTown_ProfessorOaksLab_NoUpdateOnCedar1::
+	msgbox PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar1, MSGBOX_NPC
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar1:
+	.string "... what's that?\n"
+	.string "You're looking for Cedar?\l"
+	.string "I'm afraid she's not here.\p"
+	.string "As a matter of fact, she does not\n"
+	.string "have a current task so she's taking\l"
+	.string "a break.\p"
+	.string "She's probably in Celadon shopping\n"
+	.string "or at the Game Corner.\p"
+	.string "When Professor Oak assigns a new\n"
+	.string "task, Cedar will be sure to call.$"
+
 PalletTown_ProfessorOaksLab_NOAmuletCoin::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOAmuletCoin, MSGBOX_NPC
 	release
@@ -889,6 +908,24 @@ PalletTown_ProfessorOaksLab_Text_NOAmuletCoin::
 	.string "So... without a bike in her posession\n"
 	.string "she would be stuck at the checkpoint\l"
 	.string "until Snorlax is encouraged to move.$"
+
+PalletTown_ProfessorOaksLab_NoUpdateOnCedar2::
+	msgbox PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar2, MSGBOX_NPC
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar2:
+	.string "... what's that?\n"
+	.string "You're looking for Cedar?\l"
+	.string "I'm afraid she's not here.\p"
+	.string "As a matter of fact, she does not\n"
+	.string "have a current task so she's taking\l"
+	.string "a break.\p"
+	.string "She's talked about swimming out to\n"
+	.string "the Seafoam Caverns last time she\l"
+	.string "had tea with her fellow Aides.\p"
+	.string "When Professor Oak assigns a new\n"
+	.string "task, Cedar will be sure to call.$"
 
 PalletTown_ProfessorOaksLab_NOExpShare::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOExpShare, MSGBOX_NPC
