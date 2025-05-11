@@ -2547,7 +2547,10 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 				    if (sFieldMoves[j] != MOVE_FLASH || !CheckBagHasItem(ITEM_HM05_FLASH, 1)){
                         // If Mon already knows DIG and the TM is in the bag, prevent it from being added to action list
                         if (sFieldMoves[j] != MOVE_DIG || !CheckBagHasItem(ITEM_TM28, 1)){ 
-						    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                            // If Mon already knows CUT and the HM is in the bag, prevent it from being added to action list
+                            if (sFieldMoves[j] != MOVE_CUT || !CheckBagHasItem(ITEM_HM01_CUT, 1)){
+						        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                            }
                         }
                     }
                 }
@@ -2578,6 +2581,9 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     // If Mon can learn HM05 and action list consists of < 4 moves and player has FLASH HM, add FLASH to action list
     if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM05 - ITEM_TM01) && CheckBagHasItem(ITEM_HM05_FLASH, 1)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 0 + MENU_FIELD_MOVES);
+    // If Mon can learn HM01 and action list consists of < 4 moves and player has CUT HM, add CUT to action list
+    if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM01 - ITEM_TM01) && CheckBagHasItem(ITEM_HM01_CUT, 1)) 
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 1 + MENU_FIELD_MOVES);
     // If Mon can learn TM28 and action list consists of < 4 moves and player recovered the DIG TM, add DIG to action list
     if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_TM28 - ITEM_TM01) && FlagGet(FLAG_RECOVERED_STOLEN_TM) == TRUE)
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 9 + MENU_FIELD_MOVES);
