@@ -3309,6 +3309,7 @@ static const struct LevelUpMove sMewtwoLevelUpLearnset[] = {
     LEVEL_UP_MOVE(79, MOVE_AMNESIA),
     LEVEL_UP_MOVE(86, MOVE_MIST),
     LEVEL_UP_MOVE(93, MOVE_ME_FIRST),
+    LEVEL_UP_MOVE(100, MOVE_PSYSTRIKE),
     LEVEL_UP_END
 };
 
