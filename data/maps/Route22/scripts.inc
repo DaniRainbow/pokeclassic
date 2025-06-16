@@ -42,6 +42,7 @@ Route22_EventScript_EarlyRivalTriggerBottom::
 
 Route22_EventScript_EarlyRival::
 	setvar VAR_ROUTE_22_RIVAL_STATE, 2
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
 	clearflag FLAG_HIDE_RIVAL_ROUTE_22
 	addobject LOCALID_RIVAL
 	applymovement LOCALID_RIVAL, Movement_RivalApproach
