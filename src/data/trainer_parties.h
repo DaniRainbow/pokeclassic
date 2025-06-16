@@ -1266,7 +1266,7 @@ static const struct TrainerMonItemCustomMoves sParty_BlackBeltJiraiya[] = {
 		.lvl = 80,
 		.species = SPECIES_MEWTWO_MEGA_X,
 		.heldItem = ITEM_MEWTWONITE_X,
-		.moves = {MOVE_AMNESIA, MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_RECOVER}
+		.moves = {MOVE_PSYSTRIKE, MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_RECOVER}
 	},
 	{
 		.iv = 250,
