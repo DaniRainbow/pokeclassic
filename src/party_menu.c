@@ -6666,6 +6666,17 @@ void Task_AbilityCapsule(u8 taskId)
     }
 }
 
+//void ItemUseCB_AbilityCapsule(u8 taskId, TaskFunc task)
+//{
+    //s16 *data = gTasks[taskId].data;
+
+    //tState = 0;
+    //tMonId = gPartyMenu.slotId;
+    //tSpecies = GetMonData(&gPlayerParty[tMonId], MON_DATA_SPECIES, NULL);
+    //tAbilityNum = GetMonData(&gPlayerParty[tMonId], MON_DATA_ABILITY_NUM, NULL);
+    //SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
+    //gTasks[taskId].func = Task_AbilityCapsule;
+//}
 void ItemUseCB_AbilityCapsule(u8 taskId, TaskFunc task)
 {
     s16 *data = gTasks[taskId].data;
@@ -6673,7 +6684,7 @@ void ItemUseCB_AbilityCapsule(u8 taskId, TaskFunc task)
     tState = 0;
     tMonId = gPartyMenu.slotId;
     tSpecies = GetMonData(&gPlayerParty[tMonId], MON_DATA_SPECIES, NULL);
-    tAbilityNum = GetMonData(&gPlayerParty[tMonId], MON_DATA_ABILITY_NUM, NULL);
+    tAbilityNum = GetMonData(&gPlayerParty[tMonId], MON_DATA_ABILITY_NUM, NULL) ^ 1;
     SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
     gTasks[taskId].func = Task_AbilityCapsule;
 }
