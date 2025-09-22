@@ -6019,7 +6019,7 @@ const struct Trainer gTrainers[] = {
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
         .trainerPic = TRAINER_PIC_BLACK_BELT,
         .trainerName = _("Jiraiya"),
-        .items = {ITEM_FULL_RESTORE},
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
         .partySize = ARRAY_COUNT(sParty_BlackBeltJiraiya),
@@ -6037,5 +6037,16 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_LassKairi),
         .party = {.ItemCustomMoves = sParty_LassKairi}
 	},
-
+    [TRAINER_ENGINEER_DYLAN] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_ENGINEER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_ENGINEER,
+        .trainerName = _("Dylan"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_EngineerDylan),
+        .party = {.ItemCustomMoves = sParty_EngineerDylan}
+	},
 };

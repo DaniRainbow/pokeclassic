@@ -6719,6 +6719,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SisAndBroLiaLuc[] = {
         .species = SPECIES_SEAKING,
     },
 };
+
 //Route 20
 static const struct TrainerMonNoItemDefaultMoves sParty_DragonTamerRoger1[] = {
     {
@@ -6897,6 +6898,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerFemaleShirley[] =
         .lvl = 30,
         .species = SPECIES_SEADRA,
     },
+};
+// Need to update moves and items. Trainer already created in trainers.h as TRAINER_ENGINEER_DYLAN
+static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
+	{
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_GOLEM,
+		.heldItem = ITEM_LIGHT_BALL,
+		.moves = {MOVE_VOLT_TACKLE, MOVE_ELECTRO_BALL, MOVE_SLAM, MOVE_AGILITY}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_PIDGEOT,
+		.heldItem = ITEM_SILK_SCARF,
+		.moves = {MOVE_HYPER_VOICE, MOVE_ROLLOUT, MOVE_SING, MOVE_EARTHQUAKE}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_MACHAMP,
+		.heldItem = ITEM_FOCUS_BAND,
+		.moves = {MOVE_DUAL_CHOP, MOVE_SEISMIC_TOSS, MOVE_FOCUS_ENERGY, MOVE_FIRE_PUNCH}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_MAGNETON,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_AGILITY, MOVE_THUNDER, MOVE_HURRICANE, MOVE_THUNDERBOLT}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_ELECTABUZZ,
+		.heldItem = ITEM_MEWTWONITE_X,
+		.moves = {MOVE_PSYSTRIKE, MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_RECOVER}
+	},
+	{
+		.iv = 250,
+		.lvl = 70,
+		.species = SPECIES_BLASTOISE_MEGA,
+		.heldItem = ITEM_BLASTOISINITE,
+		.moves = {MOVE_FLY, MOVE_LAVA_PLUME, MOVE_DUAL_WINGBEAT, MOVE_FIRE_BLAST}
+	},
 };
 //Seafoam Islands
 static const struct TrainerMonItemCustomMoves sParty_BlackBeltMichael[] = {
