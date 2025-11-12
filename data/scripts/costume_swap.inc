@@ -41,12 +41,13 @@ Text_ChangeClothes_Cancel:
 EventScript_Dresser_Loop::
 	message Text_ChooseRegionStyle
 	waitmessage
-	multichoicedefault 0, 0, MULTI_DRESSER_DRAWERS, 4, FALSE
+	multichoicedefault 0, 0, MULTI_DRESSER_DRAWERS, 5, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_KantoCostumes
 	case 1, EventScript_JohtoCostumes
 	case 2, EventScript_HoennCostumes
 	case 3, EventScript_SinnohCostumes
+    case 4, EventScript_Dresser_Exit
 	case MULTI_B_PRESSED, EventScript_Dresser_Exit
 	end
 
