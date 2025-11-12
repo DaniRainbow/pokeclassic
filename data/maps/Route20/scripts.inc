@@ -261,3 +261,15 @@ Route20_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
+
+Route20_EngineerDylan::
+	lock
+	faceplayer
+	msgbox Route20_Text_EngineerDylan_Placeholder
+	release
+	end
+
+Route20_Text_EngineerDylan_Placeholder:
+	.string "Hello! I'm Lil Dill!\n"
+	.string "I'm visiting from Johto!$"
+
