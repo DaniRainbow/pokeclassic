@@ -262,14 +262,75 @@ Route20_RocketFugitive::
     fadescreen FADE_FROM_BLACK
     end
 
-Route20_EngineerDylan::
+//Route20_EngineerDylan::
+	//lock
+	//faceplayer
+	//msgbox Route20_Text_EngineerDylan_Placeholder
+	//release
+	//end
+
+//Route20_Text_EngineerDylan_Placeholder:
+	//.string "Hello! I'm Lil Dill!\n"
+	//.string "I'm visiting from Johto!$"
+
+Route20_EventScript_Blastoise::
 	lock
 	faceplayer
-	msgbox Route20_Text_EngineerDylan_Placeholder
+    goto_if_set FLAG_DEFEATED_DYLAN, Route20_EventScript_BlastoiseDefeated
+	msgbox Route20_Text_Blastoise MSGBOX_DEFAULT
 	release
 	end
 
-Route20_Text_EngineerDylan_Placeholder:
-	.string "Hello! I'm Lil Dill!\n"
-	.string "I'm visiting from Johto!$"
+Route20_Text_Blastoise:
+	.string "{PLAYER}.\p"
+	.string "I won't talk like Mewtwo forever.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+Route20_EventScript_EngineerDylan::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DYLAN, Route20_EventScript_MegaHintBlastoise
+	trainerbattle_single TRAINER_ENGINEER_DYLAN, Route20_Text_DylanIntro, Route20_Text_DylanDefeat
+	setflag FLAG_DEFEATED_DYLAN
+	msgbox Route20_Text_DylanPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route20_Text_DylanIntro:
+	.string "Hi, I'm Dill!\p"
+	.string "I'll say more when Dani is done.$"
+
+Route20_Text_DylanDefeat:
+	.string "Kanto still has some fight in it.$"
+
+Route20_Text_DylanPostBattle:
+	.string "What an incredible team you have!$"
+
+Route20_EventScript_MegaHintBlastoise::  
+    goto_if_set FLAG_GOT_BLASTOISINITE, Route20_EventScript_DylanDefeated
+    msgbox Route20_Text_BlastoiseMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route20_Text_BlastoiseMegaHint:
+    .string "Vermillion City.$"
+
+Route20_EventScript_DylanDefeated::
+    msgbox DylanDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+DylanDefeated_Text:	
+	.string "I can tell you are a trainer who\n"
+	.string "fights with all your heart and soul.$"
+
+Route20_EventScript_BlastoiseDefeated::
+	msgbox BlastoiseDefeated MSGBOX_DEFAULT
+	release
+	end
+
+BlastoiseDefeated:	
+	.string "Blastoise looks at you\n"
+	.string "and snorts approvingly.$"
 

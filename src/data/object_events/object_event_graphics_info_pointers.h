@@ -415,6 +415,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clefairy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machoke;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgey;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Magikarp;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreatBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall;
@@ -840,7 +841,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_POLIWRATH] = 				 	 &gObjectEventGraphicsInfo_Poliwrath,
 	[OBJ_EVENT_GFX_PSYDUCK] = 				 		 &gObjectEventGraphicsInfo_Psyduck,
 	[OBJ_EVENT_GFX_VOLTORB] = 				 		 &gObjectEventGraphicsInfo_Voltorb,
-	[OBJ_EVENT_GFX_ZAPDOS] = 				 		 &gObjectEventGraphicsInfo_Zapdos
+	[OBJ_EVENT_GFX_ZAPDOS] = 				 		 &gObjectEventGraphicsInfo_Zapdos,
+    [OBJ_EVENT_GFX_MAGIKARP] =                       &gObjectEventGraphicsInfo_Magikarp
 };
 
 

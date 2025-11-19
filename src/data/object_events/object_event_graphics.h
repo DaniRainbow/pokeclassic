@@ -1329,7 +1329,7 @@ const u32 gObjectEventPic_WigglytuffOverworld[] = INCBIN_U32("graphics/object_ev
 const u16 gObjectEventPal_Wigglytuff[] = INCBIN_U16("graphics/object_events/palettes/wigglytuff.gbapal");
 const u32 gObjectEventPic_ZapdosOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/zapdos_overworld.4bpp");
 const u16 gObjectEventPal_Zapdos[] = INCBIN_U16("graphics/object_events/palettes/zapdos.gbapal");
-
+const u16 gObjectEventPal_Magikarp[] = INCBIN_U16("graphics/object_events/palettes/magikarp.gbapal");
 //FRLG Objects
 const u16 gObjectEventPic_Pokedex[] = INCBIN_U16("graphics/object_events/pics/misc/pokedex.4bpp");
 const u16 gObjectEventPic_OldAmber[] = INCBIN_U16("graphics/object_events/pics/misc/old_amber.4bpp");

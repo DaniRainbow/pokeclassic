@@ -1264,7 +1264,7 @@ static const struct TrainerMonItemCustomMoves sParty_BlackBeltJiraiya[] = {
     {
 		.iv = 250,
 		.lvl = 80,
-		.species = SPECIES_MEWTWO_MEGA_X,
+		.species = SPECIES_MEWTWO,
 		.heldItem = ITEM_MEWTWONITE_X,
 		.moves = {MOVE_PSYSTRIKE, MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_RECOVER}
 	},
@@ -6905,7 +6905,7 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_GOLEM,
-		.heldItem = ITEM_HARD_ROCK,
+		.heldItem = ITEM_HARD_STONE,
 		.moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_HEAVY_SLAM, MOVE_STONE_EDGE}
 	},
     {
@@ -6913,13 +6913,13 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 		.lvl = 65,
 		.species = SPECIES_PIDGEOT,
 		.heldItem = ITEM_QUICK_CLAW,
-		.moves = {MOVE_HURRICANE, MOVE_ROLLOUT, MOVE_DRILL_PECK, MOVE_TAIL_WIND}
+		.moves = {MOVE_SKY_ATTACK, MOVE_ROLLOUT, MOVE_DRILL_PECK, MOVE_TAILWIND}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_MACHAMP,
-		.heldItem = ITEM_FLAME_ORB,
+		.heldItem = ITEM_SITRUS_BERRY,
 		.moves = {MOVE_CLOSE_COMBAT, MOVE_POISON_JAB, MOVE_KNOCK_OFF, MOVE_ICE_PUNCH}
 	},
     {
@@ -6939,7 +6939,7 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 	{
 		.iv = 250,
 		.lvl = 70,
-		.species = SPECIES_BLASTOISE_MEGA,
+		.species = SPECIES_BLASTOISE,
 		.heldItem = ITEM_BLASTOISINITE,
 		.moves = {MOVE_WATER_SPOUT, MOVE_AURA_SPHERE, MOVE_PROTECT, MOVE_ICE_PUNCH}
 	},

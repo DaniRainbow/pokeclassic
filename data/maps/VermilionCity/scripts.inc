@@ -599,5 +599,6 @@ VermilionCity_Text_SquirtleGlasses::
 	
 VermilionCity_EventScript_Blastoisinite::
 	finditem ITEM_BLASTOISINITE, 1
+	setflag FLAG_GOT_BLASTOISINITE
 	release
 	end

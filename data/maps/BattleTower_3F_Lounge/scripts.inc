@@ -1,15 +1,6 @@
 BattleTower_3F_Lounge_MapScripts::
 	.byte 0
 
-//BattleTower_3F_Lounge_Text_HiIAmJiraiya:
-	//.string "I came to the Battle Tower to fight\n"
-	//.string "against the finest Trainers Kanto\l"
-	//.string "has to offer.\p"
-	//.string "Now that it is closed, I meditate\n"
-	//.string "to prepare myself for a challenger.\p"
-	//.string "... what's that? Are you saying\n"
-	//.string "you will battle me?$"
-
 BattleTower_3F_Lounge_EventScript_Mewtwo::
 	lock
 	faceplayer
@@ -46,15 +37,6 @@ BattleTower_3F_Lounge_Text_JiraiyaDefeat:
 
 BattleTower_3F_Lounge_Text_JiraiyaPostBattle:
 	.string "Is this a dream?$"
-
-//BlackBeltDeclined::
-	//msgbox	Text_IWouldNotEither, MSGBOX_DEFAULT
-	//release
-	//end
-
-//Text_IWouldNotEither:
-	//.string "Do not interrupt my meditation.\n"
-	//.string "Move on, then.$"
 
 BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated::
 	msgbox JiraiyaDefeated MSGBOX_DEFAULT
