@@ -6905,43 +6905,43 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_GOLEM,
-		.heldItem = ITEM_LIGHT_BALL,
-		.moves = {MOVE_VOLT_TACKLE, MOVE_ELECTRO_BALL, MOVE_SLAM, MOVE_AGILITY}
+		.heldItem = ITEM_HARD_ROCK,
+		.moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_HEAVY_SLAM, MOVE_STONE_EDGE}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_PIDGEOT,
-		.heldItem = ITEM_SILK_SCARF,
-		.moves = {MOVE_HYPER_VOICE, MOVE_ROLLOUT, MOVE_SING, MOVE_EARTHQUAKE}
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_HURRICANE, MOVE_ROLLOUT, MOVE_DRILL_PECK, MOVE_TAIL_WIND}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_MACHAMP,
-		.heldItem = ITEM_FOCUS_BAND,
-		.moves = {MOVE_DUAL_CHOP, MOVE_SEISMIC_TOSS, MOVE_FOCUS_ENERGY, MOVE_FIRE_PUNCH}
+		.heldItem = ITEM_FLAME_ORB,
+		.moves = {MOVE_CLOSE_COMBAT, MOVE_POISON_JAB, MOVE_KNOCK_OFF, MOVE_ICE_PUNCH}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_MAGNETON,
-		.heldItem = ITEM_LEFTOVERS,
-		.moves = {MOVE_AGILITY, MOVE_THUNDER, MOVE_HURRICANE, MOVE_THUNDERBOLT}
+		.heldItem = ITEM_MAGNET,
+		.moves = {MOVE_MAGNET_BOMB, MOVE_THUNDER, MOVE_CHARGE, MOVE_FLASH_CANNON}
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_ELECTABUZZ,
-		.heldItem = ITEM_MEWTWONITE_X,
-		.moves = {MOVE_PSYSTRIKE, MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_RECOVER}
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_THUNDER_PUNCH, MOVE_THUNDERBOLT, MOVE_AGILITY, MOVE_IRON_HEAD}
 	},
 	{
 		.iv = 250,
 		.lvl = 70,
 		.species = SPECIES_BLASTOISE_MEGA,
 		.heldItem = ITEM_BLASTOISINITE,
-		.moves = {MOVE_FLY, MOVE_LAVA_PLUME, MOVE_DUAL_WINGBEAT, MOVE_FIRE_BLAST}
+		.moves = {MOVE_WATER_SPOUT, MOVE_AURA_SPHERE, MOVE_PROTECT, MOVE_ICE_PUNCH}
 	},
 };
 //Seafoam Islands
