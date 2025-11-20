@@ -79,6 +79,7 @@ PokemonMansion_2F_EventScript_ItemCalcium::
 
 PokemonMansion_2F_EventScript_CharizarditeX::
 	finditem ITEM_CHARIZARDITE_X, 1
+	setflag FLAG_GOT_CHARIZARDITE_X
 	release
 	end
 

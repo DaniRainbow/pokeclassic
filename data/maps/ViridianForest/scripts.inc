@@ -195,4 +195,5 @@ ViridianForest_EventScript_ItemPokeBall::
 
 ViridianForest_EventScript_Beedrillite::
     finditem ITEM_BEEDRILLITE, 1
+    setflag FLAG_GOT_BEEDRILLITE
     end

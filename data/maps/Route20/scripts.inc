@@ -91,6 +91,7 @@ Route20_Text_DarrinPostBattle::
 
 Route20_EventScript_Slowbronite::
 	finditem ITEM_SLOWBRONITE, 1
+	setflag FLAG_GOT_SLOWBRONITE
 	release
 	end
 

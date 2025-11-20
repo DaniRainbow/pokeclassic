@@ -39,6 +39,7 @@ Route2_FindItem_ParlyzHeal::
 
 Route2_FindItem_Pidgeotite::
 	finditem ITEM_PIDGEOTITE, 1
+	setflag FLAG_GOT_PIDGEOTITE
 	end
 
 Route2_RocketFugitiveM::

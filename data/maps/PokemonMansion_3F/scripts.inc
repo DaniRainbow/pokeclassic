@@ -72,6 +72,7 @@ PokemonMansion_3F_EventScript_ItemCharcoal::
 
 PokemonMansion_3F_EventScript_CharizarditeY::
 	finditem ITEM_CHARIZARDITE_Y, 1
+	setflag FLAG_GOT_CHARIZARDITE_Y
 	release
 	end
 

@@ -18,6 +18,7 @@ RockTunnel_B1F_EventScript_ItemMaxEther::
 
 RockTunnel_B1F_EventScript_Aerodactlyite::
     finditem ITEM_AERODACTYLITE, 1
+    setflag FLAG_GOT_AERODACTYLITE
     release
     end
 

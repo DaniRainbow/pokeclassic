@@ -47,5 +47,6 @@ SafariZone_East_EventScript_ItemTM11::
 
 SafariZone_East_EventScript_Kangaskhanite::
 	finditem ITEM_KANGASKHANITE, 1
+	setflag FLAG_GOT_KANGASKHANITE
 	release
 	end

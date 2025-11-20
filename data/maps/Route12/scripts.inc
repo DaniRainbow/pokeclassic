@@ -321,3 +321,67 @@ Route12_RocketFugitive::
     fadescreen FADE_FROM_BLACK
     end
 
+Route12_EventScript_Dennis::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_LARRY, Route12_EventScript_DennisDefeated
+	msgbox Route12_Text_Dennis MSGBOX_DEFAULT
+	release
+	end
+
+Route12_Text_Dennis:
+	.string "DENNIS: KAAAARP!\p"
+	.string "... you feel uneasy, as if you\n"
+	.string "are looking at death itself.$"
+
+Route12_EventScript_FishermanLarry::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_LARRY, Route12_EventScript_MegaHintGyarados
+	trainerbattle_single TRAINER_FISHERMAN_LARRY, Route12_Text_LarryIntro, Route12_Text_LarryDefeat
+	setflag FLAG_DEFEATED_LARRY
+	msgbox Route12_Text_LarryPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route12_Text_LarryIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+Route12_Text_LarryDefeat:
+	.string "Incredible... how...?$"
+
+Route12_Text_LarryPostBattle:
+	.string "Is this a dream?$"
+
+Route12_EventScript_MegaHintGyarados::    
+    goto_if_set FLAG_GOT_MEGAITEM, Route12_Text_LarryDefeated
+    msgbox Route12_Text_GyaradosMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route12_Text_GyaradosMegaHint:
+    .string "Hint where to find Mega Stone.$"
+
+Route12_Text_LarryDefeated::
+    msgbox LarryDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+LarryDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+Route12_EventScript_DennisDefeated::
+	msgbox DennisDefeated MSGBOX_DEFAULT
+	release
+	end
+
+DennisDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

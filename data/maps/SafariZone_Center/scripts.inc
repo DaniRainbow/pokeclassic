@@ -32,5 +32,6 @@ SafariZone_Center_EventScript_ItemNugget::
 
 SafariZone_Center_EventScript_Pinsirte::
 	finditem ITEM_PINSIRITE, 1
+	setflag FLAG_GOT_PINSIRITE
 	release
 	end

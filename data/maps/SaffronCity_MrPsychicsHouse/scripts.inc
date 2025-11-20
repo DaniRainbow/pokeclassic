@@ -27,6 +27,7 @@ SaffronCity_MrPsychicsHouse_EventScript_GetAlakazite::
 	giveitem ITEM_ALAKAZITE, 1
 	msgbox SaffronCity_MrPsychicsHouse_Text_ExplainAlakazite
 	setflag FLAG_HIDE_ALAKAZITE
+	setflag FLAG_GOT_ALAKAZITE
 	release
 	end
 

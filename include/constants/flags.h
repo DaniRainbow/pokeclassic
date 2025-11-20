@@ -196,8 +196,8 @@
 #define FLAG_GOT_AERODACTYLITE              0xB2
 #define FLAG_GOT_MEWTWONITE_X               0xB3
 #define FLAG_GOT_MEWTWONITE_Y               0xB4
-#define FLAG_UNUSED_0x0B5                 	0xB5
-#define FLAG_UNUSED_0x0B6                   0xB6
+#define FLAG_DEFEATED_LARRY                 0xB5
+#define FLAG_DEFEATED_JUSTICE               0xB6
 #define FLAG_UNUSED_0x0B7                   0xB7
 #define FLAG_UNUSED_0x0B8                   0xB8
 #define FLAG_UNUSED_0x0B9                 	0xB9

@@ -2972,6 +2972,50 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanAndrew[] = {
         .species = SPECIES_MAGIKARP,
     },
 };
+static const struct TrainerMonItemCustomMoves sParty_FishermanLarry[] = {
+	{
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_GOLEM,
+		.heldItem = ITEM_HARD_STONE,
+		.moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_HEAVY_SLAM, MOVE_STONE_EDGE}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_PIDGEOT,
+		.heldItem = ITEM_QUICK_CLAW,
+		.moves = {MOVE_SKY_ATTACK, MOVE_ROLLOUT, MOVE_DRILL_PECK, MOVE_TAILWIND}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_MACHAMP,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_CLOSE_COMBAT, MOVE_POISON_JAB, MOVE_KNOCK_OFF, MOVE_ICE_PUNCH}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_MAGNETON,
+		.heldItem = ITEM_MAGNET,
+		.moves = {MOVE_MAGNET_BOMB, MOVE_THUNDER, MOVE_CHARGE, MOVE_FLASH_CANNON}
+	},
+    {
+		.iv = 250,
+		.lvl = 65,
+		.species = SPECIES_ELECTABUZZ,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_THUNDER_PUNCH, MOVE_THUNDERBOLT, MOVE_AGILITY, MOVE_IRON_HEAD}
+	},
+	{
+		.iv = 250,
+		.lvl = 70,
+		.species = SPECIES_BLASTOISE,
+		.heldItem = ITEM_BLASTOISINITE,
+		.moves = {MOVE_WATER_SPOUT, MOVE_AURA_SPHERE, MOVE_PROTECT, MOVE_ICE_PUNCH}
+	},
+};
 //Route 9
 static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerAlicia1[] = {
     {

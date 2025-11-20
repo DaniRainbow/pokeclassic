@@ -748,5 +748,6 @@ CeruleanCity_Text_DexNavCall::
 
 CeruleanCity_EventScript_Venusaurite::
 	finditem ITEM_VENUSAURITE, 1
+	setflag FLAG_GOT_VENUSAURITE
 	release
 	end

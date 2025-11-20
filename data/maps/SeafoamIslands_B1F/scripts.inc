@@ -13,5 +13,6 @@ SeafoamIslands_B1F_EventScript_ItemWaterStone::
 
 SeafoamIslands_B1F_EventScript_Gyaradosite::
 	finditem ITEM_GYARADOSITE, 1
+	setflag FLAG_GOT_GYARADOSITE
 	release
 	end

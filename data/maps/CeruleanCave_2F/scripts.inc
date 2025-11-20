@@ -18,10 +18,12 @@ CeruleanCave_2F_EventScript_ItemPPUp::
 
 CeruleanCave_2F_EventScript_MewtoniteY::
 	finditem ITEM_MEWTWONITE_Y, 1
+	setflag FLAG_GOT_MEWTWONITE_Y
 	release
 	end
 
 CeruleanCave_2F_EventScript_MewtoniteX::
 	finditem ITEM_MEWTWONITE_X, 1
+	setflag FLAG_GOT_MEWTWONITE_X
 	release
 	end

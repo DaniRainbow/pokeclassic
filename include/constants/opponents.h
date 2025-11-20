@@ -613,7 +613,7 @@
 #define	TRAINER_BLACKBELT_MICHAEL                   501
 #define	TRAINER_HEXMANIAC_CAMRAN	                502
 #define	TRAINER_ENGINEER_DYLAN	                    503
-#define	TRAINER_UNUSED_504	504
+#define	TRAINER_FISHERMAN_LARRY	                    504
 #define	TRAINER_UNUSED_505	505
 #define	TRAINER_UNUSED_506	506
 #define	TRAINER_UNUSED_507	507

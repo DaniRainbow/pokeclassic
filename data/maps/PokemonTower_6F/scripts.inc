@@ -16,6 +16,7 @@ PokemonTower_6F_EventScript_ItemRareCandy::
 
 PokemonTower_6F_EventScript_Gengarite::
 	finditem ITEM_GENGARITE, 1
+	setflag FLAG_GOT_GENGARITE
 	release
 	end
 
