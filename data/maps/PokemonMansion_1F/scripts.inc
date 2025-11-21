@@ -73,3 +73,68 @@ PokemonMansion_1F_EventScript_ItemBlackSludge::
 	finditem ITEM_BLACK_SLUDGE, 1
 	release
 	end
+
+PokemonMansion_1F_EventScript_Alakazam::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_JUSTICE, PokemonMansion_1F_EventScript_AlakazamDefeated
+	msgbox PokemonMansion_1F_Text_Alazakam MSGBOX_DEFAULT
+	release
+	end
+
+PokemonMansion_1F_Text_Alakazam:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+PokemonMansion_1F_EventScript_GentlemanJustice::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_JUSTICE, PokemonMansion_1F_EventScript_MegaHintAlakazam
+	trainerbattle_single TRAINER_GENTLEMAN_JUSTICE, PokemonMansion_1F_Text_JusticeIntro, PokemonMansion_1F_Text_JusticeDefeat
+	setflag FLAG_DEFEATED_JUSTICE
+	msgbox PokemonMansion_1F_Text_JusticePostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+PokemonMansion_1F_Text_JusticerIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+PokemonMansion_1F_Text_JusticeDefeat:
+	.string "Incredible... how...?$"
+
+PokemonMansion_1F_Text_JusticePostBattle:
+	.string "Is this a dream?$"
+
+PokemonMansion_1F_EventScript_MegaHintAlakazam::    
+    goto_if_set FLAG_GOT_MEGAITEM, PokemonMansion_1F_EventScript_TrainerDefeated
+    msgbox PokemonMansion_1F_Text_PokemonMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+PokemonMansion_1F_Text_PokemonMegaHint:
+    .string "Hint where to find Mega Stone.$"
+
+PokemonMansion_1F_EventScript_TrainerDefeated::
+    msgbox TrainerDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+TrainerDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+PokemonMansion_1F_EventScript_PokemonDefeated::
+	msgbox PokemonDefeated MSGBOX_DEFAULT
+	release
+	end
+
+PokemonDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

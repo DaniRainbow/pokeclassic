@@ -614,7 +614,7 @@
 #define	TRAINER_HEXMANIAC_CAMRAN	                502
 #define	TRAINER_ENGINEER_DYLAN	                    503
 #define	TRAINER_FISHERMAN_LARRY	                    504
-#define	TRAINER_UNUSED_505	505
+#define	TRAINER_GENTLEMAN_JUSTICE	                505
 #define	TRAINER_UNUSED_506	506
 #define	TRAINER_UNUSED_507	507
 #define	TRAINER_UNUSED_508	508
