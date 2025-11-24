@@ -600,7 +600,6 @@ static const struct MenuAction MultichoiceList_AllFossils[] =
 
 static const struct MenuAction MultichoiceList_DomeHelix[] =
 {
-   
     {gText_HelixFossil},
     {gText_DomeFossil},
     {gText_Exit},
