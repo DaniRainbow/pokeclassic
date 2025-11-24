@@ -78,7 +78,7 @@ PokemonMansion_1F_EventScript_Alakazam::
 	lock
 	faceplayer
     goto_if_set FLAG_DEFEATED_JUSTICE, PokemonMansion_1F_EventScript_AlakazamDefeated
-	msgbox PokemonMansion_1F_Text_Alazakam MSGBOX_DEFAULT
+	msgbox PokemonMansion_1F_Text_Alakazam MSGBOX_DEFAULT
 	release
 	end
 
@@ -97,7 +97,7 @@ PokemonMansion_1F_EventScript_GentlemanJustice::
 	release
 	end
 
-PokemonMansion_1F_Text_JusticerIntro:
+PokemonMansion_1F_Text_JusticeIntro:
 	.string "I came to the Battle Tower to fight\n"
 	.string "against the finest Trainers Kanto\l"
 	.string "has to offer.\p"
@@ -112,25 +112,25 @@ PokemonMansion_1F_Text_JusticePostBattle:
 	.string "Is this a dream?$"
 
 PokemonMansion_1F_EventScript_MegaHintAlakazam::    
-    goto_if_set FLAG_GOT_MEGAITEM, PokemonMansion_1F_EventScript_TrainerDefeated
-    msgbox PokemonMansion_1F_Text_PokemonMegaHint MSGBOX_DEFAULT
+    goto_if_set FLAG_GOT_ALAKAZITE, PokemonMansion_1F_EventScript_JusticeDefeated
+    msgbox PokemonMansion_1F_Text_AlakazamMegaHint MSGBOX_DEFAULT
     waitmessage
     release
     end
     
-PokemonMansion_1F_Text_PokemonMegaHint:
+PokemonMansion_1F_Text_AlakazamMegaHint:
     .string "Hint where to find Mega Stone.$"
 
-PokemonMansion_1F_EventScript_TrainerDefeated::
-    msgbox TrainerDefeated_Text MSGBOX_DEFAULT
+PokemonMansion_1F_EventScript_JusticeDefeated::
+    msgbox JusticeDefeated_Text MSGBOX_DEFAULT
 	release
 	end
 
-TrainerDefeated_Text:	
+JusticeDefeated_Text:	
 	.string "I came here to fight the best\n"
 	.string "and that's exactly what you are.$"
 
-PokemonMansion_1F_EventScript_PokemonDefeated::
+PokemonMansion_1F_EventScript_AlakazamDefeated::
 	msgbox PokemonDefeated MSGBOX_DEFAULT
 	release
 	end
