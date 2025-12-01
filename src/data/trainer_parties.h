@@ -2975,45 +2975,45 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanAndrew[] = {
 static const struct TrainerMonItemCustomMoves sParty_FishermanLarry[] = {
 	{
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_GOLEM,
-		.heldItem = ITEM_HARD_STONE,
-		.moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_HEAVY_SLAM, MOVE_STONE_EDGE}
+		.lvl = 68,
+		.species = SPECIES_STARMIE,
+		.heldItem = ITEM_DAMP_ROCK,
+		.moves = {MOVE_RAIN_DANCE, MOVE_PSYCHIC, MOVE_HYDRO_PUMP, MOVE_ICE_BEAM}
 	},
     {
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_PIDGEOT,
-		.heldItem = ITEM_QUICK_CLAW,
-		.moves = {MOVE_SKY_ATTACK, MOVE_ROLLOUT, MOVE_DRILL_PECK, MOVE_TAILWIND}
+		.lvl = 68,
+		.species = SPECIES_BLASTOISE,
+		.heldItem = ITEM_WHITE_HERB,
+		.moves = {MOVE_EARTHQUAKE, MOVE_SHELL_SMASH, MOVE_ICE_BEAM, MOVE_SURF}
 	},
     {
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_MACHAMP,
-		.heldItem = ITEM_SITRUS_BERRY,
-		.moves = {MOVE_CLOSE_COMBAT, MOVE_POISON_JAB, MOVE_KNOCK_OFF, MOVE_ICE_PUNCH}
+		.lvl = 68,
+		.species = SPECIES_DRAGONITE,
+		.heldItem = ITEM_LUM_BERRY,
+		.moves = {MOVE_DRAGON_DANCE, MOVE_OUTRAGE, MOVE_ROOST, MOVE_IRON_HEAD}
 	},
     {
 		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_MAGNETON,
-		.heldItem = ITEM_MAGNET,
-		.moves = {MOVE_MAGNET_BOMB, MOVE_THUNDER, MOVE_CHARGE, MOVE_FLASH_CANNON}
-	},
-    {
-		.iv = 250,
-		.lvl = 65,
-		.species = SPECIES_ELECTABUZZ,
-		.heldItem = ITEM_LEFTOVERS,
-		.moves = {MOVE_THUNDER_PUNCH, MOVE_THUNDERBOLT, MOVE_AGILITY, MOVE_IRON_HEAD}
+		.lvl = 68,
+		.species = SPECIES_TENTACRUEL,
+		.heldItem = ITEM_BLACK_SLUDGE,
+		.moves = {MOVE_VENOSHOCK, MOVE_ACID_ARMOR, MOVE_TOXIC, MOVE_PROTECT}
 	},
 	{
 		.iv = 250,
+		.lvl = 100,
+		.species = SPECIES_MAGIKARP,
+		.heldItem = ITEM_EVIOLITE,
+		.moves = {MOVE_DRAGON_RAGE, MOVE_FLAIL, MOVE_AQUA_JET, MOVE_NONE}
+	},
+    {
+		.iv = 250,
 		.lvl = 70,
-		.species = SPECIES_BLASTOISE,
-		.heldItem = ITEM_BLASTOISINITE,
-		.moves = {MOVE_WATER_SPOUT, MOVE_AURA_SPHERE, MOVE_PROTECT, MOVE_ICE_PUNCH}
+		.species = SPECIES_GYARADOS,
+		.heldItem = ITEM_GYARADOSITE,
+		.moves = {MOVE_DRAGON_DANCE, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE}
 	},
 };
 //Route 9
