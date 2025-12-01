@@ -353,10 +353,10 @@ Route12_Text_LarryIntro:
 	.string "We are strong in mind and body.$"
 
 Route12_Text_LarryDefeat:
-	.string "Incredible... how...?$"
+	.string "That was fun!$"
 
 Route12_Text_LarryPostBattle:
-	.string "Is this a dream?$"
+	.string "Dennis, that was thrilling!$"
 
 Route12_EventScript_MegaHintGyarados::    
     goto_if_set FLAG_GOT_GYARADOSITE, Route12_Text_LarryDefeated
@@ -366,7 +366,7 @@ Route12_EventScript_MegaHintGyarados::
     end
     
 Route12_Text_GyaradosMegaHint:
-    .string "Hint where to find Mega Stone.$"
+    .string "Seafoam Islands.$"
 
 Route12_Text_LarryDefeated::
     msgbox LarryDefeated_Text MSGBOX_DEFAULT
@@ -374,7 +374,7 @@ Route12_Text_LarryDefeated::
 	end
 
 LarryDefeated_Text:	
-	.string "I came here to fight the best\n"
+	.string "Blah\n"
 	.string "and that's exactly what you are.$"
 
 Route12_EventScript_DennisDefeated::
@@ -383,5 +383,7 @@ Route12_EventScript_DennisDefeated::
 	end
 
 DennisDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "DENNIS: KARP!\p"
+	.string "... a warm feeling floods you\n"
+	.string "and you bow in gratitude for\l"
+    .string "being spared by this god.$"
