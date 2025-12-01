@@ -359,7 +359,7 @@ Route12_Text_LarryPostBattle:
 	.string "Is this a dream?$"
 
 Route12_EventScript_MegaHintGyarados::    
-    goto_if_set FLAG_GOT_MEGAITEM, Route12_Text_LarryDefeated
+    goto_if_set FLAG_GOT_GYARADOSITE, Route12_Text_LarryDefeated
     msgbox Route12_Text_GyaradosMegaHint MSGBOX_DEFAULT
     waitmessage
     release
