@@ -109,7 +109,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_1F_EventScript_GentlemanJustice",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CHANSEY",
@@ -122,7 +122,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_1F_EventScript_Alakazam",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
     }
   ],
   "warp_events": [

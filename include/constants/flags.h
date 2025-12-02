@@ -198,7 +198,7 @@
 #define FLAG_GOT_MEWTWONITE_Y               0xB4
 #define FLAG_DEFEATED_LARRY                 0xB5
 #define FLAG_DEFEATED_JUSTICE               0xB6
-#define FLAG_UNUSED_0x0B7                   0xB7
+#define FLAG_HIDE_MEGA_TRAINERS             0xB7
 #define FLAG_UNUSED_0x0B8                   0xB8
 #define FLAG_UNUSED_0x0B9                 	0xB9
 #define FLAG_UNUSED_0x0BA                   0xBA
