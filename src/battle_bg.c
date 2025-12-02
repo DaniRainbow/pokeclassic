@@ -161,7 +161,7 @@ const struct BgTemplate gBattleBgTemplates[] =
     },
 };
 
-static const struct WindowTemplate sStandardBattleWindowTemplates[] =
+static const struct WindowTemplate gStandardBattleWindowTemplates[] =
 {
     [B_WIN_MSG] = {
         .bg = 0,
@@ -378,6 +378,33 @@ static const struct WindowTemplate sStandardBattleWindowTemplates[] =
         .height = 2,
         .paletteNum = 0,
         .baseBlock = 0x00b0,
+    },
+    { // super effective
+	    .bg = 0,
+	    .tilemapLeft = 21,
+	    .tilemapTop = 57,
+	    .width = 8,
+	    .height = 2,
+	    .paletteNum = 5,
+	    .baseBlock = 0x02a0,
+    },
+    { // not very effective
+	    .bg = 0,
+	    .tilemapLeft = 21,
+	    .tilemapTop = 57,
+	    .width = 8,
+	    .height = 2,
+	    .paletteNum = 5,
+	    .baseBlock = 0x02a0,
+    },
+    { // no effect
+	    .bg = 0,
+	    .tilemapLeft = 21,
+	    .tilemapTop = 57,
+	    .width = 8,
+	    .height = 2,
+	    .paletteNum = 5,
+	    .baseBlock = 0x02a0,
     },
     DUMMY_WIN_TEMPLATE
 };
@@ -596,7 +623,7 @@ static const struct WindowTemplate sBattleArenaWindowTemplates[] =
 
 const struct WindowTemplate * const gBattleWindowTemplates[] =
 {
-    [B_WIN_TYPE_NORMAL] = sStandardBattleWindowTemplates,
+    [B_WIN_TYPE_NORMAL] = gStandardBattleWindowTemplates,
     [B_WIN_TYPE_ARENA]  = sBattleArenaWindowTemplates,
 };
 
