@@ -83,9 +83,8 @@ PokemonMansion_1F_EventScript_Alakazam::
 	end
 
 PokemonMansion_1F_Text_Alakazam:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "Alakazam reaches into your mind.\n"
+	.string "It wishes to battle your team.$"
 
 PokemonMansion_1F_EventScript_GentlemanJustice::
 	lock
@@ -98,18 +97,19 @@ PokemonMansion_1F_EventScript_GentlemanJustice::
 	end
 
 PokemonMansion_1F_Text_JusticeIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Greetings! I'm Justice.\p"
+	.string "I had an acquiantence who lived\n"
+	.string "here decades ago and wanted to\l"
+	.string "journey down memory lane.\p"
+	.string "You're the Champion! Well well.\n"
+	.string "How about a match?$"
 
 PokemonMansion_1F_Text_JusticeDefeat:
-	.string "Incredible... how...?$"
+	.string "You live up to the title!$"
 
 PokemonMansion_1F_Text_JusticePostBattle:
-	.string "Is this a dream?$"
+	.string "The best battles happen in the\n"
+	.string "most unexpected places, I find.$"
 
 PokemonMansion_1F_EventScript_MegaHintAlakazam::    
     goto_if_set FLAG_GOT_ALAKAZITE, PokemonMansion_1F_EventScript_JusticeDefeated
@@ -127,14 +127,25 @@ PokemonMansion_1F_EventScript_JusticeDefeated::
 	end
 
 JusticeDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "Do you happen to know Professor Oak?\p"
+	.string "... I see, so you are one of his\n"
+	.string "assistants he sends out for data.\p"
+	.string "... Oh, you've defeated him in a\n"
+	.string "Champion match as well? Fascinating!\p"
+	.string "I knew Samuel Oak back when he was a\n"
+	.string "child competing in the League.\p"
+	.string "I held the Chamption Title for many\n"
+	.string "years until he challenged me.\p"
+	.string "I'm honored to have witnessed two\n"
+	.string "prodigies rise above my heights.$"
 
 PokemonMansion_1F_EventScript_AlakazamDefeated::
-	msgbox PokemonDefeated MSGBOX_DEFAULT
+	msgbox AlakazamDefeated MSGBOX_DEFAULT
 	release
 	end
 
-PokemonDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+AlakazamDefeated:	
+	.string "KA ZAM!\p"
+	.string "... images of a Mega Alakazam\n"
+	.string "holding a Life Orb and Mega Stone\l"
+	.string "aggressively flood your mind.$"
