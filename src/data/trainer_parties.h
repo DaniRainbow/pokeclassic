@@ -7408,9 +7408,9 @@ static const struct TrainerMonItemCustomMoves sParty_GentlemanJustice[] = {
 	{
 		.iv = 250,
 		.lvl = 69,
-		.species = SPECIES_VENUSAUR,
-		.heldItem = ITEM_BLACK_SLUDGE,
-		.moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_EARTHQUAKE, MOVE_SUBSTITUTE}
+		.species = SPECIES_GENGAR,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_MEAN_LOOK, MOVE_PROTECT, MOVE_TOXIC_SPIKES, MOVE_PERISH_SONG}
 	},
     {
 		.iv = 250,
@@ -7433,12 +7433,12 @@ static const struct TrainerMonItemCustomMoves sParty_GentlemanJustice[] = {
 		.heldItem = ITEM_LEFTOVERS,
 		.moves = {MOVE_CURSE, MOVE_EXTREME_SPEED, MOVE_FLARE_BLITZ, MOVE_WILD_CHARGE}
 	},
-	{
+    {
 		.iv = 250,
-		.lvl = 100,
-		.species = SPECIES_GENGAR,
-		.heldItem = ITEM_SITRUS_BERRY,
-		.moves = {MOVE_MEAN_LOOK, MOVE_PROTECT, MOVE_TOXIC_SPIKES, MOVE_PERISH_SONG}
+		.lvl = 69,
+		.species = SPECIES_VENUSAUR,
+		.heldItem = ITEM_BLACK_SLUDGE,
+		.moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_EARTHQUAKE, MOVE_SUBSTITUTE}
 	},
     {
 		.iv = 250,
