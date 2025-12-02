@@ -7404,6 +7404,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BurglarLewis[] = {
     },
 };
 
+static const struct TrainerMonItemCustomMoves sParty_GentlemanJustice[] = {
+	{
+		.iv = 250,
+		.lvl = 69,
+		.species = SPECIES_VENUSAUR,
+		.heldItem = ITEM_BLACK_SLUDGE,
+		.moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_EARTHQUAKE, MOVE_SUBSTITUTE}
+	},
+    {
+		.iv = 250,
+		.lvl = 68,
+		.species = SPECIES_JOLTEON,
+		.heldItem = ITEM_CHOICE_SPECS,
+		.moves = {MOVE_THUNDERBOLT, MOVE_HYPER_BEAM, MOVE_VOLT_SWITCH, MOVE_SHADOW_BALL}
+	},
+    {
+		.iv = 250,
+		.lvl = 68,
+		.species = SPECIES_GYARADOS,
+		.heldItem = ITEM_FOCUS_BAND,
+		.moves = {MOVE_WATERFALL, MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_DRAGON_DANCE}
+	},
+    {
+		.iv = 250,
+		.lvl = 68,
+		.species = SPECIES_ARCANINE,
+		.heldItem = ITEM_LEFTOVERS,
+		.moves = {MOVE_CURSE, MOVE_EXTREME_SPEED, MOVE_FLARE_BLITZ, MOVE_WILD_CHARGE}
+	},
+	{
+		.iv = 250,
+		.lvl = 100,
+		.species = SPECIES_GENGAR,
+		.heldItem = ITEM_SITRUS_BERRY,
+		.moves = {MOVE_MEAN_LOOK, MOVE_PROTECT, MOVE_TOXIC_SPIKES, MOVE_PERISH_SONG}
+	},
+    {
+		.iv = 250,
+		.lvl = 70,
+		.species = SPECIES_ALAKAZAM,
+		.heldItem = ITEM_ALAKAZITE,
+		.moves = {MOVE_CALM_MIND, MOVE_RECOVER, MOVE_PSYCHIC, MOVE_SHADOW_BALL}
+	},
+};
+
 // Cinnabar and Cinnabar Gym
 static const struct TrainerMonItemCustomMoves sParty_GamblerRyan[] = {
 	{
