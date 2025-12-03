@@ -24,7 +24,9 @@ EventScript_MovedTooFast::
 
 sText_TryMovingSlower:
     .string "The Pokémon got away!\n"
-    .string "Try moving more slowly.$"
+    .string "Try moving more slowly.\p"
+    .string "Hold A to switch to tip-toe\n"
+    .string "mode on your Running Shoes!$"
 
 
 EventScript_PokemonGotAway::
