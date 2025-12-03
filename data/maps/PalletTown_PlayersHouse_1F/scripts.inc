@@ -65,7 +65,7 @@ PlayersHouse_1F_Text_RunningShoesManual:
 	.string "Lace up your Running Shoes and hit\n"
 	.string "the road running!\p"
 	.string "If you need to slow down, you can\n"
-	.string "do that too by holding A!”$"
+	.string "do that too by holding A Button!”$"
 
 PlayersHouse_1F_EventScript_PokenavScene::
 	msgbox PalletTown_Text_DidYouMeetOak, MSGBOX_DEFAULT
