@@ -119,7 +119,7 @@ PokemonMansion_1F_EventScript_MegaHintAlakazam::
     end
     
 PokemonMansion_1F_Text_AlakazamMegaHint:
-    .string "Hint where to find Mega Stone.$"
+    .string "Visit an acquiantence in Saffron.$"
 
 PokemonMansion_1F_EventScript_JusticeDefeated::
     msgbox JusticeDefeated_Text MSGBOX_DEFAULT
