@@ -345,12 +345,10 @@ Route12_EventScript_FishermanLarry::
 	end
 
 Route12_Text_LarryIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "How's it going, kiddo?\n"
+    .string "You seem like a capable trainer.\p"
+	.string "The fish aren't biting at the\n"
+    .string "moment, so show me what you got!$"
 
 Route12_Text_LarryDefeat:
 	.string "That was fun!$"
@@ -374,8 +372,10 @@ Route12_Text_LarryDefeated::
 	end
 
 LarryDefeated_Text:	
-	.string "Blah\n"
-	.string "and that's exactly what you are.$"
+	.string "Dennis must like you. He...\p"
+	.string "Well. Let's just say I don't\n"
+    .string "leave the house without a lot\l"
+    .string "of Max Revives for my opponents.$"
 
 Route12_EventScript_DennisDefeated::
 	msgbox DennisDefeated MSGBOX_DEFAULT
