@@ -22,7 +22,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SS_ANNE",
-      "in_connection": false,
       "x": 28,
       "y": 16,
       "elevation": 3,
@@ -32,11 +31,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_SS_ANNE"
+      "flag": "FLAG_HIDE_SS_ANNE",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MEW",
-      "in_connection": false,
       "x": 56,
       "y": 1,
       "elevation": 3,
@@ -46,11 +45,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_MEW_UNDER_TRUCK"
+      "flag": "FLAG_HIDE_MEW_UNDER_TRUCK",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "in_connection": false,
       "x": 31,
       "y": 9,
       "elevation": 3,
@@ -60,11 +59,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SSAnne_Exterior_EventScript_Sailor",
-      "flag": "FLAG_HIDE_VERMILION_HARBOR_SAILOR"
+      "flag": "FLAG_HIDE_VERMILION_HARBOR_SAILOR",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
-      "in_connection": false,
       "x": 58,
       "y": 28,
       "elevation": 3,
@@ -74,7 +73,34 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "SSAnneExterior_RocketFugitive",
-      "flag": "FLAG_ROCKET_FUGITIVE_VERMILION_1"
+      "flag": "FLAG_ROCKET_FUGITIVE_VERMILION_1",
+      "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SLOWBRO",
+      "x": 48,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 49,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 4,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
     }
   ],
   "warp_events": [

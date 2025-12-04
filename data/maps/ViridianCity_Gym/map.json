@@ -167,6 +167,32 @@
       "script": "ViridianCity_Gym_EventScript_Takashi",
       "flag": "FLAG_BADGE08_GET",
       "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_KANGASKHAN",
+      "x": 5,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WAITER",
+      "x": 2,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 4,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
     }
   ],
   "warp_events": [

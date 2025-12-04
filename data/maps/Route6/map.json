@@ -32,7 +32,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 3,
       "y": 16,
       "elevation": 3,
@@ -42,11 +41,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Route6_EventScript_Keigo",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "in_connection": false,
       "x": 12,
       "y": 21,
       "elevation": 3,
@@ -56,11 +55,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route6_EventScript_Ricky",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "in_connection": false,
       "x": 13,
       "y": 21,
       "elevation": 3,
@@ -70,11 +69,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route6_EventScript_Nancy",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 20,
       "y": 25,
       "elevation": 3,
@@ -84,11 +83,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route6_EventScript_Elijah",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "in_connection": false,
       "x": 9,
       "y": 33,
       "elevation": 3,
@@ -98,11 +97,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route6_EventScript_Isabelle",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "in_connection": false,
       "x": 13,
       "y": 33,
       "elevation": 3,
@@ -112,11 +111,11 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route6_EventScript_Jeff",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 20,
       "y": 5,
       "elevation": 3,
@@ -126,11 +125,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_ORAN_2",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 19,
       "y": 5,
       "elevation": 3,
@@ -140,11 +139,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_CHERI",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 18,
       "y": 5,
       "elevation": 3,
@@ -154,11 +153,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_ORAN_1",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 7,
       "y": 5,
       "elevation": 3,
@@ -168,11 +167,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_SOIL_5",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 6,
       "y": 5,
       "elevation": 3,
@@ -182,11 +181,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_SOIL_4",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 5,
       "y": 5,
       "elevation": 3,
@@ -196,11 +195,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_SOIL_3",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 4,
       "y": 5,
       "elevation": 3,
@@ -210,11 +209,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_SOIL_2",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 3,
       "y": 5,
       "elevation": 3,
@@ -224,11 +223,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_SOIL_1",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 3,
       "y": 28,
       "elevation": 3,
@@ -238,11 +237,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_6_SITRUS",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
-      "in_connection": false,
       "x": 21,
       "y": 5,
       "elevation": 3,
@@ -252,7 +251,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route6_RocketFugitive",
-      "flag": "FLAG_ROCKET_FUGITIVE_SAFFRON_4"
+      "flag": "FLAG_ROCKET_FUGITIVE_SAFFRON_4",
+      "in_connection": ""
     }
   ],
   "warp_events": [

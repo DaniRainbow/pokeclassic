@@ -181,6 +181,32 @@
       "script": "ViridianForest_EventScript_Beedrillite",
       "flag": "FLAG_HIDE_BEEDRILLITE",
       "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VENUSAUR",
+      "x": 29,
+      "y": 47,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 30,
+      "y": 49,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_MEGA_TRAINERS"
     }
   ],
   "warp_events": [
