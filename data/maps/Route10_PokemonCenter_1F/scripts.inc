@@ -71,7 +71,7 @@ Route10_PokemonCenter_1F_Text_GiveReward::
     .string "review your progress!\p"
     .string "Anyway, he entrusted me with this\n"
     .string "Everstone.\p"
-    .string "So, {PLAYER}, here you go!.$"
+    .string "So, {PLAYER}, here you go!$"
 
 Route10_PokemonCenter_1F_EventScript_AlreadyGotReward::
     msgbox Route10_PokemonCenter_1F_Text_ExplainReward, MSGBOX_DEFAULT

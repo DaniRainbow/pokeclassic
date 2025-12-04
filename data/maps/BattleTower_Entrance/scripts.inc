@@ -122,7 +122,7 @@ BattleTower_Entrance_LetMeExplain::
 	.string "rules and regulations than the\l"
 	.string "League, too!\p"
 	.string "There's all sorts of ways you can battle\n"
-	.string "here!.\p" 
+	.string "here!\p" 
 	.string "It's every trainer's dream!\p"
 	.string "Now that you're here, you'll need one\n"
 	.string "one of these!$"
