@@ -98,7 +98,7 @@ PokemonMansion_1F_EventScript_GentlemanJustice::
 
 PokemonMansion_1F_Text_JusticeIntro:
 	.string "Greetings! I'm Justice.\p"
-	.string "I had an acquiantence who lived\n"
+	.string "I had an acquaintance who lived\n"
 	.string "here decades ago and wanted to\l"
 	.string "journey down memory lane.\p"
 	.string "You're the Champion! Well well.\n"
