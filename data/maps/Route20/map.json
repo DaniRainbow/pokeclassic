@@ -221,11 +221,11 @@
       "flag": "FLAG_HIDE_MEGA_TRAINERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SQUIRTLE",
+      "graphics_id": "OBJ_EVENT_GFX_BLASTOISE",
       "x": 67,
       "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
