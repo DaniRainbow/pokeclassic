@@ -650,6 +650,14 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_RANGER_F                0x11D9
 #define OBJ_EVENT_PAL_TAG_RANGER_M                0x11DA
 #define OBJ_EVENT_PAL_TAG_MAGIKARP                0x11DB
+#define OBJ_EVENT_PAL_TAG_VENUSAUR                0x11DC
+#define OBJ_EVENT_PAL_TAG_CHARIZARD               0x11DD
+#define OBJ_EVENT_PAL_TAG_BLASTOISE               0x11DE
+#define OBJ_EVENT_PAL_TAG_BEEDRILL                0x11DF
+#define OBJ_EVENT_PAL_TAG_ALAKAZAM                0x11E0
+#define OBJ_EVENT_PAL_TAG_GENGAR                  0x11E1
+#define OBJ_EVENT_PAL_TAG_PINSIR                  0x11E2
+#define OBJ_EVENT_PAL_TAG_AERODACTYL              0x11E3
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
