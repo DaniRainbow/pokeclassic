@@ -615,7 +615,7 @@
 #define	TRAINER_ENGINEER_DYLAN	                    503
 #define	TRAINER_FISHERMAN_LARRY	                    504
 #define	TRAINER_GENTLEMAN_JUSTICE	                505
-#define	TRAINER_UNUSED_506	506
+#define	TRAINER_BUGCATCHER_DANI	                    506
 #define	TRAINER_UNUSED_507	507
 #define	TRAINER_UNUSED_508	508
 #define	TRAINER_UNUSED_509	509

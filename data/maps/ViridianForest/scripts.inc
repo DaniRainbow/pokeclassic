@@ -197,3 +197,71 @@ ViridianForest_EventScript_Beedrillite::
     finditem ITEM_BEEDRILLITE, 1
     setflag FLAG_GOT_BEEDRILLITE
     end
+
+ViridianForest_EventScript_Pokemon::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_DANI, ViridianForest_EventScript_VenusaurDefeated
+	msgbox ViridianForest_Text_Pokemon MSGBOX_DEFAULT
+	release
+	end
+
+ViridianForest_Text_Venusaur:
+	.string "CHARLES: Sarrrr...\p"
+    .string "Venusaur is enjoying the smell of\n"
+	.string "the grass and pollen on the wind.$"
+
+ViridianForest_EventScript_BugCatcherDani::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DANI, ViridianForest_EventScript_MegaHintVenusaur
+	trainerbattle_single TRAINER_BUGCATCHER_DANI, ViridianForest_Text_DaniIntro, ViridianForest_Text_DaniDefeat
+	setflag FLAG_DEFEATED_DANI
+	msgbox ViridianForest_Text_DaniPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+ViridianForest_Text_DaniIntro:
+	.string "Hey there!\p"
+	.string "Can I ask a favor? Charles over\n"
+	.string "there needs a bit of exercise.\p"
+	.string "Can you give us a good battle?$"
+
+ViridianForest_Text_DaniDefeat:
+	.string "You did great, Charles!$"
+
+ViridianForest_Text_DaniPostBattle:
+	.string "Thank you for that. He's older\n"
+    .string "but the best Venasaur I know.\p"
+    .string "Today's battle will help keep\n"
+    .string "the pep in his step!$"
+
+ViridianForest_EventScript_MegaHintVenusaur::    
+    goto_if_set FLAG_GOT_VENUSAURITE, ViridianForest_EventScript_DaniDefeated
+    msgbox ViridianForest_Text_VenusaurMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+ViridianForest_Text_VenusaurMegaHint:
+    .string "Cerulean City berry backyard.$"
+
+ViridianForest_EventScript_DaniDefeated::
+    msgbox DaniDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+DaniDefeated_Text:	
+	.string "Have you met Erin, the trainer\n"
+	.string "who lives in the cabin?\p"
+    .string "Her Clefairy gives me berries\n"
+    .string "whenever Charles wants.$"
+
+ViridianForest_EventScript_VenusaurDefeated::
+	msgbox VenusaurDefeated MSGBOX_DEFAULT
+	release
+	end
+
+VenusaurDefeated:	
+	.string "Charles is breathing heavily,\n"
+	.string "but his eyes are full of wonder.$"

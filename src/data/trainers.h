@@ -6073,4 +6073,16 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_GentlemanJustice),
         .party = {.ItemCustomMoves = sParty_GentlemanJustice}
 	},
+    [TRAINER_BUGCATCHER_DANI] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerName = _("Dani"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_BugCatcherDani),
+        .party = {.ItemCustomMoves = sParty_BugCatcherDani}
+	},
 };

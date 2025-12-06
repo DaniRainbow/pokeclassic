@@ -1392,6 +1392,51 @@ static const struct TrainerMonItemCustomMoves sParty_CoolTrainerErin[] = {
 	},
 };
 
+static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_SANDSLASH,
+        .heldItem = ITEM_ROCKY_HELMET,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_CLAW, MOVE_ROCK_SLIDE, MOVE_ROLLOUT}
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_WIGGLYTUFF,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_HYPER_VOICE, MOVE_SLEEP_TALK, MOVE_PLAY_ROUGH, MOVE_REST}
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_RAICHU,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_TOXIC, MOVE_DOUBLE_TEAM, MOVE_IRON_TAIL, MOVE_THUNDERBOLT}
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_CHARIZARD,
+        .heldItem = ITEM_LIFE_ORB,
+        .moves = {MOVE_FLAMETHROWER, MOVE_TAILWIND, MOVE_AIR_SLASH, MOVE_BODY_SLAM}
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_BLASTOISE,
+        .heldItem = ITEM_EXPERT_BELT,
+        .moves = {MOVE_SHELL_SMASH, MOVE_AQUA_TAIL, MOVE_AVALANCHE, MOVE_HYDRO_PUMP}
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_VENUSAUR,
+        .heldItem = ITEM_VENUSAURITE,
+        .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_BOMB, MOVE_PETAL_BLIZZARD, MOVE_LEECH_SEED}
+    },
+};
+
 //Pewter Gym
 static const struct TrainerMonNoItemCustomMoves sParty_CamperLiam[] = {
     {
