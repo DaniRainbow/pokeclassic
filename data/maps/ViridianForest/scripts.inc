@@ -198,11 +198,11 @@ ViridianForest_EventScript_Beedrillite::
     setflag FLAG_GOT_BEEDRILLITE
     end
 
-ViridianForest_EventScript_Pokemon::
+ViridianForest_EventScript_Venusaur::
 	lock
 	faceplayer
     goto_if_set FLAG_DEFEATED_DANI, ViridianForest_EventScript_VenusaurDefeated
-	msgbox ViridianForest_Text_Pokemon MSGBOX_DEFAULT
+	msgbox ViridianForest_Text_Venusaur MSGBOX_DEFAULT
 	release
 	end
 
