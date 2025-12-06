@@ -616,7 +616,7 @@
 #define	TRAINER_FISHERMAN_LARRY	                    504
 #define	TRAINER_GENTLEMAN_JUSTICE	                505
 #define	TRAINER_BUGCATCHER_DANI	                    506
-#define	TRAINER_UNUSED_507	507
+#define	TRAINER_AROMALADY_PHOEBE	                507
 #define	TRAINER_UNUSED_508	508
 #define	TRAINER_UNUSED_509	509
 #define	TRAINER_UNUSED_510	510

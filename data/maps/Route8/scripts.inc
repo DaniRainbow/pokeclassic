@@ -284,3 +284,72 @@ Route8_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
+
+Route8_EventScript_Beedrill::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_DIZZYPHOEBE, Route8_EventScript_BeedrillDefeated
+	msgbox Route8_Text_Beedrill MSGBOX_DEFAULT
+	release
+	end
+
+Route8_Text_Beedrill:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+Route8_EventScript_AromaLadyPhoebe::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DIZZYPHOEBE, Route8_EventScript_MegaHintBeedrill
+	trainerbattle_single TRAINER_AROMALADY_PHOEBE, Route8_Text_PhoebeIntro, Route8_Text_PhoebeDefeat
+	setflag FLAG_DEFEATED_DIZZYPHOEBE
+	msgbox Route8_Text_PhoebePostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route8_Text_PhoebeIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+Route8_Text_PhoebeDefeat:
+	.string "Incredible... how...?$"
+
+Route8_Text_PhoebePostBattle:
+	.string "Is this a dream?$"
+
+Route8_EventScript_MegaHintBeedrill::    
+    goto_if_set FLAG_GOT_BEEDRILLITE, Route8_EventScript_PhoebeDefeated
+    msgbox Route8_Text_BeedrillMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route8_Text_BeedrillMegaHint:
+    .string "What was that? You wish to know\n"
+    .string "where I found the Mega Stone?\p"
+    .string "Go round and round in Viridian\n"
+    .string "Forest to a humble cabin. That\l"
+    .string "is where life's turns lead me.$"
+
+Route8_EventScript_PhoebeDefeated::
+    msgbox PhoebeDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+PhoebeDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+Route8_EventScript_BeedrillDefeated::
+	msgbox BeedrillDefeated MSGBOX_DEFAULT
+	release
+	end
+
+BeedrillDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

@@ -4016,6 +4016,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BikerJaren[] = {
         .species = SPECIES_GRIMER,
     },
 };
+static const struct TrainerMonItemCustomMoves sParty_AromaLadyPhoebe[] = {
+    {
+        .iv = 250,
+        .lvl = 62,
+        .species = SPECIES_NIDOKING,
+        .heldItem = ITEM_POISON_BARB,
+        .moves = {MOVE_TOXIC_SPIKES, MOVE_HORN_DRILL, MOVE_DRILL_RUN, MOVE_POISON_JAB}
+    },
+    {
+        .iv = 250,
+        .lvl = 62,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_LIFE_ORB,
+        .moves = {MOVE_DEFENSE_CURL, MOVE_ROLLOUT, MOVE_BODY_PRESS, MOVE_STEALTH_ROCK}
+    },
+    {
+        .iv = 250,
+        .lvl = 63,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_FLY, MOVE_ROOST, MOVE_HEAL_BELL, MOVE_DRAGON_TAIL}
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_STARMIE,
+        .heldItem = ITEM_MACHO_BRACE,
+        .moves = {MOVE_RAPID_SPIN, MOVE_AVALANCHE, MOVE_CURSE, MOVE_PSYCHO_CUT}
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_MOLTRES,
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .moves = {MOVE_FIRE_SPIN, MOVE_HEAT_WAVE, MOVE_WHIRLWIND, MOVE_HURRICANE}
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_BEEDRILL,
+        .heldItem = ITEM_BEEDRILLITE,
+        .moves = {MOVE_DRILL_RUN, MOVE_POISON_JAB, MOVE_SWORDS_DANCE, MOVE_U_TURN}
+    },
+};
+
 //Celadon City Rooftop
 static const struct TrainerMonNoItemDefaultMoves sParty_RooftopRocketGrunt[] = {
     {
