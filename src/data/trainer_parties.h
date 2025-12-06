@@ -1238,42 +1238,42 @@ static const struct TrainerMonItemCustomMoves sParty_BlackBeltJiraiya[] = {
 		.lvl = 80,
 		.species = SPECIES_PIKACHU,
 		.heldItem = ITEM_LIGHT_BALL,
-		.moves = {MOVE_VOLT_TACKLE, MOVE_ELECTRO_BALL, MOVE_SLAM, MOVE_AGILITY}
+		.moves = {MOVE_ZIPPY_ZAP, MOVE_VOLT_SWITCH, MOVE_NUZZLE, MOVE_FAKE_OUT}
 	},
     {
 		.iv = 250,
 		.lvl = 80,
 		.species = SPECIES_WIGGLYTUFF,
-		.heldItem = ITEM_SILK_SCARF,
-		.moves = {MOVE_HYPER_VOICE, MOVE_ROLLOUT, MOVE_SING, MOVE_EARTHQUAKE}
+		.heldItem = ITEM_CHESTO_BERRY,
+		.moves = {MOVE_REST, MOVE_NASTY_PLOT, MOVE_WISH, MOVE_BATON_PASS}
 	},
     {
 		.iv = 250,
 		.lvl = 80,
 		.species = SPECIES_MACHAMP,
-		.heldItem = ITEM_FOCUS_BAND,
-		.moves = {MOVE_DUAL_CHOP, MOVE_SEISMIC_TOSS, MOVE_FOCUS_ENERGY, MOVE_FIRE_PUNCH}
+		.heldItem = ITEM_CHOICE_BAND,
+		.moves = {MOVE_CROSS_CHOP, MOVE_DYNAMIC_PUNCH, MOVE_STONE_EDGE, MOVE_FACADE}
 	},
     {
 		.iv = 250,
 		.lvl = 80,
 		.species = SPECIES_ZAPDOS,
 		.heldItem = ITEM_LEFTOVERS,
-		.moves = {MOVE_AGILITY, MOVE_THUNDER, MOVE_HURRICANE, MOVE_THUNDERBOLT}
+		.moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_HURRICANE, MOVE_ROOST}
 	},
     {
 		.iv = 250,
 		.lvl = 80,
 		.species = SPECIES_MEWTWO,
 		.heldItem = ITEM_MEWTWONITE_X,
-		.moves = {MOVE_PSYSTRIKE, MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_RECOVER}
+		.moves = {MOVE_KNOCK_OFF, MOVE_DRAIN_PUNCH, MOVE_EARTHQUAKE, MOVE_PSYCHO_CUT}
 	},
 	{
 		.iv = 250,
 		.lvl = 85,
 		.species = SPECIES_CHARIZARD,
-		.heldItem = ITEM_HEAT_ROCK,
-		.moves = {MOVE_FLY, MOVE_LAVA_PLUME, MOVE_DUAL_WINGBEAT, MOVE_FIRE_BLAST}
+		.heldItem = ITEM_LIFE_ORB,
+		.moves = {MOVE_AIR_SLASH, MOVE_SCORCHING_SANDS, MOVE_SOLAR_BEAM, MOVE_FIRE_BLAST}
 	},
 };
 //Viridian Forest
