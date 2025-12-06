@@ -343,7 +343,7 @@ PhoebeDefeated_Text:
     .string "Life is too short to not give\n"
     .string "things a chance. Take the wheel\l"
     .string "of your life and do doughnuts\l"
-    .string "in the parking lot of your life!"
+    .string "in the parking lot of your life!$"
 
 Route8_EventScript_BeedrillDefeated::
 	msgbox BeedrillDefeated MSGBOX_DEFAULT
