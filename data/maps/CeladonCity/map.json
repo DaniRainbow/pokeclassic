@@ -27,7 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 38,
+      "x": 40,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -41,7 +41,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLIWRATH",
-      "x": 36,
+      "x": 38,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -55,7 +55,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_3",
-      "x": 25,
+      "x": 27,
       "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -69,7 +69,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
-      "x": 48,
+      "x": 50,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -83,7 +83,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREEDER_M",
-      "x": 47,
+      "x": 49,
       "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -97,7 +97,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 30,
+      "x": 32,
       "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -111,7 +111,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "x": 38,
+      "x": 40,
       "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -125,7 +125,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MANIAC",
-      "x": 8,
+      "x": 10,
       "y": 30,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -139,7 +139,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_JENNY",
-      "x": 8,
+      "x": 10,
       "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -153,7 +153,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 18,
+      "x": 20,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -167,7 +167,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 26,
+      "x": 28,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -181,7 +181,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POLICE",
-      "x": 9,
+      "x": 11,
       "y": 30,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -195,7 +195,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 5,
+      "x": 7,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -209,7 +209,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 52,
+      "x": 54,
       "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -236,22 +236,8 @@
       "in_connection": ""
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": -7,
-      "y": 21,
-      "elevation": 2,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "25",
-      "trainer_sight_or_berry_tree_id": "6",
-      "script": "0x0",
-      "flag": "0",
-      "in_connection": ""
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_F",
-      "x": 55,
+      "x": 57,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -266,77 +252,77 @@
   ],
   "warp_events": [
     {
-      "x": 34,
+      "x": 36,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_GAME_CORNER",
       "dest_warp_id": 0
     },
     {
-      "x": 11,
+      "x": 13,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_1F",
       "dest_warp_id": 1
     },
     {
-      "x": 15,
+      "x": 17,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_1F",
       "dest_warp_id": 0
     },
     {
-      "x": 30,
+      "x": 32,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",
       "dest_warp_id": 0
     },
     {
-      "x": 48,
+      "x": 50,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": 0
     },
     {
-      "x": 39,
+      "x": 41,
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_GAME_CORNER_PRIZE_ROOM",
       "dest_warp_id": 0
     },
     {
-      "x": 11,
+      "x": 13,
       "y": 30,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_GYM",
       "dest_warp_id": 0
     },
     {
-      "x": 37,
+      "x": 39,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_RESTAURANT",
       "dest_warp_id": 0
     },
     {
-      "x": 41,
+      "x": 43,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_HOUSE1",
       "dest_warp_id": 0
     },
     {
-      "x": 49,
+      "x": 51,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_HOTEL",
       "dest_warp_id": 0
     },
     {
-      "x": 30,
+      "x": 32,
       "y": 4,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",
@@ -349,7 +335,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 16,
+      "x": 18,
       "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -357,7 +343,7 @@
     },
     {
       "type": "sign",
-      "x": 22,
+      "x": 24,
       "y": 18,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -365,7 +351,7 @@
     },
     {
       "type": "sign",
-      "x": 18,
+      "x": 20,
       "y": 14,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -373,7 +359,7 @@
     },
     {
       "type": "sign",
-      "x": 26,
+      "x": 28,
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -381,7 +367,7 @@
     },
     {
       "type": "sign",
-      "x": 33,
+      "x": 35,
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -389,7 +375,7 @@
     },
     {
       "type": "sign",
-      "x": 45,
+      "x": 47,
       "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -397,7 +383,7 @@
     },
     {
       "type": "sign",
-      "x": 38,
+      "x": 40,
       "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -405,7 +391,7 @@
     },
     {
       "type": "sign",
-      "x": 33,
+      "x": 35,
       "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -413,7 +399,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 55,
+      "x": 57,
       "y": 20,
       "elevation": 3,
       "item": "ITEM_PP_UP",
