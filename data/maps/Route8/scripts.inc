@@ -294,9 +294,8 @@ Route8_EventScript_Beedrill::
 	end
 
 Route8_Text_Beedrill:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "The Beedrill was spinning on a dime.\n"
+    .string "Now it is stopped and stares at you.$"
 
 Route8_EventScript_AromaLadyPhoebe::
 	lock
@@ -309,18 +308,17 @@ Route8_EventScript_AromaLadyPhoebe::
 	end
 
 Route8_Text_PhoebeIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Round and round and round I go.\n"
+	.string "A trainer approaches! I'll take\l"
+	.string "them for a spin.$"
 
 Route8_Text_PhoebeDefeat:
-	.string "Incredible... how...?$"
+	.string "You spun me right round!$"
 
 Route8_Text_PhoebePostBattle:
-	.string "Is this a dream?$"
+	.string "You spin me right round, baby\n"
+    .string "right round. Like a record, baby,\l"
+    .string "right round, round, round.$"
 
 Route8_EventScript_MegaHintBeedrill::    
     goto_if_set FLAG_GOT_BEEDRILLITE, Route8_EventScript_PhoebeDefeated
@@ -342,8 +340,10 @@ Route8_EventScript_PhoebeDefeated::
 	end
 
 PhoebeDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+    .string "Life is too short to not give\n"
+    .string "things a chance. Take the wheel\l"
+    .string "of your life and do doughnuts\l"
+    .string "in the parking lot of your life!"
 
 Route8_EventScript_BeedrillDefeated::
 	msgbox BeedrillDefeated MSGBOX_DEFAULT
@@ -351,5 +351,7 @@ Route8_EventScript_BeedrillDefeated::
 	end
 
 BeedrillDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Watching the Beedrill and its\n"
+	.string "trainer spin on a dime reminds\l"
+    .string "you of that movie with dancing\l"
+    .string "dorks at a gas station.$"
