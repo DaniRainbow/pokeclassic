@@ -103,6 +103,16 @@ LavenderTown_EventScript_BeautyKishi::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_KISHI, LavenderTown_EventScript_MegaHintGengar
+	goto_if_set FLAG_GOT_MEGA_RING, LavenderTown_EventScript_BeautyKishiBattle
+	msgbox LavenderTown_Text_KishiDoYouBelieve MSGBOX_NPC
+	release
+	end
+
+LavenderTown_Text_KishiDoYouBelieve:
+	.string "Tell me, young one.\n"
+	.string "Do you believe in ghosts?$"
+
+LavenderTown_EventScript_BeautyKishiBattle::
 	trainerbattle_single TRAINER_BEAUTY_KISHI, LavenderTown_Text_KishiIntro, LavenderTown_Text_KishiDefeat
 	setflag FLAG_DEFEATED_KISHI
 	msgbox LavenderTown_Text_KishiPostBattle MSGBOX_AUTOCLOSE
