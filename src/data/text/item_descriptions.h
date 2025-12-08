@@ -770,8 +770,8 @@ static const u8 sSilverPowderDesc[] = _(
 
 static const u8 sAmuletCoinDesc[] = _(
     "Doubles money in\n"
-    "battle if the\n"
-    "holder takes part.");
+    "battle if held\n"
+    "by your party.");
 
 static const u8 sCleanseTagDesc[] = _(
     "A hold item that\n"

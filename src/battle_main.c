@@ -119,6 +119,7 @@ static void HandleEndTurn_MonFled(void);
 static void HandleEndTurn_FinishBattle(void);
 static void SpriteCB_UnusedBattleInit(struct Sprite* sprite);
 static void SpriteCB_UnusedBattleInit_Main(struct Sprite *sprite);
+static bool8 partyMonHoldDoublePrizeEffect(void);
 static void TrySpecialEvolution(void);
 
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -3026,7 +3027,10 @@ static void BattleStartClearSetData(void)
     gBattleStruct->safariCatchFactor = gBaseStats[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
     gBattleStruct->safariEscapeFactor = 3;
     gBattleStruct->wildVictorySong = 0;
-    gBattleStruct->moneyMultiplier = 1;
+    if (partyMonHoldDoublePrizeEffect())
+        gBattleStruct->moneyMultiplier = 2;
+    else
+        gBattleStruct->moneyMultiplier = 1;
 
     gBattleStruct->givenExpMons = 0;
     gBattleStruct->palaceFlags = 0;
@@ -5367,6 +5371,17 @@ void RunBattleScriptCommands(void)
 {
     if (gBattleControllerExecFlags == 0)
         gBattleScriptingCommandsTable[gBattlescriptCurrInstr[0]]();
+}
+
+static bool8 partyMonHoldDoublePrizeEffect(void){
+    int i;
+    for (i = 0; i < PARTY_SIZE; i++){
+        u8 item = GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM);
+        if (ItemId_GetHoldEffect(item) == HOLD_EFFECT_DOUBLE_PRIZE){
+            return TRUE;
+        }
+    }
+    return FALSE;   
 }
 
 void SetTypeBeforeUsingMove(u16 move, u8 battlerAtk)
