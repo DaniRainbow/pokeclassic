@@ -10,6 +10,7 @@ Route4_MapScripts::
 	.byte 0
 
 Route4_OnTransition:
+	setflag FLAG_VISITED_ROUTE_4
 	call Common_EventScript_GetDayOrNight
 	end
 
