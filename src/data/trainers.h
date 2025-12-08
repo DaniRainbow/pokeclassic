@@ -6121,4 +6121,16 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_CoolTrainerMTony),
         .party = {.ItemCustomMoves = sParty_CoolTrainerMTony}
 	},
+    [TRAINER_YOUNGSTER_KODY] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .trainerName = _("Kody"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_YoungsterKody),
+        .party = {.ItemCustomMoves = sParty_YoungsterKody}
+	},
 };

@@ -259,3 +259,68 @@ Route4_Text_SolanaNotEnoughMons::
     .string "You have just one Pokémon?\n"
     .string "How did you manage Mt. Moon?$"
 
+Route4_EventScript_Charizard::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_KODY, Route4_EventScript_CharizardDefeated
+	msgbox Route4_Text_Charizard MSGBOX_DEFAULT
+	release
+	end
+
+Route4_Text_Charizard:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+Route4_EventScript_YoungsterKody::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_KODY, Route4_EventScript_MegaHintCharizard
+	trainerbattle_single TRAINER_YOUNGSTER_KODY, Route4_Text_KodyIntro, Route4_Text_KodyDefeat
+	setflag FLAG_DEFEATED_KODY
+	msgbox Route4_Text_KodyPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route4_Text_KodyIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+Route4_Text_KodyDefeat:
+	.string "Incredible... how...?$"
+
+Route4_Text_KodyPostBattle:
+	.string "Is this a dream?$"
+
+Route4_EventScript_MegaHintCharizard::    
+    goto_if_set FLAG_GOT_CHARIZARDITE_Y, Route4_EventScript_KodyDefeated
+    msgbox Route4_Text_CharizardMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route4_Text_CharizardMegaHint:
+    .string "I was playing at the top of\n"
+	.string "the Mansion on Cinnbar Island!$"
+
+Route4_EventScript_KodyDefeated::
+    msgbox KodyDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+KodyDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+Route4_EventScript_CharizardDefeated::
+	msgbox CharizardYDefeated MSGBOX_DEFAULT
+	release
+	end
+
+CharizardYDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

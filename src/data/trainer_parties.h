@@ -1703,6 +1703,51 @@ static const struct TrainerMonItemCustomMoves sParty_PicnickerSolana[] = {
 	},
 };
 
+static const struct TrainerMonItemCustomMoves sParty_YoungsterKody[] = {
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_NINETALES,
+        .heldItem = ITEM_HEAT_ROCK,
+        .moves = {MOVE_WILL_O_WISP, MOVE_WEATHER_BALL, MOVE_CONFUSE_RAY, MOVE_SOLAR_BEAM}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_EXEGGUTOR,
+        .heldItem = ITEM_CHOICE_SPECS,
+        .moves = {MOVE_SOLAR_BEAM, MOVE_EXTRASENSORY, MOVE_GIGA_DRAIN, MOVE_ANCIENT_POWER}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_VICTREEBEL,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SLEEP_POWDER, MOVE_POWER_WHIP, MOVE_GROWTH, MOVE_SUBSTITUTE}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_ELECTRODE,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_EXPLOSION, MOVE_VOLT_SWITCH, MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE}
+    },
+    {
+        .iv = 250,
+        .lvl = 69,
+        .species = SPECIES_NIDOKING,
+        .heldItem = ITEM_LIFE_ORB,
+        .moves = {MOVE_TOXIC_SPIKES, MOVE_EARTHQUAKE, MOVE_POISON_JAB, MOVE_BRICK_BREAK}
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_CHARIZARD,
+        .heldItem = ITEM_CHARIZARDITE_Y,
+        .moves = {MOVE_WEATHER_BALL, MOVE_AIR_SLASH, MOVE_DRAGON_PULSE, MOVE_SCORCHING_SANDS}
+    },
+};
+
 //Mt Moon
 static const struct TrainerMonNoItemDefaultMoves sParty_HikerMarcos[] = {
     {
