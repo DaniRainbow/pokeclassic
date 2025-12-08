@@ -3577,7 +3577,53 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PokemaniacWinston[] = {
         .species = SPECIES_SLOWPOKE,
     },
 };
-//Pokemone Tower
+//Lavender Town
+static const struct TrainerMonItemCustomMoves sParty_BeautyKishi[] = {
+    {
+        .iv = 250,
+        .lvl = 69,
+        .species = SPECIES_GOLBAT,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_U_TURN, MOVE_BRAVE_BIRD, MOVE_ROOST, MOVE_SUPER_FANG}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_MAROWAK,
+        .heldItem = ITEM_THICK_CLUB,
+        .moves = {MOVE_BONEMERANG, MOVE_KNOCK_OFF, MOVE_STONE_EDGE, MOVE_THUNDER_PUNCH}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_HAUNTER,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_CURSE, MOVE_DESTINY_BOND, MOVE_MEAN_LOOK, MOVE_TOXIC}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_HYPNO,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_NASTY_PLOT, MOVE_BATON_PASS, MOVE_HYPNOSIS, MOVE_WISH}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_MR_MIME,
+        .heldItem = ITEM_LIGHT_CLAY,
+        .moves = {MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_DAZZLING_GLEAM, MOVE_FUTURE_SIGHT}
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_GENGAR,
+        .heldItem = ITEM_GENGARITE,
+        .moves = {MOVE_PROTECT, MOVE_HEX, MOVE_SLUDGE_BOMB, MOVE_WILL_O_WISP}
+    },
+};
+
+//Pokemon Tower
 static const struct TrainerMonNoItemDefaultMoves sParty_ChannelerPatricia[] = {
     {
         .iv = 0,
@@ -4359,6 +4405,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni[] = {
         .species = SPECIES_KANGASKHAN,
     },
 };
+static const struct TrainerMonItemCustomMoves sParty_CoolTrainerMTony[] = {
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_PERSIAN,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_FAKE_OUT, MOVE_KNOCK_OFF, MOVE_U_TURN, MOVE_DOUBLE_EDGE}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_RHYDON,
+        .heldItem = ITEM_EVIOLITE,
+        .moves = {MOVE_SWORDS_DANCE, MOVE_STEALTH_ROCK, MOVE_EARTHQUAKE, MOVE_STONE_EDGE}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_NIDOQUEEN,
+        .heldItem = ITEM_LIFE_ORB,
+        .moves = {MOVE_ICE_BEAM, MOVE_EARTH_POWER, MOVE_SLUDGE_WAVE, MOVE_THUNDERBOLT}
+    },
+    {
+        .iv = 250,
+        .lvl = 69,
+        .species = SPECIES_ALAKAZAM,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_SHADOW_BALL, MOVE_COUNTER}
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_TAUROS,
+        .heldItem = ITEM_CHESTO_BERRY,
+        .moves = {MOVE_BODY_SLAM, MOVE_CLOSE_COMBAT, MOVE_REST, MOVE_ZEN_HEADBUTT}
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_KANGASKHAN,
+        .heldItem = ITEM_KANGASKHANITE,
+        .moves = {MOVE_FAKE_OUT, MOVE_POWER_UP_PUNCH, MOVE_BODY_SLAM, MOVE_CRUNCH}
+    },
+};
+
 //Celadon Gym
 static const struct TrainerMonNoItemCustomMoves sParty_LeaderErika[] = {
     {

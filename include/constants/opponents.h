@@ -617,8 +617,8 @@
 #define	TRAINER_GENTLEMAN_JUSTICE	                505
 #define	TRAINER_BUGCATCHER_DANI	                    506
 #define	TRAINER_AROMALADY_PHOEBE	                507
-#define	TRAINER_UNUSED_508	508
-#define	TRAINER_UNUSED_509	509
+#define	TRAINER_BEAUTY_KISHI	                    508
+#define	TRAINER_COOLTRAINER_TONY	                509
 #define	TRAINER_UNUSED_510	510
 #define	TRAINER_UNUSED_511	511
 #define	TRAINER_UNUSED_512	512

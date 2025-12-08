@@ -279,3 +279,68 @@ Movement_CuboneExit::
 	walk_down
 	walk_down
 	step_end
+
+RocketHideout_B4F_EventScript_Kangaskhan::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_TONY, RocketHideout_B4F_EventScript_KangaskhanDefeated
+	msgbox RocketHideout_B4F_Text_Kangaskhan MSGBOX_DEFAULT
+	release
+	end
+
+RocketHideout_B4F_Text_Kangaskhan:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+RocketHideout_B4F_EventScript_WaiterTony::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_TONY, RocketHideout_B4F_EventScript_MegaHintKangaskhan
+	trainerbattle_single TRAINER_COOLTRAINER_TONY, RocketHideout_B4F_Text_TonyIntro, RocketHideout_B4F_Text_TonyDefeat
+	setflag FLAG_DEFEATED_TONY
+	msgbox RocketHideout_B4F_Text_TonyPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+RocketHideout_B4F_Text_TonyIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+RocketHideout_B4F_Text_TonyDefeat:
+	.string "Incredible... how...?$"
+
+RocketHideout_B4F_Text_TonyPostBattle:
+	.string "Is this a dream?$"
+
+RocketHideout_B4F_EventScript_MegaHintKangaskhan::    
+    goto_if_set FLAG_GOT_KANGASKHANITE, RocketHideout_B4F_EventScript_TonyDefeated
+    msgbox RocketHideout_B4F_Text_KangaskhanMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+RocketHideout_B4F_Text_KangaskhanMegaHint:
+    .string "East area in Safari Zone.$"
+
+RocketHideout_B4F_EventScript_TonyDefeated::
+    msgbox TonyDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+TonyDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+RocketHideout_B4F_EventScript_KangaskhanDefeated::
+	msgbox KangaskhanDefeated MSGBOX_DEFAULT
+	release
+	end
+
+KangaskhanDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

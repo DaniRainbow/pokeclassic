@@ -85,3 +85,68 @@ LavenderTown_EventScript_PokemonTowerSign::
 LavenderTown_Text_PokemonTowerSign::
     .string "Pokémon Tower\n"
     .string "Becalm the Spirits of Pokémon$"
+
+LavenderTown_EventScript_Gengar::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_KISHI, LavenderTown_EventScript_GengarDefeated
+	msgbox LavenderTown_Text_Gengar MSGBOX_DEFAULT
+	release
+	end
+
+LavenderTown_Text_Gengar:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+LavenderTown_EventScript_BeautyKishi::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_KISHI, LavenderTown_EventScript_MegaHintGengar
+	trainerbattle_single TRAINER_BEAUTY_KISHI, LavenderTown_Text_KishiIntro, LavenderTown_Text_KishiDefeat
+	setflag FLAG_DEFEATED_KISHI
+	msgbox LavenderTown_Text_KishiPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+LavenderTown_Text_KishiIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+LavenderTown_Text_KishiDefeat:
+	.string "Incredible... how...?$"
+
+LavenderTown_Text_KishiPostBattle:
+	.string "Is this a dream?$"
+
+LavenderTown_EventScript_MegaHintGengar::    
+    goto_if_set FLAG_GOT_GENGARITE, LavenderTown_EventScript_KishiDefeated
+    msgbox LavenderTown_Text_GengarMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+LavenderTown_Text_GengarMegaHint:
+    .string "Climb to the top of the Tower.$"
+
+LavenderTown_EventScript_KishiDefeated::
+    msgbox KishiDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+KishiDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+LavenderTown_EventScript_GengarDefeated::
+	msgbox GengarDefeated MSGBOX_DEFAULT
+	release
+	end
+
+GengarDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

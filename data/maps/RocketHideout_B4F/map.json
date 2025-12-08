@@ -206,7 +206,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RocketHideout_B4F_EventScript_WaiterTony",
       "flag": "FLAG_HIDE_MEGA_TRAINERS"
     },
     {
@@ -219,7 +219,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RocketHideout_B4F_EventScript_Kangaskhan",
       "flag": "FLAG_HIDE_MEGA_TRAINERS"
     }
   ],

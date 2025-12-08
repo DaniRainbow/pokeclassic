@@ -201,8 +201,8 @@
 #define FLAG_HIDE_MEGA_TRAINERS             0xB7
 #define FLAG_DEFEATED_DANI                  0xB8
 #define FLAG_DEFEATED_DIZZYPHOEBE           0xB9
-#define FLAG_UNUSED_0x0BA                   0xBA
-#define FLAG_UNUSED_0x0BB                   0xBB
+#define FLAG_DEFEATED_KISHI                 0xBA
+#define FLAG_DEFEATED_TONY                  0xBB
 #define FLAG_UNUSED_0x0BC                	0xBC
 #define FLAG_UNUSED_0x0BD         			0xBD
 #define FLAG_UNUSED_0x0BE        			0xBE
