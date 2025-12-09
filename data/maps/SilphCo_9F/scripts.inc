@@ -22,6 +22,8 @@ SilphCo_9F_EventScript_HealWoman::
 
 SilphCo_9F_EventScript_HealWomanRocketsGone::
 	msgbox SilphCo_9F_Text_ThankYouSoMuch
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
 	release
 	end
 
