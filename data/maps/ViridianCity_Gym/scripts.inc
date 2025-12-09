@@ -274,7 +274,7 @@ ViridianCity_Gym_Text_GymGuyAdvice::
     .string "Leader's identity.\p"
     .string "But one thing's certain.\n"
     .string "This will be the toughest of all\l"
-    .string "the Gym LeaderS.\p"
+    .string "the Gym Leaders.\p"
     .string "Also, I heard that the Trainers\n"
     .string "here like Ground type Pokémon.$"
 
