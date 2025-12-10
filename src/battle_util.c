@@ -8784,6 +8784,9 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         if (atkBaseSpeciesId == SPECIES_PIKACHU)
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
+        else if (atkBaseSpeciesId == SPECIES_PIKACHU_PARTNER)
+            MulModifier(&modifier, UQ_4_12(2.0));
+        break;
     case HOLD_EFFECT_CHOICE_BAND:
         if (IS_MOVE_PHYSICAL(move))
             MulModifier(&modifier, UQ_4_12(1.5));
