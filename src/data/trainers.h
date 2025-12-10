@@ -3897,7 +3897,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_DojoAttack),
-        .party = {.NoItemDefaultMoves = sParty_DojoAttack}
+        .party = {.NoItemCustomMoves = sParty_DojoAttack}
     },
     [SPARRING_PARTNER_DEFENSE] = {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
@@ -3912,7 +3912,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_DojoDefense}
     },
     [SPARRING_PARTNER_SPATTACK] = {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_BLACK_BELT,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_BLACK_BELT,

@@ -5941,26 +5941,30 @@ static const struct TrainerMonNoItemDefaultMoves sParty_DojoHP[] = {
         .species = SPECIES_WIGGLYTUFF, // HP
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_DojoAttack[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_DojoAttack[] = {
     {
         .iv = 100,
         .lvl = 35,
         .species = SPECIES_MACHAMP, // ATTACK
+        .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 35,
         .species = SPECIES_MACHAMP, // ATTACK
+        .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 35,
         .species = SPECIES_MACHAMP, // ATTACK
+        .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 35,
         .species = SPECIES_MACHAMP, // ATTACK
+        .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_DojoSPAttack[] = {
