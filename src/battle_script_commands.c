@@ -6825,9 +6825,9 @@ static void Cmd_getmoneyreward(void)
     if (VarGet(gSpecialVar_0x8003) == 1)
     {
         GiveFrontierBattlePoints();
-        PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 3, gSpecialVar_0x8004);
+        PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 3, gSpecialVar_Unused_0x8014);
         gSpecialVar_0x8003 = 0;
-        gSpecialVar_0x8004 = 0;
+        gSpecialVar_Unused_0x8014 = 0;
     }
     else
     {

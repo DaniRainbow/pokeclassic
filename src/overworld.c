@@ -417,7 +417,7 @@ void Overworld_ResetStateAfterDigEscRope(void)
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
     gSpecialVar_0x8003 = 0;
-    gSpecialVar_0x8004 = 0;
+    gSpecialVar_Unused_0x8014 = 0;
     VarSet(VAR_SAFARI_ZONE_STATE,0);
 }
 

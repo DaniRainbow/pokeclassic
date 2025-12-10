@@ -42,7 +42,7 @@ SilphCo_11F_EventScript_PresidentPostgame::
 	msgbox SilphCo_11F_Text_PracticeBattling, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SilphCo_11F_EventScript_DeclinePrezBattle
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 50
+	setvar VAR_UNUSED_0x8014, 50
 	trainerbattle_no_intro TRAINER_SILPH_PREZ, SilphCo_11F_Text_PrezDefeat
 	msgbox SilphCo_11F_Text_WhatAGreatBattle, MSGBOX_NPC
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM

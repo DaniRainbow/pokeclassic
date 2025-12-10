@@ -354,19 +354,19 @@ ViridianCity_Gym_Text_RematchLeader::
 
 ViridianCity_Gym_EventScript_RivalJolteon::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single TRAINER_RIVAL_POSTGAME_JOLTEON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
 	end
 
 ViridianCity_Gym_EventScript_RivalFlareon::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single TRAINER_RIVAL_POSTGAME_FLAREON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
 	end
 
 ViridianCity_Gym_EventScript_RivalVaporeon::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single TRAINER_RIVAL_POSTGAME_VAPOREON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
 	end
 

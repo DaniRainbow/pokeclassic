@@ -1,5 +1,5 @@
 .equ FOUND_FIRST_SWITCH, FLAG_TEMP_1
-.equ SWITCH1_ID,         VAR_0x8004
+.equ SWITCH1_ID,         VAR_UNUSED_0x8014
 .equ SWITCH2_ID,         VAR_0x8005
 .equ TRASH_CAN_ID,       VAR_0x8008
 
@@ -399,7 +399,7 @@ VermilionCity_Gym_Text_RematchOriginal::
 
 VermilionCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single LEADER_REMATCH_SURGE_POSTGAME, VermilionCity_Gym_Text_RematchPostgame, VermilionCity_Gym_Text_RematchDefeat, VermilionCity_Gym_EventScript_DefeatedLeaderRematch
 	end
 
