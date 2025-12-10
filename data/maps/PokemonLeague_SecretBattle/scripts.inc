@@ -7,7 +7,7 @@ PokemonLeague_SecretBattle_MapScripts::
 	.byte 0
 
 PokemonLeague_SecretBattle_OnResume::
-	setvar VAR_UNUSED_0x8014, 4
+	setvar VAR_0x8004, 4
 	call PokemonLeague_EventScript_DoLightingEffect
 	call PokemonLeague_SecretBattle_EventScript_CheckStopTrigger
 	end
