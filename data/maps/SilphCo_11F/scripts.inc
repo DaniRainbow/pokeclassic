@@ -404,6 +404,7 @@ SilphCo_11F_EventScript_PostgameRocket::
 	call_if_eq VAR_FACING, DIR_WEST, SilphCo_11F_EventScript_LookerMovement4
 	waitmovement 10
 	setflag	FLAG_HIDE_SILPH_POSTGAME_ROCKET
+	clearflag FLAG_SILPH_INVASION_ACTIVE
 	setflag	FLAG_HIDE_SILPH_POSTGAME_LOOKER
 	setflag FLAG_LOOKER_POSTGAME_COMPLETED
 	clearflag FLAG_HIDE_LOOKER_CELADON

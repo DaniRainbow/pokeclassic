@@ -592,6 +592,7 @@ MatchCall_EventScript_LookerPostgameReady::
 	clearflag FLAG_QUEUE_LOOKER_POSTGAME_CALL
 	setflag FLAG_LOOKER_POSTGAME_STARTED
 	clearflag FLAG_HIDE_SILPH_POSTGAME_ROCKET
+	setflag FLAG_SILPH_INVASION_ACTIVE
 	releaseall
 	end
 

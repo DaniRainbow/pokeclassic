@@ -204,7 +204,7 @@
 #define FLAG_DEFEATED_KISHI                 0xBA
 #define FLAG_DEFEATED_TONY                  0xBB
 #define FLAG_DEFEATED_KODY               	0xBC
-#define FLAG_UNUSED_0x0BD         			0xBD
+#define FLAG_SILPH_INVASION_ACTIVE         	0xBD
 #define FLAG_UNUSED_0x0BE        			0xBE
 #define FLAG_UNUSED_0x0BF  					0xBF
 #define FLAG_UNUSED_0x0C0     				0xC0
