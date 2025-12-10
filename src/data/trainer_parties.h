@@ -5935,6 +5935,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_DojoHP[] = {
         .lvl = 35,
         .species = SPECIES_WIGGLYTUFF, // HP
     },
+    {
+        .iv = 100,
+        .lvl = 35,
+        .species = SPECIES_WIGGLYTUFF, // HP
+    },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_DojoAttack[] = {
     {
