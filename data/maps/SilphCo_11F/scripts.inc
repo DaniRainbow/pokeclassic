@@ -550,9 +550,9 @@ SilphCo_11F_Text_GiovanniWasWeak::
 	.string "Say hello to the new Team Rocket!$"
 
 SilphCo_11F_Text_RocketLeaderDefeat::
-	.string "What?! Am I weaker than Giovanni?\p"
+	.string "What?! Am I weaker than Giovanni?$"
 
-SilphCo_11F_Text_HowCouldThisHappen::
+SilphCo_11F_Text_HowCouldThisHappen:
 	.string "I can't believe it...\p"
 	.string "This was supposed to be our big\n"
 	.string "comeback!\p"
