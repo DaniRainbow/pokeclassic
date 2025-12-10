@@ -376,7 +376,7 @@ SaffronCity_Dojo_EventScript_DefensePupil::
 SaffronCity_Dojo_EventScript_SpDefensePupil::
 	lock
 	faceplayer
-	goto_if_set FLAG_DOJO_SPDEFENSE, SaffronCity_Dojo_EventScript_DefensePupilThirsty
+	goto_if_set FLAG_DOJO_SPDEFENSE, SaffronCity_Dojo_EventScript_SpDefensePupilThirsty
 	msgbox SaffronCity_Dojo_Text_SpDefensePupil, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SaffronCity_Dojo_EventScript_BattleLater
 	trainerbattle_single SPARRING_PARTNER_SPDEFENSE, SaffronCity_Dojo_Text_PupilIntro, SaffronCity_Dojo_Text_PupilDefeat, SaffronCity_Dojo_BattledSPDefense
