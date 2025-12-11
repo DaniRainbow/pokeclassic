@@ -19,10 +19,21 @@ SilphCo_6F_EventScript_ItemXSpecial::
 SilphCo_6F_EventScript_WorkerM2::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_6F_EventScript_WorkerM2RocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_6F_EventScript_WorkerM2RocketsGone
 	msgbox SilphCo_6F_Text_TargetedSilphForOurMonProducts
 	release
 	end
+
+SilphCo_6F_EventScript_WorkerM2RocketsBack::
+	msgbox SilphCo_6F_Text_WorkerM2RocketsBack
+	release
+	end
+
+SilphCo_6F_Text_WorkerM2RocketsBack:
+	.string "I can't complain about the invasion.\p"
+	.string "You are here and a meeting\n"
+	.string "I dreaded was canceled.$"
 
 SilphCo_6F_EventScript_WorkerM2RocketsGone::
 	msgbox SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder
@@ -32,10 +43,19 @@ SilphCo_6F_EventScript_WorkerM2RocketsGone::
 SilphCo_6F_EventScript_WorkerM3::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_6F_EventScript_WorkerM3RocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_6F_EventScript_WorkerM3RocketsGone
 	msgbox SilphCo_6F_Text_RocketsTookOverBuilding
 	release
 	end
+
+SilphCo_6F_EventScript_WorkerM3RocketsBack::
+	msgbox SilphCo_6F_Text_BetterGetBackToWork
+	release
+	end
+
+SilphCo_6F_Text_WorkerM3RocketsBack:
+	.string "Placeholder.$"
 
 SilphCo_6F_EventScript_WorkerM3RocketsGone::
 	msgbox SilphCo_6F_Text_BetterGetBackToWork
@@ -45,10 +65,19 @@ SilphCo_6F_EventScript_WorkerM3RocketsGone::
 SilphCo_6F_EventScript_WorkerM1::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_6F_EventScript_WorkerM1RocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_6F_EventScript_WorkerM1RocketsGone
 	msgbox SilphCo_6F_Text_HelpMePlease
 	release
 	end
+
+SilphCo_6F_EventScript_WorkerM1RocketsBack::
+	msgbox SilphCo_6F_Text_WorkerM1RocketsBack
+	release
+	end
+
+SilphCo_6F_Text_WorkerM1RocketsBack:
+	.string "Placeholder.$"
 
 SilphCo_6F_EventScript_WorkerM1RocketsGone::
 	msgbox SilphCo_6F_Text_WeGotEngaged

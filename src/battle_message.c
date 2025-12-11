@@ -448,6 +448,9 @@ static const u8 sText_SpDef2[] = _("Sp. Def");
 
 static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
+static const u8 sText_PkmnDroppedItem[] = _("Wild {B_OPPONENT_MON1_NAME} dropped an item!\p");
+static const u8 sText_AddedToBag[] = _("{B_PLAYER_NAME} put away the {B_BUFF1}\nin the {B_BUFF2} POCKET.\p");
+static const u8 sText_BagIsFull[] = _("Too bad! The BAG is full…\p");
 
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
 {
@@ -1231,6 +1234,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNBOXLANETTESPCFULL - BATTLESTRINGS_TABLE_START] = gText_PkmnTransferredLanettesPCBoxFull,
     [STRINGID_TRAINER1WINTEXT - BATTLESTRINGS_TABLE_START] = sText_Trainer1WinText,
     [STRINGID_TRAINER2WINTEXT - BATTLESTRINGS_TABLE_START] = sText_Trainer2WinText,
+    [STRINGID_PKMNDROPPEDITEM - BATTLESTRINGS_TABLE_START] = sText_PkmnDroppedItem,
+    [STRINGID_ADDEDTOBAG - BATTLESTRINGS_TABLE_START] = sText_AddedToBag,
+    [STRINGID_BAGISFULL - BATTLESTRINGS_TABLE_START] = sText_BagIsFull,
     [STRINGID_ENDUREDSTURDY - BATTLESTRINGS_TABLE_START] = sText_EnduredViaSturdy,
     [STRINGID_POWERHERB - BATTLESTRINGS_TABLE_START] = sText_PowerHerbActivation,
     [STRINGID_HURTBYITEM - BATTLESTRINGS_TABLE_START] = sText_HurtByItem,
@@ -3779,6 +3785,11 @@ void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
             {
                 CopyItemName(hword, dst);
             }
+            srcID += 3;
+            break;
+        case B_BUFF_POCKET:
+            hword = T1_READ_16(&src[srcID + 1]);
+            CopyPocketName(hword, dst);
             srcID += 3;
             break;
         }
