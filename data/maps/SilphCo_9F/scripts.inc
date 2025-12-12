@@ -12,6 +12,7 @@ SilphCo_9F_OnLoad::
 SilphCo_9F_EventScript_HealWoman::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE SilphCo_9F_EventScript_HealWomanRocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_9F_EventScript_HealWomanRocketsGone
 	msgbox SilphCo_9F_Text_YouShouldTakeQuickNap
 	closemessage
@@ -19,6 +20,17 @@ SilphCo_9F_EventScript_HealWoman::
 	msgbox SilphCo_9F_Text_DontGiveUp
 	release
 	end
+
+SilphCo_9F_EventScript_HealWomanRocketsBack::
+	msgbox SilphCo_9F_Text_HealWomanRocketsBack
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
+	release
+	end
+
+SilphCo_9F_Text_HealWomanRocketsBack:
+	.string "Ready to fight?\n"
+    .string "You should take a quick nap.$"
 
 SilphCo_9F_EventScript_HealWomanRocketsGone::
 	msgbox SilphCo_9F_Text_ThankYouSoMuch

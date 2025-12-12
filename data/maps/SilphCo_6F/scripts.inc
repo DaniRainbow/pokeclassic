@@ -50,12 +50,13 @@ SilphCo_6F_EventScript_WorkerM3::
 	end
 
 SilphCo_6F_EventScript_WorkerM3RocketsBack::
-	msgbox SilphCo_6F_Text_BetterGetBackToWork
+	msgbox SilphCo_6F_Text_WorkerM3RocketsBack
 	release
 	end
 
 SilphCo_6F_Text_WorkerM3RocketsBack:
-	.string "Placeholder.$"
+	.string "These Rockets just don't stop.\n"
+	.string "The extra break is nice, though.$"
 
 SilphCo_6F_EventScript_WorkerM3RocketsGone::
 	msgbox SilphCo_6F_Text_BetterGetBackToWork
@@ -77,7 +78,8 @@ SilphCo_6F_EventScript_WorkerM1RocketsBack::
 	end
 
 SilphCo_6F_Text_WorkerM1RocketsBack:
-	.string "Placeholder.$"
+	.string "On no, what am I going to do?\n"
+	.string "I promised I would be brave!$"
 
 SilphCo_6F_EventScript_WorkerM1RocketsGone::
 	msgbox SilphCo_6F_Text_WeGotEngaged
@@ -87,10 +89,19 @@ SilphCo_6F_EventScript_WorkerM1RocketsGone::
 SilphCo_6F_EventScript_WorkerF1::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_6F_EventScript_WorkerF1RocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_6F_EventScript_WorkerF1RocketsGone
 	msgbox SilphCo_6F_Text_ThatManIsSuchACoward
 	release
 	end
+
+SilphCo_6F_EventScript_WorkerF1RocketsBack::
+	msgbox SilphCo_6F_Text_WorkerF1RocketsBack
+	release
+	end
+
+SilphCo_6F_Text_WorkerF1RocketsBack:
+	.string "Men would be lost without us.$"
 
 SilphCo_6F_EventScript_WorkerF1RocketsGone::
 	msgbox SilphCo_6F_Text_NeedsMeToLookAfterHim
@@ -100,10 +111,20 @@ SilphCo_6F_EventScript_WorkerF1RocketsGone::
 SilphCo_6F_EventScript_WorkerF2::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_6F_EventScript_WorkerF2RocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_6F_EventScript_WorkerF2RocketsGone
 	msgbox SilphCo_6F_Text_RocketsTryingToConquerWorld
 	release
 	end
+
+SilphCo_6F_EventScript_WorkerF2RocketsBack::
+	msgbox SilphCo_6F_Text_WorkerF2RocketsBack
+	release
+	end
+
+SilphCo_6F_Text_WorkerF2RocketsBack:
+	.string "You're my hero, so please come\n"
+	.string "to our aid once more!$"
 
 SilphCo_6F_EventScript_WorkerF2RocketsGone::
 	msgbox SilphCo_6F_Text_RocketsRanAwayBecauseOfYou

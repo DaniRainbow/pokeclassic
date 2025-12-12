@@ -14,10 +14,20 @@ SilphCo_8F_EventScript_ItemIron::
 SilphCo_8F_EventScript_WorkerM::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_8F_EventScript_WorkerMRocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_8F_EventScript_WorkerMRocketsGone
 	msgbox SilphCo_8F_Text_WonderIfSilphIsFinished
 	release
 	end
+
+SilphCo_8F_EventScript_WorkerMRocketsBack::
+	msgbox SilphCo_8F_Text_WorkerMRocketsBack
+	release
+	end
+
+SilphCo_8F_Text_WorkerMRocketsBack:
+	.string "We made it through before.\n"
+	.string "We will make it through again.$"
 
 SilphCo_8F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_8F_Text_ThanksForSavingUs

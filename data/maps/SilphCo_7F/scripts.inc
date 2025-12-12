@@ -190,10 +190,20 @@ SilphCo_7F_Movement_RivalExitBottom::
 SilphCo_7F_EventScript_WorkerM1::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_7F_EventScript_WorkerM1RocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_7F_EventScript_WorkerM1RocketsGone
 	msgbox SilphCo_7F_Text_RocketsAfterMasterBall
 	release
 	end
+
+SilphCo_7F_EventScript_WorkerM1RocketsBack::
+	msgbox SilphCo_7F_Text_WorkerM1RocketsBack
+	release
+	end
+	
+SilphCo_7F_Text_WorkerM1RocketsBack:
+	.string "They can't be after the Master\n"
+	.string "Ball this time, so why invade?$"
 
 SilphCo_7F_EventScript_WorkerM1RocketsGone::
 	msgbox SilphCo_7F_Text_CanceledMasterBallProject
@@ -203,10 +213,21 @@ SilphCo_7F_EventScript_WorkerM1RocketsGone::
 SilphCo_7F_EventScript_WorkerM2::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_7F_EventScript_WorkerM2RocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_7F_EventScript_WorkerM2RocketsGone
 	msgbox SilphCo_7F_Text_BadIfTeamRocketTookOver
 	release
 	end
+
+SilphCo_7F_EventScript_WorkerM2RocketsBack::
+	msgbox SilphCo_7F_Text_WorkerM2RocketsBack
+	release
+	end
+
+SilphCo_7F_Text_WorkerM2RocketsBack:
+	.string "If this continues to be a trend\n"
+	.string "around here, one truly has to\l"
+	.string "question why we pay Security.$"
 
 SilphCo_7F_EventScript_WorkerM2RocketsGone::
 	msgbox SilphCo_7F_Text_WowYouChasedOffTeamRocket
@@ -216,10 +237,19 @@ SilphCo_7F_EventScript_WorkerM2RocketsGone::
 SilphCo_7F_EventScript_WorkerF::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_7F_EventScript_WorkerFRocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_7F_EventScript_WorkerFRocketsGone
 	msgbox SilphCo_7F_Text_ReallyDangerousHere
 	release
 	end
+
+SilphCo_7F_EventScript_WorkerFRocketsBack::
+	msgbox SilphCo_7F_Text_WorkerFRocketsBack
+	release
+	end
+
+SilphCo_7F_Text_WorkerFRocketsBack:
+	.string "Another day in paradise...$"
 
 SilphCo_7F_EventScript_WorkerFRocketsGone::
 	msgbox SilphCo_7F_Text_ThankYouSoMuch
@@ -282,7 +312,7 @@ SilphCo_7F_Text_RocketsAfterMasterBall::
     .string "Ball, which catches any Pokémon.$"
 
 SilphCo_7F_Text_CanceledMasterBallProject::
-    .string "We canceled the MASTER Ball\n"
+    .string "We canceled the Master Ball\n"
     .string "project because of Team Rocket.$"
 
 SilphCo_7F_Text_BadIfTeamRocketTookOver::
