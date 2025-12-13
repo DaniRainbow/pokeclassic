@@ -1,6 +1,10 @@
 CeladonCity_DepartmentStore_1F_MapScripts::
 	.byte 0
 
+CeladonCity_DepartmentStore_1F_OnTransition:
+	setescapewarp MAP_CELADON_CITY, 15, 16
+	end
+
 CeladonCity_DepartmentStore_1F_EventScript_Receptionist::
 	msgbox CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore, MSGBOX_NPC
 	end

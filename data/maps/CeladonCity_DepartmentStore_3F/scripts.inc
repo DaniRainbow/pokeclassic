@@ -1,6 +1,10 @@
 CeladonCity_DepartmentStore_3F_MapScripts::
 	.byte 0
 
+CeladonCity_DepartmentStore_3F_OnTransition:
+	setescapewarp MAP_CELADON_CITY, 15, 16
+	end
+
 CeladonCity_DepartmentStore_3F_EventScript_GBAKid1::
 	msgbox CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer, MSGBOX_NPC
 	end

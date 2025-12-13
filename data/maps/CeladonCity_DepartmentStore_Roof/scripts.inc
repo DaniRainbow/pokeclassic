@@ -5,6 +5,7 @@ CeladonCity_DepartmentStore_Roof_MapScripts::
 
 CeladonCity_DepartmentStore_Roof_OnTransition::
 	call Common_EventScript_GetDayOrNight
+	setescapewarp MAP_CELADON_CITY, 15, 16
 	end
 
 CeladonCity_DepartmentStore_Roof_OnResume::

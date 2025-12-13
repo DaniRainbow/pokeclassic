@@ -1,6 +1,10 @@
 CeladonCity_DepartmentStore_4F_MapScripts::
 	.byte 0
 
+CeladonCity_DepartmentStore_4F_OnTransition:
+	setescapewarp MAP_CELADON_CITY, 15, 16
+	end
+
 CeladonCity_DepartmentStore_4F_EventScript_Man::
 	msgbox CeladonCity_DepartmentStore_4F_Text_GettingPokeDollAsPresent, MSGBOX_NPC
 	end
