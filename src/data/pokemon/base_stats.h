@@ -12748,7 +12748,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_MONSTER,
-        .abilities = {ABILITY_PARENTAL_BOND, ABILITY_PARENTAL_BOND},
+        .abilities = {ABILITY_INNER_FOCUS, ABILITY_INNER_FOCUS},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
