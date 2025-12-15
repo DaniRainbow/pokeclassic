@@ -39,10 +39,10 @@
 #include "constants/trainers.h"
 #include "constants/rgb.h"
 #include "field_specials.h"
+#include "pokemon_summary_screen.h"
+#include "menu.h"
 #include "constants/battle_move_effects.h"
 #include "event_data.h"
-#include "menu.h"
-#include "pokemon_summary_screen.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
