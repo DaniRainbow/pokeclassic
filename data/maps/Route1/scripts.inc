@@ -33,8 +33,9 @@ Route1_EventScript_OakAppears1::
 	closemessage
 	addobject LOCALID_PIKACHU
 	applymovement LOCALID_PIKACHU, Movement_PikachuApproaches1
-	goto Route1_EventScript_PikachuEncounter
 	waitmovement 2
+	goto Route1_EventScript_PikachuEncounter
+	releaseall
 	end
 
 Route1_EventScript_OakAppears2::
@@ -56,6 +57,7 @@ Route1_EventScript_OakAppears2::
 	applymovement LOCALID_PIKACHU, Movement_PikachuApproaches2
 	waitmovement 2
 	goto Route1_EventScript_PikachuEncounter
+	releaseall
 	end
 
 Movement_OakAppears:
@@ -123,8 +125,7 @@ Route1_EventScript_PikachuEncounter::
 	setvar VAR_OAK_LAB_STATE, 1
 	warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 5
 	waitstate
-	releaseall
-	end
+	return
 
 Route1_Text_ThatWasClose::
     .string "Oak: That was close!\n"
