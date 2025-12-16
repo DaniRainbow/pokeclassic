@@ -4297,6 +4297,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_TeamRocketGrunt41),
         .party = {.NoItemDefaultMoves = sParty_TeamRocketGrunt41}
     },
+    [TRAINER_HIDEOUT_JESSIE_JAMES] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_ROCKET_DUO,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+        .trainerPic = TRAINER_PIC_ROCKET_DUO,
+        .trainerName = _("Duo"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_HideoutJessieJames),
+        .party = {.NoItemDefaultMoves = sParty_HideoutJessieJames}
+    },
     [TRAINER_SILPH_CO_JESSIE_JAMES] = {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_ROCKET_DUO,

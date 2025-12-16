@@ -620,7 +620,7 @@
 #define	TRAINER_BEAUTY_KISHI	                    508
 #define	TRAINER_COOLTRAINER_TONY	                509
 #define	TRAINER_YOUNGSTER_KODY	                    510
-#define	TRAINER_UNUSED_511	511
+#define	TRAINER_HIDEOUT_JESSIE_JAMES	            511
 #define	TRAINER_UNUSED_512	512
 #define	TRAINER_UNUSED_513	513
 #define	TRAINER_UNUSED_514	514

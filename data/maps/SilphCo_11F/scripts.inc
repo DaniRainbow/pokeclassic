@@ -227,6 +227,7 @@ SilphCo_11F_Movement_PlayerFaceGiovanni::
 
 SilphCo_11F_EventScript_JessieJames::
 	lockall
+	setvar VAR_0x8003, 0
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	applymovement LOCALID_JESSIE, Movement_JessieJamesApproachPlayer
 	applymovement LOCALID_JAMES, Movement_JessieJamesApproachPlayer

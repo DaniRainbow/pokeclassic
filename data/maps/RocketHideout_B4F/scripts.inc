@@ -173,40 +173,79 @@ RocketHideout_B4F_EventScript_DefeatedGrunt3::
 	release
 	end
 
-RocketHideout_B4F_EventScript_Jessie::
-	trainerbattle_single TRAINER_ROCKET_HIDEOUT_JESSIE, RocketHideout_B4F_Text_JessieIntro, RocketHideout_B4F_Text_JessieDefeat
-	msgbox RocketHideout_B4F_Text_JessiePostBattle, MSGBOX_AUTOCLOSE
+RocketHideout_B4F_EventScript_JessieJames::
+	lockall
+	setvar VAR_0x8003, 0
+	trainerbattle_single TRAINER_HIDEOUT_JESSIE_JAMES, RocketHideout_B4F_Text_JessieJamesIntro, RocketHideout_B4F_Text_JessieJamesDefeat
+	msgbox RocketHideout_B4F_Text_JessieJamesPostBattle
+	closemessage
+	releaseall
 	end
 
-RocketHideout_B4F_Text_JessieIntro::
-	.string "Jessie: You're that twerp that\n"
-	.string "keeps interrupting our schemes!$"
-
-RocketHideout_B4F_Text_JessieDefeat::
-	.string "Jessie: No! No! No!$"
-
-RocketHideout_B4F_Text_JessiePostBattle::
-	.string "Jessie: You may have defeated\n"
-	.string "me again, but the Boss will\l"
-	.string "finally get rid of you for good.$"
-
-RocketHideout_B4F_EventScript_James::
-	trainerbattle_single TRAINER_ROCKET_HIDEOUT_JAMES, RocketHideout_B4F_Text_JamesIntro, RocketHideout_B4F_Text_JamesDefeat
-	msgbox RocketHideout_B4F_Text_JamesPostBattle, MSGBOX_AUTOCLOSE
+RocketHideout_B4F_EventScript_JamesSorry::
+	lock
+	msgbox RocketHideout_B4F_Text_JamesSorry
+	release
 	end
 
-RocketHideout_B4F_Text_JamesIntro::
-	.string "James: You're starting to take\n"
-	.string "the fun out of all of this.$"
-
-RocketHideout_B4F_Text_JamesDefeat::
-	.string "James: This is really starting\n"
-	.string "to get to me!$"
-
-RocketHideout_B4F_Text_JamesPostBattle::
+RocketHideout_B4F_Text_JamesSorry:
 	.string "James: For what it's worth, I\n"
 	.string "am sorry about what happened to\l"
 	.string "that Cubone's mother...$"
+	
+RocketHideout_B4F_Text_JessieJamesIntro:
+	.string "Jessie: You're that twerp that\n"
+	.string "keeps interrupting our schemes!\p"
+	.string "James: You're starting to take\n"
+	.string "the fun out of all of this.$"
+
+RocketHideout_B4F_Text_JessieJamesDefeat:
+	.string "Jessie: No! No! No!\p"
+	.string "James: This is really starting\n"
+	.string "to get to me!$"
+
+RocketHideout_B4F_Text_JessieJamesPostBattle:
+	.string "Jessie: You may have defeated\n"
+	.string "me again, but the Boss will\l"
+	.string "finally get rid of you for good.\p"
+	.string "James: For what it's worth, I\n"
+	.string "am sorry about what happened to\l"
+	.string "that Cubone's mother...$"
+
+//RocketHideout_B4F_EventScript_Jessie::
+	//trainerbattle_single TRAINER_ROCKET_HIDEOUT_JESSIE, RocketHideout_B4F_Text_JessieIntro, RocketHideout_B4F_Text_JessieDefeat
+	//msgbox RocketHideout_B4F_Text_JessiePostBattle, MSGBOX_AUTOCLOSE
+	//end
+
+//RocketHideout_B4F_Text_JessieIntro::
+	//.string "Jessie: You're that twerp that\n"
+	//.string "keeps interrupting our schemes!$"
+
+//RocketHideout_B4F_Text_JessieDefeat::
+	//.string "Jessie: No! No! No!$"
+
+//RocketHideout_B4F_Text_JessiePostBattle::
+	//.string "Jessie: You may have defeated\n"
+	//.string "me again, but the Boss will\l"
+	//.string "finally get rid of you for good.$"
+
+//RocketHideout_B4F_EventScript_James::
+	//trainerbattle_single TRAINER_ROCKET_HIDEOUT_JAMES, RocketHideout_B4F_Text_JamesIntro, RocketHideout_B4F_Text_JamesDefeat
+	//msgbox RocketHideout_B4F_Text_JamesPostBattle, MSGBOX_AUTOCLOSE
+	//end
+
+//RocketHideout_B4F_Text_JamesIntro::
+	//.string "James: You're starting to take\n"
+	//.string "the fun out of all of this.$"
+
+//RocketHideout_B4F_Text_JamesDefeat::
+	//.string "James: This is really starting\n"
+	//.string "to get to me!$"
+
+//RocketHideout_B4F_Text_JamesPostBattle::
+	//.string "James: For what it's worth, I\n"
+	//.string "am sorry about what happened to\l"
+	//.string "that Cubone's mother...$"
 
 RocketHideout_B4F_EventScript_DrawMapForBarrierRemoval::
 	playse SE_UNLOCK

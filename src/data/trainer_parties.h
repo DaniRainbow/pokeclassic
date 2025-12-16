@@ -4415,6 +4415,28 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt18[] = {
         .species = SPECIES_ZUBAT,
     },
 };
+static const struct TrainerMonNoItemDefaultMoves sParty_HideoutJessieJames[] = {
+    {
+        .iv = 80,
+        .lvl = 21,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 80,
+        .lvl = 21,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 100,
+        .lvl = 22,
+        .species = SPECIES_MEOWTH,
+    },
+    {
+        .iv = 100,
+        .lvl = 22,
+        .species = SPECIES_LICKITUNG,
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_RocketHideoutJessie[] = {
     {
         .iv = 80,
