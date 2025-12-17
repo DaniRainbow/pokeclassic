@@ -150,7 +150,7 @@ SSAnneExterior_Text_Slowbro:
 SSAnneExterior_EventScript_GentlemanDiamond::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_DIAMOND, SSAnneExterior_EventScript_MegaHintPokemon
+	goto_if_set FLAG_DEFEATED_DIAMOND, SSAnneExterior_EventScript_MegaHintSlowbro
 	trainerbattle_single TRAINER_GENTLEMAN_DIAMOND, SSAnneExterior_Text_DiamondIntro, SSAnneExterior_Text_DiamondDefeat
 	setflag FLAG_DEFEATED_DIAMOND
 	msgbox SSAnneExterior_Text_DiamondPostBattle MSGBOX_AUTOCLOSE
@@ -168,7 +168,7 @@ SSAnneExterior_Text_DiamondIntro:
 SSAnneExterior_Text_DiamondDefeat:
 	.string "Incredible... how...?$"
 
-SSAnneExterior_Text_DiamondostBattle:
+SSAnneExterior_Text_DiamondPostBattle:
 	.string "Is this a dream?$"
 
 SSAnneExterior_EventScript_MegaHintSlowbro::    
@@ -191,7 +191,7 @@ DiamondDefeated_Text:
 	.string "and that's exactly what you are.$"
 
 SSAnneExterior_EventScript_SlowbroDefeated::
-	msgbox PokemonDefeated MSGBOX_DEFAULT
+	msgbox SlowbroDefeated MSGBOX_DEFAULT
 	release
 	end
 

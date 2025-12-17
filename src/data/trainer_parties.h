@@ -2518,6 +2518,56 @@ static const struct TrainerMonNoItemCustomMoves sParty_LeaderLtSurgePostgame[] =
         .moves = {MOVE_EXPLOSION, MOVE_THUNDER_WAVE, MOVE_SCREECH, MOVE_THUNDER},
     },
 };
+static const struct TrainerMonItemCustomMoves sParty_GentlemanDiamond[] = {
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_HITMONLEE,
+        .heldItem = ITEM_BLACK_GLASSES,//ASSAULT VEST
+        .moves = {MOVE_FAKE_OUT, MOVE_BULLET_PUNCH, MOVE_CLOSE_COMBAT, MOVE_SUCKER_PUNCH},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_JOLTEON,
+        .heldItem = ITEM_CHOICE_SPECS,
+        .moves = {MOVE_VOLT_SWITCH, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_HIDDEN_POWER},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_RHYDON,
+        .heldItem = ITEM_FOCUS_BAND,//FOCUS SASH
+        .moves = {MOVE_STEALTH_ROCK, MOVE_EARTHQUAKE, MOVE_MEGAHORN, MOVE_DRAGON_TAIL},
+        .abilityNums = 1,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_TOXIC, MOVE_PROTECT, MOVE_MORNING_SUN, MOVE_WILL_O_WISP},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_CRUNCH, MOVE_DUAL_WINGBEAT},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_SLOWBRO,
+        .heldItem = ITEM_SLOWBRONITE,
+        .moves = {MOVE_SCALD, MOVE_CALM_MIND, MOVE_SLACK_OFF, MOVE_PSYSHOCK},
+        .abilityNums = 2,
+    },
+};
 
 //SS Anne - Deck
 static const struct TrainerMonNoItemDefaultMoves sParty_SailorEdmond[] = {

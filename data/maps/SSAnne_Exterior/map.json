@@ -86,7 +86,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SSAnneExterior_EventScript_Slowbro",
       "flag": "FLAG_HIDE_MEGA_TRAINERS"
     },
     {
@@ -99,7 +99,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SSAnneExterior_EventScript_GentlemanDiamond",
       "flag": "FLAG_HIDE_MEGA_TRAINERS"
     }
   ],
