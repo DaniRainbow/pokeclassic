@@ -55,7 +55,7 @@ CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle::
 	end
 
 CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle::
-    .string "How do you like your new Bicycle?\n"
+    .string "How do you like your new bikes?\n"
     .string "Do you like how it rides?\p"
     .string "You can take it out on Cycling\n"
     .string "Road and even into caves!$"
@@ -85,7 +85,7 @@ CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo::
 
 CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
     .string "{PLAYER} exchanged the\n"
-    .string "Bike Voucher for a Bicycle.$"
+    .string "Bike Voucher for two bikes!$"
 
 CeruleanCity_BikeShop_EventScript_BringBikeVoucher::
 	msgbox CeruleanCity_BikeShop_Text_MakeRoomForBicycle, MSGBOX_DEFAULT
@@ -128,7 +128,7 @@ CeruleanCity_BikeShop_EventScript_YoungsterHaveBike::
 	
 CeruleanCity_BikeShop_Text_WowYourBikeIsCool::
     .string "Wow.\n"
-    .string "Your BIKE is really cool!$"
+    .string "You got two bikes?!$"
 
 
 
