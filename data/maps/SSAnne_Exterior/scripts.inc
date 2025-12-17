@@ -133,3 +133,68 @@ SSAnneExterior_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
+
+SSAnneExterior_EventScript_Slowbro::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_DIAMOND, SSAnneExterior_EventScript_SlowbroDefeated
+	msgbox SSAnneExterior_Text_Slowbro MSGBOX_DEFAULT
+	release
+	end
+
+SSAnneExterior_Text_Slowbro:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+SSAnneExterior_EventScript_GentlemanDiamond::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DIAMOND, SSAnneExterior_EventScript_MegaHintPokemon
+	trainerbattle_single TRAINER_GENTLEMAN_DIAMOND, SSAnneExterior_Text_DiamondIntro, SSAnneExterior_Text_DiamondDefeat
+	setflag FLAG_DEFEATED_DIAMOND
+	msgbox SSAnneExterior_Text_DiamondPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+SSAnneExterior_Text_DiamondIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+SSAnneExterior_Text_DiamondDefeat:
+	.string "Incredible... how...?$"
+
+SSAnneExterior_Text_DiamondostBattle:
+	.string "Is this a dream?$"
+
+SSAnneExterior_EventScript_MegaHintSlowbro::    
+    goto_if_set FLAG_GOT_SLOWBRONITE, SSAnneExterior_EventScript_DiamondDefeated
+    msgbox SSAnneExterior_Text_SlowbroMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+SSAnneExterior_Text_SlowbroMegaHint:
+    .string "Hint where to find Mega Stone.$"
+
+SSAnneExterior_EventScript_DiamondDefeated::
+    msgbox DiamondDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+DiamondDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+SSAnneExterior_EventScript_SlowbroDefeated::
+	msgbox PokemonDefeated MSGBOX_DEFAULT
+	release
+	end
+
+SlowbroDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

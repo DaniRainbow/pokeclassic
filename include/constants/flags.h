@@ -207,7 +207,7 @@
 #define FLAG_SILPH_INVASION_ACTIVE         	0xBD
 #define FLAG_DEFEATED_JESSIEJAMESRHB4F      0xBE
 #define FLAG_MOVENOW_JESSIEJAMES  			0xBF
-#define FLAG_UNUSED_0x0C0     				0xC0
+#define FLAG_DEFEATED_DIAMOND     			0xC0
 #define FLAG_UNUSED_0x0C1                  	0xC1
 #define FLAG_UNUSED_0x0C2   				0xC2
 #define FLAG_UNUSED_0x0C3  					0xC3
