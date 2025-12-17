@@ -205,8 +205,8 @@
 #define FLAG_DEFEATED_TONY                  0xBB
 #define FLAG_DEFEATED_KODY               	0xBC
 #define FLAG_SILPH_INVASION_ACTIVE         	0xBD
-#define FLAG_UNUSED_0x0BE        			0xBE
-#define FLAG_UNUSED_0x0BF  					0xBF
+#define FLAG_DEFEATED_JESSIEJAMESRHB4F      0xBE
+#define FLAG_MOVENOW_JESSIEJAMES  			0xBF
 #define FLAG_UNUSED_0x0C0     				0xC0
 #define FLAG_UNUSED_0x0C1                  	0xC1
 #define FLAG_UNUSED_0x0C2   				0xC2

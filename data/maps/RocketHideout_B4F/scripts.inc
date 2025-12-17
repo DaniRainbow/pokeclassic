@@ -13,6 +13,7 @@ RocketHideout_B4F_MapScripts::
 	.byte 0
 
 RocketHideout_B4F_OnLoad::
+	setvar VAR_0x8003, 0
 	setvar NUM_DOOR_GRUNTS_DEFEATED, 0
 	call_if_defeated TRAINER_TEAM_ROCKET_GRUNT_16, RocketHideout_B4F_EventScript_CountGruntDefeated
 	call_if_defeated TRAINER_TEAM_ROCKET_GRUNT_17, RocketHideout_B4F_EventScript_CountGruntDefeated
@@ -173,18 +174,28 @@ RocketHideout_B4F_EventScript_DefeatedGrunt3::
 	release
 	end
 
-RocketHideout_B4F_EventScript_JessieJames::
-	lockall
-	setvar VAR_0x8003, 0
-	trainerbattle_single TRAINER_HIDEOUT_JESSIE_JAMES, RocketHideout_B4F_Text_JessieJamesIntro, RocketHideout_B4F_Text_JessieJamesDefeat
-	msgbox RocketHideout_B4F_Text_JessieJamesPostBattle
-	closemessage
-	releaseall
+RocketHideout_B4F_EventScript_HoldItJessie::
+	lock
+	faceplayer
+	goto_if_unset FLAG_DEFEATED_JESSIEJAMESRHB4F, RocketHideout_B4F_EventScript_JessieJames
+	goto_if_unset FLAG_MOVENOW_JESSIEJAMES, RocketHideout_B4F_Eventscript_GiovannisTurn
+	msgbox RocketHideout_B4F_Text_JessieDone, MSGBOX_NPC
+	release
 	end
 
-RocketHideout_B4F_EventScript_JamesSorry::
+RocketHideout_B4F_EventScript_HoldItJames::
 	lock
-	msgbox RocketHideout_B4F_Text_JamesSorry
+	faceplayer
+	goto_if_unset FLAG_DEFEATED_JESSIEJAMESRHB4F, RocketHideout_B4F_EventScript_JessieJames
+	goto_if_unset FLAG_MOVENOW_JESSIEJAMES, RocketHideout_B4F_Eventscript_GiovannisTurn
+	msgbox RocketHideout_B4F_Text_JamesSorry, MSGBOX_NPC
+	release
+	end
+
+RocketHideout_B4F_EventScript_JessieJames::
+	trainerbattle_single TRAINER_HIDEOUT_JESSIE_JAMES, RocketHideout_B4F_Text_JessieJamesIntro, RocketHideout_B4F_Text_JessieJamesDefeat
+	msgbox RocketHideout_B4F_Text_JessieJamesPostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_DEFEATED_JESSIEJAMESRHB4F
 	release
 	end
 
@@ -203,6 +214,11 @@ RocketHideout_B4F_Text_JessieJamesDefeat:
 	.string "Jessie: No! No! No!\p"
 	.string "James: This is really starting\n"
 	.string "to get to me!$"
+
+RocketHideout_B4F_Text_JessieDone:
+	.string "Jessie: You may have defeated\n"
+	.string "me again, but the Boss will\l"
+	.string "finally get rid of you for good.$"
 
 RocketHideout_B4F_Text_JessieJamesPostBattle:
 	.string "Jessie: You may have defeated\n"
@@ -251,7 +267,40 @@ RocketHideout_B4F_EventScript_DrawMapForBarrierRemoval::
 	playse SE_UNLOCK
 	special DrawWholeMapView
 	waitse
+	applymovement LOCALID_JESSIE, Movement_HoldItJessie
+	waitmovement 0
+	applymovement LOCALID_JAMES, Movement_HoldItJames
+	waitmovement 0
 	return
+
+Movement_HoldItJessie::
+	walk_right
+	face_down
+	step_end
+
+Movement_HoldItJames::
+	walk_left
+	face_down
+	step_end
+
+RocketHideout_B4F_Eventscript_GiovannisTurn::
+	applymovement LOCALID_JESSIE, Movement_LeaveItJessie
+	waitmovement 0
+	applymovement LOCALID_JAMES, Movement_LeaveItJames
+	waitmovement 0
+	setflag FLAG_MOVENOW_JESSIEJAMES
+	release
+	end
+
+Movement_LeaveItJessie::
+	walk_left
+	face_right
+	step_end
+
+Movement_LeaveItJames::
+	walk_right
+	face_left
+	step_end
 
 RocketHideout_B4F_EventScript_SetBarrier::
 	setmetatile 17, 12, METATILE_SilphCo_HideoutBarrier_TopLeft_Floor, 1

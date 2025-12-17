@@ -559,6 +559,3 @@ SilphCo_11F_Text_HowCouldThisHappen:
 	.string "comeback!\p"
 	.string "We thought Giovanni was weak...\n"
 	.string "but you're just too good!$"
-
-
-
