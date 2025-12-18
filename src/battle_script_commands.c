@@ -3947,10 +3947,20 @@ static void Cmd_getexp(void)
                     gExpShareExp = 0;
                 }
             #else
-                *exp = calculatedExp;
-                gExpShareExp = calculatedExp / 4;
-                if (gExpShareExp == 0)
-                    gExpShareExp = 1;
+                if (gSaveBlock2Ptr->expShare) // exp share is turned on
+                {
+                    *exp = calculatedExp;
+                    gExpShareExp = calculatedExp / 4;
+                    if (gExpShareExp == 0)
+                        gExpShareExp = 1;
+                }
+                else
+                {
+                    *exp = SAFE_DIV(calculatedExp, viaSentIn);
+                    if (*exp == 0)
+                        *exp = 1;
+                    gExpShareExp = 0;
+                }
             #endif
 
             gBattleScripting.getexpState++;
