@@ -9378,3 +9378,55 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FugitiveF[] = {
         .species = SPECIES_GYARADOS,
     },
 };
+
+//For importing
+static const struct TrainerMonItemCustomMoves sParty_RetiredFugi[] = {
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_DITTO,
+        .heldItem = ITEM_CHOICE_SCARF,
+        .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .abilityNums = 0, //Imposter
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_MAGMAR,
+        .heldItem = ITEM_SHELL_BELL,
+        .moves = {MOVE_BELLY_DRUM, MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_MACH_PUNCH},
+        .abilityNums = 0, //Vital Spirit
+    },
+    {
+        .iv = 250,
+        .lvl = 69,
+        .species = SPECIES_MAROWAK,
+        .heldItem = ITEM_THICK_CLUB,
+        .moves = {MOVE_BONEMERANG, MOVE_STONE_EDGE, MOVE_SWORDS_DANCE, MOVE_THUNDER_PUNCH},
+        .abilityNums = 0, //Battle Armor
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_SNORLAX,
+        .heldItem = ITEM_CHESTO_BERRY,
+        .moves = {MOVE_REST, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_ZEN_HEADBUTT},
+        .abilityNums = 0, //Thick Fat
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_PARASECT,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_SPORE, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_NIGHTMARE},
+        .abilityNums = 0, //Damp
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_MEWTWO,
+        .heldItem = ITEM_MEWTWONITE_Y,
+        .moves = {MOVE_PSYSTRIKE, MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT},
+        .abilityNums = 0, //Insomnia
+    },
+};
