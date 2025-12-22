@@ -2,8 +2,29 @@ CeruleanCity_BikeShop_MapScripts::
 	.byte 0
 
 CeruleanCity_BikeShop_EventScript_Bicycle::
+	goto_if_unset FLAG_RECEIVED_BIKE, CeruleanCity_BikeShop_EventScript_NoBikeYet
+	checkitem ITEM_ACRO_BIKE, 1
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_BikeShop_EventScript_GetAcroBike
 	msgbox CeruleanCity_BikeShop_Text_ShinyNewBicycle, MSGBOX_SIGN
 	end
+
+CeruleanCity_BikeShop_EventScript_NoBikeYet::
+	msgbox CeruleanCity_BikeShop_Text_ShinyNewBicycle, MSGBOX_SIGN
+	end
+
+CeruleanCity_BikeShop_EventScript_GetAcroBike::
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message CeruleanCity_BikeShop_Text_BonusBike
+	waitmessage
+	waitfanfare
+	closemessage
+	additem ITEM_ACRO_BIKE, 1
+	release
+	end
+
+CeruleanCity_BikeShop_Text_BonusBike:
+	.string "{PLAYER} claimed the\n"
+    .string "missing Acro Bike!$"
 
 CeruleanCity_BikeShop_Text_ShinyNewBicycle::
     .string "A shiny new Bicycle!$"
