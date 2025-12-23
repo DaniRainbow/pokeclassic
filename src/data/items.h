@@ -5161,8 +5161,6 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
-        .iconPic = gItemIcon_FlameOrb,
-        .iconPalette = gItemIconPalette_FlameOrb,
     },
     [ITEM_TOXIC_ORB] =
     {
@@ -5175,7 +5173,5 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
-        .iconPic = gItemIcon_ToxicOrb,
-        .iconPalette = gItemIconPalette_ToxicOrb,
     },
 };

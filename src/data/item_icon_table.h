@@ -448,6 +448,9 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SPEED_CANDY]  = {gItemIcon_IVCandy, gItemIconPalette_SpeedCandy},
     [ITEM_MAX_CANDY]    = {gItemIcon_MaxCandy, gItemIconPalette_MaxCandy},
     [ITEM_RESET_CANDY]  = {gItemIcon_MaxCandy, gItemIconPalette_ResetCandy},
+    //Status Orbs
+    [ITEM_FLAME_ORB] {gItemIcon_FlameOrb, gItemIconPalette_FlameOrb},
+    [ITEM_TOXIC_ORB] {gItemIcon_ToxicOrb, gItemIconPalette_ToxicOrb},
 
 };
 

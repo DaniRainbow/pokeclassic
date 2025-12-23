@@ -971,3 +971,9 @@ const u32 gItemIcon_MaxCandy[] = INCBIN_U32("graphics/items/icons/max_candy.4bpp
 const u32 gItemIconPalette_MaxCandy[] = INCBIN_U32("graphics/items/icon_palettes/max_candy.gbapal.lz");
 const u32 gItemIconPalette_ResetCandy[] = INCBIN_U32("graphics/items/icon_palettes/reset_candy.gbapal.lz");
 
+//Status Orbs
+const u32 gItemIcon_FlameOrb[] = INCBIN_U32("graphics/items/icons/flame_orb.4bpp.lz");
+const u32 gItemIconPalette_FlameOrb[] = INCBIN_U32("graphics/items/icon_palettes/flame_orb.gbapal.lz");
+
+const u32 gItemIcon_ToxicOrb[] = INCBIN_U32("graphics/items/icons/toxic_orb.4bpp.lz");
+const u32 gItemIconPalette_ToxicOrb[] = INCBIN_U32("graphics/items/icon_palettes/toxic_orb.gbapal.lz");

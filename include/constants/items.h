@@ -540,8 +540,11 @@
 #define ITEM_MEWTWONITE_X 		 421
 #define ITEM_MEWTWONITE_Y 		 422
 
+//Status Orbs
+#define ITEM_FLAME_ORB           423
+#define ITEM_TOXIC_ORB           424
 
-#define ITEMS_COUNT 423
+#define ITEMS_COUNT 425
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS

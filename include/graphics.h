@@ -5811,4 +5811,10 @@ extern const u32 gItemIcon_MaxCandy[];
 extern const u32 gItemIconPalette_MaxCandy[];
 extern const u32 gItemIconPalette_ResetCandy[];
 
+//Status Orbs
+extern const u32 gItemIcon_FlameOrb[];
+extern const u32 gItemIconPalette_FlameOrb[];
+extern const u32 gItemIcon_ToxicOrb[];
+extern const u32 gItemIconPalette_ToxicOrb[];
+
 #endif //GUARD_GRAPHICS_H
