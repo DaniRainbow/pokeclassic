@@ -67,6 +67,7 @@ struct TrainerMonItemCustomMoves
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];
     u8 abilityNums;
+    u8 *shiny;
 };
 
 union TrainerMonPtr
