@@ -25,6 +25,11 @@ EventScript_UpdateOakLabState::
 	setvar VAR_OAK_LAB_STATE, 8
 	return
 
+PalletTown_EventScript_Test::
+	additem ITEM_FLAME_ORB, 1
+	additem ITEM_TOXIC_ORB, 1
+	end
+
 PalletTown_EventScript_PokenavSceneStart1::
 	lockall
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT

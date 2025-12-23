@@ -5152,7 +5152,7 @@ const struct Item gItems[] =
     // Status Orbs
     [ITEM_FLAME_ORB] =
     {
-        .name = ("Flame Orb"),
+        .name = _("Flame Orb"),
         .itemId = ITEM_FLAME_ORB,
         .price = 4000,
         .holdEffect = HOLD_EFFECT_FLAME_ORB,
@@ -5164,7 +5164,7 @@ const struct Item gItems[] =
     },
     [ITEM_TOXIC_ORB] =
     {
-        .name = ("Toxic Orb"),
+        .name = _("Toxic Orb"),
         .itemId = ITEM_TOXIC_ORB,
         .price = 4000,
         .holdEffect = HOLD_EFFECT_TOXIC_ORB,
