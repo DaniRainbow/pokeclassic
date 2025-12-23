@@ -2040,7 +2040,7 @@ static void HandleSpecialTrainerBattleEnd(void)
         for (i = 0; i < 3; i++)
         {
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES))
-                gSaveBlock1Ptr->playerParty[i] = gPlayerParty[i];
+                SavePlayerPartyMon(i, &gPlayerParty[i]);
         }
         break;
     }

@@ -7288,3 +7288,17 @@ u16 GetTrainerFrontSpriteBasedOnPlayerCostumeAndGender(u8 costumeId, u8 playerGe
     return trainerPic;
 }
 
+struct Pokemon *GetSavedPlayerPartyMon(u32 index)
+{
+    return &gSaveBlock1Ptr->playerParty[index];
+}
+
+u8 *GetSavedPlayerPartyCount(void)
+{
+    return &gSaveBlock1Ptr->playerPartyCount;
+}
+
+void SavePlayerPartyMon(u32 index, struct Pokemon *mon)
+{
+    gSaveBlock1Ptr->playerParty[index] = *mon;
+}

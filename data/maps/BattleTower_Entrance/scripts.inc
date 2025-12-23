@@ -3,12 +3,7 @@
 
 BattleTower_Entrance_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleTower_Entrance_OnFrame
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleTower_Entrance_OnWarp
 	.byte 0
-
-BattleTower_Entrance_OnWarp:
-	map_script_2 VAR_TEMP_1, 0, BattleTower_Entrance_EventScript_TurnPlayer
-	.2byte 0
 
 BattleTower_Entrance_OnFrame::
 	map_script_2 VAR_BATTLE_TOWER, 0, BattleTower_Entrance_BattleTowerCutscene
@@ -18,12 +13,6 @@ BattleTower_Entrance_OnFrame::
 	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_WON, BattleTower_Entrance_EventScript_WonChallenge
 	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST, BattleTower_Entrance_EventScript_LostChallenge
 	.2byte 0
-
-BattleTower_Entrance_EventScript_TurnPlayer::
-	goto_if_unset FLAG_SYS_FRONTIER_PASS, BattleTower_Entrance_EventScript_SkipTurnPlayer
-	setvar VAR_TEMP_1, 1
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-	end
 
 BattleTower_Entrance_EventScript_SkipTurnPlayer::
 	end
@@ -382,17 +371,17 @@ BattleTower_Entrance_Text_ChallengeBattleTower::
 	.string "the Battle Tower?\p"
 	.string "I'm sorry, but we are closed.$"
 
-BattleTower_Entrance_EventScript_BattleTowerTrigger::
-	lock
-	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
-	turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
-	msgbox BattleTower_Entrance_Text_TowerWelcomeOOPS, MSGBOX_DEFAULT
-	release
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
-	waitmovement 0
-	release
-	end
+//BattleTower_Entrance_EventScript_BattleTowerTrigger::
+	//lock
+	//goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
+	//applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
+	//turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
+	//msgbox BattleTower_Entrance_Text_TowerWelcomeOOPS, MSGBOX_DEFAULT
+	//release
+	//applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
+	//waitmovement 0
+	//release
+	//end
 	
 BattleTower_Entrance_Text_TowerWelcomeOOPS::
 	.string "I'm very sorry but this tower\n"
@@ -402,23 +391,23 @@ BattleTower_Entrance_Text_TowerWelcomeOOPS::
 	.string "friends, the Battle Tower is\l"
 	.string "closed indefinitely.$"
 	
-//BattleTower_Entrance_EventScript_BattleTowerTrigger::
-	//lock
-	//goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
-	//applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
-	//turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
-	//setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
-	//special SavePlayerParty
-	//msgbox BattleTower_Entrance_Text_TowerWelcome, MSGBOX_DEFAULT
-//BattleTower_Entrance_EventScript_ChooseBattleTowerMode::
-	//multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
-	//switch VAR_RESULT
-	//case 0, BattleTower_Entrance_EventScript_TryEnterSinglesChallenge
-	//case 1, BattleTower_Entrance_EventScript_TryEnterDoublesChallenge
-	//case 2, BattleTower_Entrance_EventScript_ExplainChallenge
-	//case 3, BattleTower_Entrance_EventScript_CancelChallenge
-	//case MULTI_B_PRESSED, BattleTower_Entrance_EventScript_CancelChallenge
-	//end
+BattleTower_Entrance_EventScript_BattleTowerTrigger::
+	lock
+	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
+	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
+	turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
+	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
+	special SavePlayerParty
+	msgbox BattleTower_Entrance_Text_TowerWelcome, MSGBOX_DEFAULT
+BattleTower_Entrance_EventScript_ChooseBattleTowerMode::
+	multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
+	switch VAR_RESULT
+	case 0, BattleTower_Entrance_EventScript_TryEnterSinglesChallenge
+	case 1, BattleTower_Entrance_EventScript_TryEnterDoublesChallenge
+	case 2, BattleTower_Entrance_EventScript_ExplainChallenge
+	case 3, BattleTower_Entrance_EventScript_CancelChallenge
+	case MULTI_B_PRESSED, BattleTower_Entrance_EventScript_CancelChallenge
+	end
 
 BattleTower_Entrance_EventScript_BattleTowerBlocker::
 	lock
@@ -441,20 +430,20 @@ BattleFrontier_Movement_PlayerFaceTowerKiosk::
 	face_left
 	step_end
 
-//BattleTower_Entrance_Text_TowerWelcome:
-	//.string "Welcome to the Battle Tower,\n"
-	//.string "where the talents of Trainers\l"
-	//.string "are put to the test!\p"
-	//.string "I'll be your guide to the\n"
-	//.string "Battle Rooms.\p"
-	//.string "Which type of challenge will\n"
-	//.string "you be participating in today?$"
+BattleTower_Entrance_Text_TowerWelcome:
+	.string "Welcome to the Battle Tower,\n"
+	.string "where the talents of Trainers\l"
+	.string "are put to the test!\p"
+	.string "I'll be your guide to the\n"
+	.string "Battle Rooms.\p"
+	.string "Which type of challenge will\n"
+	.string "you be participating in today?$"
 
-//BattleTower_Entrance_EventScript_ExplainChallenge::
-	//msgbox BattleTower_Entrance_Text_ExplainChallenge, MSGBOX_DEFAULT
-	//waitmessage
-	//goto BattleTower_Entrance_EventScript_ChooseBattleTowerMode
-	//end
+BattleTower_Entrance_EventScript_ExplainChallenge::
+	msgbox BattleTower_Entrance_Text_ExplainChallenge, MSGBOX_DEFAULT
+	waitmessage
+	goto BattleTower_Entrance_EventScript_ChooseBattleTowerMode
+	end
 
 BattleTower_Entrance_Text_ExplainChallenge:
 	.string "The Battle Tower is a facility where\n"
@@ -619,7 +608,7 @@ BattleTower_Entrance_EventScript_EnterElevator::
 	call BattleTower_Entrance_EventScript_ShowYouToBattleRoom
 	clearflag FLAG_CANCEL_BATTLE_ROOM_CHALLENGE
 	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_ELEVATOR, 2, 5
-	setvar VAR_TEMP_0, 0
+	setvar VAR_TEMP_CHALLENGE_STATUS, 0
 	waitstate
 	end
 
