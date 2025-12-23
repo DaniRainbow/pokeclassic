@@ -5149,10 +5149,33 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_ReduceIV,
         .secondaryId = NUM_STATS,
     },
-
-
-
-
-
-
+    // Status Orbs
+    [ITEM_FLAME_ORB] =
+    {
+        .name = ("Flame Orb"),
+        .itemId = ITEM_FLAME_ORB,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_FLAME_ORB,
+        .description = sFlameOrbDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_FlameOrb,
+        .iconPalette = gItemIconPalette_FlameOrb,
+    },
+    [ITEM_TOXIC_ORB] =
+    {
+        .name = ("Toxic Orb"),
+        .itemId = ITEM_TOXIC_ORB,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_TOXIC_ORB,
+        .description = sToxicOrbDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+        .iconPic = gItemIcon_ToxicOrb,
+        .iconPalette = gItemIconPalette_ToxicOrb,
+    },
 };
