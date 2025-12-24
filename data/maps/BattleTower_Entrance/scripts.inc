@@ -14,9 +14,6 @@ BattleTower_Entrance_OnFrame::
 	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST, BattleTower_Entrance_EventScript_LostChallenge
 	.2byte 0
 
-BattleTower_Entrance_EventScript_SkipTurnPlayer::
-	end
-
 BattleTower_Entrance_BattleTowerCutscene::
 	applymovement OBJ_EVENT_ID_PLAYER, BTCutscene_ApproachScott
 	waitmovement 0
