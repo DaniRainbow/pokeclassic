@@ -254,7 +254,7 @@ SilphCo_11F_Text_StopYouOnceAndForAll::
 	.string "Jessie: We knew you'd be coming.\n"
 	.string "James: But this is as far as you go.\l"
 	.string "Jessie: Our Boss is in a meeting.\n"
-	.string "James: So you'll deal with us!$"
+	.string "James: So you'll deal with us first!$"
 
 SilphCo_11F_Text_JessieJamesDefeat::
 	.string "Jessie: Argh! I hate kids!\p"
