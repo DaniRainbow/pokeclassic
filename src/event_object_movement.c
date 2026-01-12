@@ -125,10 +125,7 @@ static void InitObjectPriorityByElevation(struct Sprite *, u8);
 static void ObjectEventUpdateSubpriority(struct ObjectEvent*, struct Sprite*);
 static void DoTracksGroundEffect_None(struct ObjectEvent*, struct Sprite*, u8);
 static void DoTracksGroundEffect_Footprints(struct ObjectEvent*, struct Sprite*, u8);
-static void DoTracksGroundEffect_FootprintsB(struct ObjectEvent*, struct Sprite*, u8);
-static void DoTracksGroundEffect_FootprintsC(struct ObjectEvent*, struct Sprite*, u8);
 static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent*, struct Sprite*, u8);
-static void DoTracksGroundEffect_SlitherTracks(struct ObjectEvent*, struct Sprite*, u8);
 static void DoRippleFieldEffect(struct ObjectEvent*, struct Sprite*);
 static void DoGroundEffects_OnSpawn(struct ObjectEvent*, struct Sprite*);
 static void DoGroundEffects_OnBeginStep(struct ObjectEvent*, struct Sprite*);
@@ -9264,9 +9261,6 @@ static void (*const sGroundEffectTracksFuncs[])(struct ObjectEvent *objEvent, st
     [TRACKS_NONE] = DoTracksGroundEffect_None,
     [TRACKS_FOOT] = DoTracksGroundEffect_Footprints,
     [TRACKS_BIKE_TIRE] = DoTracksGroundEffect_BikeTireTracks,
-    [TRACKS_SLITHER] = DoTracksGroundEffect_SlitherTracks,
-    [TRACKS_SPOT] = DoTracksGroundEffect_FootprintsC,
-    [TRACKS_BUG] = DoTracksGroundEffect_FootprintsB,
 };
 
 void GroundEffect_SandTracks(struct ObjectEvent *objEvent, struct Sprite *sprite)
@@ -9301,41 +9295,7 @@ static void DoTracksGroundEffect_Footprints(struct ObjectEvent *objEvent, struct
     FieldEffectStart(sandFootprints_FieldEffectData[isDeepSand]);
 }
 
-static void DoTracksGroundEffect_FootprintsB(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a)
-{
-	// First half-word is a Field Effect script id. (gFieldEffectScriptPointers)
-	u16 otherFootprintsA_FieldEffectData[2] = {
-		FLDEFF_TRACKS_SPOT,
-		FLDEFF_TRACKS_SPOT
-	};
-
-	gFieldEffectArguments[0] = objEvent->previousCoords.x;
-	gFieldEffectArguments[1] = objEvent->previousCoords.y;
-	gFieldEffectArguments[2] = 149;
-	gFieldEffectArguments[3] = 2;
-	gFieldEffectArguments[4] = objEvent->facingDirection;
-    gFieldEffectArguments[5] = objEvent->previousMetatileBehavior;
-	FieldEffectStart(otherFootprintsA_FieldEffectData[a]);
-}
-
-static void DoTracksGroundEffect_FootprintsC(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a)
-{
-	// First half-word is a Field Effect script id. (gFieldEffectScriptPointers)
-	u16 otherFootprintsB_FieldEffectData[2] = {
-		FLDEFF_TRACKS_BUG,
-		FLDEFF_TRACKS_BUG
-	};
-
-	gFieldEffectArguments[0] = objEvent->previousCoords.x;
-	gFieldEffectArguments[1] = objEvent->previousCoords.y;
-	gFieldEffectArguments[2] = 149;
-	gFieldEffectArguments[3] = 2;
-	gFieldEffectArguments[4] = objEvent->facingDirection;
-    gFieldEffectArguments[5] = objEvent->previousMetatileBehavior;
-	FieldEffectStart(otherFootprintsB_FieldEffectData[a]);
-}
-
-static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a)
+static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, struct Sprite *sprite, bool8 isDeepSand)
 {
     //  Specifies which bike track shape to show next.
     //  For example, when the bike turns from up to right, it will show
@@ -9360,34 +9320,6 @@ static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, st
             bikeTireTracks_Transitions[objEvent->previousMovementDirection][objEvent->facingDirection - 5];
         FieldEffectStart(FLDEFF_BIKE_TIRE_TRACKS);
     }
-}
-
-static void DoTracksGroundEffect_SlitherTracks(struct ObjectEvent *objEvent, struct Sprite *sprite, u8 a)
-{
-	//  Specifies which bike track shape to show next.
-	//  For example, when the bike turns from up to right, it will show
-	//  a track that curves to the right.
-	//  Each 4-byte row corresponds to the initial direction of the bike, and
-	//  each byte in that row is for the next direction of the bike in the order
-	//  of down, up, left, right.
-	static const u8 slitherTracks_Transitions[4][4] = {
-		1, 2, 7, 8,
-		1, 2, 6, 5,
-		5, 8, 3, 4,
-		6, 7, 3, 4,
-	};
-
-	if (objEvent->currentCoords.x != objEvent->previousCoords.x || objEvent->currentCoords.y != objEvent->previousCoords.y)
-	{
-		gFieldEffectArguments[0] = objEvent->previousCoords.x;
-		gFieldEffectArguments[1] = objEvent->previousCoords.y;
-		gFieldEffectArguments[2] = 149;
-		gFieldEffectArguments[3] = 2;
-		gFieldEffectArguments[4] =
-			slitherTracks_Transitions[objEvent->previousMovementDirection][objEvent->facingDirection - 5];
-        gFieldEffectArguments[5] = objEvent->previousMetatileBehavior;
-		FieldEffectStart(FLDEFF_TRACKS_SLITHER);
-	}
 }
 
 void GroundEffect_Ripple(struct ObjectEvent *objEvent, struct Sprite *sprite)
