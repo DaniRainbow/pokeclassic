@@ -563,7 +563,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Erin"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_CoolTrainerErin),
         .party = {.ItemCustomMoves = sParty_CoolTrainerErin}
 	},
@@ -761,7 +761,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Solana"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_PicnickerSolana),
         .party = {.ItemCustomMoves = sParty_PicnickerSolana}
 	},
@@ -3737,7 +3737,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Camran"),
         .items = {ITEM_FRESH_WATER},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_HexManiacCamran),
         .party = {.ItemCustomMoves = sParty_HexManiacCamran}
 	},
@@ -3906,7 +3906,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Conan"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_SchoolKidConan),
         .party = {.ItemCustomMoves = sParty_SchoolKidConan}
 	},
@@ -4800,7 +4800,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Michael"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_BlackBeltMichael),
         .party = {.ItemCustomMoves = sParty_BlackBeltMichael}
 },
@@ -5091,7 +5091,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Ryan"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_GamblerRyan),
         .party = {.ItemCustomMoves = sParty_GamblerRyan}
 	},
@@ -5310,7 +5310,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Orion"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_NinjaBoyOrion),
         .party = {.ItemCustomMoves = sParty_NinjaBoyOrion}
 	},
@@ -6057,7 +6057,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Jiraiya"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_BlackBeltJiraiya),
         .party = {.ItemCustomMoves = sParty_BlackBeltJiraiya}
 	},
@@ -6069,7 +6069,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Kairi"),
         .items = {ITEM_FULL_RESTORE},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_LassKairi),
         .party = {.ItemCustomMoves = sParty_LassKairi}
 	},
@@ -6081,7 +6081,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Dylan"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_EngineerDylan),
         .party = {.ItemCustomMoves = sParty_EngineerDylan}
 	},
@@ -6093,7 +6093,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Larry"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_FishermanLarry),
         .party = {.ItemCustomMoves = sParty_FishermanLarry}
 	},
@@ -6105,7 +6105,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Justice"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_GentlemanJustice),
         .party = {.ItemCustomMoves = sParty_GentlemanJustice}
 	},
@@ -6117,7 +6117,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Dani"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_BugCatcherDani),
         .party = {.ItemCustomMoves = sParty_BugCatcherDani}
 	},
@@ -6129,7 +6129,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Phoebe"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_AromaLadyPhoebe),
         .party = {.ItemCustomMoves = sParty_AromaLadyPhoebe}
 	},
@@ -6141,7 +6141,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Kishi"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_BeautyKishi),
         .party = {.ItemCustomMoves = sParty_BeautyKishi}
 	},
@@ -6153,7 +6153,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Tony"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_CoolTrainerMTony),
         .party = {.ItemCustomMoves = sParty_CoolTrainerMTony}
 	},
@@ -6165,7 +6165,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Kody"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_YoungsterKody),
         .party = {.ItemCustomMoves = sParty_YoungsterKody}
 	},
@@ -6177,7 +6177,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Diamond"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_GentlemanDiamond),
         .party = {.ItemCustomMoves = sParty_GentlemanDiamond}
 	},
