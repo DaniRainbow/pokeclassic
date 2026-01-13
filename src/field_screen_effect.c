@@ -1150,6 +1150,7 @@ static void Task_OrbEffect(u8 taskId)
         ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN1_ON);
         SetGpuRegBits(REG_OFFSET_BLDCNT, gOrbEffectBackgroundLayerFlags[0]);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(12, 7));
+        UpdateShadowColor(0x2109); // force shadows to gray
         SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR);
         SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG1 | WINOUT_WIN01_BG2 | WINOUT_WIN01_BG3 | WINOUT_WIN01_OBJ);
         SetBgTilemapPalette(0, 0, 0, 0x1E, 0x14, 0xF);
@@ -1180,6 +1181,9 @@ static void Task_OrbEffect(u8 taskId)
         tState = 4;
         break;
     case 4:
+        // If the caller script is delayed after starting the orb effect, a `waitstate` might be reached *after*
+        // we enable the ScriptContext in case 2; enabling it here as well avoids softlocks in this scenario
+        EnableBothScriptContexts();
         if (--tShakeDelay == 0)
         {
             s32 panning;
@@ -1214,6 +1218,7 @@ static void Task_OrbEffect(u8 taskId)
         SetGpuReg(REG_OFFSET_DISPCNT, tDispCnt);
         SetGpuReg(REG_OFFSET_BLDCNT, tBldCnt);
         SetGpuReg(REG_OFFSET_BLDALPHA, tBldAlpha);
+        UpdateShadowColor(RGB_BLACK); // force shadows to gray
         SetGpuReg(REG_OFFSET_WININ, tWinIn);
         SetGpuReg(REG_OFFSET_WINOUT, tWinOut);
         EnableBothScriptContexts();
