@@ -919,7 +919,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Miguel"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_SETUP_FIRST_TURN| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_SuperNerdMiguel2A),
         .party = {.ItemCustomMoves = sParty_SuperNerdMiguel2A}
 	},
@@ -931,7 +931,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Miguel"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_SETUP_FIRST_TURN| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_SuperNerdMiguel2B),
         .party = {.ItemCustomMoves = sParty_SuperNerdMiguel2B}
 	},

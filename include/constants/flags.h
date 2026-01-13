@@ -209,7 +209,7 @@
 #define FLAG_DEFEATED_JESSIEJAMESRHB4F      0xBE
 #define FLAG_MOVENOW_JESSIEJAMES  			0xBF
 #define FLAG_DEFEATED_DIAMOND     			0xC0
-#define FLAG_UNUSED_0x0C1                  	0xC1
+#define FLAG_DEFEATED_MIGUEL2               0xC1
 #define FLAG_UNUSED_0x0C2   				0xC2
 #define FLAG_UNUSED_0x0C3  					0xC3
 #define FLAG_UNUSED_0x0C4  					0xC4 

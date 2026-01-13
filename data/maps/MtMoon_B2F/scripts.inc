@@ -96,6 +96,8 @@ MtMoon_B2F_EventScript_MiguelTrigger::
 MtMoon_B2F_EventScript_Miguel::
 	lock
 	faceplayer
+	goto_if_set FLAG_DEFEATED_MIGUEL2, MtMoon_B2F_EventScript_MegaHintAerodactyl
+	goto_if_unset FLAG_HIDE_MEGA_TRAINERS, MtMoon_B2F_EventScript_SuperNerdMiguel
 	goto_if_set FLAG_GOT_FOSSIL_FROM_MT_MOON, MtMoon_B2F_EventScript_MiguelFossilPicked
 	goto_if_defeated TRAINER_SUPER_NERD_MIGUEL, MtMoon_B2F_EventScript_MiguelGoPickFossil
 	goto MtMoon_B2F_EventScript_BattleMiguel
@@ -122,6 +124,81 @@ MtMoon_B2F_Text_MiguelDefeat::
 MtMoon_B2F_Text_WellEachTakeAFossil::
     .string "We'll each take a fossil!\n"
     .string "No being greedy!$"
+
+MtMoon_B2F_EventScript_Aerodactyl::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_MIGUEL2, MtMoon_B2F_EventScript_AerodactylDefeated
+	msgbox MtMoon_B2F_Text_Aerodactyl MSGBOX_DEFAULT
+	release
+	end
+
+MtMoon_B2F_Text_Aerodactyl:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+MtMoon_B2F_EventScript_SuperNerdMiguel::
+	goto_if_set FLAG_HIDE_DOME_FOSSIL, MtMoon_B2F_EventScript_SuperNerdMiguelOmanyte
+	goto_if_set FLAG_HIDE_HELIX_FOSSIL, MtMoon_B2F_EventScript_SuperNerdMiguelKabuto
+	release
+	end
+
+MtMoon_B2F_EventScript_SuperNerdMiguelOmanyte::
+	trainerbattle_single TRAINER_SUPER_NERD_MIGUEL_2A, MtMoon_B2F_Text_Miguel2Intro, MtMoon_B2F_Text_Miguel2Defeat
+	setflag FLAG_DEFEATED_MIGUEL2
+	msgbox MtMoon_B2F_Text_Miguel2PostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+MtMoon_B2F_EventScript_SuperNerdMiguelKabuto::
+	trainerbattle_single TRAINER_SUPER_NERD_MIGUEL_2B, MtMoon_B2F_Text_Miguel2Intro, MtMoon_B2F_Text_Miguel2Defeat
+	setflag FLAG_DEFEATED_MIGUEL2
+	msgbox MtMoon_B2F_Text_Miguel2PostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+MtMoon_B2F_Text_Miguel2Intro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+MtMoon_B2F_Text_Miguel2Defeat:
+	.string "Incredible... how...?$"
+
+MtMoon_B2F_Text_Miguel2PostBattle:
+	.string "Is this a dream?$"
+
+MtMoon_B2F_EventScript_MegaHintAerodactyl::    
+    goto_if_set FLAG_GOT_AERODACTYLITE, MtMoon_B2F_EventScript_Miguel2Defeated
+    msgbox MtMoon_B2F_Text_AerodactylMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+MtMoon_B2F_Text_AerodactylMegaHint:
+    .string "Rock Tunnel.$"
+
+MtMoon_B2F_EventScript_Miguel2Defeated::
+    msgbox Miguel2Defeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+Miguel2Defeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+MtMoon_B2F_EventScript_AerodactylDefeated::
+	msgbox AerodactylDefeated MSGBOX_DEFAULT
+	release
+	end
+
+AerodactylDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"
 
 MtMoon_B2F_EventScript_MiguelFossilPicked::
 	msgbox MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils, MSGBOX_DEFAULT
