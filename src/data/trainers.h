@@ -911,7 +911,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_SuperNerdMiguel),
         .party = {.NoItemDefaultMoves = sParty_SuperNerdMiguel}
     },
-    [TRAINER_SUPER_NERD_MIGUEL_2] = {
+    [TRAINER_SUPER_NERD_MIGUEL_2A] = {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_SUPER_NERD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
@@ -920,8 +920,20 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
-        .partySize = ARRAY_COUNT(sParty_SuperNerdMiguel2),
-        .party = {.ItemCustomMoves = sParty_SuperNerdMiguel2}
+        .partySize = ARRAY_COUNT(sParty_SuperNerdMiguel2A),
+        .party = {.ItemCustomMoves = sParty_SuperNerdMiguel2A}
+	},
+    [TRAINER_SUPER_NERD_MIGUEL_2B] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_SUPER_NERD,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_SUPER_NERD,
+        .trainerName = _("Miguel"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT,
+        .partySize = ARRAY_COUNT(sParty_SuperNerdMiguel2B),
+        .party = {.ItemCustomMoves = sParty_SuperNerdMiguel2B}
 	},
     [TRAINER_ROCKET_DUO_1] = {
         .partyFlags = 0,
