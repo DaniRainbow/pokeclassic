@@ -1937,6 +1937,65 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerdMiguel[] = {
     },
 };
 
+static const struct TrainerMonItemCustomMoves sParty_SuperNerdMiguel2[] = {
+    {
+        .iv = 250,
+        .lvl = 69,
+        .species = SPECIES_OMASTAR,
+        .heldItem = ITEM_POWER_HERB,
+        .moves = {MOVE_METEOR_BEAM, MOVE_SURF, MOVE_ICE_BEAM, MOVE_SHELL_SMASH},
+        .abilityNums = 0, //Weak Armor
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_CLEFABLE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_MOONBLAST, MOVE_CALM_MIND, MOVE_MOONLIGHT, MOVE_FLAMETHROWER},
+        .abilityNums = 0, //Magic Guard
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_MAGNETON,
+        .heldItem = ITEM_CHOICE_SPECS,
+        .moves = {MOVE_THUNDERBOLT, MOVE_FLASH_CANNON, MOVE_TRI_ATTACK, MOVE_VOLT_SWITCH},
+        .abilityNums = 0, //Sturdy
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_DUGTRIO,
+        .heldItem = ITEM_LIFE_ORB,
+        .moves = {MOVE_SANDSTORM, MOVE_EARTHQUAKE, MOVE_PROTECT, MOVE_SUCKER_PUNCH},
+        .abilityNums = 0, //Sand Force
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_ROCKY_HELMET,
+        .moves = {MOVE_SANDSTORM, MOVE_BODY_PRESS, MOVE_FIRE_PUNCH, MOVE_PROTECT},
+        .abilityNums = 0, // Sturdy
+    },
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_KABUTOPS,
+        .heldItem = ITEM_ASSAULT_VEST,
+        .moves = {MOVE_AQUA_JET, MOVE_LIQUIDATION, MOVE_STONE_EDGE, MOVE_X_SCISSOR},
+        .abilityNums = 0, //Battle Armor
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_AERODACTYLITE,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_ROOST, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE},
+        .abilityNums = 0, //Tough Claws
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_RocketDuo1[] = {
     {
         .iv = 50,
