@@ -225,28 +225,6 @@ RocketHideout_Burglars_Text_BurglarPostBattle4::
     .string "What? Get an honest job?\n"
     .string "In this economy?$"
 
-RocketHideout_Burglars_TM35::
-    trainerbattle_single TRAINER_BURGLAR_KYLE, RocketHideout_Burglars_Text_BurglarIntro5, RocketHideout_Burglars_Text_BurglarDefeat5
-    goto_if_set FLAG_GOT_TM35, RocketHideout_Burglars_EventScript_GotTM35
-    msgbox RocketHideout_Burglars_Text_GetTM, MSGBOX_AUTOCLOSE
-    giveitem ITEM_TM35, 1
-    setflag FLAG_GOT_TM35
-RocketHideout_Burglars_EventScript_GotTM35::
-    msgbox RocketHideout_Burglars_Text_BurglarPostBattle5, MSGBOX_AUTOCLOSE
-    release
-    end
-
-RocketHideout_Burglars_Text_BurglarIntro5::
-    .string "Stealing is cool!$"
-
-RocketHideout_Burglars_Text_BurglarDefeat5::
-    .string "Losing is not!$"
-
-RocketHideout_Burglars_Text_BurglarPostBattle5::
-    .string "I just love stealing so much.\n"
-    .string "Its the only thing I love!$"
-
-
 RocketHideout_Burglars_TM36::
     trainerbattle_single TRAINER_BURGLAR_PETE, RocketHideout_Burglars_Text_BurglarIntro6, RocketHideout_Burglars_Text_BurglarDefeat6
     goto_if_set FLAG_GOT_TM36, RocketHideout_Burglars_EventScript_GotTM36

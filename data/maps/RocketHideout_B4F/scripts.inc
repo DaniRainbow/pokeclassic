@@ -432,3 +432,47 @@ RocketHideout_B4F_EventScript_KangaskhanDefeated::
 KangaskhanDefeated:	
 	.string "You are a worthy opponent and\n"
 	.string "have earned my respect.$"
+
+RocketHideout_B4F_EventScript_Burglars_TM35::
+	lock
+	faceplayer
+	goto_if_defeated TRAINER_BURGLAR_KYLE, RocketHideout_B4F_EventScript_TM35_Fix
+    trainerbattle_single TRAINER_BURGLAR_KYLE, RocketHideout_B4F_Burglars_Text_BurglarIntro5, RocketHideout_B4F_Burglars_Text_BurglarDefeat5
+    msgbox RocketHideout_B4F_Burglars_Text_GetTM, MSGBOX_AUTOCLOSE
+    giveitem ITEM_TM35, 1
+    setflag FLAG_GOT_TM35
+	release
+	end
+
+RocketHideout_B4F_Burglars_Text_GetTM:
+    .string "Team Rocket left a lot of good\n"
+    .string "loot behind when they left.\p"
+    .string "Here, take this.\n"
+    .string "There's plenty to go around!$"
+
+RocketHideout_B4F_EventScript_GotTM35::
+    msgbox RocketHideout_B4F_Burglars_Text_BurglarPostBattle5, MSGBOX_AUTOCLOSE
+    release
+    end
+
+RocketHideout_B4F_Burglars_Text_BurglarIntro5:
+    .string "Stealing is cool!$"
+
+RocketHideout_B4F_Burglars_Text_BurglarDefeat5:
+    .string "Losing is not!$"
+
+RocketHideout_B4F_Burglars_Text_BurglarPostBattle5:
+    .string "I just love stealing so much.\n"
+    .string "Its the only thing I love!$"
+
+RocketHideout_B4F_EventScript_TM35_Fix::
+	goto_if_set FLAG_GOT_TM35, RocketHideout_B4F_EventScript_GotTM35
+	msgbox RocketHideout_B4F_Burglars_Text_GetTM, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM35, 1
+	setflag FLAG_GOT_TM35
+	release
+	end
+
+RocketHideout_B4F_Text_YouForgotThis:
+	.string "I didn't know I was supposed to\n"
+	.string "share before. Here you go!$"
