@@ -138,10 +138,11 @@ EventScript_RockItem_Stardust::
 	goto EventScript_SmashRockEncounter
 
 EventScript_RockItem_RareTreasure::
-	random 3
+	random 4
 	goto_if_eq VAR_RESULT, 0, EventScript_RockItem_Nugget
 	goto_if_eq VAR_RESULT, 1, EventScript_RockItem_BigPearl
 	goto_if_eq VAR_RESULT, 2, EventScript_RockItem_StarPiece
+	goto_if_eq VAR_RESULT, 3, EventScript_RockItem_RareCandy
 	end
 
 EventScript_RockItem_Nugget::
@@ -154,6 +155,10 @@ EventScript_RockItem_BigPearl::
 
 EventScript_RockItem_StarPiece::
 	giveitem ITEM_STAR_PIECE, 1
+	goto EventScript_SmashRockEncounter
+
+EventScript_RockItem_RareCandy::
+	giveitem ITEM_RARE_CANDY, 5
 	goto EventScript_SmashRockEncounter
 
 EventScript_RockItem_Stone::
