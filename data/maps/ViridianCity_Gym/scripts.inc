@@ -432,3 +432,68 @@ ViridianCity_Gym_Text_RivalExplainTM26::
 ViridianCity_Gym_Text_YouDoNotHaveSpace2::
     .string "Oh, you don't have space for this?\p"
     .string "Too bad! Guess I'll keep it. Ha!$"
+
+ViridianCity_Gym_EventScript_MewtwoY::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_MEIHUI, ViridianCity_Gym_EventScript_PokemonDefeated
+	msgbox ViridianCity_Gym_Text_Pokemon MSGBOX_DEFAULT
+	release
+	end
+
+ViridianCity_Gym_Text_Pokemon:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+ViridianCity_Gym_EventScript_Ranger_MEIHUI::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_MEIHUI, ViridianCity_Gym_EventScript_MegaHintPokemon
+	trainerbattle_single TRAINER_POKEMON_RANGER_F_MEIHUI, ViridianCity_Gym_Text_TrainerIntro, ViridianCity_Gym_Text_TrainerDefeat
+	setflag FLAG_DEFEATED_MEIHUI
+	msgbox ViridianCity_Gym_Text_TrainerPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+ViridianCity_Gym_Text_TrainerIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+ViridianCity_Gym_Text_TrainerDefeat:
+	.string "Incredible... how...?$"
+
+ViridianCity_Gym_Text_TrainerPostBattle:
+	.string "Is this a dream?$"
+
+ViridianCity_Gym_EventScript_MegaHintPokemon::    
+    goto_if_set FLAG_GOT_MEGAITEM, ViridianCity_Gym_EventScript_TrainerDefeated
+    msgbox ViridianCity_Gym_Text_PokemonMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+ViridianCity_Gym_Text_PokemonMegaHint:
+    .string "Hint where to find Mega Stone.$"
+
+ViridianCity_Gym_EventScript_TrainerDefeated::
+    msgbox TrainerDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+TrainerDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+ViridianCity_Gym_EventScript_PokemonDefeated::
+	msgbox PokemonDefeated MSGBOX_DEFAULT
+	release
+	end
+
+PokemonDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

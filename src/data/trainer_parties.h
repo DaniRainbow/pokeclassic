@@ -8432,6 +8432,57 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerWarren[] = {
     },
 };
 
+static const struct TrainerMonItemCustomMoves sParty_RangerMeiHui[] = {
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_,
+        .heldItem = ITEM_,
+        .moves = {MOVE_, MOVE_, MOVE_, MOVE_},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_,
+        .heldItem = ITEM_,
+        .moves = {MOVE_, MOVE_, MOVE_, MOVE_},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_,
+        .heldItem = ITEM_,
+        .moves = {MOVE_, MOVE_, MOVE_, MOVE_},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_,
+        .heldItem = ITEM_,
+        .moves = {MOVE_, MOVE_, MOVE_, MOVE_},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_,
+        .heldItem = ITEM_,
+        .moves = {MOVE_, MOVE_, MOVE_, MOVE_},
+        .abilityNums = 0,
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_,
+        .heldItem = ITEM_MEGAITEM,
+        .moves = {MOVE_, MOVE_, MOVE_, MOVE_},
+        .abilityNums = 0,
+    },
+};
+
 //Victory Road
 static const struct TrainerMonItemCustomMoves sParty_NinjaBoyOrion[] = {
 	{
