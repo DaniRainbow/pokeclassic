@@ -1945,3 +1945,28 @@ static const u8 sToxicOrbDesc[] = _(
     "A bizarre orb that\n"
     "badly poisons the\n"
     "holder in battle.");
+
+static const u8 sAirBalloonDesc[] = _(
+    "Makes the holder\n"
+    "float but bursts\n"
+    "if hit by an attack.");
+
+static const u8 sAssaultVestDesc[] = _(
+    "Raises Sp. Def but\n"
+    "prevents the use\n"
+    "of status moves.");
+
+static const u8 sFocusSashDesc[] = _(
+    "If the holder has\n"
+    "full HP, it endures\n"
+    "KO hits with 1 HP.");
+
+static const u8 sHeavyDutyBootsDesc[] = _(
+    "Boots that prevent\n"
+    "effects of traps\n"
+    "set in the field.");
+
+static const u8 sLaggingTailDesc[] = _(
+    "Tremendously heavy.\n"
+    "Holder will move\n"
+    "slower than usual.");

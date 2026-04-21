@@ -57,6 +57,11 @@ CeladonCity_DepartmentStore_4F_Items::
 	.2byte ITEM_POWER_STONE
 	.2byte ITEM_FLAME_ORB
 	.2byte ITEM_TOXIC_ORB
+	.2byte ITEM_AIR_BALLOON
+	.2byte ITEM_ASSAULT_VEST
+	.2byte ITEM_FOCUS_SASH
+	.2byte ITEM_HEAVY_DUTY_BOOTS
+	.2byte ITEM_LAGGING_TAIL
 	.2byte ITEM_NONE
 	release
 	end

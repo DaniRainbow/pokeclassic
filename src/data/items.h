@@ -5149,7 +5149,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_ReduceIV,
         .secondaryId = NUM_STATS,
     },
-    // Status Orbs
+    // Missing Battle Items Restored
     [ITEM_FLAME_ORB] =
     {
         .name = _("Flame Orb"),
@@ -5173,5 +5173,65 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
+    },
+    [ITEM_AIR_BALLOON] =
+    {
+        .name = _("Air Balloon"),
+        .itemId = ITEM_AIR_BALLOON,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_AIR_BALLOON,
+        .description = sAirBalloonDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+    },
+    [ITEM_ASSAULT_VEST] =
+    {
+        .name = _("Assault Vest"),
+        .itemId = ITEM_ASSAULT_VEST,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_ASSAULT_VEST,
+        .description = sAssaultVestDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+    [ITEM_FOCUS_SASH] =
+    {
+        .name = _("Focus Sash"),
+        .itemId = ITEM_FOCUS_SASH,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_FOCUS_SASH,
+        .description = sFocusSashDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+    },
+    [ITEM_HEAVY_DUTY_BOOTS] =
+    {
+        .name = _("H.Duty Boots"),
+        .itemId = ITEM_HEAVY_DUTY_BOOTS,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_HEAVY_DUTY_BOOTS,
+        .description = sHeavyDutyBootsDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+    [ITEM_LAGGING_TAIL] =
+    {
+        .name = _("Lagging Tail"),
+        .itemId = ITEM_LAGGING_TAIL,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_LAGGING_TAIL,
+        .description = sLaggingTailDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
     },
 };

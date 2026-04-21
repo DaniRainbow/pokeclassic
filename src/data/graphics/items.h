@@ -971,9 +971,24 @@ const u32 gItemIcon_MaxCandy[] = INCBIN_U32("graphics/items/icons/max_candy.4bpp
 const u32 gItemIconPalette_MaxCandy[] = INCBIN_U32("graphics/items/icon_palettes/max_candy.gbapal.lz");
 const u32 gItemIconPalette_ResetCandy[] = INCBIN_U32("graphics/items/icon_palettes/reset_candy.gbapal.lz");
 
-//Status Orbs
+//Additional Battle Items
 const u32 gItemIcon_FlameOrb[] = INCBIN_U32("graphics/items/icons/flame_orb.4bpp.lz");
 const u32 gItemIconPalette_FlameOrb[] = INCBIN_U32("graphics/items/icon_palettes/flame_orb.gbapal.lz");
 
 const u32 gItemIcon_ToxicOrb[] = INCBIN_U32("graphics/items/icons/toxic_orb.4bpp.lz");
 const u32 gItemIconPalette_ToxicOrb[] = INCBIN_U32("graphics/items/icon_palettes/toxic_orb.gbapal.lz");
+
+const u32 gItemIcon_AirBalloon[] = INCBIN_U32("graphics/items/icons/air_balloon.4bpp.lz");
+const u32 gItemIconPalette_AirBalloon[] = INCBIN_U32("graphics/items/icon_palettes/air_balloon.gbapal.lz");
+
+const u32 gItemIcon_AssaultVest[] = INCBIN_U32("graphics/items/icons/assault_vest.4bpp.lz");
+const u32 gItemIconPalette_AssaultVest[] = INCBIN_U32("graphics/items/icon_palettes/assault_vest.gbapal.lz");
+
+const u32 gItemIcon_FocusSash[] = INCBIN_U32("graphics/items/icons/focus_sash.4bpp.lz");
+const u32 gItemIconPalette_FocusSash[] = INCBIN_U32("graphics/items/icon_palettes/focus_sash.gbapal.lz");
+
+const u32 gItemIcon_HeavyDutyBoots[] = INCBIN_U32("graphics/items/icons/heavy_duty_boots.4bpp.lz");
+const u32 gItemIconPalette_HeavyDutyBoots[] = INCBIN_U32("graphics/items/icon_palettes/heavy_duty_boots.gbapal.lz");
+
+const u32 gItemIcon_LaggingTail[] = INCBIN_U32("graphics/items/icons/lagging_tail.4bpp.lz");
+const u32 gItemIconPalette_LaggingTail[] = INCBIN_U32("graphics/items/icon_palettes/lagging_tail.gbapal.lz");

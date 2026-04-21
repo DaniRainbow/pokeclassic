@@ -5811,10 +5811,20 @@ extern const u32 gItemIcon_MaxCandy[];
 extern const u32 gItemIconPalette_MaxCandy[];
 extern const u32 gItemIconPalette_ResetCandy[];
 
-//Status Orbs
+//Additional Battle Items
 extern const u32 gItemIcon_FlameOrb[];
 extern const u32 gItemIconPalette_FlameOrb[];
 extern const u32 gItemIcon_ToxicOrb[];
 extern const u32 gItemIconPalette_ToxicOrb[];
+extern const u32 gItemIcon_AirBalloon[];
+extern const u32 gItemIconPalette_AirBalloon[];
+extern const u32 gItemIcon_AssaultVest[];
+extern const u32 gItemIconPalette_AssaultVest[];
+extern const u32 gItemIcon_FocusSash[];
+extern const u32 gItemIconPalette_FocusSash[];
+extern const u32 gItemIcon_HeavyDutyBoots[];
+extern const u32 gItemIconPalette_HeavyDutyBoots[];
+extern const u32 gItemIcon_LaggingTail[];
+extern const u32 gItemIconPalette_LaggingTail[];
 
 #endif //GUARD_GRAPHICS_H
