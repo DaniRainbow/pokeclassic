@@ -211,7 +211,7 @@
 #define FLAG_DEFEATED_DIAMOND     			0xC0
 #define FLAG_DEFEATED_MIGUEL2               0xC1
 #define FLAG_DEFEATED_MEIHUI 				0xC2
-#define FLAG_UNUSED_0x0C3  					0xC3
+#define FLAG_DEFEATED_MURAMASA  			0xC3
 #define FLAG_UNUSED_0x0C4  					0xC4 
 #define FLAG_UNUSED_0x0C5   				0xC5 
 #define FLAG_UNUSED_0x0C6   				0xC6 

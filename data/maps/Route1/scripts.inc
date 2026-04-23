@@ -193,3 +193,68 @@ Route1_RocketFugitive::
 	waitse
 	fadescreen FADE_FROM_BLACK
 	end
+
+Route1_EventScript_Pidgeot::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_MURAMASA, Route1_EventScript_PidgeotDefeated
+	msgbox Route1_Text_Pidgeot MSGBOX_DEFAULT
+	release
+	end
+
+Route1_Text_Pidgeot:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+Route1_EventScript_CoolTrainerMura::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_MURAMASA, Route1_EventScript_MegaHintPidgeot
+	trainerbattle_single TRAINER_POKEMON_COOLTRAINER_MURA, Route1_Text_MuraIntro, Route1_Text_MuraDefeat
+	setflag FLAG_DEFEATED_MURAMASA
+	msgbox Route1_Text_MuraPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route1_Text_MuraIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+Route1_Text_MuraDefeat:
+	.string "Incredible... how...?$"
+
+Route1_Text_MuraPostBattle:
+	.string "Is this a dream?$"
+
+Route1_EventScript_MegaHintPidgeot::    
+    goto_if_set FLAG_GOT_PIDGEOTITE, Route1_EventScript_MuraDefeated
+    msgbox Route1_Text_PidgeotMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route1_Text_PidgeotMegaHint:
+    .string "Hint where to find Mega Stone.$"
+
+Route1_EventScript_MuraDefeated::
+    msgbox MuraDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+MuraDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+Route1_EventScript_PidgeotDefeated::
+	msgbox PidgeotDefeated MSGBOX_DEFAULT
+	release
+	end
+
+PidgeotDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"
