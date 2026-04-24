@@ -2077,7 +2077,7 @@ static const struct TrainerMonItemCustomMoves sParty_SuperNerdMiguel2B[] = { //P
         .iv = 250,
         .lvl = 68,
         .species = SPECIES_KABUTOPS,
-        .heldItem = ITEM_ORAN_BERRY, //ITEM_ASSAULT_VEST,
+        .heldItem = ITEM_ASSAULT_VEST,
         .moves = {MOVE_AQUA_JET, MOVE_LIQUIDATION, MOVE_STONE_EDGE, MOVE_X_SCISSOR},
         .abilityNums = 1, //Battle Armor
     },
