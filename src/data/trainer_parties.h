@@ -5318,6 +5318,58 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperJacob[] = {
         .species = SPECIES_SPEAROW,
     },
 };
+
+static const struct TrainerMonItemCustomMoves sParty_AromaLadyLily[] = {
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_NIDOQUEEN,
+        .heldItem = ITEM_FOCUS_SASH,
+        .moves = {MOVE_EARTH_POWER, MOVE_MUDDY_WATER, MOVE_VISE_GRIP, MOVE_DYNAMIC_PUNCH},
+        .abilityNums = 0, //
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_ELECTABUZZ,
+        .heldItem = ITEM_AIR_BALLOON,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_VOLT_SWITCH, MOVE_LIGHT_SCREEN, MOVE_BRICK_BREAK},
+        .abilityNums = 0, //
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_BLASTOISE,
+        .heldItem = ITEM_FLAME_ORB,
+        .moves = {MOVE_SHELL_SMASH, MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_FACADE},
+        .abilityNums = 0, //
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_SANDSLASH,
+        .heldItem = ITEM_EXPERT_BELT,
+        .moves = {MOVE_EARTHQUAKE, MOVE_KNOCK_OFF, MOVE_HONE_CLAWS, MOVE_POISON_JAB},
+        .abilityNums = 0, //
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_CHANSEY,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_HEAL_BELL, MOVE_SOFT_BOILED, MOVE_ZEN_HEADBUTT, MOVE_FOCUS_BLAST},
+        .abilityNums = 0, //
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_PINSIR,
+        .heldItem = ITEM_PINSIRITE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_SUBMISSION, MOVE_SWORDS_DANCE, MOVE_X_SCISSOR},
+        .abilityNums = 0, //
+    },
+};
+
 //Fuchsia Gym
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TamerPhil[] = {

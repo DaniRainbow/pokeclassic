@@ -129,3 +129,68 @@ Route18_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
+
+Route18_EventScript_Pinsir::
+	lock
+	faceplayer
+    goto_if_set FLAG_DEFEATED_LILY, Route18_EventScript_PinsirDefeated
+	msgbox Route18_Text_Pinsir MSGBOX_DEFAULT
+	release
+	end
+
+Route18_Text_Pinsir:
+	.string "{PLAYER}.\p"
+	.string "I have surpassed my natural limits.\n"
+	.string "If you dare to challenge us, good luck.$"
+
+Route18_EventScript_AromaLadyLily::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_LILY, Route18_EventScript_MegaHintPinsir
+	trainerbattle_single TRAINER_AROMALADY_LILY, Route18_Text_LilyIntro, Route18_Text_LilyDefeat
+	setflag FLAG_DEFEATED_LILY
+	msgbox Route18_Text_LilyPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route18_Text_LilyIntro:
+	.string "I came to the Battle Tower to fight\n"
+	.string "against the finest Trainers Kanto\l"
+	.string "has to offer.\p"
+	.string "Now that it is closed, I meditate\n"
+	.string "to prepare myself for a challenger.\p"
+	.string "We are strong in mind and body.$"
+
+Route18_Text_LilyDefeat:
+	.string "Incredible... how...?$"
+
+Route18_Text_LilyPostBattle:
+	.string "Is this a dream?$"
+
+Route18_EventScript_MegaHintPinsir::    
+    goto_if_set FLAG_GOT_PINSIRITE, Route18_EventScript_LilyDefeated
+    msgbox Route18_Text_PinsirMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route18_Text_PinsirMegaHint:
+    .string "Hint where to find Mega Stone.$"
+
+Route18_EventScript_LilyDefeated::
+    msgbox LilyDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+LilyDefeated_Text:	
+	.string "I came here to fight the best\n"
+	.string "and that's exactly what you are.$"
+
+Route18_EventScript_PinsirDefeated::
+	msgbox PinsirDefeated MSGBOX_DEFAULT
+	release
+	end
+
+PinsirDefeated:	
+	.string "You are a worthy opponent and\n"
+	.string "have earned my respect.$"

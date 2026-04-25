@@ -212,7 +212,7 @@
 #define FLAG_DEFEATED_MIGUEL2               0xC1
 #define FLAG_DEFEATED_MEIHUI 				0xC2
 #define FLAG_DEFEATED_MURAMASA  			0xC3
-#define FLAG_UNUSED_0x0C4  					0xC4 
+#define FLAG_DEFEATED_LILY 					0xC4 
 #define FLAG_UNUSED_0x0C5   				0xC5 
 #define FLAG_UNUSED_0x0C6   				0xC6 
 #define FLAG_UNUSED_0x0C7           		0xC7
