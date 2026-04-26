@@ -6217,4 +6217,16 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_AromaLadyLily),
         .party = {.ItemCustomMoves = sParty_AromaLadyLily}
     },
+    [TRAINER_DRAGONTAMER_NICK] = {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
+        .trainerName = _("Nick"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
+        .partySize = ARRAY_COUNT(sParty_DragonTamerNick),
+        .party = {.ItemCustomMoves = sParty_DragonTamerNick}
+    },
 };

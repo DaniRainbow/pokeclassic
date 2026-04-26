@@ -8895,6 +8895,58 @@ static const struct TrainerMonNoItemCustomMoves sParty_CoolCoupleRayTyra[] = {
     },
 };
 
+//Indigo Plateau
+static const struct TrainerMonItemCustomMoves sParty_DragonTamerNick[] = {
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_FOCUS_SASH,
+        .moves = {MOVE_TAILWIND, MOVE_ROCK_SLIDE, MOVE_DUAL_WINGBEAT, MOVE_STEALTH_ROCK},
+        .abilityNums = 0, //Unnerve
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_WACAN_BERRY,
+        .moves = {MOVE_WATERFALL, MOVE_EARTHQUAKE, MOVE_ICE_FANG, MOVE_IRON_HEAD},
+        .abilityNums = 0, //Moxie
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_DRAGONAIR,
+        .heldItem = ITEM_EVIOLITE,
+        .moves = {MOVE_FLAMETHROWER, MOVE_DRAGON_PULSE, MOVE_HAZE, MOVE_THUNDER_WAVE},
+        .abilityNums = 0, //Shed Skin
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_EXTREME_SPEED, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .abilityNums = 0, //Multiscale
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_ARBOK,
+        .heldItem = ITEM_BLACK_SLUDGE,
+        .moves = {MOVE_COIL, MOVE_GUNK_SHOT, MOVE_TOXIC, MOVE_DRAGON_TAIL},
+        .abilityNums = 0, //Intimidate
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_CHARIZARD,
+        .heldItem = ITEM_CHARIZARDITE_X,
+        .moves = {MOVE_DRAGON_DANCE, MOVE_OUTRAGE, MOVE_FIRE_PUNCH, MOVE_EARTHQUAKE},
+        .abilityNums = 0, //Tough Claws
+    },
+};
+
 //
 static const struct TrainerMonItemDefaultMoves sParty_SilphPrez[] = {
     {
