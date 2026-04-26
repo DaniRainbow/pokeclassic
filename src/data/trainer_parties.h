@@ -1404,7 +1404,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
         .lvl = 65,
         .species = SPECIES_SANDSLASH,
         .heldItem = ITEM_ROCKY_HELMET,
-        .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_CLAW, MOVE_ROCK_SLIDE, MOVE_ROLLOUT}
+        .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_CLAW, MOVE_ROCK_SLIDE, MOVE_ROLLOUT},
         .abilityNums = 0, //Sand Veil
     },
     {
@@ -1412,7 +1412,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
         .lvl = 65,
         .species = SPECIES_WIGGLYTUFF,
         .heldItem = ITEM_LEFTOVERS,
-        .moves = {MOVE_HYPER_VOICE, MOVE_SLEEP_TALK, MOVE_PLAY_ROUGH, MOVE_REST}
+        .moves = {MOVE_HYPER_VOICE, MOVE_SLEEP_TALK, MOVE_PLAY_ROUGH, MOVE_REST},
         .abilityNums = 0, //Cute Charm
     },
     {
@@ -1420,7 +1420,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
         .lvl = 65,
         .species = SPECIES_RAICHU,
         .heldItem = ITEM_FOCUS_BAND,
-        .moves = {MOVE_TOXIC, MOVE_DOUBLE_TEAM, MOVE_IRON_TAIL, MOVE_THUNDERBOLT}
+        .moves = {MOVE_TOXIC, MOVE_DOUBLE_TEAM, MOVE_IRON_TAIL, MOVE_THUNDERBOLT},
         .abilityNums = 0, //Static
     },
     {
@@ -1428,7 +1428,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
         .lvl = 65,
         .species = SPECIES_CHARIZARD,
         .heldItem = ITEM_LIFE_ORB,
-        .moves = {MOVE_FLAMETHROWER, MOVE_TAILWIND, MOVE_AIR_SLASH, MOVE_BODY_SLAM}
+        .moves = {MOVE_FLAMETHROWER, MOVE_TAILWIND, MOVE_AIR_SLASH, MOVE_BODY_SLAM},
         .abilityNums = 0, //Blaze
     },
     {
@@ -1436,7 +1436,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
         .lvl = 65,
         .species = SPECIES_BLASTOISE,
         .heldItem = ITEM_EXPERT_BELT,
-        .moves = {MOVE_SHELL_SMASH, MOVE_AQUA_TAIL, MOVE_AVALANCHE, MOVE_HYDRO_PUMP}
+        .moves = {MOVE_SHELL_SMASH, MOVE_AQUA_TAIL, MOVE_AVALANCHE, MOVE_HYDRO_PUMP},
         .abilityNums = 0, //Torrent
     },
     {
@@ -1444,7 +1444,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
         .lvl = 70,
         .species = SPECIES_VENUSAUR,
         .heldItem = ITEM_VENUSAURITE,
-        .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_BOMB, MOVE_PETAL_BLIZZARD, MOVE_LEECH_SEED}
+        .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_BOMB, MOVE_PETAL_BLIZZARD, MOVE_LEECH_SEED},
         .abilityNums = 0, //Thick Fat
     },
 };
