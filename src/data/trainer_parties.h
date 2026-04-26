@@ -7979,7 +7979,7 @@ static const struct TrainerMonItemCustomMoves sParty_GentlemanJustice[] = {
 		.lvl = 68,
 		.species = SPECIES_JOLTEON,
 		.heldItem = ITEM_CHOICE_SPECS,
-		.moves = {MOVE_THUNDERBOLT, MOVE_ALLURING_VOICE, MOVE_VOLT_SWITCH, MOVE_SHADOW_BALL},
+		.moves = {MOVE_THUNDERBOLT, MOVE_HYPER_BEAM, MOVE_VOLT_SWITCH, MOVE_SHADOW_BALL},
         .abilityNums = 0, //Volt Absorb
 	},
     {
