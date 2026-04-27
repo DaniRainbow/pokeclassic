@@ -1055,7 +1055,7 @@ void SetDefaultFlashLevel(void)
     else if (FlagGet(FLAG_SYS_USE_FLASH))
         gSaveBlock1Ptr->flashLevel = 0;
     else
-        gSaveBlock1Ptr->flashLevel = gMaxFlashLevel - 0;
+        gSaveBlock1Ptr->flashLevel = gMaxFlashLevel - 1;
 }
 
 void SetFlashLevel(s32 flashLevel)
