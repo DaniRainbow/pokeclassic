@@ -1609,11 +1609,11 @@
 
 #define FLAG_DAILY_ROCKET_FUGITIVE                  (DAILY_FLAGS_START + 0x1C) // Unused Flag
 
-#define FLAG_UNUSED_0x93D                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
-#define FLAG_UNUSED_0x93E                           (DAILY_FLAGS_START + 0x1E) // Unused Flag
-#define FLAG_UNUSED_0x93F                           (DAILY_FLAGS_START + 0x1F) // Unused Flag
-#define FLAG_UNUSED_0x940                           (DAILY_FLAGS_START + 0x20) // Unused Flag
-#define FLAG_UNUSED_0x941                           (DAILY_FLAGS_START + 0x21) // Unused Flag
+#define FLAG_DAILY_MEWTWO                           (DAILY_FLAGS_START + 0x1D) // Legendary daily encounter, higher shiny odds. Mewtwo
+#define FLAG_DAILY_MEW                              (DAILY_FLAGS_START + 0x1E) // Legendary daily encounter, higher shiny odds. Mew
+#define FLAG_DAILY_MOLTRES                          (DAILY_FLAGS_START + 0x1F) // Legendary daily encounter, higher shiny odds. Moltres
+#define FLAG_DAILY_ZAPDOS                           (DAILY_FLAGS_START + 0x20) // Legendary daily encounter, higher shiny odds. Zapdos
+#define FLAG_DAILY_ARTICUNO                         (DAILY_FLAGS_START + 0x21) // Legendary daily encounter, higher shiny odds. Articuno
 #define FLAG_UNUSED_0x942                           (DAILY_FLAGS_START + 0x22) // Unused Flag
 #define FLAG_UNUSED_0x943                           (DAILY_FLAGS_START + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x944                           (DAILY_FLAGS_START + 0x24) // Unused Flag

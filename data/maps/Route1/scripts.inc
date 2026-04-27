@@ -1,6 +1,7 @@
 .set LOCALID_OAK, 1
 .set LOCALID_PIKACHU, 2
 .set LOCALID_FUGITIVE, 7
+.set LOCALID_MEWTWO, 10
 
 Route1_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route1_OnTransition
@@ -258,3 +259,59 @@ Route1_EventScript_PidgeotDefeated::
 PidgeotDefeated:	
 	.string "You are a worthy opponent and\n"
 	.string "have earned my respect.$"
+
+Route1_EventScript_DailyMewtwo::
+	lock
+	faceplayer
+	random 50
+	copyvar VAR_0x8004, VAR_RESULT
+	goto_if_eq VAR_0x8004, 1, Route1_EventScript_Surprise_Mewtwo
+	setvar VAR_0x8004, 0
+	setwildbattle SPECIES_MEWTWO, 70
+	waitse
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+	delay 20
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route1_EventScript_DefeatedMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route1_EventScript_RanFromMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route1_EventScript_RanFromMewtwo
+	release
+	end
+
+Route1_EventScript_Surprise_Mewtwo::
+	setvar VAR_0x8004, 0
+	setflag FLAG_SHINY_CREATION
+	setwildbattle SPECIES_MEWTWO, 70
+	waitse
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+	delay 20
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route1_EventScript_DefeatedMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route1_EventScript_RanFromMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route1_EventScript_RanFromMewtwo
+	release
+	end
+
+Route1_EventScript_DefeatedMewtwo::
+	setvar VAR_0x8004, SPECIES_MEWTWO
+	goto Common_EventScript_LegendaryFlewAway
+	removeobject LOCALID_MEWTWO
+	setflag FLAG_DAILY_MEWTWO
+	release
+	end
+
+Route1_EventScript_RanFromMewtwo::
+	setvar VAR_0x8004, SPECIES_MEWTWO
+	goto Common_EventScript_LegendaryFlewAway
+	removeobject LOCALID_MEWTWO
+	setflag FLAG_DAILY_MEWTWO
+	release
+	end
