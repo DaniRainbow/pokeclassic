@@ -8545,7 +8545,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerWarren[] = {
 static const struct TrainerMonItemCustomMoves sParty_RangerMeiHui[] = {
     {
         .iv = 250,
-        .lvl = 65,
+        .lvl = 68,
         .species = SPECIES_SQUIRTLE,
         .heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_AQUA_TAIL, MOVE_SHELL_SMASH, MOVE_ICE_BEAM, MOVE_FOCUS_PUNCH},
@@ -8553,7 +8553,7 @@ static const struct TrainerMonItemCustomMoves sParty_RangerMeiHui[] = {
     },
     {
         .iv = 250,
-        .lvl = 65,
+        .lvl = 68,
         .species = SPECIES_BULBASAUR,
         .heldItem = ITEM_FOCUS_SASH,
         .moves = {MOVE_SLUDGE_BOMB, MOVE_BODY_SLAM, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED},
@@ -8561,7 +8561,7 @@ static const struct TrainerMonItemCustomMoves sParty_RangerMeiHui[] = {
     },
     {
         .iv = 250,
-        .lvl = 65,
+        .lvl = 69,
         .species = SPECIES_PIKACHU_PARTNER,
         .heldItem = ITEM_LIGHT_BALL,
         .moves = {MOVE_VOLT_SWITCH, MOVE_THUNDERBOLT, MOVE_IRON_TAIL, MOVE_KNOCK_OFF},
@@ -8569,7 +8569,7 @@ static const struct TrainerMonItemCustomMoves sParty_RangerMeiHui[] = {
     },
     {
         .iv = 250,
-        .lvl = 65,
+        .lvl = 69,
         .species = SPECIES_CUBONE,
         .heldItem = ITEM_ROCKY_HELMET,
         .moves = {MOVE_BONEMERANG, MOVE_EARTHQUAKE, MOVE_BONE_CLUB, MOVE_SHADOW_CLAW},
@@ -8577,7 +8577,7 @@ static const struct TrainerMonItemCustomMoves sParty_RangerMeiHui[] = {
     },
     {
         .iv = 250,
-        .lvl = 65,
+        .lvl = 69,
         .species = SPECIES_CLEFAIRY,
         .heldItem = ITEM_EVIOLITE,
         .moves = {MOVE_BATON_PASS, MOVE_CALM_MIND, MOVE_DRAINING_KISS, MOVE_PLAY_ROUGH},
