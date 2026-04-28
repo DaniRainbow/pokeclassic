@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PowerPlant_EventScript_Zapdos",
-      "flag": "FLAG_HIDE_ZAPDOS",
+      "flag": "FLAG_DAILY_ZAPDOS",
       "in_connection": ""
     },
     {
