@@ -36,6 +36,7 @@ VictoryRoad_MoltresCave_EventScript_TryRemoveMoltres::
 VictoryRoad_MoltresCave_EventScript_Moltres::
 	lock
 	faceplayer
+	goto_if_set FLAG_CAUGHT_MOLTRES, VictoryRoad_MoltresCave_EventScript_DailyMOLTRES
 	waitse
 	delay 20
 	playse SE_THUNDERSTORM_STOP
@@ -67,16 +68,71 @@ VictoryRoad_MoltresCave_EventScript_Moltres::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, VictoryRoad_MoltresCave_EventScript_RanFromMoltres
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, VictoryRoad_MoltresCave_EventScript_RanFromMoltres
 	setflag FLAG_CAUGHT_MOLTRES
+	setflag FLAG_DAILY_MOLTRES
 	release
 	end
 
 VictoryRoad_MoltresCave_EventScript_DefeatedMoltres::
 	setflag FLAG_DEFEATED_MOLTRES
 	setvar VAR_0x8004, SPECIES_MOLTRES
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_MOLTRESFlewAway
 	end
 
 VictoryRoad_MoltresCave_EventScript_RanFromMoltres::
 	setvar VAR_0x8004, SPECIES_MOLTRES
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_MOLTRESFlewAway
 	end
+
+VictoryRoad_MoltresCave_EventScript_DailyMOLTRES::
+    random 50
+    copyvar VAR_0x8004, VAR_RESULT
+    goto_if_eq VAR_0x8004, 1, VictoryRoad_MoltresCave_EventScript_Surprise_MOLTRES
+    setvar VAR_0x8004, 0
+    setwildbattle SPECIES_MOLTRES, 70
+    waitse
+    playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, VictoryRoad_MoltresCave_EventScript_DefeatedMOLTRES
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, VictoryRoad_MoltresCave_EventScript_RanFromMOLTRES
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, VictoryRoad_MoltresCave_EventScript_RanFromMOLTRES
+    release
+    end
+
+VictoryRoad_MoltresCave_EventScript_Surprise_MOLTRES::
+    setvar VAR_0x8004, 0
+    setflag FLAG_SHINY_CREATION
+    setwildbattle SPECIES_MOLTRES, 50
+    waitse
+    playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, VictoryRoad_MoltresCave_EventScript_DailyDefeatedMOLTRES
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, VictoryRoad_MoltresCave_EventScript_DailyRanFromMOLTRES
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, VictoryRoad_MoltresCave_EventScript_DailyRanFromMOLTRES
+    release
+    end
+
+VictoryRoad_MoltresCave_EventScript_DailyDefeatedMOLTRES::
+    setvar VAR_0x8004, SPECIES_MOLTRES
+    goto Common_EventScript_MOLTRESFlewAway
+    removeobject LOCALID_MOLTRES
+    setflag FLAG_DAILY_MOLTRES
+    release
+    end
+
+VictoryRoad_MoltresCave_EventScript_DailyRanFromMOLTRES::
+    setvar VAR_0x8004, SPECIES_MOLTRES
+    goto Common_EventScript_MOLTRESFlewAway
+    removeobject LOCALID_MOLTRES
+    setflag FLAG_DAILY_MOLTRES
+    release
+    end
