@@ -115,6 +115,7 @@ FarawayIsland_Interior_Movement_MewFloatUpEast:
 FarawayIsland_Interior_EventScript_Mew::
 	lock
 	faceplayer
+	goto_if_set FLAG_CAUGHT_MEW, FarawayIsland_Interior_EventScript_DailyMew
 	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewAppear
 	waitmovement 0
 	setvar VAR_0x8004, 0
@@ -140,6 +141,7 @@ FarawayIsland_Interior_EventScript_Mew::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FarawayIsland_Interior_EventScript_PlayerOrMewRan
 	goto_if_eq VAR_RESULT, B_OUTCOME_MON_TELEPORTED, FarawayIsland_Interior_EventScript_PlayerOrMewRan
 	setflag FLAG_CAUGHT_MEW
+	setflag FLAG_DAILY_MEW
 	release
 	end
 
@@ -153,6 +155,65 @@ FarawayIsland_Interior_EventScript_PlayerOrMewRan::
 	setvar VAR_0x8004, SPECIES_MEW
 	goto Common_EventScript_LegendaryFlewAway
 	end
+
+FarawayIsland_Interior_EventScript_DailyMew::
+    applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewAppear
+	waitmovement 0
+	random 50
+    copyvar VAR_0x8004, VAR_RESULT
+    goto_if_eq VAR_0x8004, 1, FarawayIsland_Interior_EventScript_Surprise_Mew
+    setvar VAR_0x8004, 0
+    setwildbattle SPECIES_MEW, 30
+    waitse
+    playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, FarawayIsland_Interior_EventScript_DailyDefeatedMew
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FarawayIsland_Interior_EventScript_DailyRanFromMew
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FarawayIsland_Interior_EventScript_DailyRanFromMew
+    release
+    end
+
+FarawayIsland_Interior_EventScript_Surprise_Mew::
+    applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewAppear
+	waitmovement 0
+	setvar VAR_0x8004, 0
+    setflag FLAG_SHINY_CREATION
+    setwildbattle SPECIES_MEW, 30
+    waitse
+    playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, FarawayIsland_Interior_EventScript_DailyDefeatedMew
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FarawayIsland_Interior_EventScript_DailyRanFromMew
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FarawayIsland_Interior_EventScript_DailyRanFromMew
+    release
+    end
+
+FarawayIsland_Interior_EventScript_DailyDefeatedMew::
+    setvar VAR_0x8004, SPECIES_MEW
+    goto Common_EventScript_LegendaryFlewAway
+    removeobject LOCALID_FARAWAY_ISLAND_MEW
+    setflag FLAG_DAILY_MEW
+    release
+    end
+
+FarawayIsland_Interior_EventScript_DailyRanFromMew::
+    setvar VAR_0x8004, SPECIES_MEW
+    goto Common_EventScript_LegendaryFlewAway
+    removeobject LOCALID_FARAWAY_ISLAND_MEW
+    setflag FLAG_DAILY_MEW
+    release
+    end
+
 
 FarawayIsland_Interior_EventScript_FoundMewNorth::
 	applymovement LOCALID_FARAWAY_ISLAND_MEW, FarawayIsland_Interior_Movement_MewFloatUpNorth
