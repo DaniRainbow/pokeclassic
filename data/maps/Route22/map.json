@@ -35,7 +35,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
+      "script": "Route22_Trigger_BillCheckingIn",
       "flag": "FLAG_HIDE_RIVAL_ROUTE_22",
       "in_connection": ""
     },
@@ -117,6 +117,42 @@
       "var": "VAR_ROUTE_22_RIVAL_STATE",
       "var_value": "4",
       "script": "Route22_EventScript_LateRivalTriggerBottom"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE_22_RIVAL_STATE",
+      "var_value": "4",
+      "script": "Route22_Trigger_BillCheckingIn"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE_22_RIVAL_STATE",
+      "var_value": "4",
+      "script": "Route22_Trigger_BillCheckingIn"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE_22_RIVAL_STATE",
+      "var_value": "4",
+      "script": "Route22_Trigger_BillCheckingIn"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_ROUTE_22_RIVAL_STATE",
+      "var_value": "4",
+      "script": "Route22_Trigger_BillCheckingIn"
     }
   ],
   "bg_events": [
@@ -126,7 +162,7 @@
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route22_EventScript_LeagueGateSign"
+      "script": "Route22_Trigger_BillCheckingIn"
     }
   ]
 }
