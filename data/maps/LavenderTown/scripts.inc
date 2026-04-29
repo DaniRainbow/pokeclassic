@@ -89,15 +89,18 @@ LavenderTown_Text_PokemonTowerSign::
 LavenderTown_EventScript_Gengar::
 	lock
 	faceplayer
+	playmoncry SPECIES_GENGAR, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_KISHI, LavenderTown_EventScript_GengarDefeated
 	msgbox LavenderTown_Text_Gengar MSGBOX_DEFAULT
 	release
 	end
 
 LavenderTown_Text_Gengar:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "You hear the sound of a squeaky carousel\n"
+	.string "spinning in an empty playground.\p"
+	.string "Gengar chuckles as the noise fades.$"
 
 LavenderTown_EventScript_BeautyKishi::
 	lock
@@ -120,18 +123,18 @@ LavenderTown_EventScript_BeautyKishiBattle::
 	end
 
 LavenderTown_Text_KishiIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Tell me, young one.\n"
+	.string "Do you believe in ghosts?\p"
+	.string "Seeing is believing. Now that\n"
+	.string "you can see, we can begin.$"
 
 LavenderTown_Text_KishiDefeat:
-	.string "Incredible... how...?$"
+	.string "All is well that ends well.$"
 
 LavenderTown_Text_KishiPostBattle:
-	.string "Is this a dream?$"
+	.string "What you choose to believe in\n"
+	.string "will haunt the world when you\l"
+	.string "depart from this life.$"
 
 LavenderTown_EventScript_MegaHintGengar::    
     goto_if_set FLAG_GOT_GENGARITE, LavenderTown_EventScript_KishiDefeated
@@ -141,7 +144,9 @@ LavenderTown_EventScript_MegaHintGengar::
     end
     
 LavenderTown_Text_GengarMegaHint:
-    .string "Climb to the top of the Tower.$"
+    .string "Marowak and I believe you are\n"
+	.string "a kind trainer, so please\l"
+	.string "climb to the top of the Tower.$"
 
 LavenderTown_EventScript_KishiDefeated::
     msgbox KishiDefeated_Text MSGBOX_DEFAULT
@@ -149,8 +154,11 @@ LavenderTown_EventScript_KishiDefeated::
 	end
 
 KishiDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "What you choose to believe in\n"
+	.string "will haunt the world when you\l"
+	.string "depart from this life.\p"
+	.string "Believe there is good to be\n"
+	.string "found in this world.$"
 
 LavenderTown_EventScript_GengarDefeated::
 	msgbox GengarDefeated MSGBOX_DEFAULT
@@ -158,5 +166,5 @@ LavenderTown_EventScript_GengarDefeated::
 	end
 
 GengarDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Gengar rolls its eyes and sticks\n"
+	.string "out its tongue in good fun.$"
