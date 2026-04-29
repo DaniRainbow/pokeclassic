@@ -7498,13 +7498,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerFemaleShirley[] =
         .species = SPECIES_SEADRA,
     },
 };
-// Need to update moves and items. Trainer already created in trainers.h as TRAINER_ENGINEER_DYLAN
+
 static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 	{
 		.iv = 250,
 		.lvl = 68,
 		.species = SPECIES_GOLEM,
-		.heldItem = ITEM_HARD_STONE,
+		.heldItem = ITEM_ROCKY_HELMET,
 		.moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_HEAVY_SLAM, MOVE_STONE_EDGE},
         .abilityNums = 1, //Sturdy
 	},
@@ -7512,7 +7512,7 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 		.iv = 250,
 		.lvl = 68,
 		.species = SPECIES_PIDGEOT,
-		.heldItem = ITEM_QUICK_CLAW,
+		.heldItem = ITEM_POWER_HERB,
 		.moves = {MOVE_SKY_ATTACK, MOVE_ROLLOUT, MOVE_DRILL_PECK, MOVE_TAILWIND},
         .abilityNums = 2, //Big Pecks
 	},
@@ -7528,7 +7528,7 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 		.iv = 250,
 		.lvl = 69,
 		.species = SPECIES_MAGNETON,
-		.heldItem = ITEM_MAGNET,
+		.heldItem = ITEM_AIR_BALLOON,
 		.moves = {MOVE_MAGNET_BOMB, MOVE_THUNDER, MOVE_CHARGE, MOVE_FLASH_CANNON},
         .abilityNums = 2, //Analytic
 	},
@@ -7545,7 +7545,7 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 		.lvl = 70,
 		.species = SPECIES_BLASTOISE,
 		.heldItem = ITEM_BLASTOISINITE,
-		.moves = {MOVE_WATER_SPOUT, MOVE_AURA_SPHERE, MOVE_PROTECT, MOVE_ICE_PUNCH},
+		.moves = {MOVE_WATER_SPOUT, MOVE_AURA_SPHERE, MOVE_DARK_PULSE, MOVE_ICE_BEAM},
         .abilityNums = 0, //Torrent
 	},
 };
