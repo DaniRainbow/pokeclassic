@@ -324,6 +324,9 @@ Route12_RocketFugitive::
 Route12_EventScript_Dennis::
 	lock
 	faceplayer
+    playmoncry SPECIES_MAGIKARP, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_LARRY, Route12_EventScript_DennisDefeated
 	msgbox Route12_Text_Dennis MSGBOX_DEFAULT
 	release
