@@ -288,6 +288,9 @@ Route8_RocketFugitive::
 Route8_EventScript_Beedrill::
 	lock
 	faceplayer
+    playmoncry SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_DIZZYPHOEBE, Route8_EventScript_BeedrillDefeated
 	msgbox Route8_Text_Beedrill MSGBOX_DEFAULT
 	release

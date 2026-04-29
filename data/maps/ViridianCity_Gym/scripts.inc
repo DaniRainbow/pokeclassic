@@ -436,15 +436,20 @@ ViridianCity_Gym_Text_YouDoNotHaveSpace2::
 ViridianCity_Gym_EventScript_MewtwoY::
 	lock
 	faceplayer
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_MEIHUI, ViridianCity_Gym_EventScript_MewtwoYDefeated
 	msgbox ViridianCity_Gym_Text_MewtwoY MSGBOX_DEFAULT
 	release
 	end
 
 ViridianCity_Gym_Text_MewtwoY:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "So, it was you who deflated the\n"
+	.string "oversized ego of Giovanni.\p"
+	.string "The bonds you have forged with your\n"
+	.string "Pokémon grant you tremendous strength.\p"
+	.string "I hope you will accept our challenge.$"
 
 ViridianCity_Gym_EventScript_Ranger_MEIHUI::
 	lock
@@ -462,10 +467,10 @@ ViridianCity_Gym_Text_MeiHuiIntro:
 	.string "the control of Team Yellow!$"
 
 ViridianCity_Gym_Text_MeiHuiDefeat:
-	.string "Incredible... how...?$"
+	.string "Fight fair, will you?$"
 
 ViridianCity_Gym_Text_MeiHuiPostBattle:
-	.string "Is this a dream?$"
+	.string "Admit it! My baby Pokémon rule!$"
 
 ViridianCity_Gym_EventScript_MegaHintMewtwo::    
     goto_if_set FLAG_GOT_MEWTWONITE_Y, ViridianCity_Gym_EventScript_MeiHuiDefeated
@@ -475,7 +480,14 @@ ViridianCity_Gym_EventScript_MegaHintMewtwo::
     end
     
 ViridianCity_Gym_Text_MewtwoYMegaHint:
-    .string "Check Cerulean Cave.$"
+    .string "No, you can't have my items!\p"
+	.string "Who do you think you are... oh.\n"
+	.string "You're asking why my Mewtwo can\l"
+	.string "evolve during a fight.\p"
+	.string "That's the power of Mega Pokémon!\p"
+	.string "Check Cerulean Cave for a\n"
+	.string "special stone. Trust me!\p"
+	.string "It made my 3 Star even better.$"
 
 ViridianCity_Gym_EventScript_MeiHuiDefeated::
     msgbox MeiHuiDefeated_Text MSGBOX_DEFAULT
@@ -483,8 +495,9 @@ ViridianCity_Gym_EventScript_MeiHuiDefeated::
 	end
 
 MeiHuiDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "Hey, are you on Red or Blue?\p"
+	.string "Can you knock me out of the gym?\n"
+	.string "I would like to get my coins.$"
 
 ViridianCity_Gym_EventScript_MewtwoYDefeated::
 	msgbox MewtwoYDefeated MSGBOX_DEFAULT
@@ -492,5 +505,5 @@ ViridianCity_Gym_EventScript_MewtwoYDefeated::
 	end
 
 MewtwoYDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Hold your head high, {PLAYER}.\p"
+	.string "You were a formidable opponent.$"
