@@ -263,29 +263,20 @@ Route20_RocketFugitive::
     fadescreen FADE_FROM_BLACK
     end
 
-//Route20_EngineerDylan::
-	//lock
-	//faceplayer
-	//msgbox Route20_Text_EngineerDylan_Placeholder
-	//release
-	//end
-
-//Route20_Text_EngineerDylan_Placeholder:
-	//.string "Hello! I'm Lil Dill!\n"
-	//.string "I'm visiting from Johto!$"
-
 Route20_EventScript_Blastoise::
 	lock
 	faceplayer
+	playmoncry SPECIES_BLASTOISE, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
     goto_if_set FLAG_DEFEATED_DYLAN, Route20_EventScript_BlastoiseDefeated
 	msgbox Route20_Text_Blastoise MSGBOX_DEFAULT
 	release
 	end
 
 Route20_Text_Blastoise:
-	.string "{PLAYER}.\p"
-	.string "I won't talk like Mewtwo forever.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "Blastoise stares you in the eye.\n"
+	.string "It has overwhelming confidence.$"
 
 Route20_EventScript_EngineerDylan::
 	lock
@@ -298,8 +289,10 @@ Route20_EventScript_EngineerDylan::
 	end
 
 Route20_Text_DylanIntro:
-	.string "Hi, I'm Dill!\p"
-	.string "I'll say more when Dani is done.$"
+	.string "You seem to be tougher than the\n"
+	.string "kids swimming around here.\p"
+	.string "We might actually need to\n"
+	.string "take this seriously!$"
 
 Route20_Text_DylanDefeat:
 	.string "Kanto still has some fight in it.$"
@@ -315,7 +308,10 @@ Route20_EventScript_MegaHintBlastoise::
     end
     
 Route20_Text_BlastoiseMegaHint:
-    .string "Vermillion City.$"
+    .string "...hmmm? Where did I get the\n"
+	.string "Blastoisinite from?\p"
+	.string "I found it on the shore after\n"
+	.string "beating the gym in Vermillion City.$"
 
 Route20_EventScript_DylanDefeated::
     msgbox DylanDefeated_Text MSGBOX_DEFAULT
@@ -334,4 +330,3 @@ Route20_EventScript_BlastoiseDefeated::
 BlastoiseDefeated:	
 	.string "Blastoise looks at you\n"
 	.string "and snorts approvingly.$"
-
