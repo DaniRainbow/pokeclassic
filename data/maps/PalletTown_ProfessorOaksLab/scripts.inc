@@ -691,7 +691,13 @@ PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
     .string "try to catch it!\p"
     .string "This won't always work, however.\p"
     .string "A healthy Pokémon can escape.\n"
-    .string "You have to be lucky!$"
+    .string "You have to be lucky!\p"
+	.string "Consider using moves that will\n"
+	.string "leave a status effect on the Pokémon\l"
+	.string "to increase your chances of catching.\p"
+	.string "During a fight, the Pokédex can help\n"
+	.string "explain the purpose and strengths of\l"
+	.string "the moves by pressing the R Button.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
     .string "To make a complete guide on all\n"
