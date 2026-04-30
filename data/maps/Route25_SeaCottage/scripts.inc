@@ -98,6 +98,8 @@ Movement_ReturnToPlayer::
 Route25_SeaCottage_EventScript_Bill::
 	lock
 	faceplayer
+	goto_if_set FLAG_EXHAUSTED_BILL, Route25_SeaCottage_EventScript_CollectionOrMega
+	goto_if_set FLAG_FIRST_MEGASTONE, Route25_SeaCottage_EventScript_MegaStoneAcquired
 	goto_if_set FLAG_SYS_DETECTOR_MODE, Route25_SeaCottage_EventScript_BillGoLookAtPC
 	goto_if_set FLAG_SYS_DEXNAV_GET, Route25_SeaCottage_EventScript_CheckDexNavEvent
 	goto_if_set FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_GetDexNavOrSmallTalk
@@ -594,3 +596,69 @@ Route25_SeaCottage_Text_DetectorMode::
 	.string "or even have rare abilities.\p"
 	.string "It's truly amazing!\n"
 	.string "Go try it out!$"
+
+Route25_SeaCottage_EventScript_MegaStoneAcquired::
+	goto_if_unset FLAG_SYS_DETECTOR_MODE, Route25_SeaCottage_EventScript_GetDexNavUpgrade
+	msgbox Route25_SeaCottage_Text_MegaStoneAcquired MSGBOX_DEFAULT
+	waitmessage
+	setflag FLAG_EXHAUSTED_BILL
+	release
+	end
+
+Route25_SeaCottage_Text_MegaStoneAcquired:
+	.string "Hey, {PLAYER}!\n"
+	.string "Thanks for coming by.\p"
+	.string "So, you've found a Mega Stone!\p"
+	.string "I've found that if a Pokémon holding\n"
+	.string "their Mega Stone in battle may\l"
+	.string "unlock a form of inner strength,\l"
+	.string "temporarily evolving!\p"
+	.string "Amazing, right?\p"
+	.string "To try this for yourself in battle,\n"
+	.string "press the START button as you\l"
+	.string "select your next move. The Mega\l"
+	.string "Ring should light up!\p"
+	.string "Go out there and try Mega Evolution\n"
+	.string "for yourself, and don't hesitate\l"
+	.string "to come back if you have questions.$"
+
+Route25_SeaCottage_EventScript_CollectionOrMega::
+	msgbox ROUTE25_SeaCottage_Text_CollectionOrMegaHelp MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Route25_SeaCottage_EventScript_PlayerAnsweredNo
+	msgbox Route25_SeaCottage_Text_MegaHelp, MSGBOX_DEFAULT
+	release
+	end
+
+ROUTE25_SeaCottage_Text_CollectionOrMegaHelp:
+	.string "Hey, did you have questions about\n"
+	.string "how to use your Mega Ring and Stones?$"
+
+Route25_SeaCottage_Text_MegaHelp:
+	.string "Okay, no problem!\p"
+	.string "As you've noticed, the Mega Ring is a\n"
+	.string "bracelet with a huge gem on it.\p"
+	.string "This gem when near a Mega Stone will\n"
+	.string "allow the connection a trainer has\l"
+	.string "with their Pokémon to manifest as\l"
+	.string "a new form of evolution.\p"
+	.string "While temporary, this Mega Evolution\n"
+	.string "changes the appearance and stats of\l"
+	.string "the Pokémon holding the Mega Stone.\p"
+	.string "Please be advised that Mega Stones\n"
+	.string "are specific to a Pokémon species\l"
+	.string "and not all Pokémon have a Mega form.\p"
+	.string "To try this for yourself in battle,\n"
+	.string "press the START button as you\l"
+	.string "select your next move. The Mega\l"
+	.string "Ring should light up!\$"
+
+Route25_SeaCottage_EventScript_PlayerAnsweredNo::
+	msgbox Route25_SeaCottage_Text_Collection, MSGBOX_DEFAULT
+	release
+	end
+
+Route25_SeaCottage_Text_Collection:
+	.string "Okay! Feel like checking out some\n"
+    .string "of my rare Pokémon on my PC?\p"
+    .string "Go on, check out my PC.$"
