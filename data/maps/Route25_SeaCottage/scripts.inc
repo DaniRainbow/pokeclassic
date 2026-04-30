@@ -651,7 +651,7 @@ Route25_SeaCottage_Text_MegaHelp:
 	.string "To try this for yourself in battle,\n"
 	.string "press the START button as you\l"
 	.string "select your next move. The Mega\l"
-	.string "Ring should light up!\$"
+	.string "Ring should light up!$"
 
 Route25_SeaCottage_EventScript_PlayerAnsweredNo::
 	msgbox Route25_SeaCottage_Text_Collection, MSGBOX_DEFAULT
