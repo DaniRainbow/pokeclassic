@@ -263,15 +263,17 @@ Route4_Text_SolanaNotEnoughMons::
 Route4_EventScript_Charizard::
 	lock
 	faceplayer
+    playmoncry SPECIES_CHARIZARD, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_KODY, Route4_EventScript_CharizardDefeated
 	msgbox Route4_Text_Charizard MSGBOX_DEFAULT
 	release
 	end
 
 Route4_Text_Charizard:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "Charizard seems aloof.\n"
+	.string "It's usually tall for a Charizard.$"
 
 Route4_EventScript_YoungsterKody::
 	lock
@@ -284,18 +286,15 @@ Route4_EventScript_YoungsterKody::
 	end
 
 Route4_Text_KodyIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Since swords are frowned upon,\n"
+	.string "I'll defeat you with Charizard!$"
 
 Route4_Text_KodyDefeat:
-	.string "Incredible... how...?$"
+	.string "That's so unfair!$"
 
 Route4_Text_KodyPostBattle:
-	.string "Is this a dream?$"
+	.string "If I could legally sword fight you,\n"
+	.string "I would be the winner!$"
 
 Route4_EventScript_MegaHintCharizard::    
     goto_if_set FLAG_GOT_CHARIZARDITE_Y, Route4_EventScript_KodyDefeated
@@ -305,7 +304,9 @@ Route4_EventScript_MegaHintCharizard::
     end
     
 Route4_Text_CharizardMegaHint:
-    .string "I was playing at the top of\n"
+    .string "Where did I get the Mega Stone\n"
+	.string "For my Charizard?\p"
+	.string "I was training at the top of\n"
 	.string "the Mansion on Cinnbar Island!$"
 
 Route4_EventScript_KodyDefeated::
@@ -314,8 +315,9 @@ Route4_EventScript_KodyDefeated::
 	end
 
 KodyDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "Even if the morrow is barren of\n"
+	.string "promises, nothing shall forestall\l"
+	.string "my return.$"
 
 Route4_EventScript_CharizardDefeated::
 	msgbox CharizardYDefeated MSGBOX_DEFAULT
@@ -323,5 +325,5 @@ Route4_EventScript_CharizardDefeated::
 	end
 
 CharizardYDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "You think Charizard is smiling,\n"
+	.string "but it's tough to say.$"
