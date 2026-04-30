@@ -3,7 +3,7 @@
 ### DaniRainbow's fork: pre-release v1.4.6 available to test!
 
 PokéClassic is a recreation of Pokémon Yellow, recreated in the Pokémon Emerald engine. Revisit your classic adventures through Kanto with new features, questlines, and post game content!
-This fork was created to address the unfixed issues with the original repository and accomplished an unofficial PokéClassic 1.4 release. v1.5 not planned at this time but may happen if there are more reported issues or appropriate enhancements.
+This fork was created to address the unfixed issues with the original repository and accomplished an unofficial PokéClassic 1.4 release. v1.5 is on the horizon and will close out this chapter.
 # Getting PokeClassic
 This repository builds the following ROM:
 
