@@ -133,15 +133,16 @@ Route18_RocketFugitive::
 Route18_EventScript_Pinsir::
 	lock
 	faceplayer
+	playmoncry SPECIES_PINSIR, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_LILY, Route18_EventScript_PinsirDefeated
 	msgbox Route18_Text_Pinsir MSGBOX_DEFAULT
 	release
 	end
 
 Route18_Text_Pinsir:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "Pinsir is chewing on a stick.$"
 
 Route18_EventScript_AromaLadyLily::
 	lock
@@ -154,18 +155,15 @@ Route18_EventScript_AromaLadyLily::
 	end
 
 Route18_Text_LilyIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Another trainer appears!\n"
+	.string "Do you use bird Pokémon, too?$"
 
 Route18_Text_LilyDefeat:
-	.string "Incredible... how...?$"
+	.string "I lost? How wonderful!$"
 
 Route18_Text_LilyPostBattle:
-	.string "Is this a dream?$"
+	.string "That was a great fight!\n"
+	.string "Don't you think so, Pinchy?$"
 
 Route18_EventScript_MegaHintPinsir::    
     goto_if_set FLAG_GOT_PINSIRITE, Route18_EventScript_LilyDefeated
@@ -175,7 +173,9 @@ Route18_EventScript_MegaHintPinsir::
     end
     
 Route18_Text_PinsirMegaHint:
-    .string "Hint where to find Mega Stone.$"
+    .string "What's that? Mega Stone?\n"
+	.string "Oh that's right, I found mine\l"
+	.string "in the Safari Zone over there!$"
 
 Route18_EventScript_LilyDefeated::
     msgbox LilyDefeated_Text MSGBOX_DEFAULT
@@ -183,8 +183,9 @@ Route18_EventScript_LilyDefeated::
 	end
 
 LilyDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "Thank you for the great match!\n"
+	.string "I can only rechallenge Wilton\l"
+	.string "so often, you know.$"
 
 Route18_EventScript_PinsirDefeated::
 	msgbox PinsirDefeated MSGBOX_DEFAULT
@@ -192,5 +193,4 @@ Route18_EventScript_PinsirDefeated::
 	end
 
 PinsirDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Pinsir motions for a high five.$"
