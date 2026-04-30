@@ -77,6 +77,9 @@ PokemonMansion_1F_EventScript_ItemBlackSludge::
 PokemonMansion_1F_EventScript_Alakazam::
 	lock
 	faceplayer
+    playmoncry SPECIES_ALAKAZAM, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_JUSTICE, PokemonMansion_1F_EventScript_AlakazamDefeated
 	msgbox PokemonMansion_1F_Text_Alakazam MSGBOX_DEFAULT
 	release
@@ -119,7 +122,10 @@ PokemonMansion_1F_EventScript_MegaHintAlakazam::
     end
     
 PokemonMansion_1F_Text_AlakazamMegaHint:
-    .string "Visit an acquiantence in Saffron.$"
+    .string "You don't have to ask, for Alakazam\n"
+	.string "told me what you seek.\p"
+	.string "Visit an acquiantence of mine in\n"
+	.string "Saffron City for the Mega Stone.$"
 
 PokemonMansion_1F_EventScript_JusticeDefeated::
     msgbox JusticeDefeated_Text MSGBOX_DEFAULT
