@@ -701,6 +701,18 @@ MatchCall_Text_Bill7::
 	.string "The Mega Ring should light up!\n"
 	.string "Swing by the cottage some time.$"
 
+MatchCall_Text_Bill8::
+	.string "Bill: Wow, {PLAYER}!\p"
+	.string "The footage from your battles are\n"
+	.string "all over the net!\p"
+	.string "People just can't get enough of you!\p"
+	.string "I hope my inventions were helpful\n"
+	.string "on your journey.\p"
+	.string "Oh, me?\p"
+	.string "I'll stick to the lab for now.\n"
+	.string "Mega Evolution requires research!\p"
+	.string "Come visit sometime!$"
+
 @Match Call Trainers
 MatchCall_WildBattleText1::
 	.string "Hey there, {PLAYER}!\n"

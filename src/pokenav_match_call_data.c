@@ -350,6 +350,8 @@ static const match_call_text_data_t sBillTextScripts[] = {
     { MatchCall_Text_Bill4,  FLAG_BADGE08_GET,            0xFFFF },
     { MatchCall_Text_Bill5,  FLAG_SYS_DETECTOR_MODE,      0xFFFF },
     { MatchCall_Text_Bill6,  FLAG_SYS_GAME_CLEAR,         0xFFFF },
+    { MatchCall_Text_Bill7,  FLAG_FIRST_MEGASTONE,        0xFFFF },
+    { MatchCall_Text_Bill8,  FLAG_EXHAUSTED_BILL,         0xFFFF },
     { NULL,                  0xFFFF,                      0xFFFF }
 };
 
