@@ -367,7 +367,9 @@ Route12_EventScript_MegaHintGyarados::
     end
     
 Route12_Text_GyaradosMegaHint:
-    .string "Seafoam Islands.$"
+    .string "If you don't mind the journey,\n"
+    .string "Seafoam Islands is beautiful\l"
+    .string "this time of year.$"
 
 Route12_Text_LarryDefeated::
     msgbox LarryDefeated_Text MSGBOX_DEFAULT
