@@ -4,15 +4,16 @@ IndigoPlateau_Exterior_MapScripts::
 IndigoPlateau_Exterior_EventScript_Charizard::
 	lock
 	faceplayer
+    playmoncry SPECIES_CHARIZARD, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_NICK, IndigoPlateau_Exterior_EventScript_CharizardDefeated
 	msgbox IndigoPlateau_Exterior_Text_Charizard MSGBOX_DEFAULT
 	release
 	end
 
 IndigoPlateau_Exterior_Text_Charizard:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "Charizard snorts as it glares.$"
 
 IndigoPlateau_Exterior_EventScript_DragonTamerNick::
 	lock
@@ -25,18 +26,13 @@ IndigoPlateau_Exterior_EventScript_DragonTamerNick::
 	end
 
 IndigoPlateau_Exterior_Text_NickIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Oh good! Practice!$"
 
 IndigoPlateau_Exterior_Text_NickDefeat:
-	.string "Incredible... how...?$"
+	.string "Ha ha, yes!$"
 
 IndigoPlateau_Exterior_Text_NickPostBattle:
-	.string "Is this a dream?$"
+	.string "I'm all fired up now!$"
 
 IndigoPlateau_Exterior_EventScript_MegaHintCharizard::    
     goto_if_set FLAG_GOT_CHARIZARDITE_X, IndigoPlateau_Exterior_EventScript_NickDefeated
@@ -46,7 +42,8 @@ IndigoPlateau_Exterior_EventScript_MegaHintCharizard::
     end
     
 IndigoPlateau_Exterior_Text_CharizardMegaHint:
-    .string "Pokemon Mansion.$"
+    .string "If you want a Charizard as impressive\n"
+	.string "as mine, check the Pokémon Mansion.$"
 
 IndigoPlateau_Exterior_EventScript_NickDefeated::
     msgbox NickDefeated_Text MSGBOX_DEFAULT
@@ -54,8 +51,9 @@ IndigoPlateau_Exterior_EventScript_NickDefeated::
 	end
 
 NickDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "My Charizard's flame burns so strongly\n"
+	.string "it is able to go swimming without\l"
+	.string "its tail going out!$"
 
 IndigoPlateau_Exterior_EventScript_CharizardDefeated::
 	msgbox CharizardDefeated MSGBOX_DEFAULT
@@ -63,5 +61,5 @@ IndigoPlateau_Exterior_EventScript_CharizardDefeated::
 	end
 
 CharizardDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Charizard looks annoyed with you.\n"
+	.string "It swishes its tail, exhaling smoke.$"
