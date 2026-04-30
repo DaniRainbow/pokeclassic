@@ -17,12 +17,26 @@ BattleTower_3F_Lounge_Text_Mewtwo:
 BattleTower_3F_Lounge_EventScript_BlackBeltJiraiya::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_JIRAIYA, BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated
+	goto_if_set FLAG_DEFEATED_JIRAIYA, BattleTower_3F_Lounge_EventScript_MegaHintMewtwoX
 	trainerbattle_single TRAINER_BLACKBELT_JIRAIYA, BattleTower_3F_Lounge_Text_JiraiyaIntro, BattleTower_3F_Lounge_Text_JiraiyaDefeat
 	setflag FLAG_DEFEATED_JIRAIYA
 	msgbox BattleTower_3F_Lounge_Text_JiraiyaPostBattle MSGBOX_AUTOCLOSE
 	releaseall
 	end
+
+BattleTower_3F_Lounge_EventScript_MegaHintMewtwoX::    
+    goto_if_set FLAG_GOT_MEWTWONITE_X, BattleTower_3F_Lounge_EventScript_BlackBeltJiraiyaDefeated
+    msgbox BattleTower_3F_Lounge_Text_MewtwoMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+BattleTower_3F_Lounge_Text_MewtwoMegaHint:
+    .string "I thought that, surely, once we picked\n"
+	.string "up the Mega Stone in Cerulean Cave,\l"
+	.string "our formidable group would become\l"
+	.string "invincible.\p"
+	.string "How can you be this strong?$"
 
 BattleTower_3F_Lounge_Text_JiraiyaIntro:
 	.string "I came to the Battle Tower to fight\n"
