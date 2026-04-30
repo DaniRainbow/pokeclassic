@@ -684,6 +684,23 @@ MatchCall_Text_Bill6::
 	.string "Maybe I'll think of something new!\p"
 	.string "Come visit sometime!$"
 
+MatchCall_Text_Bill7::
+	.string "Bill: Hey, {PLAYER}!\p"
+	.string "My sensors detected a surge in power\n"
+	.string "from the Mega Ring I gave you.\p"
+	.string "Did you happen to find the Mega Stone?\p"
+	.string "...\n"
+	.string "Oh, good! Perfect timing, then.\p"
+	.string "I've found that if a Pokémon holding\n"
+	.string "their Mega Stone in battle may unlock\l"
+	.string "a form of inner strength, temporarily.\p"
+	.string "Amazing, right?\p"
+	.string "To try this for yourself in battle,\n"
+	.string "press the START button as you select\l"
+	.string "your next move.\p"
+	.string "The Mega Ring should light up!\n"
+	.string "Swing by the cottage some time.$"
+
 @Match Call Trainers
 MatchCall_WildBattleText1::
 	.string "Hey there, {PLAYER}!\n"
