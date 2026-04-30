@@ -19,7 +19,15 @@ RockTunnel_B1F_EventScript_ItemMaxEther::
 RockTunnel_B1F_EventScript_Aerodactlyite::
     finditem ITEM_AERODACTYLITE, 1
     setflag FLAG_GOT_AERODACTYLITE
-    release
+    goto_if_unset FLAG_FIRST_MEGASTONE, RockTunnel_B1F_EventScript_FoundMegaStone
+    end
+
+RockTunnel_B1F_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
     end
 
 RockTunnel_B1F_EventScript_Sofia::

@@ -26,10 +26,20 @@ SaffronCity_MrPsychicsHouse_EventScript_GetAlakazite::
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_MrPsychicsHouse_EventScript_NoRoomForTM29
 	giveitem ITEM_ALAKAZITE, 1
 	msgbox SaffronCity_MrPsychicsHouse_Text_ExplainAlakazite
+	waitmessage
 	setflag FLAG_HIDE_ALAKAZITE
 	setflag FLAG_GOT_ALAKAZITE
+	goto_if_unset FLAG_FIRST_MEGASTONE, SaffronCity_MrPsychicsHouse_EventScript_FoundMegaStone
 	release
-	end
+    end
+
+SaffronCity_MrPsychicsHouse_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end
 
 SaffronCity_MrPsychicsHouse_Text_ExplainAlakazite::
 	.string "You already know, don't you?\n"

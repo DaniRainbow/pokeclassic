@@ -73,6 +73,13 @@ PokemonMansion_3F_EventScript_ItemCharcoal::
 PokemonMansion_3F_EventScript_CharizarditeY::
 	finditem ITEM_CHARIZARDITE_Y, 1
 	setflag FLAG_GOT_CHARIZARDITE_Y
-	release
-	end
+	goto_if_unset FLAG_FIRST_MEGASTONE, PokemonMansion_3F_EventScript_FoundMegaStone
+    end
 
+PokemonMansion_3F_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end

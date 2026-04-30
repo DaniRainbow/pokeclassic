@@ -14,5 +14,14 @@ SeafoamIslands_B1F_EventScript_ItemWaterStone::
 SeafoamIslands_B1F_EventScript_Gyaradosite::
 	finditem ITEM_GYARADOSITE, 1
 	setflag FLAG_GOT_GYARADOSITE
-	release
-	end
+	goto_if_unset FLAG_FIRST_MEGASTONE, SeafoamIslands_B1F_EventScript_FoundMegaStone
+    end
+
+SeafoamIslands_B1F_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end
+

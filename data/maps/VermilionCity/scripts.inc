@@ -600,5 +600,13 @@ VermilionCity_Text_SquirtleGlasses::
 VermilionCity_EventScript_Blastoisinite::
 	finditem ITEM_BLASTOISINITE, 1
 	setflag FLAG_GOT_BLASTOISINITE
-	release
-	end
+	goto_if_unset FLAG_FIRST_MEGASTONE, VermilionCity_EventScript_FoundMegaStone
+    end
+
+VermilionCity_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end
