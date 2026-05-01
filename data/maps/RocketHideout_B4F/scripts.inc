@@ -371,15 +371,17 @@ Movement_CuboneExit::
 RocketHideout_B4F_EventScript_Kangaskhan::
 	lock
 	faceplayer
+    playmoncry SPECIES_KANGASKHAN, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_TONY, RocketHideout_B4F_EventScript_KangaskhanDefeated
 	msgbox RocketHideout_B4F_Text_Kangaskhan MSGBOX_DEFAULT
 	release
 	end
 
 RocketHideout_B4F_Text_Kangaskhan:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "There's something sinister about\n"
+	.string "this Kangaskhan.$"
 
 RocketHideout_B4F_EventScript_WaiterTony::
 	lock
@@ -392,18 +394,21 @@ RocketHideout_B4F_EventScript_WaiterTony::
 	end
 
 RocketHideout_B4F_Text_TonyIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "How dare you enter the offices of\n"
+	.string "the great Giovanni!\p"
+	.string "...\p"
+	.string "Wait... it can't be!\p"
+	.string "You're the brat who dismantled\n"
+	.string "Giovanni's organization?\p"
+	.string "Kangaskhan, crush them!$"
 
 RocketHideout_B4F_Text_TonyDefeat:
-	.string "Incredible... how...?$"
+	.string "I see now....$"
 
 RocketHideout_B4F_Text_TonyPostBattle:
-	.string "Is this a dream?$"
+	.string "It is clear to me now.\p"
+	.string "Team Rocket had no choice but\n"
+	.string "but to disband. You forced them.$"
 
 RocketHideout_B4F_EventScript_MegaHintKangaskhan::    
     goto_if_set FLAG_GOT_KANGASKHANITE, RocketHideout_B4F_EventScript_TonyDefeated
@@ -413,7 +418,11 @@ RocketHideout_B4F_EventScript_MegaHintKangaskhan::
     end
     
 RocketHideout_B4F_Text_KangaskhanMegaHint:
-    .string "East area in Safari Zone.$"
+    .string "Look kid, don't hurt us!\n"
+	.string "I can tell you where to find your\l"
+	.string "very own Kangaskhanite!.\p"
+	.string "I found it on the ground in\n"
+	.string "the Safari Zone.$"
 
 RocketHideout_B4F_EventScript_TonyDefeated::
     msgbox TonyDefeated_Text MSGBOX_DEFAULT
@@ -421,8 +430,8 @@ RocketHideout_B4F_EventScript_TonyDefeated::
 	end
 
 TonyDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "This surely can't be the end\n"
+	.string "of the great Giovanni's story.$"
 
 RocketHideout_B4F_EventScript_KangaskhanDefeated::
 	msgbox KangaskhanDefeated MSGBOX_DEFAULT
@@ -430,8 +439,8 @@ RocketHideout_B4F_EventScript_KangaskhanDefeated::
 	end
 
 KangaskhanDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Kangaskhan takes a deep breath\n"
+	.string "and gives a dissatisfactory grunt.$"
 
 RocketHideout_B4F_EventScript_Burglars_TM35::
 	lock
