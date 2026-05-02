@@ -137,15 +137,17 @@ SSAnneExterior_RocketFugitive::
 SSAnneExterior_EventScript_Slowbro::
 	lock
 	faceplayer
+    playmoncry SPECIES_SLOWBRO, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_DIAMOND, SSAnneExterior_EventScript_SlowbroDefeated
 	msgbox SSAnneExterior_Text_Slowbro MSGBOX_DEFAULT
 	release
 	end
 
 SSAnneExterior_Text_Slowbro:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "SSSSSSSSSSSSSLLLLLLLLLOOOOOOOOOO\n"
+	.string "OOOOOOOOOOOOOOOOOOOOOOWWWWWWWWWW$"
 
 SSAnneExterior_EventScript_GentlemanDiamond::
 	lock
@@ -158,18 +160,17 @@ SSAnneExterior_EventScript_GentlemanDiamond::
 	end
 
 SSAnneExterior_Text_DiamondIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Ah, hello there. I'm on vacation with\n"
+	.string "my Slowbro and my other friends.\p"
+	.string "Care for a Pokémon match?$"
 
 SSAnneExterior_Text_DiamondDefeat:
-	.string "Incredible... how...?$"
+	.string "I'm impressed!$"
 
 SSAnneExterior_Text_DiamondPostBattle:
-	.string "Is this a dream?$"
+	.string "Thank you so much for the good match!\p"
+	.string "I think we will watch the ocean a bit\n"
+	.string "more before surfing back to our city.$"
 
 SSAnneExterior_EventScript_MegaHintSlowbro::    
     goto_if_set FLAG_GOT_SLOWBRONITE, SSAnneExterior_EventScript_DiamondDefeated
@@ -179,7 +180,10 @@ SSAnneExterior_EventScript_MegaHintSlowbro::
     end
     
 SSAnneExterior_Text_SlowbroMegaHint:
-    .string "Hint where to find Mega Stone.$"
+    .string "There is some really lovely surfing\n"
+	.string "to be found on your Route 20.\p"
+	.string "Come to think of it, that is also the\n"
+	.string "place I picked up our Slowbronite!$"
 
 SSAnneExterior_EventScript_DiamondDefeated::
     msgbox DiamondDefeated_Text MSGBOX_DEFAULT
@@ -187,8 +191,10 @@ SSAnneExterior_EventScript_DiamondDefeated::
 	end
 
 DiamondDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "You only get one life and no one\n"
+	.string "but yourself gets to live it.\p"
+	.string "It's okay to work hard, but you\n"
+	.string "must take time for play and rest.$"
 
 SSAnneExterior_EventScript_SlowbroDefeated::
 	msgbox SlowbroDefeated MSGBOX_DEFAULT
@@ -196,5 +202,5 @@ SSAnneExterior_EventScript_SlowbroDefeated::
 	end
 
 SlowbroDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "BBBBRRRRRRRRRRRRRRRRRRRRRRRRRROOOO\n"
+	.string "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO$"
