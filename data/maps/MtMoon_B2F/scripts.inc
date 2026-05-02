@@ -134,9 +134,7 @@ MtMoon_B2F_EventScript_Aerodactyl::
 	end
 
 MtMoon_B2F_Text_Aerodactyl:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "Aerodactyl growls as you approach.$"
 
 MtMoon_B2F_EventScript_SuperNerdMiguel::
 	goto_if_set FLAG_HIDE_DOME_FOSSIL, MtMoon_B2F_EventScript_SuperNerdMiguelOmanyte
@@ -159,18 +157,17 @@ MtMoon_B2F_EventScript_SuperNerdMiguelKabuto::
 	end
 
 MtMoon_B2F_Text_Miguel2Intro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Oh, great. You again.\p"
+	.string "I found more fossils and I don't\n"
+	.string "plan on losing to a little kid again!$"
 
 MtMoon_B2F_Text_Miguel2Defeat:
-	.string "Incredible... how...?$"
+	.string "Inconceivable!$"
 
 MtMoon_B2F_Text_Miguel2PostBattle:
-	.string "Is this a dream?$"
+	.string "Get out of here, won't you?\p"
+	.string "This is my spot, and you're ruining\n"
+	.string "my fossil search!$"
 
 MtMoon_B2F_EventScript_MegaHintAerodactyl::    
     goto_if_set FLAG_GOT_AERODACTYLITE, MtMoon_B2F_EventScript_Miguel2Defeated
@@ -180,7 +177,13 @@ MtMoon_B2F_EventScript_MegaHintAerodactyl::
     end
     
 MtMoon_B2F_Text_AerodactylMegaHint:
-    .string "Rock Tunnel.$"
+    .string "UGH, stop talking to me!\p"
+	.string "There are surely other places you can\n"
+	.string "run around in than here.\p"
+	.string "If you want more fossils, go north of\n"
+	.string "Lavendar Town for a hike.\p" 
+	.string "Rock Tunnel is full of rocks,\n"
+	.string "including Mega Stones. I swear!$"
 
 MtMoon_B2F_EventScript_Miguel2Defeated::
     msgbox Miguel2Defeated_Text MSGBOX_DEFAULT
@@ -188,8 +191,8 @@ MtMoon_B2F_EventScript_Miguel2Defeated::
 	end
 
 Miguel2Defeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "This is what I get for trying to\n"
+	.string "leave my basement and touch grass.$"
 
 MtMoon_B2F_EventScript_AerodactylDefeated::
 	msgbox AerodactylDefeated MSGBOX_DEFAULT
@@ -197,8 +200,8 @@ MtMoon_B2F_EventScript_AerodactylDefeated::
 	end
 
 AerodactylDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Aerodactyl stares at you with\n"
+	.string "what you believe to be admiration.$"
 
 MtMoon_B2F_EventScript_MiguelFossilPicked::
 	msgbox MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils, MSGBOX_DEFAULT
