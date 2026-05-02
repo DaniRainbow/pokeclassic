@@ -198,15 +198,17 @@ Route1_RocketFugitive::
 Route1_EventScript_Pidgeot::
 	lock
 	faceplayer
+    playmoncry SPECIES_PIDGEOT, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_MURAMASA, Route1_EventScript_PidgeotDefeated
 	msgbox Route1_Text_Pidgeot MSGBOX_DEFAULT
 	release
 	end
 
 Route1_Text_Pidgeot:
-	.string "{PLAYER}.\p"
-	.string "I have surpassed my natural limits.\n"
-	.string "If you dare to challenge us, good luck.$"
+	.string "Pidgeot seems tired but determined\n"
+	.string "to hover as fast as it can.$"
 
 Route1_EventScript_CoolTrainerMura::
 	lock
@@ -219,18 +221,15 @@ Route1_EventScript_CoolTrainerMura::
 	end
 
 Route1_Text_MuraIntro:
-	.string "I came to the Battle Tower to fight\n"
-	.string "against the finest Trainers Kanto\l"
-	.string "has to offer.\p"
-	.string "Now that it is closed, I meditate\n"
-	.string "to prepare myself for a challenger.\p"
-	.string "We are strong in mind and body.$"
+	.string "Hey, kid! See any shiny Pokémon\p"
+	.string "around here? Looking for a Pidgey.$"
 
 Route1_Text_MuraDefeat:
-	.string "Incredible... how...?$"
+	.string "Hold on, time out!$"
 
 Route1_Text_MuraPostBattle:
-	.string "Is this a dream?$"
+	.string "We've been here all day trying to\n"
+	.string "to find shiny Pokémon!$"
 
 Route1_EventScript_MegaHintPidgeot::    
     goto_if_set FLAG_GOT_PIDGEOTITE, Route1_EventScript_MuraDefeated
@@ -240,7 +239,8 @@ Route1_EventScript_MegaHintPidgeot::
     end
     
 Route1_Text_PidgeotMegaHint:
-    .string "Hint where to find Mega Stone.$"
+    .string "I didn't find any shiny Pokémon on\n"
+	.string "Route 2, but there were other goodies!$"
 
 Route1_EventScript_MuraDefeated::
     msgbox MuraDefeated_Text MSGBOX_DEFAULT
@@ -248,8 +248,8 @@ Route1_EventScript_MuraDefeated::
 	end
 
 MuraDefeated_Text:	
-	.string "I came here to fight the best\n"
-	.string "and that's exactly what you are.$"
+	.string "One day I will have a shiny Pidgeot!\n"
+	.string "I'll look cooler when I fly.$"
 
 Route1_EventScript_PidgeotDefeated::
 	msgbox PidgeotDefeated MSGBOX_DEFAULT
@@ -257,5 +257,5 @@ Route1_EventScript_PidgeotDefeated::
 	end
 
 PidgeotDefeated:	
-	.string "You are a worthy opponent and\n"
-	.string "have earned my respect.$"
+	.string "Pidgeot is even more determined\n"
+	.string "than before to be the best.$"
