@@ -210,6 +210,9 @@ ViridianForest_EventScript_FoundMegaStone::
 ViridianForest_EventScript_Venusaur::
 	lock
 	faceplayer
+    playmoncry SPECIES_VENUSAUR, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_DANI, ViridianForest_EventScript_VenusaurDefeated
 	msgbox ViridianForest_Text_Venusaur MSGBOX_DEFAULT
 	release
@@ -253,7 +256,14 @@ ViridianForest_EventScript_MegaHintVenusaur::
     end
     
 ViridianForest_Text_VenusaurMegaHint:
-    .string "Cerulean City berry backyard.$"
+    .string "Hmm? You're looking for the\n"
+    .string "Mega Stones?\p"
+    .string "I can tell you where to find the\n"
+    .string "Venusaurite, no problem!\p"
+    .string "I have some Pokémon Breeder pals\n"
+    .string "in Cerulean City. Their backyard\l"
+    .string "had two last I visited. They\l"
+    .string "let me have one, so go ask them!$"
 
 ViridianForest_EventScript_DaniDefeated::
     msgbox DaniDefeated_Text MSGBOX_DEFAULT
