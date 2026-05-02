@@ -128,6 +128,9 @@ MtMoon_B2F_Text_WellEachTakeAFossil::
 MtMoon_B2F_EventScript_Aerodactyl::
 	lock
 	faceplayer
+    playmoncry SPECIES_AERODACTYL, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
     goto_if_set FLAG_DEFEATED_MIGUEL2, MtMoon_B2F_EventScript_AerodactylDefeated
 	msgbox MtMoon_B2F_Text_Aerodactyl MSGBOX_DEFAULT
 	release
