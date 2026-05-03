@@ -189,6 +189,10 @@ Route22_EventScript_LateRivalPostBattle::
 	removeobject LOCALID_RIVAL
 	setflag FLAG_HIDE_RIVAL_ROUTE_22
 	setvar VAR_ROUTE_22_RIVAL_STATE, 5
+	goto_if_set FLAG_BILL4CALLED, Common_EventScript_End
+	pokenavcall MatchCall_Text_Bill4
+	waitmessage
+	setflag FLAG_BILL4CALLED
 	releaseall
 	end
 
@@ -216,14 +220,4 @@ Route22_RocketFugitive::
 	removeobject LOCALID_FUGITIVE
 	waitse
 	fadescreen FADE_FROM_BLACK
-	end
-
-Route22_Trigger_BillCheckingIn::
-	lockall
-	goto_if_set FLAG_BILL4CALLED, Common_EventScript_End
-	goto_if_unset FLAG_BADGE08_GET, Common_EventScript_End
-	pokenavcall MatchCall_Text_Bill4
-	waitmessage
-	setflag FLAG_BILL4CALLED
-	releaseall
 	end
