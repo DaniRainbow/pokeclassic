@@ -4,6 +4,9 @@ BattleTower_3F_Lounge_MapScripts::
 BattleTower_3F_Lounge_EventScript_Mewtwo::
 	lock
 	faceplayer
+    playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
 	goto_if_set FLAG_DEFEATED_JIRAIYA, BattleTower_3F_Lounge_EventScript_MewtwoDefeated
 	msgbox BattleTower_3F_Lounge_Text_Mewtwo MSGBOX_DEFAULT
 	release
