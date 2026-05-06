@@ -118,6 +118,21 @@ ViridianForest_Text_CharliePostBattle::
     .string "Bug Pokémon evolve quickly.\n"
     .string "They're a lot of fun!$"
 
+ViridianForest_EventScript_Lottie::
+	trainerbattle_single TRAINER_LASS_LOTTIE, ViridianForest_Text_LottieIntro, ViridianForest_Text_LottieDefeat
+	msgbox ViridianForest_Text_LottiePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_Text_LottieIntro::
+    .string "Hi, I'm Lottie!\n"
+    .string "Do you have a Pikachu?$"
+
+ViridianForest_Text_LottieDefeat::
+    .string "Oh no, really?$"
+
+ViridianForest_Text_LottiePostBattle::
+    .string "I looked forever, but I never\n"
+    .string "found a Pikachu here.$"
 
 ViridianForest_EventScript_TrainerTips1::
 	msgbox ViridianForest_Text_AvoidGrassyAreasWhenWeak, MSGBOX_SIGN

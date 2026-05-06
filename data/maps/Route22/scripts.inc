@@ -154,14 +154,17 @@ Route22_EventScript_LateRival::
 	end
 
 Route22_EventScript_LateRival_Jolteon::
+	setvar VAR_ROUTE_22_RIVAL_STATE, 4
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_JOLTEON, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_EventScript_LateRival_Flareon::
+	setvar VAR_ROUTE_22_RIVAL_STATE, 4
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_FLAREON, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_EventScript_LateRival_Vaporeon::
+	setvar VAR_ROUTE_22_RIVAL_STATE, 4
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_VAPOREON, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 

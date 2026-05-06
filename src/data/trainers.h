@@ -555,6 +555,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_BugCatcherCharlie),
         .party = {.NoItemDefaultMoves = sParty_BugCatcherCharlie}
     },
+    [TRAINER_LASS_LOTTIE] = {
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_LASS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lottie"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
+        .partySize = ARRAY_COUNT(sParty_LassLottie),
+        .party = {.NoItemDefaultMoves = sParty_LassLottie}
+    },
     [TRAINER_COOLTRAINER_ERIN] = {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_COOLTRAINER,

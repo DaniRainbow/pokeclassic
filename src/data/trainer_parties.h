@@ -1353,6 +1353,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherCharlie[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_LassLottie[] = {
+    {
+        .iv = 0,
+        .lvl = 6,
+        .species = SPECIES_NIDORAN_F,
+    },
+    {
+        .iv = 0,
+        .lvl = 6,
+        .species = SPECIES_NIDORAN_M,
+    },
+};
+
 static const struct TrainerMonItemCustomMoves sParty_CoolTrainerErin[] = {
 	{
 		.iv = 250,
