@@ -1619,7 +1619,7 @@ void LoadSpritePalettes(const struct SpritePalette *palettes)
 
 void DoLoadSpritePalette(const u16 *src, u16 paletteOffset)
 {
-    LoadPaletteFast(src, paletteOffset + 0x100, 32);
+    LoadPalette(src, paletteOffset + 0x100, 32);
 }
 
 u8 AllocSpritePalette(u16 tag)
