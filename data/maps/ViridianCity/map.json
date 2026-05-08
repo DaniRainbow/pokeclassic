@@ -270,6 +270,33 @@
       "var": "VAR_VIRIDIAN_CITY_GYM",
       "var_value": "0",
       "script": "ViridianCity_EventScript_GymDoorLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "4",
+      "script": "ViridianCity_EventScripts_TeamRocketRumor3"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "4",
+      "script": "ViridianCity_EventScripts_TeamRocketRumor2"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_ADVENTURE_BEGINS",
+      "var_value": "4",
+      "script": "ViridianCity_EventScripts_TeamRocketRumor1"
     }
   ],
   "bg_events": [
