@@ -39,7 +39,7 @@ Playtester, 1.4+ developer:
     DaniRainbow
 
 Designers:
-    Headlocker03
+    Headlocker03 ,
     Liquid Justice
 
 Special Thanks:
