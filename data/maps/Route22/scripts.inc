@@ -1,6 +1,5 @@
 .set LOCALID_RIVAL, 1
 .set LOCALID_FUGITIVE, 2
-.set LOCALID_MANDATORY, 3
 
 Route22_MapScripts::
 	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, Route22_OnReturnToField
@@ -19,10 +18,17 @@ Route22_EventScript_HealAfterRivalBattle::
 	end
 
 Route22_OnTransition:
+	goto_if_unset FLAG_BADGE08_GET, Route22_HideMandatory
+	call Common_EventScript_GetDayOrNight
+	end
+
+Route22_HideMandatory:
+	removeobject 3
 	call Common_EventScript_GetDayOrNight
 	end
 
 Route22_OnResume:
+	goto_if_unset FLAG_BADGE08_GET, Route22_HideMandatory
 	call Common_EventScript_GetDayOrNight
 	end
 
@@ -162,13 +168,13 @@ Route22_Text_LateRivalDefeat::
 Route22_EventScript_LateRivalPostBattle::
 	playbgm MUS_RG_RIVAL_EXIT, 0
 	msgbox Route22_Text_LateRivalPostBattle, MSGBOX_DEFAULT
-	delay 10
-	applymovement LOCALID_MANDATORY, Movement_MandatoryExit
-	waitmovement 1
-	fadedefaultbgm
-	removeobject LOCALID_MANDATORY
+	waitmessage
+	fadescreen FADE_TO_BLACK
+	closemessage
+	removeobject 3
 	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	setvar VAR_ROUTE_22_RIVAL_STATE, 5
+	fadescreen FADE_FROM_BLACK
 	goto_if_set FLAG_BILL4CALLED, Common_EventScript_End
 	pokenavcall MatchCall_Text_Bill4
 	waitmessage

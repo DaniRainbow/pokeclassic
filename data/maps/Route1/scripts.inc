@@ -19,6 +19,7 @@ Route1_OnResume:
 
 Route1_EventScript_OakAppears1::
 	lockall
+	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	addobject LOCALID_OAK
 	applymovement LOCALID_OAK, Movement_OakAppears
 	waitmovement 1
@@ -41,6 +42,7 @@ Route1_EventScript_OakAppears1::
 
 Route1_EventScript_OakAppears2::
 	lockall
+	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	addobject LOCALID_OAK
 	applymovement LOCALID_OAK, Movement_OakAppears
 	waitmovement 1
