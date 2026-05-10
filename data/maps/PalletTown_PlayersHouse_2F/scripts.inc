@@ -39,6 +39,7 @@ PlayersHouse_2F_EventScript_NewGameStart1::
 	applymovement LOCALID_MOM, MomGoesDownstairs
 	waitmovement 1
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
+	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	playse SE_EXIT
 	removeobject LOCALID_MOM
 	setvar VAR_ADVENTURE_BEGINS, 1

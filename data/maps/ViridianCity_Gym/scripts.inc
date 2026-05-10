@@ -75,6 +75,7 @@ ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	settrainerflag 	TRAINER_COOLTRAINER_YUJI					
 	settrainerflag 	TRAINER_COOLTRAINER_WARREN					
 	setflag FLAG_BADGE08_GET
+	clearflag FLAG_HIDE_RIVAL22_MANDATORY
 	setvar VAR_ROUTE_22_RIVAL_STATE, 4
 	goto ViridianCity_Gym_EventScript_GiveTM26
 	end

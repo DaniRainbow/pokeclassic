@@ -217,7 +217,7 @@
 #define FLAG_BILL4CALLED   				    0xC6 
 #define FLAG_FIRST_MEGASTONE           		0xC7
 #define FLAG_EXHAUSTED_BILL              	0xC8
-#define FLAG_UNUSED_0x0C9             		0xC9
+#define FLAG_HIDE_RIVAL22_MANDATORY         0xC9
 #define FLAG_UNUSED_0x0CA            		0xCA
 #define FLAG_UNUSED_0x0CB           		0xCB
 #define FLAG_UNUSED_0x0CC          			0xCC

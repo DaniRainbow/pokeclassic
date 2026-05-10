@@ -1,5 +1,6 @@
 .set LOCALID_RIVAL, 1
 .set LOCALID_FUGITIVE, 2
+.set LOCALID_MANDATORY, 3
 
 Route22_MapScripts::
 	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, Route22_OnReturnToField
@@ -124,48 +125,24 @@ Movement_RivalExit:
 	walk_left
 	step_end
 
-Route22_EventScript_LateRivalTriggerTop::
-	setobjectxyperm LOCALID_RIVAL, 33, 4
-	goto Route22_EventScript_LateRival
-	end
-
-Route22_EventScript_LateRivalTriggerMiddle::
-	setobjectxyperm LOCALID_RIVAL, 33, 5
-	goto Route22_EventScript_LateRival
-	end
-
-Route22_EventScript_LateRivalTriggerBottom::
-	setobjectxyperm LOCALID_RIVAL, 33, 6
-	goto Route22_EventScript_LateRival
-	end
-
-Route22_EventScript_LateRival::
-	setvar VAR_ROUTE_22_RIVAL_STATE, 2
-	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-	clearflag FLAG_HIDE_RIVAL_ROUTE_22
-	addobject LOCALID_RIVAL
-	applymovement LOCALID_RIVAL, Movement_RivalApproach
-	waitmovement 1
-	delay 6
-	msgbox Route22_Text_LateRivalIntro
+Route22_EventScript_MandatoryRival::
+	lock
+	faceplayer
 	goto_if_eq VAR_RIVAL_WINRATE, 2, Route22_EventScript_LateRival_Jolteon
 	goto_if_eq VAR_RIVAL_WINRATE, 1, Route22_EventScript_LateRival_Flareon
 	goto Route22_EventScript_LateRival_Vaporeon
 	end
 
 Route22_EventScript_LateRival_Jolteon::
-	setvar VAR_ROUTE_22_RIVAL_STATE, 4
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_JOLTEON, Route22_Text_LateRivalDefeat
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_JOLTEON, Route22_Text_LateRivalIntro, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_EventScript_LateRival_Flareon::
-	setvar VAR_ROUTE_22_RIVAL_STATE, 4
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_FLAREON, Route22_Text_LateRivalDefeat
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_FLAREON, Route22_Text_LateRivalIntro, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_EventScript_LateRival_Vaporeon::
-	setvar VAR_ROUTE_22_RIVAL_STATE, 4
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_VAPOREON, Route22_Text_LateRivalDefeat
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_VAPOREON, Route22_Text_LateRivalIntro, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_Text_LateRivalIntro::
@@ -183,20 +160,20 @@ Route22_Text_LateRivalDefeat::
 	.string "I was just careless!$"
 
 Route22_EventScript_LateRivalPostBattle::
+	playbgm MUS_RG_RIVAL_EXIT, 0
 	msgbox Route22_Text_LateRivalPostBattle, MSGBOX_DEFAULT
 	delay 10
-	playbgm MUS_RG_RIVAL_EXIT, 0
-	applymovement LOCALID_RIVAL, Movement_RivalExit
+	applymovement LOCALID_MANDATORY, Movement_MandatoryExit
 	waitmovement 1
 	fadedefaultbgm
-	removeobject LOCALID_RIVAL
-	setflag FLAG_HIDE_RIVAL_ROUTE_22
+	removeobject LOCALID_MANDATORY
+	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	setvar VAR_ROUTE_22_RIVAL_STATE, 5
 	goto_if_set FLAG_BILL4CALLED, Common_EventScript_End
 	pokenavcall MatchCall_Text_Bill4
 	waitmessage
 	setflag FLAG_BILL4CALLED
-	releaseall
+	release
 	end
 
 Route22_Text_LateRivalPostBattle::
@@ -224,3 +201,7 @@ Route22_RocketFugitive::
 	waitse
 	fadescreen FADE_FROM_BLACK
 	end
+
+Movement_MandatoryExit:
+	walk_up
+	step_end
