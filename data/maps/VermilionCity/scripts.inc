@@ -446,6 +446,10 @@ VermilionCity_EventScript_SquirtleEvent::
 	playse SE_PIN
 	applymovement LOCALID_SQUIRTLE, Common_Movement_Heart
 	setvar VAR_TEMP_1, SPECIES_SQUIRTLE
+	random 128
+    copyvar VAR_0x8004, VAR_RESULT
+    goto_if_eq VAR_0x8004, 1, VermilionCity_EventScript_SquirtleEventLucky
+    setvar VAR_0x8004, 0
 	givemon SPECIES_SQUIRTLE, 10, ITEM_BLACK_GLASSES
 	goto_if_eq VAR_RESULT, 0, VermilionCity_EventScript_SquirtleParty
 	goto_if_eq VAR_RESULT, 1, VermilionCity_EventScript_SquirtlePC
@@ -453,6 +457,15 @@ VermilionCity_EventScript_SquirtleEvent::
 	releaseall
 	end
 
+VermilionCity_EventScript_SquirtleEventLucky::
+	setvar VAR_0x8004, 0
+    setflag FLAG_SHINY_CREATION
+	givemon SPECIES_SQUIRTLE, 10, ITEM_BLACK_GLASSES
+	goto_if_eq VAR_RESULT, 0, VermilionCity_EventScript_SquirtleParty
+	goto_if_eq VAR_RESULT, 1, VermilionCity_EventScript_SquirtlePC
+	goto_if_eq VAR_RESULT, 2, VermilionCity_EventScript_NoRoomForSquirtle
+	releaseall
+	end
 
 VermilionCity_EventScript_SquirtleParty::
 	call VermilionCity_EventScript_GetSquirtle
