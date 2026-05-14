@@ -49,6 +49,19 @@ Route24_EventScript_CharmanderGuy::
 	msgbox Route24_Text_NotCutOutToBeATrainer, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_BetterReleaseIt
 	setvar VAR_TEMP_1, SPECIES_CHARMANDER
+	random 128
+    copyvar VAR_0x8004, VAR_RESULT
+    goto_if_eq VAR_0x8004, 1, Route24_EventScript_CharmanderGuyLucky
+    setvar VAR_0x8004, 0
+	givemon SPECIES_CHARMANDER, 7, ITEM_NONE
+	goto_if_eq VAR_RESULT, 0, Route24_EventScript_CharmanderParty
+	goto_if_eq VAR_RESULT, 1, Route24_EventScript_CharmanderPC
+	goto_if_eq VAR_RESULT, 2, Route24_EventScript_NoRoomForCharmander
+	end
+
+Route24_EventScript_CharmanderGuyLucky::
+	setvar VAR_0x8004, 0
+    setflag FLAG_SHINY_CREATION
 	givemon SPECIES_CHARMANDER, 7, ITEM_NONE
 	goto_if_eq VAR_RESULT, 0, Route24_EventScript_CharmanderParty
 	goto_if_eq VAR_RESULT, 1, Route24_EventScript_CharmanderPC
