@@ -218,7 +218,7 @@
 #define FLAG_FIRST_MEGASTONE           		0xC7
 #define FLAG_EXHAUSTED_BILL              	0xC8
 #define FLAG_HIDE_RIVAL22_MANDATORY         0xC9
-#define FLAG_UNUSED_0x0CA            		0xCA
+#define FLAG_MISSING_PECHA_BERRY           	0xCA
 #define FLAG_UNUSED_0x0CB           		0xCB
 #define FLAG_UNUSED_0x0CC          			0xCC
 #define FLAG_UNUSED_0x0CD    				0xCD
@@ -1183,12 +1183,12 @@
 #define FLAG_HIDE_POKEMON_MANSION_3F_CHARCOAL                       0x46E
 #define FLAG_HIDE_DIGLETTS_CAVE_SMOOTH_ROCK                         0x46F
 #define FLAG_HIDE_VICTORY_ROAD_HEAT_ROCK                            0x470
-#define FLAG_UNUSED_ITEM_0x471                                   	0x471
-#define FLAG_UNUSED_ITEM_0x472                                      0x472
-#define FLAG_UNUSED_ITEM_0x473                              		0x473
-#define FLAG_UNUSED_ITEM_0x474                                		0x474
-#define FLAG_UNUSED_ITEM_0x475                                 		0x475
-#define FLAG_UNUSED_ITEM_0x476                                  	0x476
+#define FLAG_HIDE_ASSAULT_VEST                                  	0x471
+#define FLAG_HIDE_LAGGING_TAIL                                      0x472
+#define FLAG_HIDE_FOCUS_SASH                           		        0x473
+#define FLAG_HIDE_HEAVY_DUTY_BOOTS                               	0x474
+#define FLAG_HIDE_FLAME_ORB                           		        0x475
+#define FLAG_HIDE_TOXIC_ORB_ROUTE25                                 0x476
 #define FLAG_UNUSED_ITEM_0x477                            			0x477
 #define FLAG_UNUSED_ITEM_0x478                             			0x478
 #define FLAG_UNUSED_ITEM_0x479                                      0x479

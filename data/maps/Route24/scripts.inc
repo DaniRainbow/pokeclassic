@@ -759,5 +759,16 @@ Route24_Text_EthanDefeat::
 Route24_Text_EthanPostBattle::
     .string "I did my best. I have no regrets!$"
 
+Route24_EventScript_ZubatDroppedThis::
+	goto_if_set FLAG_MISSING_PECHA_BERRY, Route24_EventScript_TakeCare
+	finditem ITEM_PECHA_BERRY, 1
+	setflag FLAG_MISSING_PECHA_BERRY
+	release
+	end
+
+Route24_EventScript_TakeCare::
+	release
+	end
+
 @TODO: Postgame Nugget Bridge
 
