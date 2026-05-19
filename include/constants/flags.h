@@ -1369,9 +1369,9 @@
 #define FLAG_VISITED_VERMILION_CITY                 (SYSTEM_FLAGS + 0x13)
 #define FLAG_VISITED_LAVENDER_TOWN                	(SYSTEM_FLAGS + 0x14)
 #define FLAG_VISITED_CELADON_CITY                	(SYSTEM_FLAGS + 0x15)
-#define FLAG_VISITED_SAFFRON_CITY                 	(SYSTEM_FLAGS + 0x16)
-#define FLAG_VISITED_FUCHSIA_CITY                 	(SYSTEM_FLAGS + 0x17)
-#define FLAG_VISITED_CINNABAR_ISLAND                (SYSTEM_FLAGS + 0x18)
+#define FLAG_VISITED_FUCHSIA_CITY                 	(SYSTEM_FLAGS + 0x16)
+#define FLAG_VISITED_CINNABAR_ISLAND                (SYSTEM_FLAGS + 0x17)
+#define FLAG_VISITED_SAFFRON_CITY                   (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_INDIGO_PLATEAU                 (SYSTEM_FLAGS + 0x19)
 #define FLAG_VISITED_BATTLE_FRONTIER                (SYSTEM_FLAGS + 0x1A) // Might be unncessary
 #define FLAG_VISITED_ROUTE_10                 		(SYSTEM_FLAGS + 0x1B)
