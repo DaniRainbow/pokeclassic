@@ -663,7 +663,7 @@ MatchCall_Text_Bill4::
 	.string "...\p"
 	.string "That gives me an idea!\p"
 	.string "Why don't you come back to the Sea\n"
-	.string "Cottage.\p"
+	.string "Cottage?\p"
 	.string "I'll be done by the time you get here!$"
 
 MatchCall_Text_Bill5::
