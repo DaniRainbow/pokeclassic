@@ -156,7 +156,7 @@ Route22_Text_LateRivalIntro::
 	.string "What a surprise to see you here!\p"
 	.string "So, you're on your way to the\n"
 	.string "Pokémon League?\p"
-	.string "You collected all the BADGES too?\n"
+	.string "You collected all the Badges too?\n"
 	.string "That's cool!\p"
 	.string "Then I will whip you {PLAYER} as a warm up\n"
 	.string "for the Pokémon League! Come on!$" 
