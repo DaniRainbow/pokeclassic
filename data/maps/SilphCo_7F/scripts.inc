@@ -387,7 +387,7 @@ SilphCo_7F_Text_RivalIntro::
     .string "turn up if I waited here!\p"
     .string "I guess Team Rocket slowed you\n"
     .string "down! Not that I care!\p"
-    .string "I saw you in SAFFRON, so I decided\n"
+    .string "I saw you in Saffron, so I decided\n"
     .string "to see if you got better!$"
 
 SilphCo_7F_Text_RivalDefeat::
