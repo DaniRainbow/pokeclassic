@@ -413,7 +413,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_RIVAL_CHAMPION_JOLTEON] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_CHAMPION,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
         .trainerPic = TRAINER_PIC_BLUE,
         .trainerName = _("{B_RIVAL_NAME}"),
@@ -427,7 +427,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_RIVAL_CHAMPION_FLAREON] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_CHAMPION,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
         .trainerPic = TRAINER_PIC_BLUE,
         .trainerName = _("{B_RIVAL_NAME}"),
@@ -441,7 +441,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_RIVAL_CHAMPION_VAPOREON] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_CHAMPION,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RIVAL,
         .trainerPic = TRAINER_PIC_BLUE,
         .trainerName = _("{B_RIVAL_NAME}"),

@@ -49,6 +49,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/battle_config.h"
+#include "constants/opponents.h"
 
 struct SpeciesItem
 {
