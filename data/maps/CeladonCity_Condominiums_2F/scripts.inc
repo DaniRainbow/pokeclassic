@@ -110,7 +110,7 @@ CeladonCity_Condominiums_2F_EventScript_Headlocker::
 CeladonCity_Condominiums_2F_Text_Headlocker:
 	.string "I'm Headlocker, a designer\n"
 	.string "for this game!\p"
-	.string "How's it going?$"
+	.string "What's good?$"
 
 CeladonCity_Condominiums_2F_EventScript_CherryPie::
 	lock
