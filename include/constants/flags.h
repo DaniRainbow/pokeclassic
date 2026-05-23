@@ -218,8 +218,8 @@
 #define FLAG_FIRST_MEGASTONE           		0xC7
 #define FLAG_EXHAUSTED_BILL              	0xC8
 #define FLAG_HIDE_RIVAL22_MANDATORY         0xC9
-#define FLAG_MISSING_PECHA_BERRY           	0xCA
-#define FLAG_UNUSED_0x0CB           		0xCB
+#define FLAG_MISSING_PECHA_BERRY          	0xCA
+#define FLAG_MET_MAGAZINE_DANI           	0xCB
 #define FLAG_UNUSED_0x0CC          			0xCC
 #define FLAG_UNUSED_0x0CD    				0xCD
 #define FLAG_UNUSED_0x0CE    				0xCE
