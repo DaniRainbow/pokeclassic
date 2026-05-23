@@ -1338,6 +1338,7 @@ const u16 gObjectEventPal_Alakazam[] = INCBIN_U16("graphics/object_events/palett
 const u16 gObjectEventPal_Gengar[] = INCBIN_U16("graphics/object_events/palettes/gengar.gbapal");
 const u16 gObjectEventPal_Pinsir[] = INCBIN_U16("graphics/object_events/palettes/pinsir.gbapal");
 const u16 gObjectEventPal_Aerodactyl[] = INCBIN_U16("graphics/object_events/palettes/aerodactyl.gbapal");
+const u16 gObjectEventPal_Arcanine[] = INCBIN_U16("graphics/object_events/palettes/arcanine.gbapal");
 //FRLG Objects
 const u16 gObjectEventPic_Pokedex[] = INCBIN_U16("graphics/object_events/pics/misc/pokedex.4bpp");
 const u16 gObjectEventPic_OldAmber[] = INCBIN_U16("graphics/object_events/pics/misc/old_amber.4bpp");
