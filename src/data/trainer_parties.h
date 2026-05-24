@@ -1372,42 +1372,48 @@ static const struct TrainerMonItemCustomMoves sParty_CoolTrainerErin[] = {
 		.lvl = 65,
 		.species = SPECIES_WARTORTLE,
 		.heldItem = ITEM_KINGS_ROCK,
-		.moves = {MOVE_IRON_DEFENSE, MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_SKULL_BASH}
+		.moves = {MOVE_IRON_DEFENSE, MOVE_HYDRO_PUMP, MOVE_BLIZZARD, MOVE_SKULL_BASH},
+        .abilityNums = 2, //Rain Dish
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_HAUNTER,
 		.heldItem = ITEM_SPELL_TAG,
-		.moves = {MOVE_SUBSTITUTE, MOVE_SHADOW_CLAW, MOVE_CONFUSE_RAY, MOVE_DARKEST_LARIAT}
+		.moves = {MOVE_SUBSTITUTE, MOVE_SHADOW_CLAW, MOVE_CONFUSE_RAY, MOVE_DARKEST_LARIAT},
+        .abilityNums = 0, //Levitate
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_CLEFAIRY,
-		.heldItem = ITEM_WHITE_HERB,
-		.moves = {MOVE_HEALING_WISH, MOVE_METEOR_MASH, MOVE_MOONLIGHT, MOVE_BODY_SLAM}
+		.heldItem = ITEM_EVIOLITE,
+		.moves = {MOVE_HEALING_WISH, MOVE_METEOR_MASH, MOVE_MOONLIGHT, MOVE_BODY_SLAM},
+        .abilityNums = 0, //Cute Charm
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_JOLTEON,
-		.heldItem = ITEM_QUICK_CLAW,
-		.moves = {MOVE_AGILITY, MOVE_LAST_RESORT, MOVE_THUNDER_FANG, MOVE_QUICK_ATTACK}
+		.heldItem = ITEM_AIR_BALLOON,
+		.moves = {MOVE_AGILITY, MOVE_LAST_RESORT, MOVE_THUNDER_FANG, MOVE_QUICK_ATTACK},
+        .abilityNums = 2, //Quick Feet
 	},
     {
 		.iv = 250,
 		.lvl = 65,
 		.species = SPECIES_FLAREON,
 		.heldItem = ITEM_CHARCOAL,
-		.moves = {MOVE_LAVA_PLUME, MOVE_BABY_DOLL_EYES, MOVE_FLARE_BLITZ, MOVE_IRON_TAIL}
+		.moves = {MOVE_LAVA_PLUME, MOVE_BABY_DOLL_EYES, MOVE_FLARE_BLITZ, MOVE_IRON_TAIL},
+        .abilityNums = 2, //Guts
 	},
 	{
 		.iv = 250,
 		.lvl = 72,
 		.species = SPECIES_VAPOREON,
-		.heldItem = ITEM_MYSTIC_WATER,
-		.moves = {MOVE_MUDDY_WATER, MOVE_CALM_MIND, MOVE_HYDRO_PUMP, MOVE_ICE_BEAM}
+		.heldItem = ITEM_FOCUS_SASH,
+		.moves = {MOVE_MUDDY_WATER, MOVE_CALM_MIND, MOVE_HYDRO_PUMP, MOVE_ICE_BEAM},
+        .abilityNums = 2, //Hydration
 	},
 };
 
