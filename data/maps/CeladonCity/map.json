@@ -28,7 +28,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 40,
-      "y": 14,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -42,7 +42,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POLIWRATH",
       "x": 38,
-      "y": 14,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
