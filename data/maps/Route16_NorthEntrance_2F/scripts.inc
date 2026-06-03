@@ -77,8 +77,8 @@ Route16_NorthEntrance_2F_Text_ExplainReward::
 	.string "Did you know Pokémon can hold items?\p"
     .string "An Amulet Coin is an item to be\n"
     .string "held by a Pokémon.\p"
-    .string "If the Pokémon appears in a winning\n"
-    .string "battle, you will earn more money.$"
+    .string "If the Pokémon is in your current\n"
+    .string "team, you will earn more money.$"
 
 Route16_NorthEntrance_2F_EventScript_AideNextLocation::
     setflag FLAG_QUEUE_AIDE_CALL

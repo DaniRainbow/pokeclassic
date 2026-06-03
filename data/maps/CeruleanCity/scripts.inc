@@ -603,6 +603,19 @@ CeruleanCity_EventScript_BulbasaurBreeder::
 	faceplayer
 	msgbox CeruleanCity_Text_BulbasaurTrustsYou, MSGBOX_DEFAULT
 	setvar VAR_TEMP_1, SPECIES_BULBASAUR
+	random 128
+    copyvar VAR_0x8004, VAR_RESULT
+    goto_if_eq VAR_0x8004, 1, CeruleanCity_EventScript_BulbasaurBreederLucky
+    setvar VAR_0x8004, 0
+	givemon SPECIES_BULBASAUR, 7, ITEM_NONE
+	goto_if_eq VAR_RESULT, 0, CeruleanCity_EventScript_BulbasaurParty
+	goto_if_eq VAR_RESULT, 1, CeruleanCity_EventScript_BulbasaurPC
+	goto_if_eq VAR_RESULT, 2, CeruleanCity_EventScript_NoRoomForBulbasaur
+	end
+
+CeruleanCity_EventScript_BulbasaurBreederLucky::
+	setvar VAR_0x8004, 0
+    setflag FLAG_SHINY_CREATION
 	givemon SPECIES_BULBASAUR, 7, ITEM_NONE
 	goto_if_eq VAR_RESULT, 0, CeruleanCity_EventScript_BulbasaurParty
 	goto_if_eq VAR_RESULT, 1, CeruleanCity_EventScript_BulbasaurPC
@@ -748,5 +761,14 @@ CeruleanCity_Text_DexNavCall::
 
 CeruleanCity_EventScript_Venusaurite::
 	finditem ITEM_VENUSAURITE, 1
-	release
-	end
+	setflag FLAG_GOT_VENUSAURITE
+	goto_if_unset FLAG_FIRST_MEGASTONE, CeruleanCity_EventScript_FoundMegaStone
+    end
+
+CeruleanCity_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end

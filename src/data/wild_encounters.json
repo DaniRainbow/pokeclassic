@@ -800,7 +800,7 @@
               },
               {
                 "min_level": 9,
-                "max_level": 9,
+                "max_level": 5,
                 "species": "SPECIES_MANKEY"
               },
               {
@@ -841,7 +841,7 @@
             ]
           },
           "water_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 8,
@@ -1015,7 +1015,7 @@
             ]
           },
           "water_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 10,
             "mons": [
               {
                 "min_level": 8,
@@ -9307,7 +9307,7 @@
           "map": "MAP_MT_MOON_1F",
           "base_label": "gMtMoon_1F",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 15,
             "mons": [
               {
                 "min_level": 6,
@@ -9426,7 +9426,7 @@
           "map": "MAP_MT_MOON_B1F",
           "base_label": "gMtMoon_B1F",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 15,
             "mons": [
               {
                 "min_level": 6,
@@ -9545,7 +9545,7 @@
           "map": "MAP_MT_MOON_B2F",
           "base_label": "gMtMoon_B2F",
           "land_mons": {
-            "encounter_rate": 20,
+            "encounter_rate": 15,
             "mons": [
               {
                 "min_level": 6,

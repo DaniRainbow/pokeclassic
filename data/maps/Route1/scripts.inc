@@ -1,6 +1,7 @@
 .set LOCALID_OAK, 1
 .set LOCALID_PIKACHU, 2
 .set LOCALID_FUGITIVE, 7
+.set LOCALID_MEWTWO, 10
 
 Route1_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route1_OnTransition
@@ -18,6 +19,7 @@ Route1_OnResume:
 
 Route1_EventScript_OakAppears1::
 	lockall
+	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	addobject LOCALID_OAK
 	applymovement LOCALID_OAK, Movement_OakAppears
 	waitmovement 1
@@ -33,12 +35,14 @@ Route1_EventScript_OakAppears1::
 	closemessage
 	addobject LOCALID_PIKACHU
 	applymovement LOCALID_PIKACHU, Movement_PikachuApproaches1
-	goto Route1_EventScript_PikachuEncounter
 	waitmovement 2
+	goto Route1_EventScript_PikachuEncounter
+	releaseall
 	end
 
 Route1_EventScript_OakAppears2::
 	lockall
+	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	addobject LOCALID_OAK
 	applymovement LOCALID_OAK, Movement_OakAppears
 	waitmovement 1
@@ -56,6 +60,7 @@ Route1_EventScript_OakAppears2::
 	applymovement LOCALID_PIKACHU, Movement_PikachuApproaches2
 	waitmovement 2
 	goto Route1_EventScript_PikachuEncounter
+	releaseall
 	end
 
 Movement_OakAppears:
@@ -123,8 +128,7 @@ Route1_EventScript_PikachuEncounter::
 	setvar VAR_OAK_LAB_STATE, 1
 	warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 5
 	waitstate
-	releaseall
-	end
+	return
 
 Route1_Text_ThatWasClose::
     .string "Oak: That was close!\n"
@@ -192,3 +196,68 @@ Route1_RocketFugitive::
 	waitse
 	fadescreen FADE_FROM_BLACK
 	end
+
+Route1_EventScript_Pidgeot::
+	lock
+	faceplayer
+    playmoncry SPECIES_PIDGEOT, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_MURAMASA, Route1_EventScript_PidgeotDefeated
+	msgbox Route1_Text_Pidgeot MSGBOX_DEFAULT
+	release
+	end
+
+Route1_Text_Pidgeot:
+	.string "Pidgeot seems tired but determined\n"
+	.string "to hover as fast as it can.$"
+
+Route1_EventScript_CoolTrainerMura::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_MURAMASA, Route1_EventScript_MegaHintPidgeot
+	trainerbattle_single TRAINER_POKEMON_COOLTRAINER_MURA, Route1_Text_MuraIntro, Route1_Text_MuraDefeat
+	setflag FLAG_DEFEATED_MURAMASA
+	msgbox Route1_Text_MuraPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route1_Text_MuraIntro:
+	.string "Hey, kid! See any shiny Pokémon\p"
+	.string "around here? Looking for a Pidgey.$"
+
+Route1_Text_MuraDefeat:
+	.string "Hold on, time out!$"
+
+Route1_Text_MuraPostBattle:
+	.string "We've been here all day trying to\n"
+	.string "to find shiny Pokémon!$"
+
+Route1_EventScript_MegaHintPidgeot::    
+    goto_if_set FLAG_GOT_PIDGEOTITE, Route1_EventScript_MuraDefeated
+    msgbox Route1_Text_PidgeotMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route1_Text_PidgeotMegaHint:
+    .string "I didn't find any shiny Pokémon on\n"
+	.string "Route 2, but there were other goodies!$"
+
+Route1_EventScript_MuraDefeated::
+    msgbox MuraDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+MuraDefeated_Text:	
+	.string "One day I will have a shiny Pidgeot!\n"
+	.string "I'll look cooler when I fly.$"
+
+Route1_EventScript_PidgeotDefeated::
+	msgbox PidgeotDefeated MSGBOX_DEFAULT
+	release
+	end
+
+PidgeotDefeated:	
+	.string "Pidgeot is even more determined\n"
+	.string "than before to be the best.$"

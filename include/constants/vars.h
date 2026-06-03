@@ -23,6 +23,7 @@
 #define VAR_TEMP_E                 (TEMP_VARS_START + 0xE)
 #define VAR_TEMP_F                 (TEMP_VARS_START + 0xF)
 #define TEMP_VARS_END              VAR_TEMP_F
+#define NUM_TEMP_VARS              (TEMP_VARS_END - TEMP_VARS_START + 1)
 
 // object gfx id vars
 // These 0x10 vars are used to dynamically control a map object's sprite.
@@ -303,5 +304,14 @@
 #define VAR_TRAINER_BATTLE_OPPONENT_A 0x8015 // Alias of gTrainerBattleOpponent_A
 
 #define SPECIAL_VARS_END              0x8015
+
+// Temp var aliases
+#define VAR_TEMP_CHALLENGE_STATUS           VAR_TEMP_0
+#define VAR_TEMP_MIXED_RECORDS              VAR_TEMP_0
+#define VAR_TEMP_RECORD_MIX_GIFT_ITEM       VAR_TEMP_1
+#define VAR_TEMP_PLAYING_PYRAMID_MUSIC      VAR_TEMP_E
+#define VAR_TEMP_FRONTIER_TUTOR_SELECTION   VAR_TEMP_D
+#define VAR_TEMP_FRONTIER_TUTOR_ID          VAR_TEMP_E
+#define VAR_TEMP_TRANSFERRED_SPECIES        VAR_TEMP_1
 
 #endif // GUARD_CONSTANTS_VARS_H

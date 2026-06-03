@@ -32,5 +32,14 @@ SafariZone_Center_EventScript_ItemNugget::
 
 SafariZone_Center_EventScript_Pinsirte::
 	finditem ITEM_PINSIRITE, 1
-	release
-	end
+	setflag FLAG_GOT_PINSIRITE
+	goto_if_unset FLAG_FIRST_MEGASTONE, SafariZone_Center_EventScript_FoundMegaStone
+    end
+
+SafariZone_Center_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end

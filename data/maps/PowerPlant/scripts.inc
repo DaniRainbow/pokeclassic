@@ -21,7 +21,6 @@ PowerPlant_OnTransition:
 	setvar VAR_TEMP_2, 0
 	call_if_unset FLAG_DEFEATED_POWER_PLANT_ELECTRODE_1, PowerPlant_EventScript_ShowElectrode1
 	call_if_unset FLAG_DEFEATED_POWER_PLANT_ELECTRODE_2, PowerPlant_EventScript_ShowElectrode2
-	call_if_set FLAG_CAUGHT_ZAPDOS, PowerPlant_EventScript_HideZapdos
 	call_if_unset FLAG_CAUGHT_ZAPDOS, PowerPlant_EventScript_TryShowZapdos
 	end
 
@@ -81,13 +80,9 @@ PowerPlant_EventScript_DefeatedElectrode2::
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-PowerPlant_EventScript_HideZapdos::
-	setflag FLAG_HIDE_ZAPDOS
-	return
-
 PowerPlant_EventScript_TryShowZapdos::
 	goto_if_set FLAG_DEFEATED_ZAPDOS, Common_EventScript_Return
-	clearflag FLAG_HIDE_ZAPDOS
+	clearflag FLAG_DAILY_ZAPDOS
 	return
 
 PowerPlant_EventScript_TryRemoveZapdos::
@@ -99,6 +94,7 @@ PowerPlant_EventScript_TryRemoveZapdos::
 PowerPlant_EventScript_Zapdos::
 	lock
 	faceplayer
+	goto_if_set FLAG_CAUGHT_ZAPDOS, PowerPlant_EventScript_DailyZAPDOS
 	waitse
 	delay 20
 	playse SE_THUNDERSTORM_STOP
@@ -130,6 +126,7 @@ PowerPlant_EventScript_Zapdos::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_RanFromZapdos
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_RanFromZapdos
 	setflag FLAG_CAUGHT_ZAPDOS
+	setflag FLAG_DAILY_ZAPDOS
 	release
 	end
 
@@ -143,6 +140,60 @@ PowerPlant_EventScript_RanFromZapdos::
 	setvar VAR_0x8004, SPECIES_ZAPDOS
 	goto Common_EventScript_LegendaryFlewAway
 	end
+
+PowerPlant_EventScript_DailyZAPDOS::
+    random 50
+    copyvar VAR_0x8004, VAR_RESULT
+    goto_if_eq VAR_0x8004, 1, PowerPlant_EventScript_Surprise_ZAPDOS
+    setvar VAR_0x8004, 0
+    setwildbattle SPECIES_ZAPDOS, 50
+    waitse
+    playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, PowerPlant_EventScript_DefeatedZapdos
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_RanFromZapdos
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_RanFromZapdos
+    release
+    end
+
+PowerPlant_EventScript_Surprise_ZAPDOS::
+    setvar VAR_0x8004, 0
+    setflag FLAG_SHINY_CREATION
+    setwildbattle SPECIES_ZAPDOS, 50
+    waitse
+    playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, PowerPlant_EventScript_DailyDefeatedZapdos
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_DailyRanFromZapdos
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_DailyRanFromZapdos
+    release
+    end
+
+PowerPlant_EventScript_DailyDefeatedZapdos::
+    setvar VAR_0x8004, SPECIES_ZAPDOS
+    goto Common_EventScript_LegendaryFlewAway
+    removeobject LOCALID_ZAPDOS
+    setflag FLAG_DAILY_ZAPDOS
+    release
+    end
+
+PowerPlant_EventScript_DailyRanFromZapdos::
+    setvar VAR_0x8004, SPECIES_ZAPDOS
+    goto Common_EventScript_LegendaryFlewAway
+    removeobject LOCALID_ZAPDOS
+    setflag FLAG_DAILY_ZAPDOS
+    release
+    end
 
 PowerPlant_EventScript_ItemMaxPotion::
 	finditem ITEM_MAX_POTION, 1

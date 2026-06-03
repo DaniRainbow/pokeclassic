@@ -2674,7 +2674,7 @@ const struct Item gItems[] =
         .holdEffect = HOLD_EFFECT_EVIOLITE,
         .holdEffectParam = 50,
         .description = sEvioliteDesc,
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 40,
@@ -2739,7 +2739,7 @@ const struct Item gItems[] =
 
     [ITEM_MACH_BIKE] =
     {
-        .name = _("Bicycle"),
+        .name = _("Mach Bike"),
         .itemId = ITEM_MACH_BIKE,
         .price = 0,
         .description = sMachBikeDesc,
@@ -2903,7 +2903,7 @@ const struct Item gItems[] =
 
     [ITEM_ACRO_BIKE] =
     {
-        .name = _("Bicylce"),
+        .name = _("Acro Bike"),
         .itemId = ITEM_ACRO_BIKE,
         .price = 0,
         .description = sAcroBikeDesc,
@@ -5149,10 +5149,89 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_ReduceIV,
         .secondaryId = NUM_STATS,
     },
-
-
-
-
-
-
+    // Missing Battle Items Restored
+    [ITEM_FLAME_ORB] =
+    {
+        .name = _("Flame Orb"),
+        .itemId = ITEM_FLAME_ORB,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_FLAME_ORB,
+        .description = sFlameOrbDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+    [ITEM_TOXIC_ORB] =
+    {
+        .name = _("Toxic Orb"),
+        .itemId = ITEM_TOXIC_ORB,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_TOXIC_ORB,
+        .description = sToxicOrbDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 30,
+    },
+    [ITEM_AIR_BALLOON] =
+    {
+        .name = _("Air Balloon"),
+        .itemId = ITEM_AIR_BALLOON,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_AIR_BALLOON,
+        .description = sAirBalloonDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+    },
+    [ITEM_ASSAULT_VEST] =
+    {
+        .name = _("Assault Vest"),
+        .itemId = ITEM_ASSAULT_VEST,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_ASSAULT_VEST,
+        .description = sAssaultVestDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+    [ITEM_FOCUS_SASH] =
+    {
+        .name = _("Focus Sash"),
+        .itemId = ITEM_FOCUS_SASH,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_FOCUS_SASH,
+        .description = sFocusSashDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+    },
+    [ITEM_HEAVY_DUTY_BOOTS] =
+    {
+        .name = _("H.Duty Boots"),
+        .itemId = ITEM_HEAVY_DUTY_BOOTS,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_HEAVY_DUTY_BOOTS,
+        .description = sHeavyDutyBootsDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+    },
+    [ITEM_LAGGING_TAIL] =
+    {
+        .name = _("Lagging Tail"),
+        .itemId = ITEM_LAGGING_TAIL,
+        .price = 4000,
+        .holdEffect = HOLD_EFFECT_LAGGING_TAIL,
+        .description = sLaggingTailDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+    },
 };

@@ -415,6 +415,16 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clefairy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machop;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Machoke;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pidgey;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Magikarp;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Charizard;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blastoise;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beedrill;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Alakazam;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gengar;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pinsir;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Aerodactyl;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Arcanine;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreatBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall;
@@ -840,9 +850,18 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_POLIWRATH] = 				 	 &gObjectEventGraphicsInfo_Poliwrath,
 	[OBJ_EVENT_GFX_PSYDUCK] = 				 		 &gObjectEventGraphicsInfo_Psyduck,
 	[OBJ_EVENT_GFX_VOLTORB] = 				 		 &gObjectEventGraphicsInfo_Voltorb,
-	[OBJ_EVENT_GFX_ZAPDOS] = 				 		 &gObjectEventGraphicsInfo_Zapdos
+	[OBJ_EVENT_GFX_ZAPDOS] = 				 		 &gObjectEventGraphicsInfo_Zapdos,
+    [OBJ_EVENT_GFX_MAGIKARP] =                       &gObjectEventGraphicsInfo_Magikarp,
+    [OBJ_EVENT_GFX_VENUSAUR] =                       &gObjectEventGraphicsInfo_Venusaur,
+    [OBJ_EVENT_GFX_CHARIZARD] =                      &gObjectEventGraphicsInfo_Charizard,
+    [OBJ_EVENT_GFX_BLASTOISE] =                      &gObjectEventGraphicsInfo_Blastoise,
+    [OBJ_EVENT_GFX_BEEDRILL] =                       &gObjectEventGraphicsInfo_Beedrill,
+    [OBJ_EVENT_GFX_ALAKAZAM] =                       &gObjectEventGraphicsInfo_Alakazam,
+    [OBJ_EVENT_GFX_GENGAR] =                         &gObjectEventGraphicsInfo_Gengar,
+    [OBJ_EVENT_GFX_PINSIR] =                         &gObjectEventGraphicsInfo_Pinsir,
+    [OBJ_EVENT_GFX_AERODACTYL] =                     &gObjectEventGraphicsInfo_Aerodactyl,
+    [OBJ_EVENT_GFX_ARCANINE] =                       &gObjectEventGraphicsInfo_Arcanine
 };
-
 
 
 #define OBJ_EVENT_PAL_TAG_MOLTRES                 0x11CC

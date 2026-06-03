@@ -681,11 +681,16 @@ GameCorner_EventScript_OpenRocketHideout::
 	setmetatile 17, 3, METATILE_GameCorner_PurpleWall_stairsBottom, 1
 	special DrawWholeMapView
 	setflag FLAG_OPENED_ROCKET_HIDEOUT
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_WEST
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_LookAtRocket
+	applymovement OBJ_EVENT_ID_FOLLOWER, Movement_LookAtRocket
+	waitmovement 0
 	goto GameCorner_EventScript_RocketAppears
 	end
 
+Movement_LookAtRocket:
+	face_right
+	step_end
+	
 GameCorner_EventScript_RocketAppears::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0

@@ -151,3 +151,4 @@
 	.include "src/debug.o"
 	.include "src/dexnav.o"
 	.include "src/surfable_pokemon.o"
+	.include "src/battle_controller_player.o"

@@ -15,11 +15,11 @@ BattleTower_Basement_EventScript_TurnPlayer::
 	end
 
 BattleTower_Basement_OnFrame:
-	map_script_2 VAR_TEMP_0, 0, BattleTower_Basement_EventScript_GetChallengeStatus
-	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_SAVING, BattleTower_Basement_EventScript_QuitWithoutSaving
-	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_PAUSED, BattleTower_Basement_EventScript_ResumeChallenge
-	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_WON, BattleTower_Basement_EventScript_WonChallenge
-	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_LOST, BattleTower_Basement_EventScript_LostChallenge
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, 0, BattleTower_Basement_EventScript_GetChallengeStatus
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_SAVING, BattleTower_Basement_EventScript_QuitWithoutSaving
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_PAUSED, BattleTower_Basement_EventScript_ResumeChallenge
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_WON, BattleTower_Basement_EventScript_WonChallenge
+	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST, BattleTower_Basement_EventScript_LostChallenge
 	.2byte 0
 
 BattleTower_Basement_EventScript_GetChallengeStatus::
@@ -35,7 +35,7 @@ BattleTower_Basement_EventScript_QuitWithoutSaving::
 	factory_set FACTORY_DATA_WIN_STREAK, 0
 	factory_set FACTORY_DATA_WIN_STREAK_ACTIVE, FALSE
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
-	setvar VAR_TEMP_0, 255
+	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
 	releaseall
 	end
@@ -64,7 +64,7 @@ BattleTower_Basement_EventScript_GiveBattlePoints::
 	waitse
 	msgbox BattleTower_Basement_Text_LookForwardToNextVisit, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_TEMP_0, 255
+	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
 	releaseall
 	end
@@ -81,7 +81,7 @@ BattleTower_Basement_EventScript_LostChallenge::
 	waitse
 	msgbox BattleTower_Basement_Text_LookForwardToNextVisit, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_TEMP_0, 255
+	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	releaseall
 	end
 
@@ -93,7 +93,7 @@ BattleTower_Basement_EventScript_ResumeChallenge::
 	playse SE_SAVE
 	waitse
 	frontier_set FRONTIER_DATA_PAUSED, FALSE
-	setvar VAR_TEMP_0, 255
+	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	setvar VAR_0x8006, 2
 	goto BattleTower_Basement_EventScript_EnterChallenge
 
@@ -177,7 +177,7 @@ BattleTower_Basement_EventScript_StartChallenge::
 	case MULTI_B_PRESSED, BattleTower_Basement_EventScript_LoadPartyAndCancelChallenge
 
 BattleTower_Basement_EventScript_SaveBeforeChallenge::
-	setvar VAR_TEMP_0, 0
+	setvar VAR_TEMP_CHALLENGE_STATUS, 0
 	factory_init
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_SAVING
 	factory_set FACTORY_DATA_WIN_STREAK_ACTIVE, TRUE
@@ -185,7 +185,7 @@ BattleTower_Basement_EventScript_SaveBeforeChallenge::
 	closemessage
 	delay 2
 	call Common_EventScript_SaveGame
-	setvar VAR_TEMP_0, 255
+	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	goto_if_eq VAR_RESULT, 0, BattleTower_Basement_EventScript_CancelChallengeSaveFailed
 	setvar VAR_0x8006, 0
 BattleTower_Basement_EventScript_EnterChallenge::
@@ -204,7 +204,7 @@ BattleTower_Basement_EventScript_EnterChallenge::
 	closedoor 13,1
 	waitdooranim
 	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM, 8, 13
-	setvar VAR_TEMP_0, 0
+	setvar VAR_TEMP_CHALLENGE_STATUS, 0
 	waitstate
 	end
 

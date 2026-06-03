@@ -3947,10 +3947,20 @@ static void Cmd_getexp(void)
                     gExpShareExp = 0;
                 }
             #else
-                *exp = calculatedExp;
-                gExpShareExp = calculatedExp / 2;
-                if (gExpShareExp == 0)
-                    gExpShareExp = 1;
+                if (gSaveBlock2Ptr->expShare) // exp share is turned on
+                {
+                    *exp = calculatedExp;
+                    gExpShareExp = calculatedExp / 4;
+                    if (gExpShareExp == 0)
+                        gExpShareExp = 1;
+                }
+                else
+                {
+                    *exp = SAFE_DIV(calculatedExp, viaSentIn);
+                    if (*exp == 0)
+                        *exp = 1;
+                    gExpShareExp = 0;
+                }
             #endif
 
             gBattleScripting.getexpState++;
@@ -4159,7 +4169,33 @@ static void Cmd_getexp(void)
                 gBattleScripting.getexpState = 6; // we're done
         }
         break;
-    case 6: // increment instruction
+    case 6: // check if wild Pokémon has a hold item after fainting
+        if (gBattleStruct->wildVictorySong && gBattleMons[gBattlerFainted].item != ITEM_NONE)
+        {
+            PrepareStringBattle(STRINGID_PKMNDROPPEDITEM, gBattleStruct->expGetterBattlerId);
+            gBattleScripting.getexpState = 7; // add item to bag
+        }
+        else
+        {
+            gBattleScripting.getexpState = 8; // no hold item, end battle
+        }
+        break;
+    case 7: // add dropped item to bag if space available
+        if (CheckBagHasSpace(gBattleMons[gBattlerFainted].item, 1) == TRUE)
+        {
+            AddBagItem(gBattleMons[gBattlerFainted].item, 1);
+            PREPARE_ITEM_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerFainted].item);
+            PREPARE_POCKET_BUFFER(gBattleTextBuff2, gBattleMons[gBattlerFainted].item);
+            PrepareStringBattle(STRINGID_ADDEDTOBAG, gBattleStruct->expGetterBattlerId);
+            gBattleScripting.getexpState = 8;
+        }
+        else
+        {
+            PrepareStringBattle(STRINGID_BAGISFULL, gBattleStruct->expGetterBattlerId);
+            gBattleScripting.getexpState = 8;
+        }
+        break;
+    case 8: // increment instruction
         if (gBattleControllerExecFlags == 0)
         {
             // not sure why gf clears the item and ability here
@@ -6825,9 +6861,9 @@ static void Cmd_getmoneyreward(void)
     if (VarGet(gSpecialVar_0x8003) == 1)
     {
         GiveFrontierBattlePoints();
-        PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 3, gSpecialVar_0x8004);
+        PREPARE_WORD_NUMBER_BUFFER(gBattleTextBuff1, 3, gSpecialVar_Unused_0x8014);
         gSpecialVar_0x8003 = 0;
-        gSpecialVar_0x8004 = 0;
+        gSpecialVar_Unused_0x8014 = 0;
     }
     else
     {
@@ -10606,19 +10642,20 @@ static void Cmd_setmultihitcounter(void)
         }
         else if (B_MULTI_HIT_CHANCE >= GEN_5)
         {
-            // 2 and 3 hits: 33.3%
-            // 4 and 5 hits: 16.7%
-            gMultiHitCounter = Random() % 4;
-            if (gMultiHitCounter > 2)
-            {
-                gMultiHitCounter = (Random() % 3);
-                if (gMultiHitCounter < 2)
-                    gMultiHitCounter = 2;
-                else
-                    gMultiHitCounter = 3;
-            }
+            // Based on Gen 5's odds
+            // 35% for 2 hits
+            // 35% for 3 hits
+            // 15% for 4 hits
+            // 15% for 5 hits
+            gMultiHitCounter = Random() % 100;
+            if (gMultiHitCounter < 35)
+                gMultiHitCounter = 2;
+            else if (gMultiHitCounter < 35 + 35)
+                gMultiHitCounter = 3;
+            else if (gMultiHitCounter < 35 + 35 + 15)
+                gMultiHitCounter = 4;
             else
-                gMultiHitCounter += 3;
+                gMultiHitCounter = 5;
         }
         else
         {

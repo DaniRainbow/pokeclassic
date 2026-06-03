@@ -251,8 +251,8 @@ MomGoesDownstairs:
 	step_end
 
 PalletTown_PlayersHouse_2F_Text_WeHaveAVisitor:
-	.string "Mom: {PLAYER}! I should have\p"
-	.string "known I'd find you playing\n"
+	.string "Mom: {PLAYER}! I should have\n"
+	.string "known I'd find you playing\l"
 	.string "games up here again.\p"
 	.string "You should head downstairs.\n"
 	.string "Someone is here to see you!$"

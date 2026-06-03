@@ -213,6 +213,7 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_MIRACLE_SEED] = {gItemIcon_MiracleSeed, gItemIconPalette_MiracleSeed},
     [ITEM_BLACK_GLASSES] = {gItemIcon_BlackGlasses, gItemIconPalette_BlackTypeEnhancingItem},
     [ITEM_BLACK_BELT] = {gItemIcon_BlackBelt, gItemIconPalette_BlackTypeEnhancingItem},
+    [ITEM_DESTINY_KNOT] = {gItemIcon_DestinyKnot, gItemIconPalette_DestinyKnot},
     [ITEM_MAGNET] = {gItemIcon_Magnet, gItemIconPalette_Magnet},
     [ITEM_MYSTIC_WATER] = {gItemIcon_MysticWater, gItemIconPalette_MysticWater},
     [ITEM_SHARP_BEAK] = {gItemIcon_SharpBeak, gItemIconPalette_SharpBeak},
@@ -447,7 +448,14 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SPEED_CANDY]  = {gItemIcon_IVCandy, gItemIconPalette_SpeedCandy},
     [ITEM_MAX_CANDY]    = {gItemIcon_MaxCandy, gItemIconPalette_MaxCandy},
     [ITEM_RESET_CANDY]  = {gItemIcon_MaxCandy, gItemIconPalette_ResetCandy},
-
+    //Additional Battle Items
+    [ITEM_FLAME_ORB] {gItemIcon_FlameOrb, gItemIconPalette_FlameOrb},
+    [ITEM_TOXIC_ORB] {gItemIcon_ToxicOrb, gItemIconPalette_ToxicOrb},
+    [ITEM_AIR_BALLOON] {gItemIcon_AirBalloon, gItemIconPalette_AirBalloon},
+    [ITEM_ASSAULT_VEST] {gItemIcon_AssaultVest, gItemIconPalette_AssaultVest},
+    [ITEM_FOCUS_SASH] {gItemIcon_FocusSash, gItemIconPalette_FocusSash},
+    [ITEM_HEAVY_DUTY_BOOTS] {gItemIcon_HeavyDutyBoots, gItemIconPalette_HeavyDutyBoots},
+    [ITEM_LAGGING_TAIL] {gItemIcon_LaggingTail, gItemIconPalette_LaggingTail},
 };
 
 #ifdef ITEM_EXPANSION

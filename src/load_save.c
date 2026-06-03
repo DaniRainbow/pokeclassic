@@ -163,21 +163,23 @@ void ClearContinueGameWarpStatus2(void)
 void SavePlayerParty(void)
 {
     int i;
-
-    gSaveBlock1Ptr->playerPartyCount = gPlayerPartyCount;
+    *GetSavedPlayerPartyCount() = gPlayerPartyCount;
 
     for (i = 0; i < PARTY_SIZE; i++)
-        gSaveBlock1Ptr->playerParty[i] = gPlayerParty[i];
+        SavePlayerPartyMon(i, &gPlayerParty[i]);
 }
 
 void LoadPlayerParty(void)
 {
     int i;
 
-    gPlayerPartyCount = gSaveBlock1Ptr->playerPartyCount;
+    gPlayerPartyCount = *GetSavedPlayerPartyCount();
 
     for (i = 0; i < PARTY_SIZE; i++)
-        gPlayerParty[i] = gSaveBlock1Ptr->playerParty[i];
+    {
+        u32 data;
+        gPlayerParty[i] = *GetSavedPlayerPartyMon(i);
+    }
 }
 
 void SaveObjectEvents(void)

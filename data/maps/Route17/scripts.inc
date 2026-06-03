@@ -99,7 +99,7 @@ Route17_EventScript_Jaxon::
 	end
 
 Route17_Text_JaxonIntro::
-    .string "Nice BIKE!\n"
+    .string "Nice bike!\n"
     .string "How's it handle?$"
 
 Route17_Text_JaxonDefeat::
@@ -208,7 +208,7 @@ Route17_EventScript_Virgil::
 	end
 
 Route17_Text_VirgilIntro::
-    .string "You heading to FUCHSIA?$"
+    .string "You heading to Fuchsia?$"
 
 Route17_Text_VirgilDefeat::
     .string "Crash and burn!$"

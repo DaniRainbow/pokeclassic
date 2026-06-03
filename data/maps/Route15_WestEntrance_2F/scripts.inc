@@ -65,7 +65,7 @@ Route15_WestEntrance_2F_EventScript_AlreadyGotReward::
     end
 
 Route15_WestEntrance_2F_Text_ExplainReward::
-    .string "You can turn Exp. Share on in you\n"
+    .string "You can turn Exp. Share on in your\n"
     .string "Key Items bag.\p"
     .string "It spreads EXP. Points to Pokémon\n"
     .string "in your party, even if they didn't\l"

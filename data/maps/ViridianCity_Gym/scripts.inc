@@ -75,6 +75,7 @@ ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	settrainerflag 	TRAINER_COOLTRAINER_YUJI					
 	settrainerflag 	TRAINER_COOLTRAINER_WARREN					
 	setflag FLAG_BADGE08_GET
+	clearflag FLAG_HIDE_RIVAL22_MANDATORY
 	setvar VAR_ROUTE_22_RIVAL_STATE, 4
 	goto ViridianCity_Gym_EventScript_GiveTM26
 	end
@@ -274,7 +275,7 @@ ViridianCity_Gym_Text_GymGuyAdvice::
     .string "Leader's identity.\p"
     .string "But one thing's certain.\n"
     .string "This will be the toughest of all\l"
-    .string "the Gym LeaderS.\p"
+    .string "the Gym Leaders.\p"
     .string "Also, I heard that the Trainers\n"
     .string "here like Ground type Pokémon.$"
 
@@ -354,19 +355,19 @@ ViridianCity_Gym_Text_RematchLeader::
 
 ViridianCity_Gym_EventScript_RivalJolteon::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single TRAINER_RIVAL_POSTGAME_JOLTEON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
 	end
 
 ViridianCity_Gym_EventScript_RivalFlareon::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single TRAINER_RIVAL_POSTGAME_FLAREON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
 	end
 
 ViridianCity_Gym_EventScript_RivalVaporeon::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single TRAINER_RIVAL_POSTGAME_VAPOREON, ViridianCity_Gym_Text_RivalIntro, ViridianCity_Gym_Text_RivalDefeat, ViridianCity_Gym_EventScript_DefeatedRival
 	end
 
@@ -432,3 +433,78 @@ ViridianCity_Gym_Text_RivalExplainTM26::
 ViridianCity_Gym_Text_YouDoNotHaveSpace2::
     .string "Oh, you don't have space for this?\p"
     .string "Too bad! Guess I'll keep it. Ha!$"
+
+ViridianCity_Gym_EventScript_MewtwoY::
+	lock
+	faceplayer
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_MEIHUI, ViridianCity_Gym_EventScript_MewtwoYDefeated
+	msgbox ViridianCity_Gym_Text_MewtwoY MSGBOX_DEFAULT
+	release
+	end
+
+ViridianCity_Gym_Text_MewtwoY:
+	.string "So, it was you who deflated the\n"
+	.string "oversized ego of Giovanni.\p"
+	.string "The bonds you have forged with your\n"
+	.string "Pokémon grant you tremendous strength.\p"
+	.string "I hope you will accept our challenge.$"
+
+ViridianCity_Gym_EventScript_Ranger_MEIHUI::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_MEIHUI, ViridianCity_Gym_EventScript_MegaHintMewtwo
+	trainerbattle_single TRAINER_POKEMON_RANGER_F_MEIHUI, ViridianCity_Gym_Text_MeiHuiIntro, ViridianCity_Gym_Text_MeiHuiDefeat
+	setflag FLAG_DEFEATED_MEIHUI
+	msgbox ViridianCity_Gym_Text_MeiHuiPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+ViridianCity_Gym_Text_MeiHuiIntro:
+	.string "Hold it right there!\p"
+	.string "This Pokémon Gym is now under\n"
+	.string "the control of Team Yellow!$"
+
+ViridianCity_Gym_Text_MeiHuiDefeat:
+	.string "Fight fair, will you?$"
+
+ViridianCity_Gym_Text_MeiHuiPostBattle:
+	.string "Admit it! My baby Pokémon rule!$"
+
+ViridianCity_Gym_EventScript_MegaHintMewtwo::    
+    goto_if_set FLAG_GOT_MEWTWONITE_Y, ViridianCity_Gym_EventScript_MeiHuiDefeated
+    msgbox ViridianCity_Gym_Text_MewtwoYMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+ViridianCity_Gym_Text_MewtwoYMegaHint:
+    .string "No, you can't have my items!\p"
+	.string "Who do you think you are... oh.\n"
+	.string "You're asking why my Mewtwo can\l"
+	.string "evolve during a fight.\p"
+	.string "That's the power of Mega Pokémon!\p"
+	.string "Check Cerulean Cave for a\n"
+	.string "special stone. Trust me!\p"
+	.string "It made my 3 Star even better.$"
+
+ViridianCity_Gym_EventScript_MeiHuiDefeated::
+    msgbox MeiHuiDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+MeiHuiDefeated_Text:	
+	.string "Hey, are you on Red or Blue?\p"
+	.string "Can you knock me out of the gym?\n"
+	.string "I would like to get my coins.$"
+
+ViridianCity_Gym_EventScript_MewtwoYDefeated::
+	msgbox MewtwoYDefeated MSGBOX_DEFAULT
+	release
+	end
+
+MewtwoYDefeated:	
+	.string "Hold your head high, {PLAYER}.\p"
+	.string "You were a formidable opponent.$"

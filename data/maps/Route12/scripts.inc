@@ -321,3 +321,74 @@ Route12_RocketFugitive::
     fadescreen FADE_FROM_BLACK
     end
 
+Route12_EventScript_Dennis::
+	lock
+	faceplayer
+    playmoncry SPECIES_MAGIKARP, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_LARRY, Route12_EventScript_DennisDefeated
+	msgbox Route12_Text_Dennis MSGBOX_DEFAULT
+	release
+	end
+
+Route12_Text_Dennis:
+	.string "DENNIS: KAAAARP!\p"
+	.string "... you feel uneasy, as if you\n"
+	.string "are looking at death itself.$"
+
+Route12_EventScript_FishermanLarry::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_LARRY, Route12_EventScript_MegaHintGyarados
+	trainerbattle_single TRAINER_FISHERMAN_LARRY, Route12_Text_LarryIntro, Route12_Text_LarryDefeat
+	setflag FLAG_DEFEATED_LARRY
+	msgbox Route12_Text_LarryPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route12_Text_LarryIntro:
+	.string "How's it going, kiddo?\n"
+    .string "You seem like a capable trainer.\p"
+	.string "The fish aren't biting at the\n"
+    .string "moment, so show me what you got!$"
+
+Route12_Text_LarryDefeat:
+	.string "That was fun!$"
+
+Route12_Text_LarryPostBattle:
+	.string "Dennis, that was thrilling!$"
+
+Route12_EventScript_MegaHintGyarados::    
+    goto_if_set FLAG_GOT_GYARADOSITE, Route12_Text_LarryDefeated
+    msgbox Route12_Text_GyaradosMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route12_Text_GyaradosMegaHint:
+    .string "If you don't mind the journey,\n"
+    .string "Seafoam Islands is beautiful\l"
+    .string "this time of year.$"
+
+Route12_Text_LarryDefeated::
+    msgbox LarryDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+LarryDefeated_Text:	
+	.string "Dennis must like you. He...\p"
+	.string "Well. Let's just say I don't\n"
+    .string "leave the house without a lot\l"
+    .string "of Max Revives for my opponents.$"
+
+Route12_EventScript_DennisDefeated::
+	msgbox DennisDefeated MSGBOX_DEFAULT
+	release
+	end
+
+DennisDefeated:	
+	.string "DENNIS: KARP!\p"
+	.string "... a warm feeling floods you\n"
+	.string "and you bow in gratitude for\l"
+    .string "being spared by this god.$"

@@ -907,6 +907,7 @@ gTileset_CeladonCity::
 	.4byte gMetatiles_CeladonCity
 	.4byte gMetatileAttributes_CeladonCity
 	.4byte InitTilesetAnim_CeladonCity
+	.4byte 0x0
 
 	.align 2
 gTileset_FuchsiaCity::

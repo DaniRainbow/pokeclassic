@@ -940,7 +940,7 @@ CinnabarIsland_Gym_Text_RematchOriginal::
 
 CinnabarIsland_Gym_EventScript_LeaderRematch_PostGameTeam::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single LEADER_REMATCH_BLAINE_POSTGAME, CinnabarIsland_Gym_Text_RematchPostgame, CinnabarIsland_Gym_Text_RematchDefeat, CinnabarIsland_Gym_EventScript_DefeatedLeaderRematch
 	end
 

@@ -73,3 +73,85 @@ PokemonMansion_1F_EventScript_ItemBlackSludge::
 	finditem ITEM_BLACK_SLUDGE, 1
 	release
 	end
+
+PokemonMansion_1F_EventScript_Alakazam::
+	lock
+	faceplayer
+    playmoncry SPECIES_ALAKAZAM, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_JUSTICE, PokemonMansion_1F_EventScript_AlakazamDefeated
+	msgbox PokemonMansion_1F_Text_Alakazam MSGBOX_DEFAULT
+	release
+	end
+
+PokemonMansion_1F_Text_Alakazam:
+	.string "Alakazam reaches into your mind.\n"
+	.string "It wishes to battle your team.$"
+
+PokemonMansion_1F_EventScript_GentlemanJustice::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_JUSTICE, PokemonMansion_1F_EventScript_MegaHintAlakazam
+	trainerbattle_single TRAINER_GENTLEMAN_JUSTICE, PokemonMansion_1F_Text_JusticeIntro, PokemonMansion_1F_Text_JusticeDefeat
+	setflag FLAG_DEFEATED_JUSTICE
+	msgbox PokemonMansion_1F_Text_JusticePostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+PokemonMansion_1F_Text_JusticeIntro:
+	.string "Greetings! I'm Justice.\p"
+	.string "I had an acquaintance who lived\n"
+	.string "here decades ago and wanted to\l"
+	.string "journey down memory lane.\p"
+	.string "You're the Champion! Well well.\n"
+	.string "How about a match?$"
+
+PokemonMansion_1F_Text_JusticeDefeat:
+	.string "You live up to the title!$"
+
+PokemonMansion_1F_Text_JusticePostBattle:
+	.string "The best battles happen in the\n"
+	.string "most unexpected places, I find.$"
+
+PokemonMansion_1F_EventScript_MegaHintAlakazam::    
+    goto_if_set FLAG_GOT_ALAKAZITE, PokemonMansion_1F_EventScript_JusticeDefeated
+    msgbox PokemonMansion_1F_Text_AlakazamMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+PokemonMansion_1F_Text_AlakazamMegaHint:
+    .string "You don't have to ask, for Alakazam\n"
+	.string "told me what you seek.\p"
+	.string "Visit an acquiantence of mine in\n"
+	.string "Saffron City for the Mega Stone.$"
+
+PokemonMansion_1F_EventScript_JusticeDefeated::
+    msgbox JusticeDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+JusticeDefeated_Text:	
+	.string "Do you happen to know Professor Oak?\p"
+	.string "... I see, so you are one of his\n"
+	.string "assistants he sends out for data.\p"
+	.string "... Oh, you've defeated him in a\n"
+	.string "Champion match as well? Fascinating!\p"
+	.string "I knew Samuel Oak back when he was a\n"
+	.string "child competing in the League.\p"
+	.string "I held the Chamption Title for many\n"
+	.string "years until he challenged me.\p"
+	.string "I'm honored to have witnessed two\n"
+	.string "prodigies rise above my heights.$"
+
+PokemonMansion_1F_EventScript_AlakazamDefeated::
+	msgbox AlakazamDefeated MSGBOX_DEFAULT
+	release
+	end
+
+AlakazamDefeated:	
+	.string "KA ZAM!\p"
+	.string "... images of a Mega Alakazam\n"
+	.string "holding a Life Orb and Mega Stone\l"
+	.string "aggressively flood your mind.$"

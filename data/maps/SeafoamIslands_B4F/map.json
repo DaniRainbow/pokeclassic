@@ -64,10 +64,10 @@
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_B4F_EventScript_Articuno",
-      "flag": "FLAG_HIDE_ARTICUNO",
+      "flag": "FLAG_DAILY_ARTICUNO",
       "in_connection": ""
     }
   ],

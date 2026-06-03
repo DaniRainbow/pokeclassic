@@ -315,7 +315,7 @@ SaffronCity_Gym_Text_RematchOriginal::
 
 SaffronCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_UNUSED_0x8014, 20
 	trainerbattle_single LEADER_REMATCH_SABRINA_POSTGAME, SaffronCity_Gym_Text_RematchPostgame, SaffronCity_Gym_Text_RematchDefeat, SaffronCity_Gym_EventScript_DefeatedLeaderRematch
 	end
 

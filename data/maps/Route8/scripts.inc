@@ -284,3 +284,77 @@ Route8_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
+
+Route8_EventScript_Beedrill::
+	lock
+	faceplayer
+    playmoncry SPECIES_BEEDRILL, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_DIZZYPHOEBE, Route8_EventScript_BeedrillDefeated
+	msgbox Route8_Text_Beedrill MSGBOX_DEFAULT
+	release
+	end
+
+Route8_Text_Beedrill:
+	.string "The Beedrill was spinning on a dime.\n"
+    .string "Now it is stopped and stares at you.$"
+
+Route8_EventScript_AromaLadyPhoebe::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DIZZYPHOEBE, Route8_EventScript_MegaHintBeedrill
+	trainerbattle_single TRAINER_AROMALADY_PHOEBE, Route8_Text_PhoebeIntro, Route8_Text_PhoebeDefeat
+	setflag FLAG_DEFEATED_DIZZYPHOEBE
+	msgbox Route8_Text_PhoebePostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route8_Text_PhoebeIntro:
+	.string "Round and round and round I go.\n"
+	.string "A trainer approaches! I'll take\l"
+	.string "them for a spin.$"
+
+Route8_Text_PhoebeDefeat:
+	.string "You spun me right round!$"
+
+Route8_Text_PhoebePostBattle:
+	.string "You spin me right round, baby\n"
+    .string "right round. Like a record, baby,\l"
+    .string "right round, round, round.$"
+
+Route8_EventScript_MegaHintBeedrill::    
+    goto_if_set FLAG_GOT_BEEDRILLITE, Route8_EventScript_PhoebeDefeated
+    msgbox Route8_Text_BeedrillMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route8_Text_BeedrillMegaHint:
+    .string "What was that? You wish to know\n"
+    .string "where I found the Mega Stone?\p"
+    .string "Go round and round in Viridian\n"
+    .string "Forest to a humble cabin. That\l"
+    .string "is where life's turns lead me.$"
+
+Route8_EventScript_PhoebeDefeated::
+    msgbox PhoebeDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+PhoebeDefeated_Text:	
+    .string "Life is too short to not give\n"
+    .string "things a chance. Take the wheel\l"
+    .string "of your life and do doughnuts\l"
+    .string "in the parking lot of your life!$"
+
+Route8_EventScript_BeedrillDefeated::
+	msgbox BeedrillDefeated MSGBOX_DEFAULT
+	release
+	end
+
+BeedrillDefeated:	
+	.string "Watching the Beedrill and its\n"
+	.string "trainer spin on a dime reminds\l"
+    .string "you of that movie with dancing\l"
+    .string "dorks at a gas station.$"

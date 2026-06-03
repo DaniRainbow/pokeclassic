@@ -13,6 +13,7 @@ RocketHideout_B4F_MapScripts::
 	.byte 0
 
 RocketHideout_B4F_OnLoad::
+	setvar VAR_0x8003, 0
 	setvar NUM_DOOR_GRUNTS_DEFEATED, 0
 	call_if_defeated TRAINER_TEAM_ROCKET_GRUNT_16, RocketHideout_B4F_EventScript_CountGruntDefeated
 	call_if_defeated TRAINER_TEAM_ROCKET_GRUNT_17, RocketHideout_B4F_EventScript_CountGruntDefeated
@@ -173,46 +174,133 @@ RocketHideout_B4F_EventScript_DefeatedGrunt3::
 	release
 	end
 
-RocketHideout_B4F_EventScript_Jessie::
-	trainerbattle_single TRAINER_ROCKET_HIDEOUT_JESSIE, RocketHideout_B4F_Text_JessieIntro, RocketHideout_B4F_Text_JessieDefeat
-	msgbox RocketHideout_B4F_Text_JessiePostBattle, MSGBOX_AUTOCLOSE
+RocketHideout_B4F_EventScript_HoldItJessie::
+	lock
+	faceplayer
+	goto_if_unset FLAG_DEFEATED_JESSIEJAMESRHB4F, RocketHideout_B4F_EventScript_JessieJames
+	goto_if_unset FLAG_MOVENOW_JESSIEJAMES, RocketHideout_B4F_Eventscript_GiovannisTurn
+	msgbox RocketHideout_B4F_Text_JessieDone, MSGBOX_NPC
+	release
 	end
 
-RocketHideout_B4F_Text_JessieIntro::
+RocketHideout_B4F_EventScript_HoldItJames::
+	lock
+	faceplayer
+	goto_if_unset FLAG_DEFEATED_JESSIEJAMESRHB4F, RocketHideout_B4F_EventScript_JessieJames
+	goto_if_unset FLAG_MOVENOW_JESSIEJAMES, RocketHideout_B4F_Eventscript_GiovannisTurn
+	msgbox RocketHideout_B4F_Text_JamesSorry, MSGBOX_NPC
+	release
+	end
+
+RocketHideout_B4F_EventScript_JessieJames::
+	trainerbattle_single TRAINER_HIDEOUT_JESSIE_JAMES, RocketHideout_B4F_Text_JessieJamesIntro, RocketHideout_B4F_Text_JessieJamesDefeat
+	msgbox RocketHideout_B4F_Text_JessieJamesPostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_DEFEATED_JESSIEJAMESRHB4F
+	release
+	end
+
+RocketHideout_B4F_Text_JamesSorry:
+	.string "James: For what it's worth, I\n"
+	.string "am sorry about what happened to\l"
+	.string "that Cubone's mother...$"
+	
+RocketHideout_B4F_Text_JessieJamesIntro:
 	.string "Jessie: You're that twerp that\n"
-	.string "keeps interrupting our schemes!$"
+	.string "keeps interrupting our schemes!\p"
+	.string "James: You're starting to take\n"
+	.string "the fun out of all of this.$"
 
-RocketHideout_B4F_Text_JessieDefeat::
-	.string "Jessie: No! No! No!$"
+RocketHideout_B4F_Text_JessieJamesDefeat:
+	.string "Jessie: No! No! No!\p"
+	.string "James: This is really starting\n"
+	.string "to get to me!$"
 
-RocketHideout_B4F_Text_JessiePostBattle::
+RocketHideout_B4F_Text_JessieDone:
 	.string "Jessie: You may have defeated\n"
 	.string "me again, but the Boss will\l"
 	.string "finally get rid of you for good.$"
 
-RocketHideout_B4F_EventScript_James::
-	trainerbattle_single TRAINER_ROCKET_HIDEOUT_JAMES, RocketHideout_B4F_Text_JamesIntro, RocketHideout_B4F_Text_JamesDefeat
-	msgbox RocketHideout_B4F_Text_JamesPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-RocketHideout_B4F_Text_JamesIntro::
-	.string "James: You're starting to take\n"
-	.string "the fun out of all of this.$"
-
-RocketHideout_B4F_Text_JamesDefeat::
-	.string "James: This is really starting\n"
-	.string "to get to me!$"
-
-RocketHideout_B4F_Text_JamesPostBattle::
+RocketHideout_B4F_Text_JessieJamesPostBattle:
+	.string "Jessie: You may have defeated\n"
+	.string "me again, but the Boss will\l"
+	.string "finally get rid of you for good.\p"
 	.string "James: For what it's worth, I\n"
 	.string "am sorry about what happened to\l"
 	.string "that Cubone's mother...$"
+
+//RocketHideout_B4F_EventScript_Jessie::
+	//trainerbattle_single TRAINER_ROCKET_HIDEOUT_JESSIE, RocketHideout_B4F_Text_JessieIntro, RocketHideout_B4F_Text_JessieDefeat
+	//msgbox RocketHideout_B4F_Text_JessiePostBattle, MSGBOX_AUTOCLOSE
+	//end
+
+//RocketHideout_B4F_Text_JessieIntro::
+	//.string "Jessie: You're that twerp that\n"
+	//.string "keeps interrupting our schemes!$"
+
+//RocketHideout_B4F_Text_JessieDefeat::
+	//.string "Jessie: No! No! No!$"
+
+//RocketHideout_B4F_Text_JessiePostBattle::
+	//.string "Jessie: You may have defeated\n"
+	//.string "me again, but the Boss will\l"
+	//.string "finally get rid of you for good.$"
+
+//RocketHideout_B4F_EventScript_James::
+	//trainerbattle_single TRAINER_ROCKET_HIDEOUT_JAMES, RocketHideout_B4F_Text_JamesIntro, RocketHideout_B4F_Text_JamesDefeat
+	//msgbox RocketHideout_B4F_Text_JamesPostBattle, MSGBOX_AUTOCLOSE
+	//end
+
+//RocketHideout_B4F_Text_JamesIntro::
+	//.string "James: You're starting to take\n"
+	//.string "the fun out of all of this.$"
+
+//RocketHideout_B4F_Text_JamesDefeat::
+	//.string "James: This is really starting\n"
+	//.string "to get to me!$"
+
+//RocketHideout_B4F_Text_JamesPostBattle::
+	//.string "James: For what it's worth, I\n"
+	//.string "am sorry about what happened to\l"
+	//.string "that Cubone's mother...$"
 
 RocketHideout_B4F_EventScript_DrawMapForBarrierRemoval::
 	playse SE_UNLOCK
 	special DrawWholeMapView
 	waitse
+	applymovement LOCALID_JESSIE, Movement_HoldItJessie
+	waitmovement 0
+	applymovement LOCALID_JAMES, Movement_HoldItJames
+	waitmovement 0
 	return
+
+Movement_HoldItJessie::
+	walk_right
+	face_down
+	step_end
+
+Movement_HoldItJames::
+	walk_left
+	face_down
+	step_end
+
+RocketHideout_B4F_Eventscript_GiovannisTurn::
+	applymovement LOCALID_JESSIE, Movement_LeaveItJessie
+	waitmovement 0
+	applymovement LOCALID_JAMES, Movement_LeaveItJames
+	waitmovement 0
+	setflag FLAG_MOVENOW_JESSIEJAMES
+	release
+	end
+
+Movement_LeaveItJessie::
+	walk_left
+	face_right
+	step_end
+
+Movement_LeaveItJames::
+	walk_right
+	face_left
+	step_end
 
 RocketHideout_B4F_EventScript_SetBarrier::
 	setmetatile 17, 12, METATILE_SilphCo_HideoutBarrier_TopLeft_Floor, 1
@@ -279,3 +367,121 @@ Movement_CuboneExit::
 	walk_down
 	walk_down
 	step_end
+
+RocketHideout_B4F_EventScript_Kangaskhan::
+	lock
+	faceplayer
+    playmoncry SPECIES_KANGASKHAN, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_TONY, RocketHideout_B4F_EventScript_KangaskhanDefeated
+	msgbox RocketHideout_B4F_Text_Kangaskhan MSGBOX_DEFAULT
+	release
+	end
+
+RocketHideout_B4F_Text_Kangaskhan:
+	.string "There's something sinister about\n"
+	.string "this Kangaskhan.$"
+
+RocketHideout_B4F_EventScript_WaiterTony::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_TONY, RocketHideout_B4F_EventScript_MegaHintKangaskhan
+	trainerbattle_single TRAINER_COOLTRAINER_TONY, RocketHideout_B4F_Text_TonyIntro, RocketHideout_B4F_Text_TonyDefeat
+	setflag FLAG_DEFEATED_TONY
+	msgbox RocketHideout_B4F_Text_TonyPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+RocketHideout_B4F_Text_TonyIntro:
+	.string "How dare you enter the offices of\n"
+	.string "the great Giovanni!\p"
+	.string "...\p"
+	.string "Wait... it can't be!\p"
+	.string "You're the brat who dismantled\n"
+	.string "Giovanni's organization?\p"
+	.string "Kangaskhan, crush them!$"
+
+RocketHideout_B4F_Text_TonyDefeat:
+	.string "I see now....$"
+
+RocketHideout_B4F_Text_TonyPostBattle:
+	.string "It is clear to me now.\p"
+	.string "Team Rocket had no choice but\n"
+	.string "but to disband. You forced them.$"
+
+RocketHideout_B4F_EventScript_MegaHintKangaskhan::    
+    goto_if_set FLAG_GOT_KANGASKHANITE, RocketHideout_B4F_EventScript_TonyDefeated
+    msgbox RocketHideout_B4F_Text_KangaskhanMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+RocketHideout_B4F_Text_KangaskhanMegaHint:
+    .string "Look kid, don't hurt us!\n"
+	.string "I can tell you where to find your\l"
+	.string "very own Kangaskhanite!.\p"
+	.string "I found it on the ground in\n"
+	.string "the Safari Zone.$"
+
+RocketHideout_B4F_EventScript_TonyDefeated::
+    msgbox TonyDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+TonyDefeated_Text:	
+	.string "This surely can't be the end\n"
+	.string "of the great Giovanni's story.$"
+
+RocketHideout_B4F_EventScript_KangaskhanDefeated::
+	msgbox KangaskhanDefeated MSGBOX_DEFAULT
+	release
+	end
+
+KangaskhanDefeated:	
+	.string "Kangaskhan takes a deep breath\n"
+	.string "and gives a dissatisfactory grunt.$"
+
+RocketHideout_B4F_EventScript_Burglars_TM35::
+	lock
+	faceplayer
+	goto_if_defeated TRAINER_BURGLAR_KYLE, RocketHideout_B4F_EventScript_TM35_Fix
+    trainerbattle_single TRAINER_BURGLAR_KYLE, RocketHideout_B4F_Burglars_Text_BurglarIntro5, RocketHideout_B4F_Burglars_Text_BurglarDefeat5
+    msgbox RocketHideout_B4F_Burglars_Text_GetTM, MSGBOX_AUTOCLOSE
+    giveitem ITEM_TM35, 1
+    setflag FLAG_GOT_TM35
+	release
+	end
+
+RocketHideout_B4F_Burglars_Text_GetTM:
+    .string "Team Rocket left a lot of good\n"
+    .string "loot behind when they left.\p"
+    .string "Here, take this.\n"
+    .string "There's plenty to go around!$"
+
+RocketHideout_B4F_EventScript_GotTM35::
+    msgbox RocketHideout_B4F_Burglars_Text_BurglarPostBattle5, MSGBOX_AUTOCLOSE
+    release
+    end
+
+RocketHideout_B4F_Burglars_Text_BurglarIntro5:
+    .string "Stealing is cool!$"
+
+RocketHideout_B4F_Burglars_Text_BurglarDefeat5:
+    .string "Losing is not!$"
+
+RocketHideout_B4F_Burglars_Text_BurglarPostBattle5:
+    .string "I just love stealing so much.\n"
+    .string "Its the only thing I love!$"
+
+RocketHideout_B4F_EventScript_TM35_Fix::
+	goto_if_set FLAG_GOT_TM35, RocketHideout_B4F_EventScript_GotTM35
+	msgbox RocketHideout_B4F_Burglars_Text_GetTM, MSGBOX_AUTOCLOSE
+	giveitem ITEM_TM35, 1
+	setflag FLAG_GOT_TM35
+	release
+	end
+
+RocketHideout_B4F_Text_YouForgotThis:
+	.string "I didn't know I was supposed to\n"
+	.string "share before. Here you go!$"

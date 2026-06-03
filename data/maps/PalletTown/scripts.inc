@@ -7,6 +7,7 @@ PalletTown_MapScripts::
 
 PalletTown_OnTransition:
 	setflag FLAG_VISITED_PALLET_TOWN
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	call_if_eq VAR_SECRET_BATTLE_CLEAR, 3, EventScript_UpdatePostgame
 	call_if_eq VAR_OAK_LAB_STATE, 7, EventScript_UpdateOakLabState
 	call Common_EventScript_GetDayOrNight

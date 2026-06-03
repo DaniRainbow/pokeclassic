@@ -30,10 +30,22 @@ SilphCo_4F_EventScript_ItemTM41::
 SilphCo_4F_EventScript_WorkerM::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_4F_EventScript_WorkerMRocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_4F_EventScript_WorkerMRocketsGone
 	msgbox SilphCo_4F_Text_CantYouSeeImHiding
 	release
 	end
+
+SilphCo_4F_EventScript_WorkerMRocketsBack::
+	msgbox SilphCo_4F_Text_TeamRocketIsBack
+	release
+	end
+
+SilphCo_4F_Text_TeamRocketIsBack:
+	.string "Sssh! Please leave!\p"
+    .string "They came back and I'm afraid\n"
+	.string "to be seen with the kid who\l"
+	.string "disrupted their plans before.$"
 
 SilphCo_4F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_4F_Text_TeamRocketIsGone
