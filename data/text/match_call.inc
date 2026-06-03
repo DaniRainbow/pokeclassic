@@ -1102,12 +1102,21 @@ MatchCall_PersonalizedText6::
 	.string "Tell me about it next time, okay?$"
 
 MatchCall_PersonalizedText7::
-	.string "… … … … … …\n"
-	.string "… … … … … …\l"
-	.string "It's {STR_VAR_1}…\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\l"
-	.string "That's all today…$"
+	.string "Hey, {PLAYER}!\n"
+	.string "Guess what?\p"
+	.string "I keep losing my wrench\n"
+	.string "cause when I set it down,\l"
+	.string "my Magnemite zooms over\l"
+	.string "and has it stick to it!\p"
+	.string "Who needs a toolbox when\n"
+	.string "you have magnetic Pokémon?\p"
+	.string "The real problem is getting it to\n"
+	.string "drop the wrench when I need to\l"
+	.string "tighten some nuts and bolts...\p"
+	.string "Think it would play fetch with\n"
+	.string "the wrench if I tried to throw it?\p"
+	.string "Anyways, I need to return to work.\n"
+	.string "Have a wonderful day!$"
 
 MatchCall_PersonalizedText8::
 	.string "Ahoy!\n"
