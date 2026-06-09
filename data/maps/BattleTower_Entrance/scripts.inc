@@ -7,11 +7,11 @@ BattleTower_Entrance_MapScripts::
 
 BattleTower_Entrance_OnFrame::
 	map_script_2 VAR_BATTLE_TOWER, 0, BattleTower_Entrance_BattleTowerCutscene
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, 0, BattleTower_Entrance_EventScript_GetChallengeStatus
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_SAVING, BattleTower_Entrance_EventScript_QuitWithoutSaving
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_PAUSED, BattleTower_Entrance_EventScript_ResumeChallenge
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_WON, BattleTower_Entrance_EventScript_WonChallenge
-	map_script_2 VAR_TEMP_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST, BattleTower_Entrance_EventScript_LostChallenge
+	map_script_2 VAR_TEMP_0, 0, BattleTower_Entrance_EventScript_GetChallengeStatus
+	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_SAVING, BattleTower_Entrance_EventScript_QuitWithoutSaving
+	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_PAUSED, BattleTower_Entrance_EventScript_ResumeChallenge
+	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_WON, BattleTower_Entrance_EventScript_WonChallenge
+	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_LOST, BattleTower_Entrance_EventScript_LostChallenge
 	.2byte 0
 
 BattleTower_Entrance_BattleTowerCutscene::
@@ -256,7 +256,7 @@ BattleTower_Entrance_EventScript_QuitWithoutSaving::
 	tower_set TOWER_DATA_WIN_STREAK, 0
 	tower_set TOWER_DATA_WIN_STREAK_ACTIVE, FALSE
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, 0
-	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	setvar VAR_TEMP_0, 255
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
 	waitmovement 0
 	release
@@ -308,13 +308,14 @@ BattleTower_Entrance_EventScript_GiveBattlePoints::
 	msgbox BattleTower_Entrance_Text_AwardYouTheseBattlePoints, MSGBOX_DEFAULT
 	frontier_givepoints
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_GETPOINTS
+	call BattleTower_Entrance_EventScript_AskSaveBattle
 	tower_get TOWER_DATA_WIN_STREAK
 	goto_if_ne VAR_RESULT, 49, BattleTower_Entrance_EventScript_LookForwardToChallenge
 	msgbox BattleTower_Entrance_Text_AboutToFace50thTrainer, MSGBOX_DEFAULT
 BattleTower_Entrance_EventScript_LookForwardToChallenge::
 	msgbox BattleTower_Entrance_Text_LookForwardToAnotherChallenge, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	setvar VAR_TEMP_0, 255
 	release
 	end
 
@@ -334,11 +335,52 @@ BattleTower_Entrance_EventScript_LostThanksForPlaying::
 	faceplayer
 	message BattleTower_Entrance_Text_ThankYouForPlaying
 	waitmessage
+	call BattleTower_Entrance_EventScript_AskSaveBattle
 	msgbox BattleTower_Entrance_Text_LookForwardToAnotherChallenge, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	setvar VAR_TEMP_0, 255
 	release
 	end
+
+BattleTower_Entrance_EventScript_AskSaveBattle::
+	message BattleFrontier_Text_RecordWillBeSaved
+	waitmessage
+	frontier_checkairshow
+	special LoadPlayerParty
+	special HealPlayerParty
+	tower_save 0
+	playse SE_SAVE
+	waitse
+	call BattleFrontier_EventScript_GetCantRecordBattle
+	goto_if_eq VAR_RESULT, TRUE, BattleTower_Entrance_EventScript_EndSaveBattle
+	message BattleTower_Entrance_Text_RecordLastMatch
+	waitmessage
+	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
+	switch VAR_RESULT
+	case 1, BattleTower_Entrance_EventScript_EndSaveBattle
+	case 0, BattleTower_Entrance_EventScript_SaveBattle
+	case MULTI_B_PRESSED, BattleTower_Entrance_EventScript_EndSaveBattle
+
+BattleTower_Entrance_EventScript_SaveBattle::
+	frontier_savebattle
+	goto_if_eq VAR_RESULT, FALSE, BattleTower_Entrance_EventScript_BattleSaveFailed
+	playse SE_SAVE
+	msgbox BattleFrontier_BattleTowerLobby_Text_BattleRecordedOnPass, MSGBOX_DEFAULT
+	goto BattleTower_Entrance_EventScript_EndSaveBattle
+
+BattleTower_Entrance_EventScript_BattleSaveFailed::
+	msgbox BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved, MSGBOX_DEFAULT
+
+BattleTower_Entrance_EventScript_EndSaveBattle::
+	return
+
+BattleTower_Entrance_EventScript_GetCantRecordBattle::
+	frontier_get FRONTIER_DATA_RECORD_DISABLED
+	return
+
+BattleFrontier_Text_RecordWillBeSaved:
+	.string "Your record will be saved.\n"
+	.string "Please wait.$"
 
 BattleTower_Entrance_EventScript_ResumeChallenge::
 	lock
@@ -366,45 +408,45 @@ BattleTower_Entrance_EventScript_BattleTowerAttendant::
 BattleTower_Entrance_Text_ChallengeBattleTower::
 	.string "Oh! Are you interested in challenging\n"
 	.string "the Battle Tower?\p"
-	.string "I'm sorry, but we are closed.$"
+	.string "Please, come around to the right.$"
 
-BattleTower_Entrance_EventScript_BattleTowerTrigger::
-	lock
-	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
-	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
-	turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
-	msgbox BattleTower_Entrance_Text_TowerWelcomeOOPS, MSGBOX_DEFAULT
-	release
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
-	waitmovement 0
-	release
-	end
-	
-BattleTower_Entrance_Text_TowerWelcomeOOPS::
-	.string "I'm very sorry but this tower\n"
-	.string "will steal your Pokémon if\l"
-	.string "you participate in battles.\p"
-	.string "For the saftey of your little\n"
-	.string "friends, the Battle Tower is\l"
-	.string "closed indefinitely.$"
-	
 //BattleTower_Entrance_EventScript_BattleTowerTrigger::
 	//lock
 	//goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
 	//applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
 	//turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
-	//setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
-	//special SavePlayerParty
-	//msgbox BattleTower_Entrance_Text_TowerWelcome, MSGBOX_DEFAULT
-//BattleTower_Entrance_EventScript_ChooseBattleTowerMode::
-	//multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
-	//switch VAR_RESULT
-	//case 0, BattleTower_Entrance_EventScript_TryEnterSinglesChallenge
-	//case 1, BattleTower_Entrance_EventScript_TryEnterDoublesChallenge
-	//case 2, BattleTower_Entrance_EventScript_ExplainChallenge
-	//case 3, BattleTower_Entrance_EventScript_CancelChallenge
-	//case MULTI_B_PRESSED, BattleTower_Entrance_EventScript_CancelChallenge
+	//msgbox BattleTower_Entrance_Text_TowerWelcomeOOPS, MSGBOX_DEFAULT
+	//release
+	//applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
+	//waitmovement 0
+	//release
 	//end
+	
+//BattleTower_Entrance_Text_TowerWelcomeOOPS::
+	//.string "I'm very sorry but this tower\n"
+	//.string "will steal your Pokémon if\l"
+	//.string "you participate in battles.\p"
+	//.string "For the saftey of your little\n"
+	//.string "friends, the Battle Tower is\l"
+	//.string "closed indefinitely.$"
+	
+BattleTower_Entrance_EventScript_BattleTowerTrigger::
+	lock
+	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
+	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
+	turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
+	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
+	special SavePlayerParty
+	msgbox BattleTower_Entrance_Text_TowerWelcome, MSGBOX_DEFAULT
+BattleTower_Entrance_EventScript_ChooseBattleTowerMode::
+	multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
+	switch VAR_RESULT
+	case 0, BattleTower_Entrance_EventScript_TryEnterSinglesChallenge
+	case 1, BattleTower_Entrance_EventScript_TryEnterDoublesChallenge
+	case 2, BattleTower_Entrance_EventScript_ExplainChallenge
+	case 3, BattleTower_Entrance_EventScript_CancelChallenge
+	case MULTI_B_PRESSED, BattleTower_Entrance_EventScript_CancelChallenge
+	end
 
 BattleTower_Entrance_EventScript_BattleTowerBlocker::
 	lock
@@ -427,19 +469,19 @@ BattleFrontier_Movement_PlayerFaceTowerKiosk::
 	face_left
 	step_end
 
-//BattleTower_Entrance_Text_TowerWelcome:
-	//.string "Welcome to the Battle Tower,\n"
-	//.string "where the talents of Trainers\l"
-	//.string "I'll be your guide to the\n"
-	//.string "Battle Rooms.\p"
-	//.string "Which type of challenge will\n"
-	//.string "you be participating in today?$"
+BattleTower_Entrance_Text_TowerWelcome:
+	.string "Welcome to the Battle Tower,\n"
+	.string "where the talents of Trainers\l"
+	.string "I'll be your guide to the\n"
+	.string "Battle Rooms.\p"
+	.string "Which type of challenge will\n"
+	.string "you be participating in today?$"
 
-//BattleTower_Entrance_EventScript_ExplainChallenge::
-	//msgbox BattleTower_Entrance_Text_ExplainChallenge, MSGBOX_DEFAULT
-	//waitmessage
-	//goto BattleTower_Entrance_EventScript_ChooseBattleTowerMode
-	//end
+BattleTower_Entrance_EventScript_ExplainChallenge::
+	msgbox BattleTower_Entrance_Text_ExplainChallenge, MSGBOX_DEFAULT
+	waitmessage
+	goto BattleTower_Entrance_EventScript_ChooseBattleTowerMode
+	end
 
 BattleTower_Entrance_Text_ExplainChallenge:
 	.string "The Battle Tower is a facility where\n"
@@ -485,7 +527,7 @@ BattleTower_Entrance_EventScript_TryEnterSinglesChallenge::
 
 BattleTower_Entrance_EventScript_SaveBeforeSinglesChallenge::
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-	setvar VAR_TEMP_CHALLENGE_STATUS, 0
+	setvar VAR_TEMP_0, 0
 	tower_init
 	tower_set TOWER_DATA_WIN_STREAK_ACTIVE, TRUE
 	frontier_set FRONTIER_DATA_PAUSED, FALSE
@@ -493,7 +535,7 @@ BattleTower_Entrance_EventScript_SaveBeforeSinglesChallenge::
 	closemessage
 	delay 2
 	call Common_EventScript_SaveGame
-	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	setvar VAR_TEMP_0, 255
 	goto_if_eq VAR_RESULT, 0, BattleTower_Entrance_EventScript_CancelChallengeSaveFailed
 	incrementgamestat GAME_STAT_ENTERED_BATTLE_TOWER
 	setvar VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, TRUE
@@ -527,7 +569,7 @@ BattleTower_Entrance_EventScript_TryEnterDoublesChallenge::
 
 BattleTower_Entrance_EventScript_SaveBeforeDoublesChallenge::
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-	setvar VAR_TEMP_CHALLENGE_STATUS, 0
+	setvar VAR_TEMP_0, 0
 	tower_init
 	tower_set TOWER_DATA_WIN_STREAK_ACTIVE, TRUE
 	frontier_set FRONTIER_DATA_PAUSED, FALSE
@@ -535,7 +577,7 @@ BattleTower_Entrance_EventScript_SaveBeforeDoublesChallenge::
 	closemessage
 	delay 2
 	call Common_EventScript_SaveGame
-	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	setvar VAR_TEMP_0, 255
 	goto_if_eq VAR_RESULT, 0, BattleTower_Entrance_EventScript_CancelChallengeSaveFailed
 	incrementgamestat GAME_STAT_ENTERED_BATTLE_TOWER
 	setvar VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, FALSE
@@ -597,6 +639,7 @@ BattleTower_Entrance_EventScript_EndCancelChallenge::
 	end
 
 BattleTower_Entrance_EventScript_EnterElevator::
+	special SavePlayerParty
 	setvar VAR_0x8004, FRONTIER_UTIL_FUNC_SET_PARTY_ORDER
 	call BattleTower_Entrance_EventScript_GetPartySize
 	special CallFrontierUtilFunc
@@ -604,7 +647,7 @@ BattleTower_Entrance_EventScript_EnterElevator::
 	call BattleTower_Entrance_EventScript_ShowYouToBattleRoom
 	clearflag FLAG_CANCEL_BATTLE_ROOM_CHALLENGE
 	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_ELEVATOR, 2, 5
-	setvar VAR_TEMP_CHALLENGE_STATUS, 0
+	setvar VAR_TEMP_0, 0
 	waitstate
 	end
 
@@ -816,3 +859,7 @@ BattleTower_Entrance_Text_CanLeaveUntilLossOrSevenWins:
 	.string "or you beat seven Trainers in a row.\p"
 	.string "You'd best be certain that you're up\n"
 	.string "to the challenge.$"
+
+BattleTower_Entrance_Text_RecordLastMatch:
+	.string "Shall I record your last Battle Tower\n"
+	.string "match on your Frontier Pass?$"
