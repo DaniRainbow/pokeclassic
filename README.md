@@ -7,9 +7,9 @@ This fork was created to address the unfixed issues with the original repository
 # Getting PokeClassic
 This repository builds the following ROM:
 
-* pokeClassic.gba `sha1: 4EC3AB870E65DB041F00BDF55559BF48888AA402`
+* pokeClassic.gba `sha1: 095E252E036578DE5E9C313D554BAF4AB62F2C6F`
 
-**updated 5/8/2026**
+**updated 6/6/2026**
 
 To compile this ROM yourself, see [Pret's Installation Guide](https://github.com/pret/pokeemerald/blob/master/INSTALL.md) on how to get started with the decompilations. Then, clone this branch and build the ROM by changing "pokeemerald" to "pokeclassic" in the instructions.
 
@@ -51,8 +51,8 @@ Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, Fiasco
 
 Thank you to RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara.
 
-Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos, raoul_duke1337, Vazromi92, faithmhui, Headlocker03, Liquid Justice, RiftyBusiness
+Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos, raoul_duke1337, Vazromi92, faithmhui, Headlocker03, Liquid Justice, RiftyBusiness, Lil Dill
 
-Special thanks to Black Belt Jiraiya for helping with Hex Maniac Camran. :D
+Special thanks to Lil Dill for always being happy to consult on my projects and Black Belt Jiraiya for helping with Hex Maniac Camran. :D
 
 More to thank near launch of v1.5!
