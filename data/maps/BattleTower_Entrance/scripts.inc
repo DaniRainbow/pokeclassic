@@ -474,11 +474,11 @@ BattleTower_Entrance_Text_TowerWelcome:
 	.string "Which type of challenge will\n"
 	.string "you be participating in today?$"
 
-BattleTower_Entrance_EventScript_ExplainChallenge::
-	msgbox BattleTower_Entrance_Text_ExplainChallenge, MSGBOX_DEFAULT
-	waitmessage
-	goto BattleTower_Entrance_EventScript_ChooseBattleTowerMode
-	end
+//BattleTower_Entrance_EventScript_ExplainChallenge::
+	//msgbox BattleTower_Entrance_Text_ExplainChallenge, MSGBOX_DEFAULT
+	//waitmessage
+	//goto BattleTower_Entrance_EventScript_ChooseBattleTowerMode
+	//end
 
 BattleTower_Entrance_Text_ExplainChallenge:
 	.string "The Battle Tower is a facility where\n"
