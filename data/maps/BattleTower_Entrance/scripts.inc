@@ -241,9 +241,6 @@ BattleTower_Entrance_Text_BlackBeltYes::
 BattleTower_Entrance_Text_BlackBeltNo::
 	.string "Oh, so you're taking her side?$"
 
-
-
-
 BattleTower_Entrance_EventScript_GetChallengeStatus::
 	frontier_getstatus
 	end
@@ -408,45 +405,45 @@ BattleTower_Entrance_EventScript_BattleTowerAttendant::
 BattleTower_Entrance_Text_ChallengeBattleTower::
 	.string "Oh! Are you interested in challenging\n"
 	.string "the Battle Tower?\p"
-	.string "Please, come around to the right.$"
+	.string "I'm sorry, but we are closed.$"
 
-//BattleTower_Entrance_EventScript_BattleTowerTrigger::
-	//lock
-	//goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
-	//applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
-	//turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
-	//msgbox BattleTower_Entrance_Text_TowerWelcomeOOPS, MSGBOX_DEFAULT
-	//release
-	//applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
-	//waitmovement 0
-	//release
-	//end
-	
-//BattleTower_Entrance_Text_TowerWelcomeOOPS::
-	//.string "I'm very sorry but this tower\n"
-	//.string "will steal your Pokémon if\l"
-	//.string "you participate in battles.\p"
-	//.string "For the saftey of your little\n"
-	//.string "friends, the Battle Tower is\l"
-	//.string "closed indefinitely.$"
-	
 BattleTower_Entrance_EventScript_BattleTowerTrigger::
 	lock
 	goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
 	turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
-	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
-	special SavePlayerParty
-	msgbox BattleTower_Entrance_Text_TowerWelcome, MSGBOX_DEFAULT
-BattleTower_Entrance_EventScript_ChooseBattleTowerMode::
-	multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
-	switch VAR_RESULT
-	case 0, BattleTower_Entrance_EventScript_TryEnterSinglesChallenge
-	case 1, BattleTower_Entrance_EventScript_TryEnterDoublesChallenge
-	case 2, BattleTower_Entrance_EventScript_ExplainChallenge
-	case 3, BattleTower_Entrance_EventScript_CancelChallenge
-	case MULTI_B_PRESSED, BattleTower_Entrance_EventScript_CancelChallenge
+	msgbox BattleTower_Entrance_Text_TowerWelcomeOOPS, MSGBOX_DEFAULT
+	release
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_LeaveKiosk
+	waitmovement 0
+	release
 	end
+	
+BattleTower_Entrance_Text_TowerWelcomeOOPS::
+	.string "I'm very sorry but this tower\n"
+	.string "will steal your Pokémon if\l"
+	.string "you participate in battles.\p"
+	.string "For the saftey of your little\n"
+	.string "friends, the Battle Tower is\l"
+	.string "closed indefinitely.$"
+	
+//BattleTower_Entrance_EventScript_BattleTowerTrigger::
+	//lock
+	//goto_if_set FLAG_CANCEL_BATTLE_ROOM_CHALLENGE, BattleTower_Entrance_EventScript_Retired
+	//applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_Movement_PlayerFaceTowerKiosk
+	//turnobject LOCALID_TOWER_ATTENDANT, DIR_EAST
+	//setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
+	//special SavePlayerParty
+	//msgbox BattleTower_Entrance_Text_TowerWelcome, MSGBOX_DEFAULT
+//BattleTower_Entrance_EventScript_ChooseBattleTowerMode::
+	//multichoice 17, 0, MULTI_BATTLE_MODE_2, FALSE
+	//switch VAR_RESULT
+	//case 0, BattleTower_Entrance_EventScript_TryEnterSinglesChallenge
+	//case 1, BattleTower_Entrance_EventScript_TryEnterDoublesChallenge
+	//case 2, BattleTower_Entrance_EventScript_ExplainChallenge
+	//case 3, BattleTower_Entrance_EventScript_CancelChallenge
+	//case MULTI_B_PRESSED, BattleTower_Entrance_EventScript_CancelChallenge
+	//end
 
 BattleTower_Entrance_EventScript_BattleTowerBlocker::
 	lock
