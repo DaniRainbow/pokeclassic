@@ -108,7 +108,7 @@ CeladonCity_Condominiums_2F_EventScript_Headlocker::
 	end
 
 CeladonCity_Condominiums_2F_Text_Headlocker:
-	.string "I'm Headlocker, a designer\n"
+	.string "I'm Headlocker03, a designer\n"
 	.string "for this game!\p"
 	.string "What's good?$"
 
