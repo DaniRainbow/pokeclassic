@@ -659,6 +659,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_PINSIR                  0x11E2
 #define OBJ_EVENT_PAL_TAG_AERODACTYL              0x11E3
 #define OBJ_EVENT_PAL_TAG_ARCANINE                0x11E4
+#define OBJ_EVENT_PAL_TAG_UMBREON                 0x11E5
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -899,6 +900,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Pinsir,                OBJ_EVENT_PAL_TAG_PINSIR},
     {gObjectEventPal_Aerodactyl,            OBJ_EVENT_PAL_TAG_AERODACTYL},
     {gObjectEventPal_Arcanine,              OBJ_EVENT_PAL_TAG_ARCANINE},
+    {gObjectEventPal_Umbreon,               OBJ_EVENT_PAL_TAG_UMBREON},
     {gObjectEventPal_Janine,                OBJ_EVENT_PAL_TAG_JANINE},
     {gObjectEventPal_RangerM,               OBJ_EVENT_PAL_TAG_RANGER_M},
     {gObjectEventPal_RangerF,               OBJ_EVENT_PAL_TAG_RANGER_F},

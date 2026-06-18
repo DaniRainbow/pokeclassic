@@ -112,8 +112,8 @@ CeladonCity_Condominiums_2F_Text_Headlocker:
 	.string "designer for this game!\p"
 	.string "I just lucked into soul-linking\n"
 	.string "with these guys.\p"
-	.string "Shout-out to danenders and
-	.string "DaniRainbow for their hard work\n"
+	.string "Shout out to danenders and\n"
+	.string "DaniRainbow for their hard work\l"
 	.string "on this trip through Kanto!$"
 
 CeladonCity_Condominiums_2F_EventScript_THEWALL::
@@ -127,7 +127,9 @@ CeladonCity_Condominiums_2F_EventScript_THEWALL::
 	end
 
 CeladonCity_Condominiums_2F_Text_THEWALL:
-	.string "Cherry Pie gives you the blankest stare.$"
+	.string "THE WALL has zero disregard\n"
+	.string "for the rules and will do\l"
+	.string "as he pleases.$"
 
 CeladonCity_Condominiums_2F_EventScript_CherryPie::
 	lock
@@ -158,12 +160,3 @@ CeladonCity_Condominiums_2F_EventScript_LiquidArcanine::
 	release
 	end
 
-//CeladonCity_Condominiums_2F_EventScript_HeadlockerPokemon::
-	//lock
-	//faceplayer
-	//playmoncry SPECIES_NONE, CRY_MODE_NORMAL
-	//waitmoncry
-	//msgbox CeladonCity_Condominiums_2F_Text_NONE, MSGBOX_DEFAULT
-	//waitmessage
-	//release
-	//end
