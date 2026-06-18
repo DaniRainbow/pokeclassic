@@ -108,9 +108,26 @@ CeladonCity_Condominiums_2F_EventScript_Headlocker::
 	end
 
 CeladonCity_Condominiums_2F_Text_Headlocker:
-	.string "I'm Headlocker03, a designer\n"
-	.string "for this game!\p"
-	.string "What's good?$"
+	.string "I'm Headlocker03, a humble\n"
+	.string "designer for this game!\p"
+	.string "I just lucked into soul-linking\n"
+	.string "with these guys.\p"
+	.string "Shout-out to danenders and
+	.string "DaniRainbow for their hard work\n"
+	.string "on this trip through Kanto!$"
+
+CeladonCity_Condominiums_2F_EventScript_THEWALL::
+	lock
+	faceplayer
+	playmoncry SPECIES_UMBREON, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox CeladonCity_Condominiums_2F_Text_THEWALL, MSGBOX_DEFAULT
+	waitmessage
+	release
+	end
+
+CeladonCity_Condominiums_2F_Text_THEWALL:
+	.string "Cherry Pie gives you the blankest stare.$"
 
 CeladonCity_Condominiums_2F_EventScript_CherryPie::
 	lock
