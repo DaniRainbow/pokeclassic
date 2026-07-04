@@ -2708,11 +2708,16 @@ bool8 DexNavTryMakeShinyMon(void)
     charmBonus = (CheckBagHasItem(ITEM_SHINY_CHARM, 1) > 0) ? 8 : 0;
     #endif
     
-    chainBonus = (chain == 50) ? 5 : (chain == 100) ? 10 : 0;
+    chainBonus = (chain >= 100) ? 10 : (chain >= 50) ? 5 : 0;
     rndBonus = (Random() % 100 < 4 ? 4 : 0);
     shinyRolls = 1 + charmBonus + chainBonus + rndBonus;
 
-    if (searchLevel > 200)
+    if (searchLevel >= 255)
+    {
+        shinyRate += searchLevel - 255;
+        searchLevel = 255;
+    }
+    else if (searchLevel > 200)
     {
         shinyRate += searchLevel - 200;
         searchLevel = 200;
