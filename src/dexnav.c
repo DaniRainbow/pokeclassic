@@ -2705,7 +2705,7 @@ bool8 DexNavTryMakeShinyMon(void)
     u8 chain = gSaveBlock1Ptr->dexNavChain;
     
     #ifdef ITEM_SHINY_CHARM
-    charmBonus = (CheckBagHasItem(ITEM_SHINY_CHARM, 1) > 0) ? 4 : 0; //If the player has the Shiny Charm, the game will roll odds for a Shiny pokemon 8 more times.
+    charmBonus = (CheckBagHasItem(ITEM_SHINY_CHARM, 1) > 0) ? 4 : 0; //If the player has the Shiny Charm, the game will roll odds for a Shiny pokemon 4 more times.
     #endif
     
     chainBonus = (chain >= 100) ? 10 : (chain >= 50) ? 5 : 0; //If the player has a chain greater than or equal to 100, the game will roll odds for a Shiny pokemon 10 more times. If the player has a chain greater than 49 or less than 100, the game rolls Shiny odds 5 more times.
