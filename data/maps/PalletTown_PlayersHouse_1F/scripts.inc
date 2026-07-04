@@ -13,8 +13,6 @@ PalletTown_PlayersHouse_1F_OnTransition:
 PalletTown_PlayersHouse_1F_EvenScripts_Mom::
 	lock
 	faceplayer
-	setvar VAR_0x8003, 0
-	setvar VAR_UNUSED_0x8014, 0
 	goto_if_le VAR_ADVENTURE_BEGINS, 2, PalletTown_PlayersHouse_1F_EventScript_BetterHurry
 	goto_if_eq VAR_ADVENTURE_BEGINS, 3, PlayersHouse_1F_EventScript_PokenavScene
 	goto_if_eq VAR_SECRET_BATTLE_CLEAR, 2, PlayersHouse_1F_EventScript_BillVisiting
