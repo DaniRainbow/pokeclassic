@@ -2712,22 +2712,22 @@ bool8 DexNavTryMakeShinyMon(void)
     rndBonus = (Random() % 100 < 4 ? 4 : 0); //Roll a random number and if the number is less than 4, roll 4 additional times to see if the pokemon is a Shiny.
     shinyRolls = 1 + charmBonus + chainBonus + rndBonus;
 
-    if (searchLevel >= 255) //If the maximum search value is reached, raise the bonus so that any number rolled that is 255 or lower will produce a Shiny.
+    if (searchLevel == 255) //If the maximum search value is reached, raise the bonus so that any number rolled that is 255 or lower will produce a Shiny.
     {
         shinyRate += searchLevel - 255;
         searchLevel = 255;
     }
-    else if (searchLevel > 200) //If the pokemon was encountered in the wild 200 or more times, raise the bonus so that any number rolled that is 200 or lower will produce a Shiny.
+    if (searchLevel > 200) //If the pokemon was encountered in the wild 200 or more times, raise the bonus so that any number rolled that is 200 or lower will produce a Shiny.
     {
         shinyRate += searchLevel - 200;
         searchLevel = 200;
     }
-    else if (searchLevel > 100) //If the pokemon was encountered in the wild 100 or more times, raise the bonus so that any number rolled that is 100 or lower will produce a Shiny.
+    if (searchLevel > 100) //If the pokemon was encountered in the wild 100 or more times, raise the bonus so that any number rolled that is 100 or lower will produce a Shiny.
     {
         shinyRate += (searchLevel * 2) - 200;
         searchLevel = 100;
     }
-    else if (searchLevel > 0) //If the pokemon was encountered in the wild less than 100 times, apply no bonus check for a Shiny based on search level.
+    if (searchLevel > 0) //If the pokemon was encountered in the wild less than 100 times, apply no bonus check for a Shiny based on search level.
     {
         shinyRate += searchLevel * 6;
     }
