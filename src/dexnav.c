@@ -2716,7 +2716,7 @@ bool8 DexNavTryMakeShinyMon(void)
     {
         shinyRate += searchLevel + 992; //992 is the cumulative bonus of the previous tiers (594 if sL < 100, 398 if sL <200)
     }
-    else if (searchLevel >= 100) //If the pokemon was encountered in the wild 100 or more times, raise the bonus so that any number rolled that is 100 or lower will produce a Shiny.
+    else if (searchLevel >= 100) //If the pokemon was encountered in the wild 100 or more times, multiply the searchLevel by 2 and take the bonus calculations from the <100 searchLevel to add to the current one.
     {
         shinyRate += (searchLevel * 2) + 594; //594 is the maximum bonus of the sL <100 tier
     }
