@@ -2712,27 +2712,20 @@ bool8 DexNavTryMakeShinyMon(void)
     rndBonus = (Random() % 100 < 4 ? 4 : 0); //Roll a random number and if the number is less than 4, roll 4 additional times to see if the pokemon is a Shiny.
     shinyRolls = 1 + charmBonus + chainBonus + rndBonus;
 
-    if (searchLevel == 255) //If the maximum search value is reached, raise the bonus so that any number rolled that is 255 or lower will produce a Shiny.
+    if (searchLevel >= 200) //If the pokemon was encountered in the wild 200 or more times, take all previous bonus calculations and add that to the current searchLevel.
     {
-        shinyRate += searchLevel - 200;
-        searchLevel = 255;
+        shinyRate += searchLevel + 992; //992 is the cumulative bonus of the previous tiers (594 if sL < 100, 398 if sL <200)
     }
-    if (searchLevel > 200) //If the pokemon was encountered in the wild 200 or more times, raise the bonus so that any number rolled that is 200 or lower will produce a Shiny.
+    else if (searchLevel >= 100) //If the pokemon was encountered in the wild 100 or more times, raise the bonus so that any number rolled that is 100 or lower will produce a Shiny.
     {
-        shinyRate += searchLevel - 200;
-        searchLevel = 200;
+        shinyRate += (searchLevel * 2) + 594; //594 is the maximum bonus of the sL <100 tier
     }
-    if (searchLevel > 100) //If the pokemon was encountered in the wild 100 or more times, raise the bonus so that any number rolled that is 100 or lower will produce a Shiny.
-    {
-        shinyRate += (searchLevel * 2) - 200;
-        searchLevel = 100;
-    }
-    if (searchLevel > 0) //If the pokemon was encountered in the wild less than 100 times, apply no bonus check for a Shiny based on search level.
+    else
     {
         shinyRate += searchLevel * 6;
     }
     
-    shinyRate /= 100;
+    shinyRate /= 100; //Maximum shinyRate will be 12.41, 1:806 odds if no bonus is applied, 1:101 if only Shiny Charm bonus applies
     for (i = 0; i < shinyRolls; i++)
     {
         if (Random() % 10000 < shinyRate) //Pick a random number between 0 and 9999 and if it is less than the search level bonus, generate a Shiny.
