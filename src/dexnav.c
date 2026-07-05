@@ -2712,7 +2712,11 @@ bool8 DexNavTryMakeShinyMon(void)
     rndBonus = (Random() % 100 < 4 ? 4 : 0); //Roll a random number and if the number is less than 4, roll 4 additional times to see if the pokemon is a Shiny.
     shinyRolls = 1 + charmBonus + chainBonus + rndBonus;
 
-    if (searchLevel >= 200) //If the pokemon was encountered in the wild 200 or more times, take all previous bonus calculations and add that to the current searchLevel.
+    if (searchLevel == 255) //If the pokemon was encountered in the wild 255 times, take all previous bonus calculations and add an additional 153 to the current search level. searchLevel = 1400
+    {
+        shinyRate += searchLevel + 1145;
+    }
+    else if (searchLevel >= 200) //If the pokemon was encountered in the wild 200 or more times, take all previous bonus calculations and add that to the current searchLevel. searchLevel = 1246 maximum
     {
         shinyRate += searchLevel + 992; //992 is the cumulative bonus of the previous tiers (594 if sL < 100, 398 if sL <200)
     }
@@ -2725,7 +2729,7 @@ bool8 DexNavTryMakeShinyMon(void)
         shinyRate += searchLevel * 6;
     }
     
-    shinyRate /= 100; //Maximum shinyRate will be 12.41, 1:806 odds if no bonus is applied, 1:101 if only Shiny Charm bonus applies
+    shinyRate /= 100; //Maximum shinyRate will be 14, 1:714 odds if no bonus is applied, 1:119 no Shiny Charm 50+ chain bonus, 1:65 no Shiny Charm 100 chain bonus, 1:79 if only Shiny Charm bonus applies, 1:51 Shiny Charm and 50+ chain bonus, 1:38 Shiny Charm and 100 chain bonus
     for (i = 0; i < shinyRolls; i++)
     {
         if (Random() % 10000 < shinyRate) //Pick a random number between 0 and 9999 and if it is less than the search level bonus, generate a Shiny.
