@@ -2714,7 +2714,7 @@ bool8 DexNavTryMakeShinyMon(void)
 
     if (searchLevel == 255) //If the maximum search value is reached, raise the bonus so that any number rolled that is 255 or lower will produce a Shiny.
     {
-        shinyRate += searchLevel - 255;
+        shinyRate += searchLevel - 200;
         searchLevel = 255;
     }
     if (searchLevel > 200) //If the pokemon was encountered in the wild 200 or more times, raise the bonus so that any number rolled that is 200 or lower will produce a Shiny.
