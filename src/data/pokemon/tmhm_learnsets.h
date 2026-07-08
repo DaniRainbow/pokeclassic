@@ -2324,6 +2324,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)
+                                        | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
     [SPECIES_VOLTORB]     = TMHM_LEARNSET(TMHM(TM06_TOXIC)
