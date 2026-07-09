@@ -213,7 +213,7 @@ TitleMatch_EventScript_Victory::
 	end
 
 TitleMatch_EventScript_Defeat::
-	msgbox TitleMatch_Text_TitleMatchVictory, MSGBOX_DEFAULT
+	msgbox TitleMatch_Text_TitleMatchDefeated, MSGBOX_DEFAULT
 
 TitleMatch_EventScript_Exit::
 	waitmessage
