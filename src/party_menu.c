@@ -2547,9 +2547,12 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 				    if (sFieldMoves[j] != MOVE_FLASH || !CheckBagHasItem(ITEM_HM05_FLASH, 1)){
                         // If Mon already knows DIG and the TM is in the bag, prevent it from being added to action list
                         if (sFieldMoves[j] != MOVE_DIG || !CheckBagHasItem(ITEM_TM28, 1)){ 
-                            // If Mon already knows CUT and the HM is in the bag, prevent it from being added to action list
-                            if (sFieldMoves[j] != MOVE_CUT || !CheckBagHasItem(ITEM_HM01_CUT, 1)){
-						        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                            // If Mon already knows TELEPORT, prevent it from being added to action list
+                            if (sFieldMoves[j] != MOVE_TELEPORT){
+                                // If Mon already knows CUT and the HM is in the bag, prevent it from being added to action list
+                                if (sFieldMoves[j] != MOVE_CUT || !CheckBagHasItem(ITEM_HM01_CUT, 1)){
+						            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                                }
                             }
                         }
                     }
