@@ -474,7 +474,7 @@ static void Task_CreditsMain(u8 taskId)
         s16 bikeTaskId = gTasks[taskId].tTaskId_BikeScene;
         gTasks[bikeTaskId].tState = 30;
 
-        gTasks[taskId].tTheEndDelay = 256;
+        gTasks[taskId].tTheEndDelay = 228;
         gTasks[taskId].func = Task_CreditsTheEnd1;
         return;
     }
@@ -639,7 +639,7 @@ static void Task_CreditsTheEnd3(u8 taskId)
                                 | DISPCNT_OBJ_1D_MAP
                                 | DISPCNT_BG0_ON);
 
-    gTasks[taskId].tDelay = 215; //set this to 215 to actually show "THE END" in time to the last song beat
+    gTasks[taskId].tDelay = 0; //set this to 215 to actually show "THE END" in time to the last song beat
     gTasks[taskId].func = Task_CreditsTheEnd4;
 }
 
@@ -784,7 +784,7 @@ static void Task_UpdatePage(u8 taskId)
     case 3:
         if (!gPaletteFade.active)
         {
-            gTasks[taskId].tDelay = 115;
+            gTasks[taskId].tDelay = 190;
             gTasks[taskId].tState++;
         }
         return;
