@@ -163,7 +163,7 @@ FarawayIsland_Interior_EventScript_DailyMew::
     copyvar VAR_0x8004, VAR_RESULT
     goto_if_eq VAR_0x8004, 1, FarawayIsland_Interior_EventScript_Surprise_Mew
     setvar VAR_0x8004, 0
-    setwildbattle SPECIES_MEW, 30
+    seteventmon SPECIES_MEW, 30
     waitse
     playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
     delay 20
@@ -183,7 +183,7 @@ FarawayIsland_Interior_EventScript_Surprise_Mew::
 	waitmovement 0
 	setvar VAR_0x8004, 0
     setflag FLAG_SHINY_CREATION
-    setwildbattle SPECIES_MEW, 30
+    seteventmon SPECIES_MEW, 30
     waitse
     playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
     delay 20
