@@ -8618,15 +8618,33 @@ static const struct TrainerMonItemCustomMoves sParty_NinjaBoyOrion[] = {
 		.iv = 250,
 		.lvl = 45,
 		.species = SPECIES_RAICHU,
-		.heldItem = ITEM_QUICK_CLAW,
-		.moves = {MOVE_THUNDER, MOVE_TOXIC, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM}
+		.heldItem = ITEM_BRIGHT_POWDER,
+		.moves = {MOVE_THUNDER, MOVE_TOXIC, MOVE_FAKE_OUT, MOVE_DOUBLE_TEAM},
+        .abilityNums = 2, //LightningRod
 	},
 	{
 		.iv = 250,
 		.lvl = 45,
 		.species = SPECIES_BLASTOISE,
 		.heldItem = ITEM_LEFTOVERS,
-		.moves = {MOVE_SURF, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_AVALANCHE}
+		.moves = {MOVE_SURF, MOVE_BODY_SLAM, MOVE_RAIN_DANCE, MOVE_AVALANCHE},
+        .abilityNums = 2, //Rain Dish
+	},
+    {
+		.iv = 250,
+		.lvl = 45,
+		.species = SPECIES_SLOWBRO,
+		.heldItem = ITEM_FOCUS_SASH,
+		.moves = {MOVE_SURF, MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_ICE_BEAM},
+        .abilityNums = 0, //Oblivious
+	},
+    {
+		.iv = 250,
+		.lvl = 45,
+		.species = SPECIES_CHARIZARD,
+		.heldItem = ITEM_ROCKY_HELMET,
+		.moves = {MOVE_FIRE_FANG, MOVE_WING_ATTACK, MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW},
+        .abilityNums = 0, //Blaze
 	},
 };
 
