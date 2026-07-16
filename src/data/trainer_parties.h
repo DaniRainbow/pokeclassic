@@ -441,8 +441,9 @@ static const struct TrainerMonItemCustomMoves sParty_SecretBattleOak[] = {
         .iv = 250,
         .lvl = 69,
         .species = SPECIES_DITTO,
-        .heldItem = ITEM_QUICK_CLAW,
+        .heldItem = ITEM_CHOICE_SCARF,
         .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .abilityNums = 2, //Imposter
     },
     {
         .iv = 250,
@@ -450,6 +451,7 @@ static const struct TrainerMonItemCustomMoves sParty_SecretBattleOak[] = {
         .species = SPECIES_TAUROS,
         .heldItem = ITEM_FOCUS_BAND,
         .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_FACADE, MOVE_IRON_TAIL},
+        .abilityNums = 1, //Anger Point
     },
     {
         .iv = 250,
@@ -457,27 +459,31 @@ static const struct TrainerMonItemCustomMoves sParty_SecretBattleOak[] = {
         .species = SPECIES_CHANSEY,
         .heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_SOFT_BOILED, MOVE_FIRE_BLAST, MOVE_SING, MOVE_ICE_BEAM},
+        .abilityNums = 0, //Natural Cure
     },
     {
         .iv = 250,
-        .lvl = 65,
+        .lvl = 69,
         .species = SPECIES_ARCANINE,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_HOWL, MOVE_EXTREME_SPEED, MOVE_FLAMETHROWER, MOVE_CRUNCH},
+        .abilityNums = 0, //Intimidate
     },
     {
         .iv = 250,
         .lvl = 69,
         .species = SPECIES_EXEGGUTOR,
         .heldItem = ITEM_LUM_BERRY,
-        .moves = {MOVE_SLEEP_POWDER, MOVE_SOLAR_BEAM, MOVE_LEECH_SEED, MOVE_SUBSTITUTE},
+        .moves = {MOVE_SPORE, MOVE_SOLAR_BEAM, MOVE_LEECH_SEED, MOVE_SUBSTITUTE},
+        .abilityNums = 2, //Harvest
     },
     {
         .iv = 250,
-        .lvl = 65,
+        .lvl = 70,
         .species = SPECIES_RHYDON,
         .heldItem = ITEM_SITRUS_BERRY,
         .moves = {MOVE_MEGAHORN, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_ROCK_BLAST},
+        .abilityNums = 1, //Rock Head
     },
 };
 
