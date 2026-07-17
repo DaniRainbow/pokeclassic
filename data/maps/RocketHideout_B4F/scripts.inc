@@ -408,7 +408,7 @@ RocketHideout_B4F_Text_TonyDefeat:
 RocketHideout_B4F_Text_TonyPostBattle:
 	.string "It is clear to me now.\p"
 	.string "Team Rocket had no choice but\n"
-	.string "but to disband. You forced them.$"
+	.string "to disband. You forced them.$"
 
 RocketHideout_B4F_EventScript_MegaHintKangaskhan::    
     goto_if_set FLAG_GOT_KANGASKHANITE, RocketHideout_B4F_EventScript_TonyDefeated
