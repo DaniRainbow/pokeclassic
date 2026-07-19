@@ -3,10 +3,6 @@
 
 BattleTower_Entrance_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleTower_Entrance_OnFrame
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, CableClub_OnFrame
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, CableClub_OnWarp
-	map_script MAP_SCRIPT_ON_LOAD, CableClub_OnLoad
-	map_script MAP_SCRIPT_ON_TRANSITION, CableClub_OnTransition
 	.byte 0
 
 BattleTower_Entrance_OnFrame::
@@ -17,18 +13,6 @@ BattleTower_Entrance_OnFrame::
 	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_WON, BattleTower_Entrance_EventScript_WonChallenge
 	map_script_2 VAR_TEMP_0, CHALLENGE_STATUS_LOST, BattleTower_Entrance_EventScript_LostChallenge
 	.2byte 0
-
-BattleTower_Entrance_EventScript_Colosseum::
-	call CableClub_EventScript_Colosseum
-	end
-
-BattleTower_Entrance_EventScript_TradeCenter::
-	call CableClub_EventScript_TradeCenter
-	end
-
-BattleTower_Entrance_EventScript_RecordCorner::
-	call CableClub_EventScript_RecordCorner
-	end
 
 BattleTower_Entrance_BattleTowerCutscene::
 	applymovement OBJ_EVENT_ID_PLAYER, BTCutscene_ApproachScott
@@ -876,3 +860,17 @@ BattleTower_Entrance_Text_CanLeaveUntilLossOrSevenWins:
 BattleTower_Entrance_Text_RecordLastMatch:
 	.string "Shall I record your last Battle Tower\n"
 	.string "match on your Frontier Pass?$"
+
+BattleTower_Entrance_EventScript_Technician::
+	lock
+	faceplayer
+	msgbox BattleTower_Entrance_Text_Technician, MSGBOX_NPC
+	waitmessage
+	release
+	end
+
+BattleTower_Entrance_Text_Technician:
+	.string "Kid, I am trying to figure out\n"
+	.string "what went wrong here.\p"
+	.string "Clear off. The adults have\n"
+	.string "work to do, champ.$"
