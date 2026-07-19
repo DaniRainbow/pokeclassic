@@ -35,7 +35,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route24_EventScript_RocketTriggerLeft",
+      "script": "Route24_EventScript_Cale",
       "flag": "FLAG_HIDE_NUGGET_BRIDGE_CALE",
       "in_connection": ""
     },
@@ -84,7 +84,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 12,
-      "y": 19,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -242,7 +242,7 @@
       "elevation": 0,
       "var": "VAR_CERULEAN_CITY_ROCKETS",
       "var_value": "0",
-      "script": "Route24_EventScript_RocketTriggerRight"
+      "script": ""
     }
   ],
   "bg_events": [
