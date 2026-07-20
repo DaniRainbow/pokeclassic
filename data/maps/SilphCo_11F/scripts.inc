@@ -437,8 +437,8 @@ SilphCo_11F_Text_RocketWellNeverStop::
 
 SilphCo_11F_Text_TakingYouIn::
 	.string "Looker: We'll see about that.\p"
-	.string "{PLAYER}! I'm taking this Rocket in.\p"
-	.string "Thanks for all your help here.\n"
+	.string "{PLAYER}! I'm taking this Rocket in.\n"
+	.string "Thanks for all your help here.\p"
 	.string "You should come see me the next\n"
 	.string "time you're in Celadon City.$"
 
