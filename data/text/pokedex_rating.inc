@@ -1,10 +1,10 @@
 gOakDexRatingText_GoodToSeeYou::
-	.string "OAK: Good to see you, {PLAYER}!\n"
+	.string "Oak: Good to see you, {PLAYER}!\n"
 	.string "How is your Pokédex coming along?\p"
 	.string "Here, let me take a look.$"
 
 gOakDexRatingText_AreYouCurious::
-	.string "OAK: Good to hear from you you,\n"
+	.string "Oak: Good to hear from you you,\n"
 	.string "{PLAYER}!\p"
 	.string "How is your Pokédex coming along?\p"
 	.string "Let's take a look...$"
