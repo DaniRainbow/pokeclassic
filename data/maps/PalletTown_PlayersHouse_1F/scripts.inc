@@ -194,6 +194,7 @@ PlayersHouse_1F_Text_Visitor::
 
 PlayersHouse_1F_EventScript_Gameclear::
 	lockall
+	setflag FLAG_OAK_ADVENTURE_AWAITS
 	playse SE_PIN
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
 	waitmovement 1
@@ -238,6 +239,8 @@ PlayersHouse_1F_Text_Gameclear2::
 	.string "Mom: Just because you're the new\n"
 	.string "champion doesn't mean your story\l"
 	.string "is over!\p"
+	.string "Professor Oak will no doubt have\n"
+	.string "advice for you if you visit.\p"
 	.string "There's a whole world out there\n"
 	.string "for you and your Pokémon to explore!\p"
 	.string "I'm so proud of you, {PLAYER}!\n"
