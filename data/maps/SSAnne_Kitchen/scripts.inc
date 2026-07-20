@@ -39,7 +39,7 @@ SSAnne_Kitchen_EventScript_Chef4::
 
 SSAnne_Kitchen_Text_IAmLeChefMainCourseIs::
     .string "Er-hem!\n"
-    .string "Indeed I am le CHEF!\p"
+    .string "Indeed I am le Chef!\p"
     .string "Le main course is$"
 
 SSAnne_Kitchen_EventScript_SalmonDuSalad::
