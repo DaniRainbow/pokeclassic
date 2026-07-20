@@ -220,7 +220,7 @@
 #define FLAG_HIDE_RIVAL22_MANDATORY         0xC9
 #define FLAG_MISSING_PECHA_BERRY          	0xCA
 #define FLAG_MET_MAGAZINE_DANI           	0xCB
-#define FLAG_UNUSED_0x0CC          			0xCC
+#define FLAG_DEFEATED_PKMNRNGR_ALEX         0xCC
 #define FLAG_UNUSED_0x0CD    				0xCD
 #define FLAG_UNUSED_0x0CE    				0xCE
 #define FLAG_UNUSED_0x0CF        			0xCF

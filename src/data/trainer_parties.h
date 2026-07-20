@@ -7895,6 +7895,58 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerMaleSpencer[] = {
     },
 };
 
+// Route 23
+static const struct TrainerMonItemCustomMoves sParty_PokemonRangerAlex[] = {
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_PIDGEOT,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_DEFOG, MOVE_U_TURN, MOVE_ROOST, MOVE_BRAVE_BIRD},
+        .abilityNums = 2, //Big Pecks
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_PERSIAN,
+        .heldItem = ITEM_LIFE_ORB,
+        .moves = {MOVE_FAKE_OUT, MOVE_U_TURN, MOVE_KNOCK_OFF, MOVE_BODY_SLAM},
+        .abilityNums = 1, //Technician
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_SANDSLASH,
+        .heldItem = ITEM_ROCKY_HELMET,
+        .moves = {MOVE_STEALTH_ROCK, MOVE_RAPID_SPIN, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .abilityNums = 2, //Sand Rush
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_STARMIE,
+        .heldItem = ITEM_CHOICE_SPECS,
+        .moves = {MOVE_SCALD, MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_HIDDEN_POWER},
+        .abilityNums = 2, //Analytic
+    },
+    {
+        .iv = 250,
+        .lvl = 65,
+        .species = SPECIES_NINETALES,
+        .heldItem = ITEM_HEAT_ROCK,
+        .moves = {MOVE_WEATHER_BALL, MOVE_SOLAR_BEAM, MOVE_NASTY_PLOT, MOVE_BATON_PASS},
+        .abilityNums = 2, //Drought
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_TANGELA,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_GROWTH, MOVE_LEECH_SEED, MOVE_LEAF_STORM, MOVE_SLEEP_POWDER},
+        .abilityNums = 0, //Chlorophyll
+    },
+};
+
 // Pokemon Mansion
 static const struct TrainerMonNoItemDefaultMoves sParty_ScientistTed[] = {
     {

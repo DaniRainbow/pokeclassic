@@ -629,7 +629,7 @@
 #define	TRAINER_AROMALADY_LILY	                    517
 #define	TRAINER_DRAGONTAMER_NICK	                518
 #define	TRAINER_LASS_LOTTIE	                        519
-#define	TRAINER_UNUSED_520	520
+#define	TRAINER_POKEMONRANGER_ALEX	                520
 #define	TRAINER_UNUSED_521	521
 #define	TRAINER_UNUSED_522	522
 #define	TRAINER_UNUSED_523	523
