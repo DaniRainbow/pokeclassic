@@ -444,7 +444,8 @@
 #define OBJ_EVENT_GFX_AERODACTYL					OVERWORLD_POKEMON_GFX + 45
 #define OBJ_EVENT_GFX_ARCANINE                      OVERWORLD_POKEMON_GFX + 46
 #define OBJ_EVENT_GFX_UMBREON                       OVERWORLD_POKEMON_GFX + 47
-#define OBJ_EVENT_GFX_MEW                        	OVERWORLD_POKEMON_GFX + 48
+#define OBJ_EVENT_GFX_TANGELA                       OVERWORLD_POKEMON_GFX + 48
+#define OBJ_EVENT_GFX_MEW                        	OVERWORLD_POKEMON_GFX + 49
 
 #define DECORATION_GFX								OBJ_EVENT_GFX_MEW
 

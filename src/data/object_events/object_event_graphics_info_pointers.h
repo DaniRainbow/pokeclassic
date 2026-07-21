@@ -426,6 +426,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pinsir;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Aerodactyl;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Arcanine;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Umbreon;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tangela;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreatBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UltraBall;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBall;
@@ -862,7 +863,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_PINSIR] =                         &gObjectEventGraphicsInfo_Pinsir,
     [OBJ_EVENT_GFX_AERODACTYL] =                     &gObjectEventGraphicsInfo_Aerodactyl,
     [OBJ_EVENT_GFX_ARCANINE] =                       &gObjectEventGraphicsInfo_Arcanine,
-    [OBJ_EVENT_GFX_UMBREON] =                        &gObjectEventGraphicsInfo_Umbreon
+    [OBJ_EVENT_GFX_UMBREON] =                        &gObjectEventGraphicsInfo_Umbreon,
+    [OBJ_EVENT_GFX_TANGELA] =                        &gObjectEventGraphicsInfo_Tangela
 };
 
 
