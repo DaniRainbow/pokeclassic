@@ -6243,9 +6243,9 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_POKEMONRANGER_ALEX] = {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_BEAUTY,
+        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_BEAUTY,
+        .trainerPic = TRAINER_PIC_POKEMON_RANGER_F,
         .trainerName = _("Alex"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_MAX_POTION},
         .doubleBattle = FALSE,
