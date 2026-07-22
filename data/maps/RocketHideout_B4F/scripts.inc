@@ -19,6 +19,7 @@ RocketHideout_B4F_OnLoad::
 	call_if_defeated TRAINER_TEAM_ROCKET_GRUNT_17, RocketHideout_B4F_EventScript_CountGruntDefeated
 	compare NUM_DOOR_GRUNTS_DEFEATED, 2
 	call_if_ne RocketHideout_B4F_EventScript_SetBarrier
+	call_if_set FLAG_GOT_SQUIRTLE,  RocketHideout_B4F_EventScript_RepositionRockets
 	end
 
 RocketHideout_B4F_EventScript_CountGruntDefeated::
@@ -199,6 +200,13 @@ RocketHideout_B4F_EventScript_JessieJames::
 	release
 	end
 
+RocketHideout_B4F_EventScript_RepositionRockets::
+	setobjectxyperm LOCALID_JESSIE, 16, 11
+	setobjectmovementtype LOCALID_JESSIE, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_JAMES, 19, 11
+	setobjectmovementtype LOCALID_JAMES, MOVEMENT_TYPE_FACE_LEFT
+	return
+
 RocketHideout_B4F_Text_JamesSorry:
 	.string "James: For what it's worth, I\n"
 	.string "am sorry about what happened to\l"
@@ -267,10 +275,7 @@ RocketHideout_B4F_EventScript_DrawMapForBarrierRemoval::
 	playse SE_UNLOCK
 	special DrawWholeMapView
 	waitse
-	applymovement LOCALID_JESSIE, Movement_HoldItJessie
-	waitmovement 0
-	applymovement LOCALID_JAMES, Movement_HoldItJames
-	waitmovement 0
+	setflag FLAG_JESSIE_JAMES_READY
 	return
 
 Movement_HoldItJessie::
@@ -288,6 +293,7 @@ RocketHideout_B4F_Eventscript_GiovannisTurn::
 	waitmovement 0
 	applymovement LOCALID_JAMES, Movement_LeaveItJames
 	waitmovement 0
+	clearflag FLAG_JESSIE_JAMES_READY
 	setflag FLAG_MOVENOW_JESSIEJAMES
 	release
 	end
