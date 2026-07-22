@@ -419,7 +419,7 @@ CeladonCity_DepartmentStore_Roof_Text_FloorSign::
     .string "Vending Machines$"
 
 CeladonCity_DepartmentStore_Roof_Text_WhichDrinkWouldYouLike:
-	.string "It's a VENDING MACHINE.\n"
+	.string "It's a Vending Machine.\n"
 	.string "Which drink would you like?$"
 
 CeladonCity_DepartmentStore_Roof_Text_CanOfDrinkDroppedDown:

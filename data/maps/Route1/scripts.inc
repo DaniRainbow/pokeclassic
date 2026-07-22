@@ -1,7 +1,6 @@
 .set LOCALID_OAK, 1
 .set LOCALID_PIKACHU, 2
 .set LOCALID_FUGITIVE, 7
-.set LOCALID_MEWTWO, 10
 
 Route1_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route1_OnTransition

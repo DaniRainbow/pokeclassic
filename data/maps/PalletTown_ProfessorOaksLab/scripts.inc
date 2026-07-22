@@ -863,8 +863,8 @@ PalletTown_ProfessorOaksLab_Text_NOEverstone:
 	.string "It's a hard tunnel to get through.\p"
 	.string "Try checking the PokéCenter outside\n"
 	.string "the north entrance.\p"
-	.string "Have you picked up FLY? If so, please\n"
-	.string "FLY on over to Rock Tunnel.$"
+	.string "Have you picked up Fly? If so, please\n"
+	.string "Fly on over to Rock Tunnel.$"
 
 PalletTown_ProfessorOaksLab_NOItemfinder::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOItemfinder, MSGBOX_NPC
