@@ -93,7 +93,6 @@ Route23_EventScript_PokemonRanger_Alex::
 	trainerbattle_single TRAINER_POKEMONRANGER_ALEX, Route23_Text_AlexIntro, Route23_Text_AlexDefeat
 	setflag FLAG_DEFEATED_PKMNRNGR_ALEX
 	msgbox Route23_Text_AlexPostBattle MSGBOX_AUTOCLOSE
-	playse SE_PIN
 	release
 	end
 
