@@ -19,7 +19,7 @@ RocketHideout_B4F_OnLoad::
 	call_if_defeated TRAINER_TEAM_ROCKET_GRUNT_17, RocketHideout_B4F_EventScript_CountGruntDefeated
 	compare NUM_DOOR_GRUNTS_DEFEATED, 2
 	call_if_ne RocketHideout_B4F_EventScript_SetBarrier
-	call_if_set FLAG_GOT_SQUIRTLE,  RocketHideout_B4F_EventScript_RepositionRockets
+	call_if_set FLAG_MOVENOW_JESSIEJAMES,  RocketHideout_B4F_EventScript_RepositionRockets
 	end
 
 RocketHideout_B4F_EventScript_CountGruntDefeated::
