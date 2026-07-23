@@ -9,15 +9,26 @@ Route23_MapScripts::
 Route23_OnTransition:
 	clearflag FLAG_HIDE_VICTORY_ROAD_3F_BOULDER
 	setflag FLAG_HIDE_VICTORY_ROAD_2F_BOULDER
+	setflag FLAG_HIDE_GORDON
 	setvar VAR_VICTORY_ROAD_1F_STATE, 0
 	setvar VAR_VICTORY_ROAD_2F_BOULDER1, 0
 	setvar VAR_VICTORY_ROAD_2F_BOULDER2, 0
 	setvar VAR_VICTORY_ROAD_3F_STATE, 0
 	call Common_EventScript_GetDayOrNight
+	goto_if_unset FLAG_DEFEATED_PKMNRNGR_ALEX, Route23_EventScript_HideNSeek
+	goto_if_set FLAG_DEFEATED_PKMNRNGR_ALEX, Route23_EventScript_ShowGordon
 	end
 
 Route23_OnResume:
 	call Common_EventScript_GetDayOrNight
+	end
+
+Route23_EventScript_ShowGordon::
+	clearflag FLAG_HIDE_GORDON
+	end
+
+Route23_EventScript_HideNSeek::
+	clearflag FLAG_TANGELA_IN_PLACE
 	end
 
 Route23_EventScript_VictoryRoadGateSign::
@@ -33,10 +44,19 @@ Route23_EventScript_ItemTM10::
 	release
 	end
 
-Route23_EventScript_TangelaEvent::
+Route23_EventScript_RangerAlex::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_PKMNRNGR_ALEX, Route23_EventScript_TalkAboutTangela
+	goto_if_unset FLAG_TANGELA_IN_PLACE, Route23_EventScript_TangelaEvent
+	trainerbattle_single TRAINER_POKEMONRANGER_ALEX, Route23_Text_AlexIntro, Route23_Text_AlexDefeat
+	setflag FLAG_DEFEATED_PKMNRNGR_ALEX
+	clearflag FLAG_HIDE_GORDON
+	msgbox Route23_Text_AlexPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route23_EventScript_TangelaEvent::
 	msgbox Route23_Text_AlexGreeting, MSGBOX_NPC
 	waitmessage
 	playse SE_PIN
@@ -47,6 +67,8 @@ Route23_EventScript_TangelaEvent::
 	applymovement LOCALID_BEAUTY, Movement_LookUpDownRightFacePlayer
 	waitmovement 0
 	playmoncry SPECIES_TANGELA, CRY_MODE_ENCOUNTER
+	waitmoncry
+    delay 20
 	addobject LOCALID_TANGELA
 	applymovement LOCALID_TANGELA, Movement_RunsDownStop1
 	waitmovement 0
@@ -69,8 +91,7 @@ Route23_EventScript_TangelaEvent::
 	playse SE_WALL_HIT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
-	goto Route23_EventScript_PokemonRanger_Alex
-	release
+	setflag FLAG_TANGELA_IN_PLACE
 	end
 
 Route23_EventScript_Tangela::
@@ -79,31 +100,22 @@ Route23_EventScript_Tangela::
     playmoncry SPECIES_TANGELA, CRY_MODE_ENCOUNTER
     waitmoncry
     delay 20
-    goto_if_set FLAG_DEFEATED_PKMNRNGR_ALEX, Route23_EventScript_TangelaDefeated
 	msgbox Route23_Text_Tangela MSGBOX_DEFAULT
 	release
 	end
 
 Route23_Text_Tangela:
-	.string "{PLAYER}.\p"
-	.string "I will be a Tangela one day.$"
-
-Route23_EventScript_PokemonRanger_Alex::
-	faceplayer
-	trainerbattle_single TRAINER_POKEMONRANGER_ALEX, Route23_Text_AlexIntro, Route23_Text_AlexDefeat
-	setflag FLAG_DEFEATED_PKMNRNGR_ALEX
-	msgbox Route23_Text_AlexPostBattle MSGBOX_AUTOCLOSE
-	release
-	end
+	.string "Tangela is practicing soft\n"
+	.string "and quiet feet in the grass.$"
 
 Route23_Text_AlexIntro:
 	.string "Tag, you're it?$"
 
 Route23_Text_AlexDefeat:
-	.string "Incredible... how...?$"
+	.string "Dang, now I'm it!$"
 
 Route23_Text_AlexPostBattle:
-	.string "Is this a dream?$"
+	.string "Thanks for playing!$"
 
 Route23_EventScript_TalkAboutTangela::    
     msgbox Route23_Text_TalkAboutTangela MSGBOX_DEFAULT
@@ -112,22 +124,21 @@ Route23_EventScript_TalkAboutTangela::
     end
     
 Route23_Text_TalkAboutTangela:
-    .string "Tag, you are it.$"
-
-Route23_EventScript_TangelaDefeated::
-	msgbox TangelaDefeated MSGBOX_DEFAULT
-	release
-	end
-
-TangelaDefeated:	
-	.string "I don't look like spaghetti\n"
-	.string "but I will.$"
+    .string "No matter how hard Gordon tries,\n"
+	.string "he can't quite seem to figure\l"
+	.string "how to make quiet steps.$"
 
 Route23_Text_AlexGreeting:
-	.string "Placeholder.$"
+	.string "Oh... hi!\n"
+	.string "You're not who I was expecting.\p"
+	.string "I'm taking a break from training\n"
+	.string "for the League to play with my\l"
+	.string "amazing Pokémon.$"
 
 Route23_Text_AlexLooking:
-	.string "Placeholder 2.$"
+	.string "Speaking of which, it's not\n"
+	.string "like Gordon to take this long\l"
+	.string "during hide and seek...$"
 
 Movement_LookUpDownRightFacePlayer::
 	face_up
@@ -136,7 +147,11 @@ Movement_LookUpDownRightFacePlayer::
 	face_right
 	delay_16
 	delay_16
+	delay_16
+	delay_16
 	face_left
+	delay_16
+	delay_16
 	delay_16
 	delay_16
 	step_end

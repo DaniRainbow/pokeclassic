@@ -49,12 +49,12 @@
       "x": 15,
       "y": 70,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route23_EventScript_TangelaEvent",
+      "script": "Route23_EventScript_RangerAlex",
       "flag": "0"
     },
     {
@@ -62,13 +62,13 @@
       "x": 10,
       "y": 65,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 7,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route23_EventScript_Tangela",
-      "flag": "0"
+      "flag": "FLAG_HIDE_GORDON"
     }
   ],
   "warp_events": [

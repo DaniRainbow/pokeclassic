@@ -886,8 +886,8 @@
 #define FLAG_HIDE_SCOTT_AT_HOUSE                           		    0x347
 #define FLAG_OAK_ADVENTURE_AWAITS                      				0x348
 #define FLAG_JESSIE_JAMES_READY              						0x349
-#define FLAG_HIDE_UNUSED_116                       					0x34A
-#define FLAG_HIDE_UNUSED_117                   						0x34B
+#define FLAG_HIDE_GORDON                       					    0x34A
+#define FLAG_TANGELA_IN_PLACE                   					0x34B
 #define FLAG_HIDE_UNUSED_118                           				0x34C
 #define FLAG_HIDE_UNUSED_119                  						0x34D
 #define FLAG_HIDE_UNUSED_120                      					0x34E
