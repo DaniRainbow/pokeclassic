@@ -195,6 +195,7 @@ PlayersHouse_1F_Text_Visitor::
 PlayersHouse_1F_EventScript_Gameclear::
 	lockall
 	setflag FLAG_OAK_ADVENTURE_AWAITS
+	clearflag FLAG_HIDE_PKMNRANGER_ALEX
 	playse SE_PIN
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
 	waitmovement 1

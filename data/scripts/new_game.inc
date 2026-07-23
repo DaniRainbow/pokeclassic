@@ -190,4 +190,5 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_MEWTONITE_Y
 	setflag FLAG_HIDE_MEWTONITE_X 
 	setflag FLAG_HIDE_PALLET_BILL
+	setflag FLAG_HIDE_PKMNRANGER_ALEX
 	end
