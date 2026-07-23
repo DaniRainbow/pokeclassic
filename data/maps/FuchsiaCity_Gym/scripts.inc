@@ -78,7 +78,7 @@ FuchsiaCity_Gym_Text_ReceivedBadge::
 
 FuchsiaCity_Gym_Text_ExplainBadge::
     .string "The Soul Badge will allow you\n"
-   .string "to SURF outside of battle.$"
+   .string "to Surf outside of battle.$"
 
 FuchsiaCity_Gym_EventScript_GetTM::
 	msgbox FuchsiaCity_Gym_Text_TakeThisWithYou, MSGBOX_DEFAULT

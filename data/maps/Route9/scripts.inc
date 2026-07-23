@@ -29,7 +29,7 @@ Route9_Text_AliciaDefeat::
 Route9_Text_AliciaPostBattle::
     .string "The tunnel coming up is pitch-black\n"
     .string "inside.\p"
-    .string "You'll need FLASH to get through\n"
+    .string "You'll need Flash to get through\n"
     .string "there.$"
 
 Route9_EventScript_RegisterAliciaAfterBattle::
