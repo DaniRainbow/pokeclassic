@@ -15,11 +15,19 @@ PewterCity_MapScripts::
 
 PewterCity_OnTransition:
 	setflag FLAG_VISITED_PEWTER_CITY
+	goto_if_unset FLAG_REGISTERED_AIDE, PewterCity_EventScript_Cedar
 	setvar VAR_PEWTER_CITY_MUSEUM_STATE, 0
 	call Common_EventScript_GetDayOrNight
 	end
 
 PewterCity_OnResume:
+	call Common_EventScript_GetDayOrNight
+	end
+
+PewterCity_EventScript_Cedar::
+	setvar VAR_TEMP_0, 255
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	setvar VAR_PEWTER_CITY_MUSEUM_STATE, 0
 	call Common_EventScript_GetDayOrNight
 	end
 
@@ -36,6 +44,7 @@ PewterCity_Trigger_RegisterOakAide::
 	delay 30
 	setflag FLAG_REGISTERED_AIDE
 	setflag FLAG_HIDE_AIDE_OAK_LAB
+	setvar VAR_TEMP_0, 0
 	releaseall
 	end
 

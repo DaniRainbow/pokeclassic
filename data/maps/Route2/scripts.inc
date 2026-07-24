@@ -7,6 +7,7 @@ Route2_MapScripts::
 	.byte 0
 
 Route2_OnTransition:
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	call Common_EventScript_GetDayOrNight
 	end
 
