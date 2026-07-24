@@ -1103,6 +1103,7 @@ MatchCall_PersonalizedText6::
 
 MatchCall_PersonalizedText7::
 	.string "Hey, {PLAYER}!\n"
+	.string "It's Bernie.\p"
 	.string "Guess what?\p"
 	.string "I keep losing my wrench\n"
 	.string "cause when I set it down,\l"
