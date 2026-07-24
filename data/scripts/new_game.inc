@@ -192,4 +192,5 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_PALLET_BILL
 	setflag FLAG_HIDE_PKMNRANGER_ALEX
 	setflag FLAG_HIDE_MEGA_TRAINERS
+	setflag FLAG_HIDE_RIVAL22_MANDATORY 
 	end
