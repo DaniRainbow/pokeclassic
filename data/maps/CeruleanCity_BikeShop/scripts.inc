@@ -2,8 +2,29 @@ CeruleanCity_BikeShop_MapScripts::
 	.byte 0
 
 CeruleanCity_BikeShop_EventScript_Bicycle::
+	goto_if_unset FLAG_RECEIVED_BIKE, CeruleanCity_BikeShop_EventScript_NoBikeYet
+	checkitem ITEM_ACRO_BIKE, 1
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_BikeShop_EventScript_GetAcroBike
 	msgbox CeruleanCity_BikeShop_Text_ShinyNewBicycle, MSGBOX_SIGN
 	end
+
+CeruleanCity_BikeShop_EventScript_NoBikeYet::
+	msgbox CeruleanCity_BikeShop_Text_ShinyNewBicycle, MSGBOX_SIGN
+	end
+
+CeruleanCity_BikeShop_EventScript_GetAcroBike::
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message CeruleanCity_BikeShop_Text_BonusBike
+	waitmessage
+	waitfanfare
+	closemessage
+	additem ITEM_ACRO_BIKE, 1
+	release
+	end
+
+CeruleanCity_BikeShop_Text_BonusBike:
+	.string "{PLAYER} claimed the\n"
+    .string "missing Acro Bike!$"
 
 CeruleanCity_BikeShop_Text_ShinyNewBicycle::
     .string "A shiny new Bicycle!$"
@@ -55,7 +76,7 @@ CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle::
 	end
 
 CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle::
-    .string "How do you like your new Bicycle?\n"
+    .string "How do you like your new bikes?\n"
     .string "Do you like how it rides?\p"
     .string "You can take it out on Cycling\n"
     .string "Road and even into caves!$"
@@ -70,6 +91,7 @@ CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher::
 	waitfanfare
 	closemessage
 	setflag FLAG_RECEIVED_BIKE
+	additem ITEM_ACRO_BIKE, 1
 	additem ITEM_MACH_BIKE, 1
 	removeitem ITEM_BIKE_VOUCHER
 	msgbox CeruleanCity_BikeShop_Text_ThankYouComeAgain, MSGBOX_DEFAULT
@@ -84,7 +106,7 @@ CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo::
 
 CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
     .string "{PLAYER} exchanged the\n"
-    .string "Bike Voucher for a Bicycle.$"
+    .string "Bike Voucher for two bikes!$"
 
 CeruleanCity_BikeShop_EventScript_BringBikeVoucher::
 	msgbox CeruleanCity_BikeShop_Text_MakeRoomForBicycle, MSGBOX_DEFAULT
@@ -127,7 +149,7 @@ CeruleanCity_BikeShop_EventScript_YoungsterHaveBike::
 	
 CeruleanCity_BikeShop_Text_WowYourBikeIsCool::
     .string "Wow.\n"
-    .string "Your BIKE is really cool!$"
+    .string "You got two bikes?!$"
 
 
 

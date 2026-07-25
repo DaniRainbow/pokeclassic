@@ -1,5 +1,10 @@
 CeladonCity_DepartmentStore_1F_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_DepartmentStore_1F_OnTransition
 	.byte 0
+
+CeladonCity_DepartmentStore_1F_OnTransition:
+	setescapewarp MAP_CELADON_CITY, 15, 16
+	end
 
 CeladonCity_DepartmentStore_1F_EventScript_Receptionist::
 	msgbox CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore, MSGBOX_NPC
@@ -17,7 +22,7 @@ CeladonCity_DepartmentStore_1F_EventScript_LayoutSign::
 
 CeladonCity_DepartmentStore_1F_Text_FloorDescriptions::
     .string "1F: Service Counter \p"
-    .string "2F: Trainer'S Market\p"
+    .string "2F: Trainer's Market\p"
     .string "3F: TV Game Shop\p"
     .string "4F: Wise Man Gifts\p"
     .string "5F: Drugstore\p"

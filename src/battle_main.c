@@ -119,6 +119,7 @@ static void HandleEndTurn_MonFled(void);
 static void HandleEndTurn_FinishBattle(void);
 static void SpriteCB_UnusedBattleInit(struct Sprite* sprite);
 static void SpriteCB_UnusedBattleInit_Main(struct Sprite *sprite);
+static bool8 partyMonHoldDoublePrizeEffect(void);
 static void TrySpecialEvolution(void);
 
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -241,6 +242,8 @@ EWRAM_DATA struct TotemBoost gTotemBoosts[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA bool8 gHasFetchedBall = FALSE;
 EWRAM_DATA u8 gLastUsedBall = 0;
 EWRAM_DATA u16 gLastThrownBall = 0;
+EWRAM_DATA u16 gBallToDisplay = 0;
+EWRAM_DATA bool8 gLastUsedBallMenuPresent = FALSE;
 EWRAM_DATA u8 gPartyCriticalHits[PARTY_SIZE] = {0};
 EWRAM_DATA static u8 sTriedEvolving = 0;
 
@@ -1953,6 +1956,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
                     SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
                 }
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNums);
                 break;
             }
             }
@@ -3026,7 +3030,10 @@ static void BattleStartClearSetData(void)
     gBattleStruct->safariCatchFactor = gBaseStats[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
     gBattleStruct->safariEscapeFactor = 3;
     gBattleStruct->wildVictorySong = 0;
-    gBattleStruct->moneyMultiplier = 1;
+    if (partyMonHoldDoublePrizeEffect())
+        gBattleStruct->moneyMultiplier = 2;
+    else
+        gBattleStruct->moneyMultiplier = 1;
 
     gBattleStruct->givenExpMons = 0;
     gBattleStruct->palaceFlags = 0;
@@ -5367,6 +5374,17 @@ void RunBattleScriptCommands(void)
 {
     if (gBattleControllerExecFlags == 0)
         gBattleScriptingCommandsTable[gBattlescriptCurrInstr[0]]();
+}
+
+static bool8 partyMonHoldDoublePrizeEffect(void){
+    int i;
+    for (i = 0; i < PARTY_SIZE; i++){
+        u8 item = GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM);
+        if (ItemId_GetHoldEffect(item) == HOLD_EFFECT_DOUBLE_PRIZE){
+            return TRUE;
+        }
+    }
+    return FALSE;   
 }
 
 void SetTypeBeforeUsingMove(u16 move, u8 battlerAtk)

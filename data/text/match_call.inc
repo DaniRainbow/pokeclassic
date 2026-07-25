@@ -592,6 +592,7 @@ MatchCall_EventScript_LookerPostgameReady::
 	clearflag FLAG_QUEUE_LOOKER_POSTGAME_CALL
 	setflag FLAG_LOOKER_POSTGAME_STARTED
 	clearflag FLAG_HIDE_SILPH_POSTGAME_ROCKET
+	setflag FLAG_SILPH_INVASION_ACTIVE
 	releaseall
 	end
 
@@ -655,14 +656,14 @@ MatchCall_Text_Bill4::
 	.string "Bill: Yo, {PLAYER}!\p"
 	.string "Whoa! Team Rocket's leader was\n"
 	.string "the Viridian Gym's leader, too?\p"
-	.string "The net was buzzing with theories,\n"
-	.string "but I don't think I saw anyone guess\l"
-	.string "that one!\p"
+	.string "The net was buzzing with\n"
+	.string "theories, but I don't think I saw\l"
+	.string "anyone guess that one!\p"
 	.string "Who knew he was hiding in plain sight!\p"
 	.string "...\p"
 	.string "That gives me an idea!\p"
 	.string "Why don't you come back to the Sea\n"
-	.string "Cottage.\p"
+	.string "Cottage?\p"
 	.string "I'll be done by the time you get here!$"
 
 MatchCall_Text_Bill5::
@@ -681,6 +682,37 @@ MatchCall_Text_Bill6::
 	.string "Oh, me?\p"
 	.string "I'll stick to the lab for now.\n"
 	.string "Maybe I'll think of something new!\p"
+	.string "Come visit sometime!$"
+
+MatchCall_Text_Bill7::
+	.string "Bill: Hey, {PLAYER}!\p"
+	.string "My sensors detected a surge in power\n"
+	.string "from the Mega Ring I gave you.\p"
+	.string "Did you happen to find the\n" 
+	.string "Mega Stone?\p"
+	.string "...\p"
+	.string "Oh, good! Perfect timing, then.\p"
+	.string "I've found that if a Pokémon holding\n"
+	.string "their Mega Stone in battle may\l"
+	.string "unlock a form of inner strength,\l"
+	.string "temporarily evolving!\p"
+	.string "Amazing, right?\p"
+	.string "To try this for yourself in battle,\n"
+	.string "press the START button as you\l"
+	.string "select your next move.\p"
+	.string "The Mega Ring should light up!\n"
+	.string "Swing by the cottage some time.$"
+
+MatchCall_Text_Bill8::
+	.string "Bill: Wow, {PLAYER}!\p"
+	.string "The footage from your battles are\n"
+	.string "all over the net!\p"
+	.string "People just can't get enough of you!\p"
+	.string "I hope my inventions were helpful\n"
+	.string "on your journey.\p"
+	.string "Oh, me?\p"
+	.string "I'll stick to the lab for now.\n"
+	.string "Mega Evolution requires research!\p"
 	.string "Come visit sometime!$"
 
 @Match Call Trainers
@@ -1070,12 +1102,22 @@ MatchCall_PersonalizedText6::
 	.string "Tell me about it next time, okay?$"
 
 MatchCall_PersonalizedText7::
-	.string "… … … … … …\n"
-	.string "… … … … … …\l"
-	.string "It's {STR_VAR_1}…\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\l"
-	.string "That's all today…$"
+	.string "Hey, {PLAYER}!\n"
+	.string "It's Bernie.\p"
+	.string "Guess what?\p"
+	.string "I keep losing my wrench\n"
+	.string "cause when I set it down,\l"
+	.string "my Magnemite zooms over\l"
+	.string "and has it stick to it!\p"
+	.string "Who needs a toolbox when\n"
+	.string "you have magnetic Pokémon?\p"
+	.string "The real problem is getting it to\n"
+	.string "drop the wrench when I need to\l"
+	.string "tighten some nuts and bolts...\p"
+	.string "Think it would play fetch with\n"
+	.string "the wrench if I tried to throw it?\p"
+	.string "Anyways, I need to return to work.\n"
+	.string "Have a wonderful day!$"
 
 MatchCall_PersonalizedText8::
 	.string "Ahoy!\n"

@@ -2705,32 +2705,34 @@ bool8 DexNavTryMakeShinyMon(void)
     u8 chain = gSaveBlock1Ptr->dexNavChain;
     
     #ifdef ITEM_SHINY_CHARM
-    charmBonus = (CheckBagHasItem(ITEM_SHINY_CHARM, 1) > 0) ? 2 : 0;
+    charmBonus = (CheckBagHasItem(ITEM_SHINY_CHARM, 1) > 0) ? 8 : 0; //If the player has the Shiny Charm, the game will roll odds for a Shiny pokemon 8 more times.
     #endif
     
-    chainBonus = (chain == 50) ? 5 : (chain == 100) ? 10 : 0;
-    rndBonus = (Random() % 100 < 4 ? 4 : 0);
+    chainBonus = (chain >= 100) ? 10 : (chain >= 50) ? 5 : 0; //If the player has a chain greater than or equal to 100, the game will roll odds for a Shiny pokemon 10 more times. If the player has a chain greater than 49 or less than 100, the game rolls Shiny odds 5 more times.
+    rndBonus = (Random() % 100 < 4 ? 4 : 0); //Roll a random number and if the number is less than 4, roll 4 additional times to see if the pokemon is a Shiny.
     shinyRolls = 1 + charmBonus + chainBonus + rndBonus;
 
-    if (searchLevel > 200)
+    if (searchLevel == 255) //If the pokemon was encountered in the wild 255 times, take all previous bonus calculations and add an additional 153 to the current search level. searchLevel = 1400
     {
-        shinyRate += searchLevel - 200;
-        searchLevel = 200;
+        shinyRate += searchLevel + 1145;
     }
-    else if (searchLevel > 100)
+    else if (searchLevel >= 200) //If the pokemon was encountered in the wild 200 or more times, take all previous bonus calculations and add that to the current searchLevel. searchLevel = 1246 maximum
     {
-        shinyRate += (searchLevel * 2) - 200;
-        searchLevel = 100;
+        shinyRate += searchLevel + 992; //992 is the cumulative bonus of the previous tiers (594 if sL < 100, 398 if sL <200)
     }
-    else if (searchLevel > 0)
+    else if (searchLevel >= 100) //If the pokemon was encountered in the wild 100 or more times, multiply the searchLevel by 2 and take the bonus calculations from the <100 searchLevel to add to the current one.
+    {
+        shinyRate += (searchLevel * 2) + 594; //594 is the maximum bonus of the sL <100 tier
+    }
+    else
     {
         shinyRate += searchLevel * 6;
     }
     
-    shinyRate /= 100;
+    shinyRate /= 100; //Maximum shinyRate will be 14, 1:714 odds if no bonus is applied, 1:119 no Shiny Charm 50+ chain bonus, 1:65 no Shiny Charm 100 chain bonus, 1:79 if only Shiny Charm bonus applies, 1:51 Shiny Charm and 50+ chain bonus, 1:38 Shiny Charm and 100 chain bonus
     for (i = 0; i < shinyRolls; i++)
     {
-        if (Random() % 10000 < shinyRate)
+        if (Random() % 10000 < shinyRate) //Pick a random number between 0 and 9999 and if it is less than the search level bonus, generate a Shiny.
             return TRUE;
     }
     

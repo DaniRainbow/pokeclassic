@@ -15,6 +15,8 @@ Route5_PokemonDayCare_Text_Clefairy::
     .string "Clefairy: Fiififiii!$"
 
 Route5_PokemonDayCare_EventScript_DaycareEmployee::
+	lock
+	faceplayer
 	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route5_PokemonDayCare_EventScript_EggWaitingPartner
 	msgbox Route5_PokemonDayCare_Text_Volunteers, MSGBOX_NPC
 	turnobject LOCALID_VOLUNTEER, DIR_NORTH
@@ -36,7 +38,6 @@ Route5_PokemonDayCare_EventScript_EggWaitingPartner::
 Route5_PokemonDayCare_Text_PartnerWasLookingForYou:
 	.string "Oh! My partner was looking for you\n"
 	.string "out front!$"
-
 
 Route5_PokemonDayCare_EventScript_EmployeesOnly::
 	turnobject LOCALID_VOLUNTEER, DIR_EAST

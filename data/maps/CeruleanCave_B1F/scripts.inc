@@ -6,17 +6,12 @@ CeruleanCave_B1F_MapScripts::
 	.byte 0
 
 CeruleanCave_OnTransition::
-	call_if_set FLAG_CAUGHT_MEWTWO, CeruleanCave_EventScript_HideMewtwo
 	call_if_unset FLAG_CAUGHT_MEWTWO, CeruleanCave_EventScript_TryShowMewtwo
 	end
 
-CeruleanCave_EventScript_HideMewtwo::
-	setflag FLAG_HIDE_MEWTWO
-	return
-
 CeruleanCave_EventScript_TryShowMewtwo::
 	goto_if_set FLAG_DEFEATED_MEWTWO, Common_EventScript_Return
-	clearflag FLAG_HIDE_MEWTWO
+	clearflag FLAG_DAILY_MEWTWO
 	return
 
 CeruleanCave_OnResume:
@@ -32,6 +27,7 @@ CeruleanCave_EventScript_TryRemoveMewtwo::
 CeruleanCave_EventScript_Mewtwo::
 	lock
 	faceplayer
+	goto_if_set FLAG_CAUGHT_MEWTWO, CeruleanCave_EventScript_DailyMewtwo
 	waitse
 	delay 20
 	playse SE_THUNDERSTORM_STOP
@@ -63,6 +59,7 @@ CeruleanCave_EventScript_Mewtwo::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CeruleanCave_EventScript_RanFromMewtwo
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CeruleanCave_EventScript_RanFromMewtwo
 	setflag FLAG_CAUGHT_MEWTWO
+	setflag FLAG_DAILY_MEWTWO
 	release
 	end
 
@@ -75,6 +72,60 @@ CeruleanCave_EventScript_DefeatedMewtwo::
 CeruleanCave_EventScript_RanFromMewtwo::
 	setvar VAR_0x8004, SPECIES_MEWTWO
 	goto Common_EventScript_LegendaryFlewAway
+	end
+
+CeruleanCave_EventScript_DailyMewtwo::
+	random 50
+	copyvar VAR_0x8004, VAR_RESULT
+	goto_if_eq VAR_0x8004, 1, CeruleanCave_EventScript_Surprise_Mewtwo
+	setvar VAR_0x8004, 0
+	setwildbattle SPECIES_MEWTWO, 70
+	waitse
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+	delay 20
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, CeruleanCave_EventScript_DefeatedMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CeruleanCave_EventScript_RanFromMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CeruleanCave_EventScript_RanFromMewtwo
+	release
+	end
+
+CeruleanCave_EventScript_Surprise_Mewtwo::
+	setvar VAR_0x8004, 0
+	setflag FLAG_SHINY_CREATION
+	setwildbattle SPECIES_MEWTWO, 70
+	waitse
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+	delay 20
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, CeruleanCave_EventScript_DailyDefeatedMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CeruleanCave_EventScript_DailyRanFromMewtwo
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CeruleanCave_EventScript_DailyRanFromMewtwo
+	release
+	end
+
+CeruleanCave_EventScript_DailyDefeatedMewtwo::
+	setvar VAR_0x8004, SPECIES_MEWTWO
+	goto Common_EventScript_LegendaryFlewAway
+	removeobject LOCALID_MEWTWO
+	setflag FLAG_DAILY_MEWTWO
+	release
+	end
+
+CeruleanCave_EventScript_DailyRanFromMewtwo::
+	setvar VAR_0x8004, SPECIES_MEWTWO
+	goto Common_EventScript_LegendaryFlewAway
+	removeobject LOCALID_MEWTWO
+	setflag FLAG_DAILY_MEWTWO
+	release
 	end
 
 CeruleanCave_B1F_EventScript_ItemUltraBall::

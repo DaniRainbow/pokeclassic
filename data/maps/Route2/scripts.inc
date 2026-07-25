@@ -7,6 +7,7 @@ Route2_MapScripts::
 	.byte 0
 
 Route2_OnTransition:
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	call Common_EventScript_GetDayOrNight
 	end
 
@@ -39,6 +40,16 @@ Route2_FindItem_ParlyzHeal::
 
 Route2_FindItem_Pidgeotite::
 	finditem ITEM_PIDGEOTITE, 1
+	setflag FLAG_GOT_PIDGEOTITE
+	goto_if_unset FLAG_FIRST_MEGASTONE, Route2_EventScript_FoundMegaStone
+	end
+
+Route2_EventScript_FoundMegaStone::
+	lockall
+	pokenavcall MatchCall_Text_Bill7
+	waitmessage
+	setflag FLAG_FIRST_MEGASTONE
+	releaseall
 	end
 
 Route2_RocketFugitiveM::

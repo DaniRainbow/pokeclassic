@@ -79,6 +79,14 @@ PokemonMansion_2F_EventScript_ItemCalcium::
 
 PokemonMansion_2F_EventScript_CharizarditeX::
 	finditem ITEM_CHARIZARDITE_X, 1
-	release
-	end
+	setflag FLAG_GOT_CHARIZARDITE_X
+	goto_if_unset FLAG_FIRST_MEGASTONE, PokemonMansion_2F_EventScript_FoundMegaStone
+    end
 
+PokemonMansion_2F_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end

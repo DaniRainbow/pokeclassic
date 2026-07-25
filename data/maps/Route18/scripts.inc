@@ -129,3 +129,68 @@ Route18_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
+
+Route18_EventScript_Pinsir::
+	lock
+	faceplayer
+	playmoncry SPECIES_PINSIR, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_LILY, Route18_EventScript_PinsirDefeated
+	msgbox Route18_Text_Pinsir MSGBOX_DEFAULT
+	release
+	end
+
+Route18_Text_Pinsir:
+	.string "Pinsir is chewing on a stick.$"
+
+Route18_EventScript_AromaLadyLily::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_LILY, Route18_EventScript_MegaHintPinsir
+	trainerbattle_single TRAINER_AROMALADY_LILY, Route18_Text_LilyIntro, Route18_Text_LilyDefeat
+	setflag FLAG_DEFEATED_LILY
+	msgbox Route18_Text_LilyPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route18_Text_LilyIntro:
+	.string "Another trainer appears!\n"
+	.string "Do you use bird Pokémon, too?$"
+
+Route18_Text_LilyDefeat:
+	.string "I lost? How wonderful!$"
+
+Route18_Text_LilyPostBattle:
+	.string "That was a great fight!\n"
+	.string "Don't you think so, Pinchy?$"
+
+Route18_EventScript_MegaHintPinsir::    
+    goto_if_set FLAG_GOT_PINSIRITE, Route18_EventScript_LilyDefeated
+    msgbox Route18_Text_PinsirMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route18_Text_PinsirMegaHint:
+    .string "What's that? Mega Stone?\n"
+	.string "Oh that's right, I found mine\l"
+	.string "in the Safari Zone over there!$"
+
+Route18_EventScript_LilyDefeated::
+    msgbox LilyDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+LilyDefeated_Text:	
+	.string "Thank you for the great match!\n"
+	.string "I can only rechallenge Wilton\l"
+	.string "so often, you know.$"
+
+Route18_EventScript_PinsirDefeated::
+	msgbox PinsirDefeated MSGBOX_DEFAULT
+	release
+	end
+
+PinsirDefeated:	
+	.string "Pinsir motions for a high five.$"

@@ -1285,7 +1285,7 @@ static void PrintContestStringOnCard(void)
 
 static void BufferBattleTowerBP(void)
 {
-    ConvertIntToDecimalStringN(gStringVar1, sData->trainerCard.frontierBP, STR_CONV_MODE_RIGHT_ALIGN, 5);
+    ConvertIntToDecimalStringN(gStringVar1, gSaveBlock2Ptr->frontier.battlePoints, STR_CONV_MODE_RIGHT_ALIGN, 5);
     StringExpandPlaceholders(sData->textTowerBP, gText_NumBP);
 }
 

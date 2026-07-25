@@ -114,6 +114,8 @@ IndigoPlateau_PokemonCenter_1F_EventScript_EnterEliteFour::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_WarpTitleMatch::
+	applymovement OBJ_EVENT_ID_PLAYER, Player_Movement_FaceDown
+	waitmovement 1
 	warp MAP_POKEMON_LEAGUE_CHALLENGER_ROOM, 6, 3
 	waitstate
 	end
@@ -165,6 +167,10 @@ Player_Movement_EnterEast:
 	walk_right
 	walk_up
 	set_invisible
+	step_end
+
+Player_Movement_FaceDown:
+	face_down
 	step_end
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFour::
@@ -262,9 +268,14 @@ IndigoPlateau_PokemonCenter_1F_Pokemart::
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_MAX_POTION
+	.2byte ITEM_ETHER
 	.2byte ITEM_REVIVE
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_TIMER_BALL
 	.2byte ITEM_NONE
 	release
 	end
@@ -308,6 +319,6 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Determination::
 	end
 
 IndigoPlateau_PokemonCenter_1F_Text_Determination::
-	.string "It takes every thing you have to\n"
+	.string "It takes every thing you have\n"
 	.string "to take on the Elite Four!\p"
 	.string "I hope you're filled with determination!$"

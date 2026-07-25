@@ -1,6 +1,11 @@
 CeladonCity_DepartmentStore_5F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_DepartmentStore_5F_OnTransition
 	.byte 0
 
+CeladonCity_DepartmentStore_5F_OnTransition:
+	setescapewarp MAP_CELADON_CITY, 15, 16
+	end
+	
 CeladonCity_DepartmentStore_5F_EventScript_Gentleman::
 	msgbox CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers, MSGBOX_NPC
 	end

@@ -181,7 +181,7 @@ FuchsiaCity_EventScript_OldMan::
 	end
 
 FuchsiaCity_Text_SafariZoneZooInFront::
-    .string "The Safar Zone has a zoo in front\n"
+    .string "The Safari Zone has a zoo in front\n"
     .string "of the entrance.\p"
     .string "Out back is the Safari Game for\n"
     .string "catching Pokémon.$"

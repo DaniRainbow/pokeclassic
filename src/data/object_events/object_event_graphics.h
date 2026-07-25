@@ -1329,7 +1329,18 @@ const u32 gObjectEventPic_WigglytuffOverworld[] = INCBIN_U32("graphics/object_ev
 const u16 gObjectEventPal_Wigglytuff[] = INCBIN_U16("graphics/object_events/palettes/wigglytuff.gbapal");
 const u32 gObjectEventPic_ZapdosOverworld[] = INCBIN_U32("graphics/object_events/pics/pokemon/zapdos_overworld.4bpp");
 const u16 gObjectEventPal_Zapdos[] = INCBIN_U16("graphics/object_events/palettes/zapdos.gbapal");
-
+const u16 gObjectEventPal_Magikarp[] = INCBIN_U16("graphics/object_events/palettes/magikarp.gbapal");
+const u16 gObjectEventPal_Venusaur[] = INCBIN_U16("graphics/object_events/palettes/venusaur.gbapal");
+const u16 gObjectEventPal_Charizard[] = INCBIN_U16("graphics/object_events/palettes/charizard.gbapal");
+const u16 gObjectEventPal_Blastoise[] = INCBIN_U16("graphics/object_events/palettes/blastoise.gbapal");
+const u16 gObjectEventPal_Beedrill[] = INCBIN_U16("graphics/object_events/palettes/beedrill.gbapal");
+const u16 gObjectEventPal_Alakazam[] = INCBIN_U16("graphics/object_events/palettes/alakazam.gbapal");
+const u16 gObjectEventPal_Gengar[] = INCBIN_U16("graphics/object_events/palettes/gengar.gbapal");
+const u16 gObjectEventPal_Pinsir[] = INCBIN_U16("graphics/object_events/palettes/pinsir.gbapal");
+const u16 gObjectEventPal_Aerodactyl[] = INCBIN_U16("graphics/object_events/palettes/aerodactyl.gbapal");
+const u16 gObjectEventPal_Arcanine[] = INCBIN_U16("graphics/object_events/palettes/arcanine.gbapal");
+const u16 gObjectEventPal_Umbreon[] = INCBIN_U16("graphics/object_events/palettes/umbreon.gbapal");
+const u16 gObjectEventPal_Tangela[] = INCBIN_U16("graphics/object_events/palettes/tangela.gbapal");
 //FRLG Objects
 const u16 gObjectEventPic_Pokedex[] = INCBIN_U16("graphics/object_events/pics/misc/pokedex.4bpp");
 const u16 gObjectEventPic_OldAmber[] = INCBIN_U16("graphics/object_events/pics/misc/old_amber.4bpp");

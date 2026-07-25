@@ -10,6 +10,7 @@ Route4_MapScripts::
 	.byte 0
 
 Route4_OnTransition:
+	setflag FLAG_VISITED_ROUTE_4
 	call Common_EventScript_GetDayOrNight
 	end
 
@@ -259,3 +260,70 @@ Route4_Text_SolanaNotEnoughMons::
     .string "You have just one Pokémon?\n"
     .string "How did you manage Mt. Moon?$"
 
+Route4_EventScript_Charizard::
+	lock
+	faceplayer
+    playmoncry SPECIES_CHARIZARD, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_KODY, Route4_EventScript_CharizardDefeated
+	msgbox Route4_Text_Charizard MSGBOX_DEFAULT
+	release
+	end
+
+Route4_Text_Charizard:
+	.string "Charizard seems aloof.\n"
+	.string "It's usually tall for a Charizard.$"
+
+Route4_EventScript_YoungsterKody::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_KODY, Route4_EventScript_MegaHintCharizard
+	trainerbattle_single TRAINER_YOUNGSTER_KODY, Route4_Text_KodyIntro, Route4_Text_KodyDefeat
+	setflag FLAG_DEFEATED_KODY
+	msgbox Route4_Text_KodyPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route4_Text_KodyIntro:
+	.string "Since swords are frowned upon,\n"
+	.string "I'll defeat you with Charizard!$"
+
+Route4_Text_KodyDefeat:
+	.string "That's so unfair!$"
+
+Route4_Text_KodyPostBattle:
+	.string "If I could legally sword fight you,\n"
+	.string "I would be the winner!$"
+
+Route4_EventScript_MegaHintCharizard::    
+    goto_if_set FLAG_GOT_CHARIZARDITE_Y, Route4_EventScript_KodyDefeated
+    msgbox Route4_Text_CharizardMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route4_Text_CharizardMegaHint:
+    .string "Where did I get the Mega Stone\n"
+	.string "For my Charizard?\p"
+	.string "I was training at the top of\n"
+	.string "the Mansion on Cinnbar Island!$"
+
+Route4_EventScript_KodyDefeated::
+    msgbox KodyDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+KodyDefeated_Text:	
+	.string "Even if the morrow is barren of\n"
+	.string "promises, nothing shall forestall\l"
+	.string "my return.$"
+
+Route4_EventScript_CharizardDefeated::
+	msgbox CharizardYDefeated MSGBOX_DEFAULT
+	release
+	end
+
+CharizardYDefeated:	
+	.string "You think Charizard is smiling,\n"
+	.string "but it's tough to say.$"

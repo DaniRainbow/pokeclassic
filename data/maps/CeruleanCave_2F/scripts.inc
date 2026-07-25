@@ -18,10 +18,20 @@ CeruleanCave_2F_EventScript_ItemPPUp::
 
 CeruleanCave_2F_EventScript_MewtoniteY::
 	finditem ITEM_MEWTWONITE_Y, 1
-	release
+	setflag FLAG_GOT_MEWTWONITE_Y
+	goto_if_unset FLAG_FIRST_MEGASTONE, CeruleanCave_2F_EventScript_FoundMegaStone
 	end
 
 CeruleanCave_2F_EventScript_MewtoniteX::
 	finditem ITEM_MEWTWONITE_X, 1
-	release
-	end
+	setflag FLAG_GOT_MEWTWONITE_X
+	goto_if_unset FLAG_FIRST_MEGASTONE, CeruleanCave_2F_EventScript_FoundMegaStone
+    end
+
+CeruleanCave_2F_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end

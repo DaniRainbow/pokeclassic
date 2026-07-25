@@ -14,6 +14,7 @@ SaffronCity_Mart_EventScript_Clerk::
 	.align 2
 SaffronCity_Pokemart::
 	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_REPEAT_BALL
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_REVIVE
 	.2byte ITEM_FULL_HEAL

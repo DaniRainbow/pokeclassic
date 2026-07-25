@@ -91,8 +91,17 @@ Route20_Text_DarrinPostBattle::
 
 Route20_EventScript_Slowbronite::
 	finditem ITEM_SLOWBRONITE, 1
-	release
-	end
+	setflag FLAG_GOT_SLOWBRONITE
+	goto_if_unset FLAG_FIRST_MEGASTONE, Route20_EventScript_FoundMegaStone
+    end
+
+Route20_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end
 
 Route20_EventScript_Tiffany::
 	trainerbattle_single TRAINER_SWIMMER_FEMALE_TIFFANY, Route20_Text_TiffanyIntro, Route20_Text_TiffanyDefeat
@@ -262,14 +271,70 @@ Route20_RocketFugitive::
     fadescreen FADE_FROM_BLACK
     end
 
-Route20_EngineerDylan::
+Route20_EventScript_Blastoise::
 	lock
 	faceplayer
-	msgbox Route20_Text_EngineerDylan_Placeholder
+	playmoncry SPECIES_BLASTOISE, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
+    goto_if_set FLAG_DEFEATED_DYLAN, Route20_EventScript_BlastoiseDefeated
+	msgbox Route20_Text_Blastoise MSGBOX_DEFAULT
 	release
 	end
 
-Route20_Text_EngineerDylan_Placeholder:
-	.string "Hello! I'm Lil Dill!\n"
-	.string "I'm visiting from Johto!$"
+Route20_Text_Blastoise:
+	.string "Blastoise stares you in the eye.\n"
+	.string "It has overwhelming confidence.$"
 
+Route20_EventScript_EngineerDylan::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DYLAN, Route20_EventScript_MegaHintBlastoise
+	trainerbattle_single TRAINER_ENGINEER_DYLAN, Route20_Text_DylanIntro, Route20_Text_DylanDefeat
+	setflag FLAG_DEFEATED_DYLAN
+	msgbox Route20_Text_DylanPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+Route20_Text_DylanIntro:
+	.string "You seem to be tougher than the\n"
+	.string "kids swimming around here.\p"
+	.string "We might actually need to\n"
+	.string "take this seriously!$"
+
+Route20_Text_DylanDefeat:
+	.string "Kanto still has some fight in it.$"
+
+Route20_Text_DylanPostBattle:
+	.string "What an incredible team you have!$"
+
+Route20_EventScript_MegaHintBlastoise::  
+    goto_if_set FLAG_GOT_BLASTOISINITE, Route20_EventScript_DylanDefeated
+    msgbox Route20_Text_BlastoiseMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+Route20_Text_BlastoiseMegaHint:
+    .string "...hmmm? Where did I get the\n"
+	.string "Blastoisinite from?\p"
+	.string "I found it on the shore after\n"
+	.string "beating the gym in Vermillion City.$"
+
+Route20_EventScript_DylanDefeated::
+    msgbox DylanDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+DylanDefeated_Text:	
+	.string "I can tell you are a trainer who\n"
+	.string "fights with all your heart and soul.$"
+
+Route20_EventScript_BlastoiseDefeated::
+	msgbox BlastoiseDefeated MSGBOX_DEFAULT
+	release
+	end
+
+BlastoiseDefeated:	
+	.string "Blastoise looks at you\n"
+	.string "and snorts approvingly.$"

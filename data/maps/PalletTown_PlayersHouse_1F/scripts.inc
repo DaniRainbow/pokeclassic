@@ -2,7 +2,13 @@
 .set LOCALID_BILL, 2
 
 PalletTown_PlayersHouse_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_1F_OnTransition
 	.byte 0
+
+PalletTown_PlayersHouse_1F_OnTransition:
+	setflag FLAG_HIDE_MEGA_TRAINERS
+	goto_if_set FLAG_GOT_MEGA_RING, PlayersHouse_1F_EventScriptChallengeUnlocked
+	end
 
 PalletTown_PlayersHouse_1F_EvenScripts_Mom::
 	lock
@@ -57,7 +63,9 @@ PlayersHouse_1F_Text_RunningShoesManual:
 	.string "“Press the B Button to run while\n"
 	.string "wearing your Running Shoes.\p"
 	.string "Lace up your Running Shoes and hit\n"
-	.string "the road running!”$"
+	.string "the road running!\p"
+	.string "If you need to slow down, you can\n"
+	.string "do that too by holding A Button!”$"
 
 PlayersHouse_1F_EventScript_PokenavScene::
 	msgbox PalletTown_Text_DidYouMeetOak, MSGBOX_DEFAULT
@@ -132,8 +140,13 @@ PlayersHouse_1F_EventScript_Bill::
 	setflag FLAG_GOT_MEGA_RING
 	msgbox PlayersHouse_1F_Text_FindMegaStones, MSGBOX_NPC
 	setvar VAR_SECRET_BATTLE_CLEAR, 3
+	goto_if_set FLAG_GOT_MEGA_RING, PlayersHouse_1F_EventScriptChallengeUnlocked
 	release
 	end
+
+PlayersHouse_1F_EventScriptChallengeUnlocked::
+	clearflag FLAG_HIDE_MEGA_TRAINERS
+	return
 
 PlayersHouse_1F_Text_SomethingAmazing::
 	.string "Hey, {PLAYER}!\n"
@@ -181,6 +194,8 @@ PlayersHouse_1F_Text_Visitor::
 
 PlayersHouse_1F_EventScript_Gameclear::
 	lockall
+	setflag FLAG_OAK_ADVENTURE_AWAITS
+	clearflag FLAG_HIDE_PKMNRANGER_ALEX
 	playse SE_PIN
 	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
 	waitmovement 1
@@ -225,6 +240,8 @@ PlayersHouse_1F_Text_Gameclear2::
 	.string "Mom: Just because you're the new\n"
 	.string "champion doesn't mean your story\l"
 	.string "is over!\p"
+	.string "Professor Oak will no doubt have\n"
+	.string "advice for you if you visit.\p"
 	.string "There's a whole world out there\n"
 	.string "for you and your Pokémon to explore!\p"
 	.string "I'm so proud of you, {PLAYER}!\n"

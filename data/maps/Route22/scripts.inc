@@ -18,10 +18,17 @@ Route22_EventScript_HealAfterRivalBattle::
 	end
 
 Route22_OnTransition:
+	goto_if_unset FLAG_BADGE08_GET, Route22_HideMandatory
+	call Common_EventScript_GetDayOrNight
+	end
+
+Route22_HideMandatory:
+	removeobject 3
 	call Common_EventScript_GetDayOrNight
 	end
 
 Route22_OnResume:
+	goto_if_unset FLAG_BADGE08_GET, Route22_HideMandatory
 	call Common_EventScript_GetDayOrNight
 	end
 
@@ -48,7 +55,7 @@ Route22_EventScript_EarlyRival::
 	applymovement LOCALID_RIVAL, Movement_RivalApproach
 	waitmovement 1
 	delay 6
-	trainerbattle_no_whiteout_continue_script TRAINER_RIVAL_OPTIONAL_BATTLE,Route22_Text_EarlyRivalIntro,Route22_Text_EarlyRivalDefeated,Route22_EventScript_RivalBattleOutcome
+	trainerbattle_no_whiteout_continue_script TRAINER_RIVAL_OPTIONAL_BATTLE, Route22_Text_EarlyRivalIntro, Route22_Text_EarlyRivalDefeated, Route22_EventScript_RivalBattleOutcome
 	end
 
 Route22_Text_EarlyRivalIntro::
@@ -124,45 +131,24 @@ Movement_RivalExit:
 	walk_left
 	step_end
 
-Route22_EventScript_LateRivalTriggerTop::
-	setobjectxyperm LOCALID_RIVAL, 33, 4
-	goto Route22_EventScript_LateRival
-	end
-
-Route22_EventScript_LateRivalTriggerMiddle::
-	setobjectxyperm LOCALID_RIVAL, 33, 5
-	goto Route22_EventScript_LateRival
-	end
-
-Route22_EventScript_LateRivalTriggerBottom::
-	setobjectxyperm LOCALID_RIVAL, 33, 6
-	goto Route22_EventScript_LateRival
-	end
-
-Route22_EventScript_LateRival::
-	setvar VAR_ROUTE_22_RIVAL_STATE, 2
-	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-	clearflag FLAG_HIDE_RIVAL_ROUTE_22
-	addobject LOCALID_RIVAL
-	applymovement LOCALID_RIVAL, Movement_RivalApproach
-	waitmovement 1
-	delay 6
-	msgbox Route22_Text_LateRivalIntro
+Route22_EventScript_MandatoryRival::
+	lock
+	faceplayer
 	goto_if_eq VAR_RIVAL_WINRATE, 2, Route22_EventScript_LateRival_Jolteon
 	goto_if_eq VAR_RIVAL_WINRATE, 1, Route22_EventScript_LateRival_Flareon
 	goto Route22_EventScript_LateRival_Vaporeon
 	end
 
 Route22_EventScript_LateRival_Jolteon::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_JOLTEON, Route22_Text_LateRivalDefeat
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_JOLTEON, Route22_Text_LateRivalIntro, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_EventScript_LateRival_Flareon::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_FLAREON, Route22_Text_LateRivalDefeat
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_FLAREON, Route22_Text_LateRivalIntro, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_EventScript_LateRival_Vaporeon::
-	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_VAPOREON, Route22_Text_LateRivalDefeat
+	trainerbattle_single TRAINER_RIVAL_ROUTE22_VAPOREON, Route22_Text_LateRivalIntro, Route22_Text_LateRivalDefeat
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_Text_LateRivalIntro::
@@ -170,7 +156,7 @@ Route22_Text_LateRivalIntro::
 	.string "What a surprise to see you here!\p"
 	.string "So, you're on your way to the\n"
 	.string "Pokémon League?\p"
-	.string "You collected all the BADGES too?\n"
+	.string "You collected all the Badges too?\n"
 	.string "That's cool!\p"
 	.string "Then I will whip you {PLAYER} as a warm up\n"
 	.string "for the Pokémon League! Come on!$" 
@@ -180,16 +166,20 @@ Route22_Text_LateRivalDefeat::
 	.string "I was just careless!$"
 
 Route22_EventScript_LateRivalPostBattle::
-	msgbox Route22_Text_LateRivalPostBattle, MSGBOX_DEFAULT
-	delay 10
 	playbgm MUS_RG_RIVAL_EXIT, 0
-	applymovement LOCALID_RIVAL, Movement_RivalExit
-	waitmovement 1
-	fadedefaultbgm
-	removeobject LOCALID_RIVAL
-	setflag FLAG_HIDE_RIVAL_ROUTE_22
+	msgbox Route22_Text_LateRivalPostBattle, MSGBOX_DEFAULT
+	waitmessage
+	fadescreen FADE_TO_BLACK
+	closemessage
+	removeobject 3
+	setflag FLAG_HIDE_RIVAL22_MANDATORY
 	setvar VAR_ROUTE_22_RIVAL_STATE, 5
-	releaseall
+	fadescreen FADE_FROM_BLACK
+	goto_if_set FLAG_BILL4CALLED, Common_EventScript_End
+	pokenavcall MatchCall_Text_Bill4
+	waitmessage
+	setflag FLAG_BILL4CALLED
+	release
 	end
 
 Route22_Text_LateRivalPostBattle::
@@ -217,3 +207,7 @@ Route22_RocketFugitive::
 	waitse
 	fadescreen FADE_FROM_BLACK
 	end
+
+Movement_MandatoryExit:
+	walk_up
+	step_end

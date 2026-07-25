@@ -15,10 +15,22 @@ SilphCo_3F_OnLoad::
 SilphCo_3F_EventScript_WorkerM::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_3F_EventScript_WorkerMInvasion
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_3F_EventScript_WorkerMRocketsGone
 	msgbox SilphCo_3F_Text_WhatAmIToDo
 	release
 	end
+
+SilphCo_3F_EventScript_WorkerMInvasion::
+	msgbox SilphCo_3F_Text_WorkerMInvasion, MSGBOX_NPC
+	release
+	end
+
+SilphCo_3F_Text_WorkerMInvasion:
+	.string "Just when I thought things were\n"
+	.string "starting to slow down around\l"
+	.string "here, the Rockets break in\l"
+	.string "again during my meal break.$"
 
 SilphCo_3F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_3F_Text_YouAndYourMonsSavedUs

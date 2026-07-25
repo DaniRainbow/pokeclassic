@@ -78,7 +78,7 @@ FuchsiaCity_Gym_Text_ReceivedBadge::
 
 FuchsiaCity_Gym_Text_ExplainBadge::
     .string "The Soul Badge will allow you\n"
-   .string "to SURF outside of battle.$"
+   .string "to Surf outside of battle.$"
 
 FuchsiaCity_Gym_EventScript_GetTM::
 	msgbox FuchsiaCity_Gym_Text_TakeThisWithYou, MSGBOX_DEFAULT
@@ -191,7 +191,7 @@ FuchsiaCity_Gym_Text_RematchOriginal::
 
 FuchsiaCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 20
+	setvar VAR_0x8004, 10
 	trainerbattle_single LEADER_REMATCH_KOGA_POSTGAME, FuchsiaCity_Gym_Text_RematchPostgame, FuchsiaCity_Gym_Text_RematchDefeat, FuchsiaCity_Gym_EventScript_DefeatedLeaderRematch
 	end
 

@@ -416,8 +416,6 @@ void Overworld_ResetStateAfterDigEscRope(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
-    gSpecialVar_0x8003 = 0;
-    gSpecialVar_0x8004 = 0;
     VarSet(VAR_SAFARI_ZONE_STATE,0);
 }
 
@@ -429,6 +427,8 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+    gSpecialVar_0x8003 = 0;
+    gSpecialVar_0x8004 = 0;
     VarSet(VAR_SAFARI_ZONE_STATE,0);
     #if VAR_TERRAIN != 0
         VarSet(VAR_TERRAIN, 0);
@@ -852,7 +852,7 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     RunOnTransitionMapScript();
     InitMap();
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
-    LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
+    LoadSecondaryTilesetPalette(gMapHeader.mapLayout, TRUE); // skip copying to Faded, gamma shift will take care of it
 
     for (paletteIndex = 6; paletteIndex < 13; paletteIndex++) // TODO: Optimize gamma shifts
         ApplyWeatherGammaShiftToPal(paletteIndex);
@@ -1055,7 +1055,7 @@ void SetDefaultFlashLevel(void)
     else if (FlagGet(FLAG_SYS_USE_FLASH))
         gSaveBlock1Ptr->flashLevel = 0;
     else
-        gSaveBlock1Ptr->flashLevel = gMaxFlashLevel - 0;
+        gSaveBlock1Ptr->flashLevel = gMaxFlashLevel - 1;
 }
 
 void SetFlashLevel(s32 flashLevel)

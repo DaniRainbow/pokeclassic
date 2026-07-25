@@ -32,7 +32,6 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "in_connection": false,
       "x": 14,
       "y": 14,
       "elevation": 3,
@@ -42,11 +41,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_7_LEPPA",
       "script": "BerryTreeScript",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": ""
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_MEMBER_M",
-      "in_connection": false,
       "x": 16,
       "y": 3,
       "elevation": 3,
@@ -56,7 +55,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "Route7_RocketFugitive",
-      "flag": "FLAG_ROCKET_FUGITIVE_CELADON_2"
+      "flag": "FLAG_ROCKET_FUGITIVE_CELADON_2",
+      "in_connection": ""
     }
   ],
   "warp_events": [

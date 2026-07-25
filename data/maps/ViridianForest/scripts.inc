@@ -118,6 +118,21 @@ ViridianForest_Text_CharliePostBattle::
     .string "Bug Pokémon evolve quickly.\n"
     .string "They're a lot of fun!$"
 
+ViridianForest_EventScript_Lottie::
+	trainerbattle_single TRAINER_LASS_LOTTIE, ViridianForest_Text_LottieIntro, ViridianForest_Text_LottieDefeat
+	msgbox ViridianForest_Text_LottiePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_Text_LottieIntro::
+    .string "Hi, I'm Lottie!\n"
+    .string "Do you have a Pikachu?$"
+
+ViridianForest_Text_LottieDefeat::
+    .string "Oh no, really?$"
+
+ViridianForest_Text_LottiePostBattle::
+    .string "I looked forever, but I never\n"
+    .string "found a Pikachu here.$"
 
 ViridianForest_EventScript_TrainerTips1::
 	msgbox ViridianForest_Text_AvoidGrassyAreasWhenWeak, MSGBOX_SIGN
@@ -195,4 +210,92 @@ ViridianForest_EventScript_ItemPokeBall::
 
 ViridianForest_EventScript_Beedrillite::
     finditem ITEM_BEEDRILLITE, 1
+    setflag FLAG_GOT_BEEDRILLITE
+    goto_if_unset FLAG_FIRST_MEGASTONE, ViridianForest_EventScript_FoundMegaStone
     end
+
+ViridianForest_EventScript_FoundMegaStone::
+    lockall
+    pokenavcall MatchCall_Text_Bill7
+    waitmessage
+    setflag FLAG_FIRST_MEGASTONE
+    releaseall
+    end
+
+ViridianForest_EventScript_Venusaur::
+	lock
+	faceplayer
+    playmoncry SPECIES_VENUSAUR, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_DANI, ViridianForest_EventScript_VenusaurDefeated
+	msgbox ViridianForest_Text_Venusaur MSGBOX_DEFAULT
+	release
+	end
+
+ViridianForest_Text_Venusaur:
+	.string "CHARLES: Sarrrr...\p"
+    .string "Venusaur is enjoying the smell of\n"
+	.string "the grass and pollen on the wind.$"
+
+ViridianForest_EventScript_BugCatcherDani::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DANI, ViridianForest_EventScript_MegaHintVenusaur
+	trainerbattle_single TRAINER_BUGCATCHER_DANI, ViridianForest_Text_DaniIntro, ViridianForest_Text_DaniDefeat
+	setflag FLAG_DEFEATED_DANI
+	msgbox ViridianForest_Text_DaniPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+ViridianForest_Text_DaniIntro:
+	.string "Hey there!\p"
+	.string "Can I ask a favor? Charles over\n"
+	.string "there needs a bit of exercise.\p"
+	.string "Can you give us a good battle?$"
+
+ViridianForest_Text_DaniDefeat:
+	.string "You did great, Charles!$"
+
+ViridianForest_Text_DaniPostBattle:
+	.string "Thank you for that. He's older\n"
+    .string "but the best Venasaur I know.\p"
+    .string "Today's battle will help keep\n"
+    .string "the pep in his step!$"
+
+ViridianForest_EventScript_MegaHintVenusaur::    
+    goto_if_set FLAG_GOT_VENUSAURITE, ViridianForest_EventScript_DaniDefeated
+    msgbox ViridianForest_Text_VenusaurMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+ViridianForest_Text_VenusaurMegaHint:
+    .string "Hmm? You're looking for the\n"
+    .string "Mega Stones?\p"
+    .string "I can tell you where to find the\n"
+    .string "Venusaurite, no problem!\p"
+    .string "I have some Pokémon Breeder pals\n"
+    .string "in Cerulean City. Their backyard\l"
+    .string "had two last I visited. They\l"
+    .string "let me have one, so go ask them!$"
+
+ViridianForest_EventScript_DaniDefeated::
+    msgbox DaniDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+DaniDefeated_Text:	
+	.string "Have you met Erin, the trainer\n"
+	.string "who lives in the cabin?\p"
+    .string "Her Clefairy gives me berries\n"
+    .string "whenever Charles wants.$"
+
+ViridianForest_EventScript_VenusaurDefeated::
+	msgbox VenusaurDefeated MSGBOX_DEFAULT
+	release
+	end
+
+VenusaurDefeated:	
+	.string "Charles is breathing heavily,\n"
+	.string "but his eyes are full of wonder.$"

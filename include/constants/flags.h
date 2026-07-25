@@ -40,6 +40,7 @@
 #define FLAG_TEMP_1E     (TEMP_FLAGS_START + 0x1E)
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
+#define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
         
 #define FLAG_SYS_NO_COLLISION       0x20 // Unused Flag //DEBUG
 #define FLAG_SYS_NO_ENCOUNTER       0x21 // Unused Flag //DEBUG
@@ -180,46 +181,46 @@
 #define FLAG_HIDE_KAIRI              		0xA2
 #define FLAG_DEFEATED_ERIN             		0xA3
 #define FLAG_DEFEATED_JIRAIYA            	0xA4
-#define FLAG_UNUSED_0x0A5                   0xA5
-#define FLAG_UNUSED_0x0A6                  	0xA6
-#define FLAG_UNUSED_0x0A7                  	0xA7
-#define FLAG_UNUSED_0x0A8                   0xA8
-#define FLAG_UNUSED_0x0A9                   0xA9
-#define FLAG_UNUSED_0x0AA                  	0xAA
-#define FLAG_UNUSED_0x0AB                  	0xAB
-#define FLAG_UNUSED_0x0AC                  	0xAC
-#define FLAG_UNUSED_0x0AD        			0xAD
-#define FLAG_UNUSED_0x0AE                   0xAE
-#define FLAG_UNUSED_0x0AF                   0xAF
-#define FLAG_UNUSED_0x0B0                   0xB0
-#define FLAG_UNUSED_0x0B1                   0xB1
-#define FLAG_UNUSED_0x0B2               	0xB2
-#define FLAG_UNUSED_0x0B3                 	0xB3
-#define FLAG_UNUSED_0x0B4                  	0xB4
-#define FLAG_UNUSED_0x0B5                 	0xB5
-#define FLAG_UNUSED_0x0B6                   0xB6
-#define FLAG_UNUSED_0x0B7                   0xB7
-#define FLAG_UNUSED_0x0B8                   0xB8
-#define FLAG_UNUSED_0x0B9                 	0xB9
-#define FLAG_UNUSED_0x0BA                   0xBA
-#define FLAG_UNUSED_0x0BB                   0xBB
-#define FLAG_UNUSED_0x0BC                	0xBC
-#define FLAG_UNUSED_0x0BD         			0xBD
-#define FLAG_UNUSED_0x0BE        			0xBE
-#define FLAG_UNUSED_0x0BF  					0xBF
-#define FLAG_UNUSED_0x0C0     				0xC0
-#define FLAG_UNUSED_0x0C1                  	0xC1
-#define FLAG_UNUSED_0x0C2   				0xC2
-#define FLAG_UNUSED_0x0C3  					0xC3
-#define FLAG_UNUSED_0x0C4  					0xC4 
-#define FLAG_UNUSED_0x0C5   				0xC5 
-#define FLAG_UNUSED_0x0C6   				0xC6 
-#define FLAG_UNUSED_0x0C7           		0xC7
-#define FLAG_UNUSED_0x0C8              		0xC8
-#define FLAG_UNUSED_0x0C9             		0xC9
-#define FLAG_UNUSED_0x0CA            		0xCA
-#define FLAG_UNUSED_0x0CB           		0xCB
-#define FLAG_UNUSED_0x0CC          			0xCC
+#define FLAG_DEFEATED_DYLAN                 0xA5
+#define FLAG_GOT_VENUSAURITE                0xA6
+#define FLAG_GOT_CHARIZARDITE_X             0xA7
+#define FLAG_GOT_CHARIZARDITE_Y             0xA8
+#define FLAG_GOT_BEEDRILLITE                0xA9
+#define FLAG_GOT_PIDGEOTITE                 0xAA
+#define FLAG_GOT_ALAKAZITE                  0xAB
+#define FLAG_GOT_SLOWBRONITE                0xAC
+#define FLAG_GOT_GENGARITE        			0xAD
+#define FLAG_GOT_KANGASKHANITE              0xAE
+#define FLAG_GOT_BLASTOISINITE              0xAF
+#define FLAG_GOT_PINSIRITE                  0xB0
+#define FLAG_GOT_GYARADOSITE                0xB1
+#define FLAG_GOT_AERODACTYLITE              0xB2
+#define FLAG_GOT_MEWTWONITE_X               0xB3
+#define FLAG_GOT_MEWTWONITE_Y               0xB4
+#define FLAG_DEFEATED_LARRY                 0xB5
+#define FLAG_DEFEATED_JUSTICE               0xB6
+#define FLAG_HIDE_MEGA_TRAINERS             0xB7
+#define FLAG_DEFEATED_DANI                  0xB8
+#define FLAG_DEFEATED_DIZZYPHOEBE           0xB9
+#define FLAG_DEFEATED_KISHI                 0xBA
+#define FLAG_DEFEATED_TONY                  0xBB
+#define FLAG_DEFEATED_KODY               	0xBC
+#define FLAG_SILPH_INVASION_ACTIVE         	0xBD
+#define FLAG_DEFEATED_JESSIEJAMESRHB4F      0xBE
+#define FLAG_MOVENOW_JESSIEJAMES  			0xBF
+#define FLAG_DEFEATED_DIAMOND     			0xC0
+#define FLAG_DEFEATED_MIGUEL2               0xC1
+#define FLAG_DEFEATED_MEIHUI 				0xC2
+#define FLAG_DEFEATED_MURAMASA  			0xC3
+#define FLAG_DEFEATED_LILY 					0xC4 
+#define FLAG_DEFEATED_NICK				    0xC5 
+#define FLAG_BILL4CALLED   				    0xC6 
+#define FLAG_FIRST_MEGASTONE           		0xC7
+#define FLAG_EXHAUSTED_BILL              	0xC8
+#define FLAG_HIDE_RIVAL22_MANDATORY         0xC9
+#define FLAG_MISSING_PECHA_BERRY          	0xCA
+#define FLAG_MET_MAGAZINE_DANI           	0xCB
+#define FLAG_DEFEATED_PKMNRNGR_ALEX         0xCC
 #define FLAG_UNUSED_0x0CD    				0xCD
 #define FLAG_UNUSED_0x0CE    				0xCE
 #define FLAG_UNUSED_0x0CF        			0xCF
@@ -883,11 +884,11 @@
 #define FLAG_HIDE_SCOTT_HALLWAY                                   	0x345
 #define FLAG_GOT_RED_CARD     									    0x346
 #define FLAG_HIDE_SCOTT_AT_HOUSE                           		    0x347
-#define FLAG_HIDE_UNUSED_114                      					0x348
-#define FLAG_HIDE_UNUSED_115               							0x349
-#define FLAG_HIDE_UNUSED_116                       					0x34A
-#define FLAG_HIDE_UNUSED_117                   						0x34B
-#define FLAG_HIDE_UNUSED_118                           				0x34C
+#define FLAG_OAK_ADVENTURE_AWAITS                      				0x348
+#define FLAG_JESSIE_JAMES_READY              						0x349
+#define FLAG_HIDE_GORDON                       					    0x34A
+#define FLAG_TANGELA_IN_PLACE                   					0x34B
+#define FLAG_HIDE_PKMNRANGER_ALEX                         			0x34C
 #define FLAG_HIDE_UNUSED_119                  						0x34D
 #define FLAG_HIDE_UNUSED_120                      					0x34E
 #define FLAG_HIDE_UNUSED_121                           				0x34F
@@ -1182,12 +1183,12 @@
 #define FLAG_HIDE_POKEMON_MANSION_3F_CHARCOAL                       0x46E
 #define FLAG_HIDE_DIGLETTS_CAVE_SMOOTH_ROCK                         0x46F
 #define FLAG_HIDE_VICTORY_ROAD_HEAT_ROCK                            0x470
-#define FLAG_UNUSED_ITEM_0x471                                   	0x471
-#define FLAG_UNUSED_ITEM_0x472                                      0x472
-#define FLAG_UNUSED_ITEM_0x473                              		0x473
-#define FLAG_UNUSED_ITEM_0x474                                		0x474
-#define FLAG_UNUSED_ITEM_0x475                                 		0x475
-#define FLAG_UNUSED_ITEM_0x476                                  	0x476
+#define FLAG_HIDE_ASSAULT_VEST                                  	0x471
+#define FLAG_HIDE_LAGGING_TAIL                                      0x472
+#define FLAG_HIDE_FOCUS_SASH                           		        0x473
+#define FLAG_HIDE_HEAVY_DUTY_BOOTS                               	0x474
+#define FLAG_HIDE_FLAME_ORB                           		        0x475
+#define FLAG_HIDE_TOXIC_ORB_ROUTE25                                 0x476
 #define FLAG_UNUSED_ITEM_0x477                            			0x477
 #define FLAG_UNUSED_ITEM_0x478                             			0x478
 #define FLAG_UNUSED_ITEM_0x479                                      0x479
@@ -1368,13 +1369,13 @@
 #define FLAG_VISITED_VERMILION_CITY                 (SYSTEM_FLAGS + 0x13)
 #define FLAG_VISITED_LAVENDER_TOWN                	(SYSTEM_FLAGS + 0x14)
 #define FLAG_VISITED_CELADON_CITY                	(SYSTEM_FLAGS + 0x15)
-#define FLAG_VISITED_SAFFRON_CITY                 	(SYSTEM_FLAGS + 0x16)
-#define FLAG_VISITED_FUCHSIA_CITY                 	(SYSTEM_FLAGS + 0x17)
-#define FLAG_VISITED_CINNABAR_ISLAND                (SYSTEM_FLAGS + 0x18)
+#define FLAG_VISITED_FUCHSIA_CITY                 	(SYSTEM_FLAGS + 0x16)
+#define FLAG_VISITED_CINNABAR_ISLAND                (SYSTEM_FLAGS + 0x17)
+#define FLAG_VISITED_SAFFRON_CITY                   (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_INDIGO_PLATEAU                 (SYSTEM_FLAGS + 0x19)
 #define FLAG_VISITED_BATTLE_FRONTIER                (SYSTEM_FLAGS + 0x1A) // Might be unncessary
 #define FLAG_VISITED_ROUTE_10                 		(SYSTEM_FLAGS + 0x1B)
-#define FLAG_VISITED_UNUSED_3                  		(SYSTEM_FLAGS + 0x1C)
+#define FLAG_VISITED_ROUTE_4                  		(SYSTEM_FLAGS + 0x1C)
 #define FLAG_VISITED_UNUSED_4                		(SYSTEM_FLAGS + 0x1D)
 #define FLAG_VISITED_UNUSED_5              			(SYSTEM_FLAGS + 0x1E)
 
@@ -1608,11 +1609,11 @@
 
 #define FLAG_DAILY_ROCKET_FUGITIVE                  (DAILY_FLAGS_START + 0x1C) // Unused Flag
 
-#define FLAG_UNUSED_0x93D                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
-#define FLAG_UNUSED_0x93E                           (DAILY_FLAGS_START + 0x1E) // Unused Flag
-#define FLAG_UNUSED_0x93F                           (DAILY_FLAGS_START + 0x1F) // Unused Flag
-#define FLAG_UNUSED_0x940                           (DAILY_FLAGS_START + 0x20) // Unused Flag
-#define FLAG_UNUSED_0x941                           (DAILY_FLAGS_START + 0x21) // Unused Flag
+#define FLAG_DAILY_MEWTWO                           (DAILY_FLAGS_START + 0x1D) // Legendary daily encounter, higher shiny odds. Mewtwo
+#define FLAG_DAILY_MEW                              (DAILY_FLAGS_START + 0x1E) // Legendary daily encounter, higher shiny odds. Mew
+#define FLAG_DAILY_MOLTRES                          (DAILY_FLAGS_START + 0x1F) // Legendary daily encounter, higher shiny odds. Moltres
+#define FLAG_DAILY_ZAPDOS                           (DAILY_FLAGS_START + 0x20) // Legendary daily encounter, higher shiny odds. Zapdos
+#define FLAG_DAILY_ARTICUNO                         (DAILY_FLAGS_START + 0x21) // Legendary daily encounter, higher shiny odds. Articuno
 #define FLAG_UNUSED_0x942                           (DAILY_FLAGS_START + 0x22) // Unused Flag
 #define FLAG_UNUSED_0x943                           (DAILY_FLAGS_START + 0x23) // Unused Flag
 #define FLAG_UNUSED_0x944                           (DAILY_FLAGS_START + 0x24) // Unused Flag
@@ -1644,6 +1645,7 @@
 #define FLAG_UNUSED_0x95E                           (DAILY_FLAGS_START + 0x3E) // Unused Flag
 #define FLAG_UNUSED_0x95F                           (DAILY_FLAGS_START + 0x3F) // Unused Flag
 #define DAILY_FLAGS_END                             (FLAG_UNUSED_0x95F + (7 - FLAG_UNUSED_0x95F % 8))
+#define NUM_DAILY_FLAGS                             (DAILY_FLAGS_END - DAILY_FLAGS_START + 1)
 
 #define FLAGS_COUNT (DAILY_FLAGS_END + 1)
 
@@ -1657,5 +1659,6 @@
 #define FLAG_SAFE_FOLLOWER_MOVEMENT             (SPECIAL_FLAGS_START + 0x5) // When set, applymovement does not put the follower inside a pokeball
 // FLAG_SPECIAL_FLAG_0x4005 - 0x407F also exist and are unused
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
+#define NUM_SPECIAL_FLAGS                       (SPECIAL_FLAGS_END - SPECIAL_FLAGS_START + 1)
 
 #endif // GUARD_CONSTANTS_FLAGS_H

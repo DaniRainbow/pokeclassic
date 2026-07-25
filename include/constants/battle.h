@@ -421,7 +421,7 @@
 #define B_WIN_TYPE_NORMAL 0
 #define B_WIN_TYPE_ARENA  1
 
-// Window Ids for sStandardBattleWindowTemplates / sBattleArenaWindowTemplates
+// Window Ids for gStandardBattleWindowTemplates / sBattleArenaWindowTemplates
 #define B_WIN_MSG                 0
 #define B_WIN_ACTION_PROMPT       1 // "What will {x} do?"
 #define B_WIN_ACTION_MENU         2 // "Fight/Pokémon/Bag/Run" menu
@@ -446,6 +446,7 @@
 #define B_WIN_VS_OUTCOME_DRAW    21
 #define B_WIN_VS_OUTCOME_LEFT    22
 #define B_WIN_VS_OUTCOME_RIGHT   23
+#define B_WIN_MOVE_DESCRIPTION   27
 
 // The following are duplicate id values for windows that Battle Arena uses differently.
 #define ARENA_WIN_PLAYER_NAME      15

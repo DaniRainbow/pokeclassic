@@ -291,6 +291,7 @@ static const u8 sText_PkmnAnchorsItselfWith[] = _("{B_DEF_NAME_WITH_PREFIX} anch
 static const u8 sText_PkmnCutsAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s Attack!");
 static const u8 sText_PkmnPreventsStatLossWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nprevents stat loss!");
 static const u8 sText_PkmnHurtsWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
+static const u8 sText_PkmnHurtsItemWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nhurt {B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnTraced[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} Traced\n{B_BUFF1}'s {B_BUFF2}!");
 static const u8 sText_PkmnsXPreventsBurns[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY}\nprevents burns!");
 static const u8 sText_PkmnsXBlocksY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nblocks {B_CURRENT_MOVE}!");
@@ -305,7 +306,7 @@ static const u8 sText_PkmnsXCuredYProblem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}
 static const u8 sText_ItSuckedLiquidOoze[] = _("It sucked up the\nLiquid Ooze!");
 static const u8 sText_PkmnTransformed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} transformed!");
 static const u8 sText_PkmnsXTookAttack[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ntook the attack!");
-const u8 gText_PkmnsXPreventsSwitching[] = _("{B_BUFF1}'s {B_LAST_ABILITY}\nprevents switching!\p");
+const u8 gText_PkmnsXPreventsSwitching[] = _("{B_OPPONENT_MON1_NAME}'s {B_SCR_ACTIVE_ABILITY}\nprevents switching!\p");
 static const u8 sText_PreventedFromWorking[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevented {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\l{B_BUFF1} from working!");
 static const u8 sText_PkmnsXMadeItIneffective[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it ineffective!");
 static const u8 sText_PkmnsXPreventsFlinching[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY}\nprevents flinching!");
@@ -447,6 +448,9 @@ static const u8 sText_SpDef2[] = _("Sp. Def");
 
 static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
+static const u8 sText_PkmnDroppedItem[] = _("Wild {B_OPPONENT_MON1_NAME} dropped an item!\p");
+static const u8 sText_AddedToBag[] = _("{B_PLAYER_NAME} put away the {B_BUFF1}\nin the {B_BUFF2} pocket.\p");
+static const u8 sText_BagIsFull[] = _("Too bad! The BAG is full…\p");
 
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
 {
@@ -1056,6 +1060,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNCUTSATTACKWITH - BATTLESTRINGS_TABLE_START] = sText_PkmnCutsAttackWith,
     [STRINGID_PKMNPREVENTSSTATLOSSWITH - BATTLESTRINGS_TABLE_START] = sText_PkmnPreventsStatLossWith,
     [STRINGID_PKMNHURTSWITH - BATTLESTRINGS_TABLE_START] = sText_PkmnHurtsWith,
+    [STRINGID_PKMNHURTSITEMWITH - BATTLESTRINGS_TABLE_START] = sText_PkmnHurtsItemWith,
     [STRINGID_PKMNTRACED - BATTLESTRINGS_TABLE_START] = sText_PkmnTraced,
     [STRINGID_STATSHARPLY - BATTLESTRINGS_TABLE_START] = gText_StatSharply,
     [STRINGID_STATROSE - BATTLESTRINGS_TABLE_START] = gText_StatRose,
@@ -1229,6 +1234,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNBOXLANETTESPCFULL - BATTLESTRINGS_TABLE_START] = gText_PkmnTransferredLanettesPCBoxFull,
     [STRINGID_TRAINER1WINTEXT - BATTLESTRINGS_TABLE_START] = sText_Trainer1WinText,
     [STRINGID_TRAINER2WINTEXT - BATTLESTRINGS_TABLE_START] = sText_Trainer2WinText,
+    [STRINGID_PKMNDROPPEDITEM - BATTLESTRINGS_TABLE_START] = sText_PkmnDroppedItem,
+    [STRINGID_ADDEDTOBAG - BATTLESTRINGS_TABLE_START] = sText_AddedToBag,
+    [STRINGID_BAGISFULL - BATTLESTRINGS_TABLE_START] = sText_BagIsFull,
     [STRINGID_ENDUREDSTURDY - BATTLESTRINGS_TABLE_START] = sText_EnduredViaSturdy,
     [STRINGID_POWERHERB - BATTLESTRINGS_TABLE_START] = sText_PowerHerbActivation,
     [STRINGID_HURTBYITEM - BATTLESTRINGS_TABLE_START] = sText_HurtByItem,
@@ -2354,6 +2362,54 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] =
         .bgColor = TEXT_COLOR_TRANSPARENT,
         .shadowColor = TEXT_COLOR_GREEN,
     },
+    { // 24 "type" super-effective
+	    .fillValue = PIXEL_FILL(0xE),
+	    .fontId = 7,
+	    .x = 0,
+	    .y = 1,
+	    .letterSpacing = 0,
+	    .lineSpacing = 0,
+	    .speed = 0,
+	    .fgColor = 6,
+	    .bgColor = 14,
+	    .shadowColor = 5,
+    },
+    { // 25 "type" not very effective
+	    .fillValue = PIXEL_FILL(0xE),
+	    .fontId = 7,
+	    .x = 0,
+	    .y = 1,
+	    .letterSpacing = 0,
+	    .lineSpacing = 0,
+	    .speed = 0,
+	    .fgColor = 1,
+	    .bgColor = 14,
+	    .shadowColor = 3,
+    },
+    { // 26 "type" no effect
+	    .fillValue = PIXEL_FILL(0xE),
+	    .fontId = 7,
+	    .x = 0,
+	    .y = 1,
+	    .letterSpacing = 0,
+	    .lineSpacing = 0,
+	    .speed = 0,
+	    .fgColor = 11,
+	    .bgColor = 14,
+	    .shadowColor = 11,
+    },
+    [B_WIN_MOVE_DESCRIPTION] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .letterSpacing = 0,
+        .lineSpacing = 0,
+        .speed = 0,
+        .fgColor = TEXT_DYNAMIC_COLOR_4,
+        .bgColor = TEXT_DYNAMIC_COLOR_5,
+        .shadowColor = TEXT_DYNAMIC_COLOR_6,
+    },
 };
 
 static const struct BattleWindowText sTextOnWindowsInfo_Arena[] =
@@ -2633,6 +2689,18 @@ static const struct BattleWindowText sTextOnWindowsInfo_Arena[] =
         .fgColor = TEXT_COLOR_DARK_GRAY,
         .bgColor = TEXT_COLOR_WHITE,
         .shadowColor = TEXT_COLOR_LIGHT_GRAY,
+    },
+    [B_WIN_MOVE_DESCRIPTION] = {
+        .fillValue = PIXEL_FILL(0xE),
+        .fontId = FONT_NARROW,
+        .x = 0,
+        .y = 1,
+        .letterSpacing = 0,
+        .lineSpacing = 0,
+        .speed = 0,
+        .fgColor = TEXT_DYNAMIC_COLOR_4,
+        .bgColor = TEXT_DYNAMIC_COLOR_5,
+        .shadowColor = TEXT_DYNAMIC_COLOR_6,
     },
 };
 
@@ -3741,6 +3809,11 @@ void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
             {
                 CopyItemName(hword, dst);
             }
+            srcID += 3;
+            break;
+        case B_BUFF_POCKET:
+            hword = T1_READ_16(&src[srcID + 1]);
+            CopyPocketName(hword, dst);
             srcID += 3;
             break;
         }

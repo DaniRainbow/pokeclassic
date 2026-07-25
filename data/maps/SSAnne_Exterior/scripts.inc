@@ -133,3 +133,74 @@ SSAnneExterior_RocketFugitive::
     waitse
     fadescreen FADE_FROM_BLACK
     end
+
+SSAnneExterior_EventScript_Slowbro::
+	lock
+	faceplayer
+    playmoncry SPECIES_SLOWBRO, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_DIAMOND, SSAnneExterior_EventScript_SlowbroDefeated
+	msgbox SSAnneExterior_Text_Slowbro MSGBOX_DEFAULT
+	release
+	end
+
+SSAnneExterior_Text_Slowbro:
+	.string "SSSSSSSSSSSSSLLLLLLLLLOOOOOOOOOO\n"
+	.string "OOOOOOOOOOOOOOOOOOOOOOWWWWWWWWWW$"
+
+SSAnneExterior_EventScript_GentlemanDiamond::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_DIAMOND, SSAnneExterior_EventScript_MegaHintSlowbro
+	trainerbattle_single TRAINER_GENTLEMAN_DIAMOND, SSAnneExterior_Text_DiamondIntro, SSAnneExterior_Text_DiamondDefeat
+	setflag FLAG_DEFEATED_DIAMOND
+	msgbox SSAnneExterior_Text_DiamondPostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+SSAnneExterior_Text_DiamondIntro:
+	.string "Ah, hello there. I'm on vacation with\n"
+	.string "my Slowbro and my other friends.\p"
+	.string "Care for a Pokémon match?$"
+
+SSAnneExterior_Text_DiamondDefeat:
+	.string "I'm impressed!$"
+
+SSAnneExterior_Text_DiamondPostBattle:
+	.string "Thank you so much for the good match!\p"
+	.string "I think we will watch the ocean a bit\n"
+	.string "more before surfing back to our city.$"
+
+SSAnneExterior_EventScript_MegaHintSlowbro::    
+    goto_if_set FLAG_GOT_SLOWBRONITE, SSAnneExterior_EventScript_DiamondDefeated
+    msgbox SSAnneExterior_Text_SlowbroMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+SSAnneExterior_Text_SlowbroMegaHint:
+    .string "There is some really lovely surfing\n"
+	.string "to be found on your Route 20.\p"
+	.string "Come to think of it, that is also the\n"
+	.string "place I picked up our Slowbronite!$"
+
+SSAnneExterior_EventScript_DiamondDefeated::
+    msgbox DiamondDefeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+DiamondDefeated_Text:	
+	.string "You only get one life and no one\n"
+	.string "but yourself gets to live it.\p"
+	.string "It's okay to work hard, but you\n"
+	.string "must take time for play and rest.$"
+
+SSAnneExterior_EventScript_SlowbroDefeated::
+	msgbox SlowbroDefeated MSGBOX_DEFAULT
+	release
+	end
+
+SlowbroDefeated:	
+	.string "BBBBRRRRRRRRRRRRRRRRRRRRRRRRRROOOO\n"
+	.string "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO$"

@@ -14,19 +14,14 @@ SeafoamIslands_B4F_OnResume::
 	end
 
 SeafoamIslands_B4F_OnTransition::
-	call_if_set FLAG_CAUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_HideArticuno
 	call_if_unset FLAG_CAUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_TryShowArticuno
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_CheckStoppedCurrent
 	call_if_set FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_SetNoCurrentLayout
 	end
 
-SeafoamIslands_B4F_EventScript_HideArticuno::
-	setflag FLAG_HIDE_ARTICUNO
-	return
-
 SeafoamIslands_B4F_EventScript_TryShowArticuno::
 	goto_if_set FLAG_DEFEATED_ARTICUNO, Common_EventScript_Return
-	clearflag FLAG_HIDE_ARTICUNO
+	clearflag FLAG_DAILY_ARTICUNO
 	return
 
 SeafoamIslands_B4F_EventScript_TryRemoveArticuno::
@@ -38,6 +33,7 @@ SeafoamIslands_B4F_EventScript_TryRemoveArticuno::
 SeafoamIslands_B4F_EventScript_Articuno::
 	lock
 	faceplayer
+	goto_if_set FLAG_CAUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_DailyARTICUNO
 	waitse
 	delay 20
 	playse SE_THUNDERSTORM_STOP
@@ -69,6 +65,7 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	setflag FLAG_CAUGHT_ARTICUNO
+	setflag FLAG_DAILY_ARTICUNO
 	release
 	end
 
@@ -82,6 +79,60 @@ SeafoamIslands_B4F_EventScript_RanFromArticuno::
 	setvar VAR_0x8004, SPECIES_ARTICUNO
 	goto Common_EventScript_LegendaryFlewAway
 	end
+
+SeafoamIslands_B4F_EventScript_DailyARTICUNO::
+    random 50
+    copyvar VAR_0x8004, VAR_RESULT
+    goto_if_eq VAR_0x8004, 1, SeafoamIslands_B4F_EventScript_Surprise_ARTICUNO
+    setvar VAR_0x8004, 0
+    setwildbattle SPECIES_ARTICUNO, 50
+    waitse
+    playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, SeafoamIslands_B4F_EventScript_DefeatedArticuno
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_RanFromArticuno
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_RanFromArticuno
+    release
+    end
+
+SeafoamIslands_B4F_EventScript_Surprise_ARTICUNO::
+    setvar VAR_0x8004, 0
+    setflag FLAG_SHINY_CREATION
+    setwildbattle SPECIES_ARTICUNO, 50
+    waitse
+    playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+    delay 20
+    waitmoncry
+    setflag FLAG_SYS_CTRL_OBJ_DELETE
+    dowildbattle
+    clearflag FLAG_SYS_CTRL_OBJ_DELETE
+    specialvar VAR_RESULT, GetBattleOutcome
+    goto_if_eq VAR_RESULT, B_OUTCOME_WON, SeafoamIslands_B4F_EventScript_DailyDefeatedArticuno
+    goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_DailyRanFromArticuno
+    goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_DailyRanFromArticuno
+    release
+    end
+
+SeafoamIslands_B4F_EventScript_DailyDefeatedArticuno::
+    setvar VAR_0x8004, SPECIES_ARTICUNO
+    goto Common_EventScript_LegendaryFlewAway
+    removeobject LOCALID_ARTICUNO
+    setflag FLAG_DAILY_ARTICUNO
+    release
+    end
+
+SeafoamIslands_B4F_EventScript_DailyRanFromArticuno::
+    setvar VAR_0x8004, SPECIES_ARTICUNO
+    goto Common_EventScript_LegendaryFlewAway
+    removeobject LOCALID_ARTICUNO
+    setflag FLAG_DAILY_ARTICUNO
+    release
+    end
 
 SeafoamIslands_B4F_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL, 1

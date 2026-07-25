@@ -96,6 +96,8 @@ MtMoon_B2F_EventScript_MiguelTrigger::
 MtMoon_B2F_EventScript_Miguel::
 	lock
 	faceplayer
+	goto_if_set FLAG_DEFEATED_MIGUEL2, MtMoon_B2F_EventScript_MegaHintAerodactyl
+	goto_if_unset FLAG_HIDE_MEGA_TRAINERS, MtMoon_B2F_EventScript_SuperNerdMiguel
 	goto_if_set FLAG_GOT_FOSSIL_FROM_MT_MOON, MtMoon_B2F_EventScript_MiguelFossilPicked
 	goto_if_defeated TRAINER_SUPER_NERD_MIGUEL, MtMoon_B2F_EventScript_MiguelGoPickFossil
 	goto MtMoon_B2F_EventScript_BattleMiguel
@@ -122,6 +124,87 @@ MtMoon_B2F_Text_MiguelDefeat::
 MtMoon_B2F_Text_WellEachTakeAFossil::
     .string "We'll each take a fossil!\n"
     .string "No being greedy!$"
+
+MtMoon_B2F_EventScript_Aerodactyl::
+	lock
+	faceplayer
+    playmoncry SPECIES_AERODACTYL, CRY_MODE_ENCOUNTER
+    waitmoncry
+    delay 20
+    goto_if_set FLAG_DEFEATED_MIGUEL2, MtMoon_B2F_EventScript_AerodactylDefeated
+	msgbox MtMoon_B2F_Text_Aerodactyl MSGBOX_DEFAULT
+	release
+	end
+
+MtMoon_B2F_Text_Aerodactyl:
+	.string "Aerodactyl growls as you approach.$"
+
+MtMoon_B2F_EventScript_SuperNerdMiguel::
+	goto_if_set FLAG_HIDE_DOME_FOSSIL, MtMoon_B2F_EventScript_SuperNerdMiguelOmanyte
+	goto_if_set FLAG_HIDE_HELIX_FOSSIL, MtMoon_B2F_EventScript_SuperNerdMiguelKabuto
+	release
+	end
+
+MtMoon_B2F_EventScript_SuperNerdMiguelOmanyte::
+	trainerbattle_single TRAINER_SUPER_NERD_MIGUEL_2A, MtMoon_B2F_Text_Miguel2Intro, MtMoon_B2F_Text_Miguel2Defeat
+	setflag FLAG_DEFEATED_MIGUEL2
+	msgbox MtMoon_B2F_Text_Miguel2PostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+MtMoon_B2F_EventScript_SuperNerdMiguelKabuto::
+	trainerbattle_single TRAINER_SUPER_NERD_MIGUEL_2B, MtMoon_B2F_Text_Miguel2Intro, MtMoon_B2F_Text_Miguel2Defeat
+	setflag FLAG_DEFEATED_MIGUEL2
+	msgbox MtMoon_B2F_Text_Miguel2PostBattle MSGBOX_AUTOCLOSE
+	release
+	end
+
+MtMoon_B2F_Text_Miguel2Intro:
+	.string "Oh, great. You again.\p"
+	.string "I found more fossils and I don't\n"
+	.string "plan on losing to a little kid again!$"
+
+MtMoon_B2F_Text_Miguel2Defeat:
+	.string "Inconceivable!$"
+
+MtMoon_B2F_Text_Miguel2PostBattle:
+	.string "Get out of here, won't you?\p"
+	.string "This is my spot, and you're ruining\n"
+	.string "my fossil search!$"
+
+MtMoon_B2F_EventScript_MegaHintAerodactyl::    
+    goto_if_set FLAG_GOT_AERODACTYLITE, MtMoon_B2F_EventScript_Miguel2Defeated
+    msgbox MtMoon_B2F_Text_AerodactylMegaHint MSGBOX_DEFAULT
+    waitmessage
+    release
+    end
+    
+MtMoon_B2F_Text_AerodactylMegaHint:
+    .string "UGH, stop talking to me!\p"
+	.string "There are surely other places you can\n"
+	.string "run around in than here.\p"
+	.string "If you want more fossils, go north of\n"
+	.string "Lavendar Town for a hike.\p" 
+	.string "Rock Tunnel is full of rocks,\n"
+	.string "including Mega Stones. I swear!$"
+
+MtMoon_B2F_EventScript_Miguel2Defeated::
+    msgbox Miguel2Defeated_Text MSGBOX_DEFAULT
+	release
+	end
+
+Miguel2Defeated_Text:	
+	.string "This is what I get for trying to\n"
+	.string "leave my basement and touch grass.$"
+
+MtMoon_B2F_EventScript_AerodactylDefeated::
+	msgbox AerodactylDefeated MSGBOX_DEFAULT
+	release
+	end
+
+AerodactylDefeated:	
+	.string "Aerodactyl stares at you with\n"
+	.string "what you believe to be admiration.$"
 
 MtMoon_B2F_EventScript_MiguelFossilPicked::
 	msgbox MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils, MSGBOX_DEFAULT

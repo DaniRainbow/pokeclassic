@@ -303,6 +303,12 @@ SaffronCity_EventScript_Looker::
 	waitmovement 16
 	msgbox SaffronCity_Text_ShouldntBeSurprised, MSGBOX_DEFAULT
 	waitmessage
+	playse SE_PIN
+	applymovement LOCALID_LOOKER, Common_Movement_ExclamationMark
+	waitse
+	waitmovement 16
+	msgbox SaffronCity_Text_RocketBurgalars, MSGBOX_DEFAULT
+	waitmessage
 	call_if_eq VAR_TEMP_1, 1, SaffronCity_EventScript_MoveLookerRight
 	call_if_eq VAR_TEMP_1, 2, SaffronCity_EventScript_MoveLookerLeft
 	waitmovement 16
@@ -362,3 +368,19 @@ SaffronCity_Text_ShouldntBeSurprised::
 	.string "for him to hide.\p"
 	.string "But we have no leads!\n"
 	.string "I'll have to continue my investigation.$"
+
+SaffronCity_Text_RocketBurgalars:
+	.string "Looker: Sorry, {PLAYER}.\n"
+	.string "I've just received word there\l"
+	.string "were some suspicious looking\l"
+	.string "characters trying to break in\l"
+	.string "to the now abandoned Rocket\l"
+	.string "Hideout below the Game Corner.\p"
+	.string "As much as I would love to\n"
+	.string "investigate, I don't see why a\l"
+	.string "Rocket would need to force entry\l"
+	.string "to their own space.\p"
+	.string "...\p"
+	.string "You're a very capable trainer.\n"
+	.string "Just use caution if you go look\l"
+	.string "for yourself, please.$"

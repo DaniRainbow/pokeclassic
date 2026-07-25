@@ -691,7 +691,13 @@ PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
     .string "try to catch it!\p"
     .string "This won't always work, however.\p"
     .string "A healthy Pokémon can escape.\n"
-    .string "You have to be lucky!$"
+    .string "You have to be lucky!\p"
+	.string "Consider using moves that will\n"
+	.string "leave a status effect on the Pokémon\l"
+	.string "to increase your chances of catching.\p"
+	.string "During a fight, the Pokédex can help\n"
+	.string "explain the purpose and strengths of\l"
+	.string "the moves by pressing the R Button.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
     .string "To make a complete guide on all\n"
@@ -857,8 +863,8 @@ PalletTown_ProfessorOaksLab_Text_NOEverstone:
 	.string "It's a hard tunnel to get through.\p"
 	.string "Try checking the PokéCenter outside\n"
 	.string "the north entrance.\p"
-	.string "Have you picked up FLY? If so, please\n"
-	.string "FLY on over to Rock Tunnel.$"
+	.string "Have you picked up Fly? If so, please\n"
+	.string "Fly on over to Rock Tunnel.$"
 
 PalletTown_ProfessorOaksLab_NOItemfinder::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOItemfinder, MSGBOX_NPC
@@ -1131,6 +1137,7 @@ PalletTown_ProfessorOaksLab_Text_OaksLastMon::
 PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	lock
 	faceplayer
+	goto_if_set FLAG_OAK_ADVENTURE_AWAITS, PalletTown_ProfessorOaksLab_EventScript_HelloChampion
 	goto_if_eq VAR_OAK_LAB_STATE, 2, PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball
 	goto_if_eq VAR_OAK_LAB_STATE, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
 	goto_if_le VAR_OAK_LAB_STATE, 5, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
@@ -1139,6 +1146,93 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	goto ProfOak_EventScript_AskRatePokedex
 	release
 	end
+
+PalletTown_ProfessorOaksLab_EventScript_HelloChampion::
+	msgbox PalletTown_ProfessorOaksLab_WonderfulToSeeYou, MSGBOX_NPC
+	waitmessage
+	goto_if_unset FLAG_DEFEATED_SECRET_BATTLE, PalletTown_ProfessorOaksLab_EventScript_NoE42
+	clearflag FLAG_OAK_ADVENTURE_AWAITS
+	release
+	end
+
+PalletTown_ProfessorOaksLab_WonderfulToSeeYou:
+	.string "Champion {PLAYER}!\n"
+	.string "I'm so glad you dropped by.\p"
+	.string "So! Looking for some ideas\n"
+	.string "on how to continue your journey?\p"
+	.string "...\p"
+	.string "What? You were hoping your mom\n"
+	.string "would get off your back about\l"
+	.string "playing your Nintendo?\p"
+	.string "Ha ha, yeah I imagine staying\n"
+	.string "home and playing your NES would\l"
+	.string "be a nice break.\p"
+	.string "{RIVAL} has one too. Fascinating\n"
+	.string "bit of technology.\p"
+	.string "Ahem, anyways. If you want\n"
+	.string "more adventure and fun, here\l"
+	.string "are some next steps a Champion\l"
+	.string "should consider on their road\l"
+	.string "to becoming a Pokémon Master.\p"
+	.string "I don't know if you have been\n"
+	.string "keeping an eye on the news, but\l"
+	.string "the news of your victory has\l"
+	.string "created an influx of interest\l"
+	.string "in the League!\p"
+	.string "You are now in {RIVAL}'s shoes\n"
+	.string "and when a challenger defeats\l"
+	.string "Lance and the rest of the E4,\l"
+	.string "you will need to head to the\l"
+	.string "League to defend your title.\p"
+	.string "I know that all Kanto gyms\n"
+	.string "are training at an increased\l"
+	.string "schedule.\p"
+	.string "Part of your role as Champion\n"
+	.string "is to check in on the gyms.\p"
+	.string "It's been years since we've\n"
+	.string "had regulatory concerns with\l"
+	.string "a Leader, so may I suggest\l"
+	.string "rematching the Leaders?\p"
+	.string "While they won't be able to\n"
+	.string "give you a second badge,\l"
+	.string "you will be awarded with\l"
+	.string "Battle Points.\p"
+	.string "..."
+	.string "What are Battle Points?\p"
+	.string "They are rewards for trainers\n"
+	.string "who have gone above and beyond.\p"
+	.string "I'm assuming you met Scott?\p"
+	.string "He runs the Battle Tower west\n"
+	.string "of Viridian City.\p"
+	.string "I've heard rumor that his pet\n"
+	.string "project is experiencing some\l"
+	.string "setbacks, but you can redeem\l"
+	.string "Battle Points there even if\l"
+	.string "they need to close.\p"
+	.string "Finally, please continue\n"
+	.string "assisting Looker and the\l"
+	.string "International Police.\p"
+	.string "Champions help keep the peace\n"
+	.string "but you're a special trainer.\p"
+	.string "... I can see your eyes are\n"
+	.string "glazing over, so I'll be done.\p"
+	.string "Just go out there and be the\n"
+	.string "best, like no one ever was.$"
+
+PalletTown_ProfessorOaksLab_EventScript_NoE42::
+	msgbox PalletTown_ProfessorOaksLab_Text_NoE42, MSGBOX_NPC
+	waitmessage
+	clearflag FLAG_OAK_ADVENTURE_AWAITS
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_NoE42:
+	.string "Hmm?\p"
+	.string "For a Pokémon Professor,\n"
+	.string "I seem to know a lot about\l"
+	.string "the Pokémon League?\p"
+	.string "Curious, isn't it?\p"
+	.string "Good luck out there, Champ.$"
 
 PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball::
 	msgbox PalletTown_ProfessorOaksLab_Text_TakeMyPokemon, MSGBOX_DEFAULT

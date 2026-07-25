@@ -221,7 +221,17 @@ Route25_Text_HaleyPostBattle::
     .string "You came from Mt. Moon?\n"
     .string "May I have a Clefairy?$"
 
+Route25_FindItem_ToxicOrb::
+	finditem ITEM_TOXIC_ORB, 1
+	end
 
+Route25_EventScript_ZubatDroppedThis::
+	goto_if_set FLAG_MISSING_PECHA_BERRY, Route25_EventScript_TakeCare
+	finditem ITEM_PECHA_BERRY, 1
+	setflag FLAG_MISSING_PECHA_BERRY
+	release
+	end
 
-
-
+Route25_EventScript_TakeCare::
+	release
+	end

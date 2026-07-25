@@ -649,6 +649,18 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_JANINE                  0x11D8
 #define OBJ_EVENT_PAL_TAG_RANGER_F                0x11D9
 #define OBJ_EVENT_PAL_TAG_RANGER_M                0x11DA
+#define OBJ_EVENT_PAL_TAG_MAGIKARP                0x11DB
+#define OBJ_EVENT_PAL_TAG_VENUSAUR                0x11DC
+#define OBJ_EVENT_PAL_TAG_CHARIZARD               0x11DD
+#define OBJ_EVENT_PAL_TAG_BLASTOISE               0x11DE
+#define OBJ_EVENT_PAL_TAG_BEEDRILL                0x11DF
+#define OBJ_EVENT_PAL_TAG_ALAKAZAM                0x11E0
+#define OBJ_EVENT_PAL_TAG_GENGAR                  0x11E1
+#define OBJ_EVENT_PAL_TAG_PINSIR                  0x11E2
+#define OBJ_EVENT_PAL_TAG_AERODACTYL              0x11E3
+#define OBJ_EVENT_PAL_TAG_ARCANINE                0x11E4
+#define OBJ_EVENT_PAL_TAG_UMBREON                 0x11E5
+#define OBJ_EVENT_PAL_TAG_TANGELA                 0x11E6
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -879,6 +891,18 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Zapdos,                OBJ_EVENT_PAL_TAG_ZAPDOS},
     {gObjectEventPal_Marowak,               OBJ_EVENT_PAL_TAG_MAROWAK},
     {gObjectEventPal_MarowakGhost,          OBJ_EVENT_PAL_TAG_MAROWAK_GHOST},
+    {gObjectEventPal_Magikarp,              OBJ_EVENT_PAL_TAG_MAGIKARP},
+    {gObjectEventPal_Venusaur,              OBJ_EVENT_PAL_TAG_VENUSAUR},
+    {gObjectEventPal_Charizard,             OBJ_EVENT_PAL_TAG_CHARIZARD},
+    {gObjectEventPal_Blastoise,             OBJ_EVENT_PAL_TAG_BLASTOISE},
+    {gObjectEventPal_Beedrill,              OBJ_EVENT_PAL_TAG_BEEDRILL},
+    {gObjectEventPal_Alakazam,              OBJ_EVENT_PAL_TAG_ALAKAZAM},
+    {gObjectEventPal_Gengar,                OBJ_EVENT_PAL_TAG_GENGAR},
+    {gObjectEventPal_Pinsir,                OBJ_EVENT_PAL_TAG_PINSIR},
+    {gObjectEventPal_Aerodactyl,            OBJ_EVENT_PAL_TAG_AERODACTYL},
+    {gObjectEventPal_Arcanine,              OBJ_EVENT_PAL_TAG_ARCANINE},
+    {gObjectEventPal_Umbreon,               OBJ_EVENT_PAL_TAG_UMBREON},
+    {gObjectEventPal_Tangela,               OBJ_EVENT_PAL_TAG_TANGELA},
     {gObjectEventPal_Janine,                OBJ_EVENT_PAL_TAG_JANINE},
     {gObjectEventPal_RangerM,               OBJ_EVENT_PAL_TAG_RANGER_M},
     {gObjectEventPal_RangerF,               OBJ_EVENT_PAL_TAG_RANGER_F},
@@ -1900,8 +1924,16 @@ static void RemoveObjectEventInternal(struct ObjectEvent *objectEvent)
     image.size = GetObjectEventGraphicsInfo(objectEvent->graphicsId)->size;
     gSprites[objectEvent->spriteId].images = &image;
     paletteNum = gSprites[objectEvent->spriteId].oam.paletteNum;
-    DestroySprite(&gSprites[objectEvent->spriteId]);
-    FieldEffectFreePaletteIfUnused(paletteNum);
+    // It's possible that this function is called while the sprite pointed to `== sDummySprite`, i.e during map resume;
+    // In this case, don't free the palette as `paletteNum` is likely blank dummy data
+    if (!gSprites[objectEvent->spriteId].inUse &&
+        !gSprites[objectEvent->spriteId].oam.paletteNum &&
+        gSprites[objectEvent->spriteId].callback == SpriteCallbackDummy) {
+        DestroySprite(&gSprites[objectEvent->spriteId]);
+    } else {
+        DestroySprite(&gSprites[objectEvent->spriteId]);
+        FieldEffectFreePaletteIfUnused(paletteNum);
+    }
 }
 
 void RemoveAllObjectEventsExceptPlayer(void)
@@ -2276,7 +2308,8 @@ void UpdateFollowingPokemon(void) { // Update following pokemon if any
         .graphicsId = OBJ_EVENT_GFX_OW_MON,
         .x = gSaveBlock1Ptr->pos.x,
         .y = gSaveBlock1Ptr->pos.y,
-        .elevation = 3,
+        // If player active, copy player elevation
+        .elevation = gObjectEvents[gPlayerAvatar.objectEventId].active ? gObjectEvents[gPlayerAvatar.objectEventId].currentElevation : 3,
         .movementType = MOVEMENT_TYPE_FOLLOW_PLAYER,
       };
       objEvent = &gObjectEvents[SpawnSpecialObjectEvent(&template)];

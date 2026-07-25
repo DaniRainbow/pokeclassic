@@ -406,13 +406,6 @@ static void PrintCreditsText(const u8 *string, u8 y, bool8 isTitle)
 
 #define tMainTaskId data[1]
 
-static void SkipCreditsSequence(void)
-{
-    SetVBlankCallback(VBlankCB_Credits);
-    SetMainCallback2(CB2_Credits);
-    CreateTask(Task_CreditsTheEnd3, 0);
-}
-
 void CB2_StartCreditsSequence(void)
 {
     u8 taskId;
@@ -424,8 +417,7 @@ void CB2_StartCreditsSequence(void)
     InitHeap(gHeap, HEAP_SIZE);
     ResetPaletteFade();
     ResetTasks();
-    SkipCreditsSequence();
-    return;
+    InitCreditsBgsAndWindows();
 
     taskId = CreateTask(Task_WaitPaletteFade, 0);
 
@@ -482,7 +474,7 @@ static void Task_CreditsMain(u8 taskId)
         s16 bikeTaskId = gTasks[taskId].tTaskId_BikeScene;
         gTasks[bikeTaskId].tState = 30;
 
-        gTasks[taskId].tTheEndDelay = 256;
+        gTasks[taskId].tTheEndDelay = 228;
         gTasks[taskId].func = Task_CreditsTheEnd1;
         return;
     }
@@ -792,7 +784,7 @@ static void Task_UpdatePage(u8 taskId)
     case 3:
         if (!gPaletteFade.active)
         {
-            gTasks[taskId].tDelay = 115;
+            gTasks[taskId].tDelay = 190;
             gTasks[taskId].tState++;
         }
         return;

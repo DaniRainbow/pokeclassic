@@ -42,7 +42,7 @@ SilphCo_1F_EventScript_PostgameGrunt2::
 SilphCo_1F_Text_PostgameGrunt2Intro::
     .string "Unlike some of us, we didn't\n"
     .string "cut and run when Giovanni\l"
-    .string "was defeatd in Viridian.$"
+    .string "was defeated in Viridian.$"
 
 SilphCo_1F_Text_PostgameGrunt2Defeat::
     .string "Maybe I should quit...$"

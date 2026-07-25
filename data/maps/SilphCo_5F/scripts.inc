@@ -26,10 +26,21 @@ SilphCo_5F_EventScript_ItemCardKey::
 SilphCo_5F_EventScript_WorkerM::
 	lock
 	faceplayer
+	goto_if_set FLAG_SILPH_INVASION_ACTIVE, SilphCo_5F_EventScript_WorkerMRocketsBack
 	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, SilphCo_5F_EventScript_WorkerMRocketsGone
 	msgbox SilphCo_5F_Text_RocketsInUproarAboutIntruder
 	release
 	end
+
+SilphCo_5F_EventScript_WorkerMRocketsBack::
+	msgbox SilphCo_5F_Text_WorkerMRocketsBack
+	release
+	end
+
+SilphCo_5F_Text_WorkerMRocketsBack:
+	.string "Team Rocket is scrambling for\n"
+    .string "control of the building.\p"
+    .string "Are you going to help again?$"
 
 SilphCo_5F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_5F_Text_YoureOurHeroThankYou

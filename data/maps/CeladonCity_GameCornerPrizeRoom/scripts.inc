@@ -16,6 +16,9 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_BaldingMan::
 
 CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon::
     .string "I sure do fancy those big plushies!\n"
+	.string "Cute plushies are the best thing on\l"
+	.string "the rewards list now that vending\l"
+	.string "TMs isn't possible.\p"
     .string "But, it's hard to win at slots!$"
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_OldMan::
@@ -23,8 +26,9 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_OldMan::
 	end
 
 CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday::
-    .string "Gahaha! I raked it in today!\n"
-    .string "If only every day were like this…$"
+    .string "Gahaha! I raked it in today!\p"
+    .string "If only they still had a few\n"
+	.string "Porygons I could exchange for…$"
 
 
 CeladonCity_GameCorner_EventScript_PrizeCornerBigDolls::
@@ -39,7 +43,12 @@ CeladonCity_GameCorner_EventScript_PrizeCornerBigDolls::
 CeladonCity_GameCorner_Text_ExchangeCoinsForPrizes:
 	.string "Welcome.\p"
 	.string "You can exchange your Coins for\n"
-	.string "prizes here.$"
+	.string "decorative Pokémon prizes here.\p"
+	.string "Please note that due to previous\n"
+	.string "incidents and new Pokémon League\l"
+	.string "restrictions, Game Corners are\l"
+	.string "no longer permitted to issue TM\l"
+	.string "or live Pokémon rewards.$"
 
 CeladonCity_GameCorner_EventScript_ChooseBigDollPrizeMessage::
 	message CeladonCity_GameCorner_Text_WhichPrize

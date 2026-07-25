@@ -15,6 +15,7 @@ FuchsiaCity_Mart_EventScript_Clerk::
 FuchsiaCity_Pokemart::
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_NET_BALL
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_REVIVE
 	.2byte ITEM_FULL_HEAL

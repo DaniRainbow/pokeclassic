@@ -4,11 +4,27 @@ ViridianForest_Erin_House_MapScripts::
 ViridianForest_Erin_House_EventScript_Clefairy::
 	lock
 	faceplayer
+	random 100
+	copyvar VAR_0x8004, VAR_RESULT
+	goto_if_eq VAR_0x8004, 1, ViridianForest_Erin_House_EventScript_ClefairyLum
+	setvar VAR_0x8004, 0
+	playmoncry SPECIES_CLEFAIRY, CRY_MODE_ENCOUNTER
 	msgbox ViridianForest_Erin_House_Text_Clefairy MSGBOX_DEFAULT
 	waitmessage
 	msgbox ViridianForest_Erin_House_Text_ClefairyBerryGiven MSGBOX_DEFAULT
 	waitmessage
 	giveitem ITEM_ORAN_BERRY, 1
+	release
+	end
+
+ViridianForest_Erin_House_EventScript_ClefairyLum::
+	setvar VAR_0x8004, 0
+	playmoncry SPECIES_CLEFAIRY, CRY_MODE_ENCOUNTER
+	msgbox ViridianForest_Erin_House_Text_Clefairy MSGBOX_DEFAULT
+	waitmessage
+	msgbox ViridianForest_Erin_House_Text_ClefairyBerryGiven MSGBOX_DEFAULT
+	waitmessage
+	giveitem ITEM_LUM_BERRY, 1
 	release
 	end
 

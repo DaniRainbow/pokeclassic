@@ -42,7 +42,7 @@ SilphCo_11F_EventScript_PresidentPostgame::
 	msgbox SilphCo_11F_Text_PracticeBattling, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SilphCo_11F_EventScript_DeclinePrezBattle
 	setvar VAR_0x8003, 1
-	setvar VAR_0x8004, 50
+	setvar VAR_0x8004, 25
 	trainerbattle_no_intro TRAINER_SILPH_PREZ, SilphCo_11F_Text_PrezDefeat
 	msgbox SilphCo_11F_Text_WhatAGreatBattle, MSGBOX_NPC
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
@@ -227,6 +227,7 @@ SilphCo_11F_Movement_PlayerFaceGiovanni::
 
 SilphCo_11F_EventScript_JessieJames::
 	lockall
+	setvar VAR_0x8003, 0
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	applymovement LOCALID_JESSIE, Movement_JessieJamesApproachPlayer
 	applymovement LOCALID_JAMES, Movement_JessieJamesApproachPlayer
@@ -404,6 +405,7 @@ SilphCo_11F_EventScript_PostgameRocket::
 	call_if_eq VAR_FACING, DIR_WEST, SilphCo_11F_EventScript_LookerMovement4
 	waitmovement 10
 	setflag	FLAG_HIDE_SILPH_POSTGAME_ROCKET
+	clearflag FLAG_SILPH_INVASION_ACTIVE
 	setflag	FLAG_HIDE_SILPH_POSTGAME_LOOKER
 	setflag FLAG_LOOKER_POSTGAME_COMPLETED
 	clearflag FLAG_HIDE_LOOKER_CELADON
@@ -435,8 +437,8 @@ SilphCo_11F_Text_RocketWellNeverStop::
 
 SilphCo_11F_Text_TakingYouIn::
 	.string "Looker: We'll see about that.\p"
-	.string "{PLAYER}! I'm taking this Rocket in.\p"
-	.string "Thanks for all your help here.\n"
+	.string "{PLAYER}! I'm taking this Rocket in.\n"
+	.string "Thanks for all your help here.\p"
 	.string "You should come see me the next\n"
 	.string "time you're in Celadon City.$"
 
@@ -536,27 +538,24 @@ SilphCo_11F_Text_GiovanniWasWeak::
 	.string "Rocket: Ha! You actually\n"
 	.string "showed up?\p"
 	.string "What? The big bad champion\n"
-	.string "of Kanto thinks he's going to\l"
-	.string "take me down?\p"
+	.string "of Kanto thinks they're going\l"
+	.string "to take me down?\p"
 	.string "Well, listen up, kid.\p"
 	.string "Giovanni was weak!\p"
 	.string "He let some chump like you\n"
 	.string "push him around!\p"
 	.string "Under my leadership, Team\n"
 	.string "Rocket won't roll over just\l"
-	.string "because some kid stands in our\l"
-	.string "way!\p"
+	.string "because some kid stands\l"
+	.string "in our way!\p"
 	.string "Say hello to the new Team Rocket!$"
 
 SilphCo_11F_Text_RocketLeaderDefeat::
-	.string "What?! Am I weaker than Giovanni?\p"
+	.string "What?! Am I weaker than Giovanni?$"
 
-SilphCo_11F_Text_HowCouldThisHappen::
+SilphCo_11F_Text_HowCouldThisHappen:
 	.string "I can't believe it...\p"
 	.string "This was supposed to be our big\n"
 	.string "comeback!\p"
 	.string "We thought Giovanni was weak...\n"
 	.string "but you're just too good!$"
-
-
-

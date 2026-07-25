@@ -15,8 +15,8 @@ SSAnne_2F_Room3_EventScript_OldMan::
 
 SSAnne_2F_Room3_Text_SomeTreesCanBeCutDown::
     .string "Small trees can be chopped down\n"
-    .string "using the move cut.\p"
+    .string "using the move Cut.\p"
     .string "But remember this!\n"
-    .string "cut is an HM technique.\p"
+    .string "Cut is a HM technique.\p"
     .string "Once learned, it is not so easily\n"
     .string "discarded.$"

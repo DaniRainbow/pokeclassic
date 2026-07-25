@@ -39,6 +39,10 @@
 #include "constants/trainers.h"
 #include "constants/rgb.h"
 #include "field_specials.h"
+#include "pokemon_summary_screen.h"
+#include "menu.h"
+#include "constants/battle_move_effects.h"
+#include "event_data.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -103,7 +107,9 @@ static void HandleInputChooseTarget(void);
 static void HandleInputChooseMove(void);
 static void MoveSelectionDisplayPpNumber(void);
 static void MoveSelectionDisplayPpString(void);
+static void MoveSelectionDisplayMoveTypeDoubles(u8 targetId);
 static void MoveSelectionDisplayMoveType(void);
+static void MoveSelectionDisplayMoveDescription(void);
 static void MoveSelectionDisplayMoveNames(void);
 static void HandleMoveSwitching(void);
 static void SwitchIn_HandleSoundAndEnd(void);
@@ -188,6 +194,11 @@ static void (*const sPlayerBufferCommands[CONTROLLER_CMDS_COUNT])(void) =
     [CONTROLLER_TERMINATOR_NOP]           = PlayerCmdEnd
 };
 
+static EWRAM_DATA bool8 sAckBallUseBtn = FALSE;
+static EWRAM_DATA bool8 sBallSwapped = FALSE;
+
+static EWRAM_DATA bool8 sDescriptionSubmenu = 0;
+
 static const u8 sCostumeBackPics[COSTUME_COUNT][GENDER_COUNT] = 
 {
     [RED_COSTUME]               = {TRAINER_BACK_PIC_RED, TRAINER_BACK_PIC_RED},
@@ -204,6 +215,34 @@ static const u8 sCostumeBackPics[COSTUME_COUNT][GENDER_COUNT] =
 };
 
 // unknown unused data
+#define X UQ_4_12
+
+static const u16 sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON_TYPES] =
+{
+	//   normal  fight   flying  poison  ground  rock    bug     ghost   steel   mystery fire    water   grass  electric psychic ice     dragon  dark    fairy
+		{X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // normal
+		{X(2.0), X(1.0), X(0.5), X(0.5), X(1.0), X(2.0), X(0.5), X(0.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(2.0), X(0.5)}, // fight
+		{X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // flying
+		{X(1.0), X(1.0), X(1.0), X(0.5), X(0.5), X(0.5), X(1.0), X(0.5), X(0.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0)}, // poison
+		{X(1.0), X(1.0), X(0.0), X(2.0), X(1.0), X(2.0), X(0.5), X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(0.5), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // ground
+		{X(1.0), X(0.5), X(2.0), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0)}, // rock
+		{X(1.0), X(0.5), X(0.5), X(0.5), X(1.0), X(1.0), X(1.0), X(0.5), X(0.5), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(1.0), X(2.0), X(0.5)}, // bug
+		{X(0.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(1.0)}, // ghost
+		{X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.5), X(0.5), X(1.0), X(0.5), X(1.0), X(2.0), X(1.0), X(1.0), X(2.0)}, // steel
+		{X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0)}, // mystery
+		{X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(2.0), X(1.0), X(0.5), X(0.5), X(2.0), X(1.0), X(1.0), X(2.0), X(0.5), X(1.0), X(1.0)}, // fire
+		{X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(0.5), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0)}, // water
+		{X(1.0), X(1.0), X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), X(1.0), X(0.5), X(1.0), X(0.5), X(2.0), X(0.5), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0)}, // grass
+		{X(1.0), X(1.0), X(2.0), X(1.0), X(0.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(0.5), X(0.5), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0)}, // electric
+		{X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0), X(0.0), X(1.0)}, // psychic
+		{X(1.0), X(1.0), X(2.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.5), X(0.5), X(2.0), X(1.0), X(1.0), X(0.5), X(2.0), X(1.0), X(1.0)}, // ice
+		{X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(0.0)}, // dragon
+		{X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(1.0), X(1.0), X(0.5), X(0.5)}, // dark
+		{X(1.0), X(2.0), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(0.5), X(1.0), X(0.5), X(1.0), X(1.0), X(1.0), X(1.0), X(1.0), X(2.0), X(2.0), X(1.0)}, // fairy
+};
+
+#undef X
+
 static const u8 sUnused[] = {0x48, 0x48, 0x20, 0x5a, 0x50, 0x50, 0x50, 0x58};
 
 void BattleControllerDummy(void)
@@ -250,6 +289,49 @@ static void CompleteOnBankSpritePosX_0(void)
         PlayerBufferExecCompleted();
 }
 
+static u16 GetPrevBall(u16 ballId)
+{
+    u16 ballPrev;
+    u32 i, j;
+    CompactItemsInBagPocket(&gBagPockets[BALLS_POCKET]);
+    for (i = 0; i < gBagPockets[BALLS_POCKET].capacity; i++)
+    {
+        if (ballId == gBagPockets[BALLS_POCKET].itemSlots[i].itemId)
+        {
+            if (i <= 0)
+            {
+                for (j = gBagPockets[BALLS_POCKET].capacity - 1; j >= 0; j--)
+                {
+                    ballPrev = gBagPockets[BALLS_POCKET].itemSlots[j].itemId;
+                    if (ballPrev != ITEM_NONE)
+                        return ballPrev;
+                }
+            } 
+            i--;
+            return gBagPockets[BALLS_POCKET].itemSlots[i].itemId;
+        }
+    }
+}
+
+static u16 GetNextBall(u16 ballId)
+{
+    u16 ballNext;
+    u32 i;
+    CompactItemsInBagPocket(&gBagPockets[BALLS_POCKET]);
+    for (i = 0; i < gBagPockets[BALLS_POCKET].capacity; i++)
+    {
+        if (ballId == gBagPockets[BALLS_POCKET].itemSlots[i].itemId)
+        {
+            i++;
+            ballNext = gBagPockets[BALLS_POCKET].itemSlots[i].itemId;
+            if (ballNext == ITEM_NONE)
+                return gBagPockets[BALLS_POCKET].itemSlots[0].itemId; // Zeroth slot
+            else
+                return ballNext;
+        }
+    }
+}
+
 static void HandleInputChooseAction(void)
 {
     u16 itemId = gBattleResources->bufferA[gActiveBattler][2] | (gBattleResources->bufferA[gActiveBattler][3] << 8);
@@ -261,6 +343,62 @@ static void HandleInputChooseAction(void)
         gPlayerDpadHoldFrames++;
     else
         gPlayerDpadHoldFrames = 0;
+
+#if B_LAST_USED_BALL == TRUE && B_LAST_USED_BALL_CYCLE == TRUE
+    if (!gLastUsedBallMenuPresent)
+    {
+        sAckBallUseBtn = FALSE;
+    }
+    else if (JOY_NEW(B_LAST_USED_BALL_BUTTON))
+    {
+        sAckBallUseBtn = TRUE;
+        sBallSwapped = FALSE;
+        ArrowsChangeColorLastBallCycle(TRUE);
+    }
+    if (sAckBallUseBtn)
+    {
+        if (JOY_HELD(B_LAST_USED_BALL_BUTTON) && (JOY_NEW(DPAD_DOWN) || JOY_NEW(DPAD_RIGHT)))
+        {
+            bool8 sameBall = FALSE;
+            u16 nextBall = GetNextBall(gBallToDisplay);
+            sBallSwapped = TRUE;
+            if (gBallToDisplay == nextBall)
+                sameBall = TRUE;
+            else
+                gBallToDisplay = nextBall;
+            SwapBallToDisplay(sameBall);
+            PlaySE(SE_SELECT);
+        }
+        else if (JOY_HELD(B_LAST_USED_BALL_BUTTON) && (JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_LEFT)))
+        {
+            bool8 sameBall = FALSE;
+            u16 prevBall = GetPrevBall(gBallToDisplay);
+            sBallSwapped = TRUE;
+            if (gBallToDisplay == prevBall)
+                sameBall = TRUE;
+            else
+                gBallToDisplay = prevBall;
+            SwapBallToDisplay(sameBall);
+            PlaySE(SE_SELECT);
+        }
+        else if (!JOY_HELD(B_LAST_USED_BALL_BUTTON) && sBallSwapped)
+        {
+            sAckBallUseBtn = FALSE;
+            sBallSwapped = FALSE;
+            ArrowsChangeColorLastBallCycle(FALSE);
+        }
+        else if (!JOY_HELD(B_LAST_USED_BALL_BUTTON) && CanThrowLastUsedBall())
+        {
+            sAckBallUseBtn = FALSE;
+            PlaySE(SE_SELECT);
+            ArrowsChangeColorLastBallCycle(FALSE);
+            TryHideLastUsedBall();
+            BtlController_EmitTwoReturnValues(1, B_ACTION_THROW_BALL, 0);
+            PlayerBufferExecCompleted();
+        }
+        return;
+    }
+#endif
 
     if (JOY_NEW(A_BUTTON))
     {
@@ -343,6 +481,16 @@ static void HandleInputChooseAction(void)
             BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_CANCEL_PARTNER, 0);
             PlayerBufferExecCompleted();
         }
+        else
+        {
+            if(!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)) //if wild, pressing B moves cursor to run
+            {
+                PlaySE(SE_SELECT);
+                ActionSelectionDestroyCursorAt(gActionSelectionCursor[gActiveBattler]);
+                gActionSelectionCursor[gActiveBattler] = 3;
+                ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
+            }
+        }
     }
     else if (JOY_NEW(START_BUTTON))
     {
@@ -353,7 +501,7 @@ static void HandleInputChooseAction(void)
         BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_DEBUG, 0);
         PlayerBufferExecCompleted();
     }
-    #if B_LAST_USED_BALL == TRUE
+#if B_LAST_USED_BALL == TRUE && B_LAST_USED_BALL_CYCLE == FALSE
     else if (JOY_NEW(B_LAST_USED_BALL_BUTTON) && CanThrowLastUsedBall())
     {
         PlaySE(SE_SELECT);
@@ -446,7 +594,7 @@ static void HandleInputChooseTarget(void)
                 case B_POSITION_PLAYER_RIGHT:
                     if (gActiveBattler != gMultiUsePlayerCursor)
                         i++;
-                    else if (moveTarget & MOVE_TARGET_USER_OR_SELECTED)
+                    else if (gBattleMoves[GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_MOVE1 + gMoveSelectionCursor[gActiveBattler])].target & MOVE_TARGET_USER_OR_SELECTED)
                         i++;
                     break;
                 case B_POSITION_OPPONENT_LEFT:
@@ -454,6 +602,7 @@ static void HandleInputChooseTarget(void)
                     i++;
                     break;
                 }
+                MoveSelectionDisplayMoveTypeDoubles(GetBattlerPosition(gMultiUsePlayerCursor));
 
                 if (gAbsentBattlerFlags & gBitTable[gMultiUsePlayerCursor]
                  || !CanTargetBattler(gActiveBattler, gMultiUsePlayerCursor, move))
@@ -496,7 +645,7 @@ static void HandleInputChooseTarget(void)
                 case B_POSITION_PLAYER_RIGHT:
                     if (gActiveBattler != gMultiUsePlayerCursor)
                         i++;
-                    else if (moveTarget & MOVE_TARGET_USER_OR_SELECTED)
+                    else if (gBattleMoves[GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_MOVE1 + gMoveSelectionCursor[gActiveBattler])].target & MOVE_TARGET_USER_OR_SELECTED)
                         i++;
                     break;
                 case B_POSITION_OPPONENT_LEFT:
@@ -504,6 +653,7 @@ static void HandleInputChooseTarget(void)
                     i++;
                     break;
                 }
+                MoveSelectionDisplayMoveTypeDoubles(GetBattlerPosition(gMultiUsePlayerCursor));
 
                 if (gAbsentBattlerFlags & gBitTable[gMultiUsePlayerCursor]
                  || !CanTargetBattler(gActiveBattler, gMultiUsePlayerCursor, move))
@@ -618,7 +768,7 @@ static void HandleInputChooseMove(void)
     else
         gPlayerDpadHoldFrames = 0;
 
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON) && !sDescriptionSubmenu)
     {
         PlaySE(SE_SELECT);
         if (moveInfo->moves[gMoveSelectionCursor[gActiveBattler]] == MOVE_CURSE)
@@ -724,7 +874,7 @@ static void HandleInputChooseMove(void)
             break;
         }
     }
-    else if (JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)
+    else if ((JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)  && !sDescriptionSubmenu)
     {
         PlaySE(SE_SELECT);
         if (gBattleStruct->zmove.viewing)
@@ -750,6 +900,8 @@ static void HandleInputChooseMove(void)
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
+            if (sDescriptionSubmenu)
+                MoveSelectionDisplayMoveDescription();
             TryChangeZIndicator(gActiveBattler, gMoveSelectionCursor[gActiveBattler]);
         }
     }
@@ -764,6 +916,8 @@ static void HandleInputChooseMove(void)
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
+            if (sDescriptionSubmenu)
+                MoveSelectionDisplayMoveDescription();
             TryChangeZIndicator(gActiveBattler, gMoveSelectionCursor[gActiveBattler]);
         }
     }
@@ -777,6 +931,8 @@ static void HandleInputChooseMove(void)
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
+            if (sDescriptionSubmenu)
+                MoveSelectionDisplayMoveDescription();
             TryChangeZIndicator(gActiveBattler, gMoveSelectionCursor[gActiveBattler]);
         }
     }
@@ -791,10 +947,12 @@ static void HandleInputChooseMove(void)
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
+            if (sDescriptionSubmenu)
+                MoveSelectionDisplayMoveDescription();
             TryChangeZIndicator(gActiveBattler, gMoveSelectionCursor[gActiveBattler]);
         }
     }
-    else if (JOY_NEW(SELECT_BUTTON) && !gBattleStruct->zmove.viewing)
+    else if (JOY_NEW(SELECT_BUTTON) && !gBattleStruct->zmove.viewing && !sDescriptionSubmenu)
     {
         if (gNumberOfMovesToChoose > 1 && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
         {
@@ -808,6 +966,19 @@ static void HandleInputChooseMove(void)
             MoveSelectionCreateCursorAt(gMultiUsePlayerCursor, 27);
             BattlePutTextOnWindow(gText_BattleSwitchWhich, B_WIN_SWITCH_PROMPT);
             gBattlerControllerFuncs[gActiveBattler] = HandleMoveSwitching;
+        }
+    }
+    if (sDescriptionSubmenu)
+    {
+        if (JOY_NEW(R_BUTTON) || JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
+        {
+            sDescriptionSubmenu = FALSE;
+            FillWindowPixelBuffer(B_WIN_MOVE_DESCRIPTION, PIXEL_FILL(0));
+            ClearStdWindowAndFrame(B_WIN_MOVE_DESCRIPTION, FALSE);
+            CopyWindowToVram(B_WIN_MOVE_DESCRIPTION, COPYWIN_GFX);
+            PlaySE(SE_SELECT);
+            MoveSelectionDisplayPpNumber();
+            MoveSelectionDisplayMoveType();
         }
     }
     else if (JOY_NEW(START_BUTTON))
@@ -828,6 +999,11 @@ static void HandleInputChooseMove(void)
             else
                 ReloadMoveNames();
         }
+    }
+    else if (JOY_NEW(R_BUTTON))
+    {
+        sDescriptionSubmenu = TRUE;
+        MoveSelectionDisplayMoveDescription();
     }
 }
 
@@ -1732,6 +1908,124 @@ static void MoveSelectionDisplayPpNumber(void)
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_PP_REMAINING);
 }
 
+static void MoveSelectionDisplayMoveDescription(void)
+{
+    struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[gActiveBattler][4]);
+    u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
+    u16 pwr = gBattleMoves[move].power;
+    u16 acc = gBattleMoves[move].accuracy;
+    s16 pri = gBattleMoves[move].priority;
+    u8 pwr_num[3], acc_num[3], pri_num[3], i;
+    u8 pwr_desc[7] = _("PWR: ");
+    u8 acc_desc[7] = _("ACC: ");
+    u8 pri_desc[7] = _("PRI: ");
+    u8 pwr_start[] = _("{CLEAR_TO 0x03}");
+    u8 acc_start[] = _("{CLEAR_TO 0x38}");
+    u8 pri_start[] = _("{CLEAR_TO 0x6D}");
+    LoadMessageBoxAndBorderGfx();
+    DrawStdWindowFrame(B_WIN_MOVE_DESCRIPTION, FALSE);
+    if (pwr < 2)
+        StringCopy(pwr_num, gText_BattleSwitchWhich5);
+    else
+        ConvertIntToDecimalStringN(pwr_num, pwr, STR_CONV_MODE_LEFT_ALIGN, 3);
+    if (acc < 2)
+        StringCopy(acc_num, gText_BattleSwitchWhich5);
+    else
+        ConvertIntToDecimalStringN(acc_num, acc, STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(pri_num, pri, STR_CONV_MODE_LEFT_ALIGN, 2);
+    StringCopy(gDisplayedStringBattle, pwr_start);
+    StringAppend(gDisplayedStringBattle, pwr_desc);
+    StringAppend(gDisplayedStringBattle, pwr_num);
+    StringAppend(gDisplayedStringBattle, acc_start);
+    StringAppend(gDisplayedStringBattle, acc_desc);
+    StringAppend(gDisplayedStringBattle, acc_num);
+    StringAppend(gDisplayedStringBattle, pri_start);
+    StringAppend(gDisplayedStringBattle, pri_desc);
+    StringAppend(gDisplayedStringBattle, pri_num);
+    StringAppend(gDisplayedStringBattle, gText_NewLine);
+    StringAppend(gDisplayedStringBattle, gMoveDescriptionPointers[move -1]);
+    BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_DESCRIPTION);
+    CopyWindowToVram(B_WIN_MOVE_DESCRIPTION, COPYWIN_FULL);
+}
+
+static void MulModifier(u16 *modifier, u16 val)
+{
+	*modifier = UQ_4_12_TO_INT((*modifier * val) + UQ_4_12_ROUND);
+}
+
+u8 TypeEffectiveness(struct ChooseMoveStruct *moveInfo, u8 targetId)
+{
+	bool8 isInverse = (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE)) ? TRUE : FALSE;
+	
+	if (gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].power == 0)
+		return 10;
+	else
+	{
+		u16 mod = sTypeEffectivenessTable[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type][gBattleMons[targetId].type1];
+
+		if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+		{
+			u16 mod2 = sTypeEffectivenessTable[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type][gBattleMons[targetId].type2];
+			MulModifier(&mod, mod2);
+		}
+
+		if (gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].effect == EFFECT_TWO_TYPED_MOVE)
+		{
+			u16 mod3 = sTypeEffectivenessTable[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].argument][gBattleMons[targetId].type1];
+			MulModifier(&mod, mod3);
+
+			if (gBattleMons[targetId].type2 != gBattleMons[targetId].type1)
+			{
+				u16 mod4 = sTypeEffectivenessTable[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].argument][gBattleMons[targetId].type2];
+				MulModifier(&mod, mod4);
+			}
+		}
+
+		// 10 - normal effectiveness
+		// 24 - super effective
+		// 25 - not very effective
+		// 26 - no effect
+
+		if (mod == UQ_4_12(0.0)) {
+			if(isInverse)
+				return 24;
+			else
+				return 26;
+		}
+		else if (mod <= UQ_4_12(0.5)) {
+			if(isInverse)
+				return 24;
+			else
+				return 25;
+		}
+		else if (mod >= UQ_4_12(2.0)) {
+			if(isInverse)
+				return 25;
+			else
+				return 24;
+		}
+		else
+			return 10;
+	}
+}
+
+static void MoveSelectionDisplayMoveTypeDoubles(u8 targetId)
+{
+	u8 *txtPtr;
+	struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[gActiveBattler][4]);
+
+	txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
+	txtPtr[0] = EXT_CTRL_CODE_BEGIN;
+	txtPtr++;
+	txtPtr[0] = 6;
+	txtPtr++;
+	txtPtr[0] = 1;
+	txtPtr++;
+
+	StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
+	BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, targetId));
+}
+
 static void MoveSelectionDisplayMoveType(void)
 {
     u8 *txtPtr;
@@ -1743,7 +2037,7 @@ static void MoveSelectionDisplayMoveType(void)
     *(txtPtr)++ = FONT_NORMAL;
 
     StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
-    BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
+    BattlePutTextOnWindow(gDisplayedStringBattle, TypeEffectiveness(moveInfo, 1));
 
     MoveSelectionDisplaySplitIcon();
 }

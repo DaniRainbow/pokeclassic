@@ -1,5 +1,10 @@
 CeladonCity_DepartmentStore_4F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_DepartmentStore_4F_OnTransition
 	.byte 0
+
+CeladonCity_DepartmentStore_4F_OnTransition:
+	setescapewarp MAP_CELADON_CITY, 15, 16
+	end
 
 CeladonCity_DepartmentStore_4F_EventScript_Man::
 	msgbox CeladonCity_DepartmentStore_4F_Text_GettingPokeDollAsPresent, MSGBOX_NPC
@@ -44,12 +49,20 @@ CeladonCity_DepartmentStore_4F_EventScript_Clerk::
 
 	.align 2
 CeladonCity_DepartmentStore_4F_Items::
+	.2byte ITEM_TIMER_BALL
 	.2byte ITEM_POKE_DOLL
 	.2byte ITEM_FIRE_STONE
 	.2byte ITEM_THUNDER_STONE
 	.2byte ITEM_WATER_STONE
 	.2byte ITEM_LEAF_STONE
 	.2byte ITEM_POWER_STONE
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
+	.2byte ITEM_AIR_BALLOON
+	.2byte ITEM_ASSAULT_VEST
+	.2byte ITEM_FOCUS_SASH
+	.2byte ITEM_HEAVY_DUTY_BOOTS
+	.2byte ITEM_LAGGING_TAIL
 	.2byte ITEM_NONE
 	release
 	end
