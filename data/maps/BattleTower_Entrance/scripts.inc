@@ -898,7 +898,9 @@ BattleTower_Entrance_Text_HaveYouLost:
 	.string "Carry with you regrets?$"
 	
 BattleTower_Entrance_Text_BeGone:
-	.string "Be gone, you have places to be!$"
+	.string "Be gone, then!\p"
+	.string "It is clear to all you aren't\n"
+	.string "victim of losing with Fling!$"
 
 .align 2
 BattleTower_Entrance_Items::
