@@ -32,6 +32,12 @@ PalletTown_PlayersHouse_1F_Text_BillVisiting::
 	.string "He's such a gentleman!$"
 
 PlayersHouse_1F_EventScript_AnotherAdventure::
+	msgbox PalletTown_PlayersHouse_1F_Text_AnotherAdventureAwaitsHuzzah, MSGBOX_DEFAULT
+	turnobject LOCALID_MOM, DIR_WEST
+	release
+	end
+
+PalletTown_PlayersHouse_1F_Text_AnotherAdventureAwaitsHuzzah:
 	.string "Strange stones? Hidden potential?\p"
 	.string "The adventures never stop for you\n" 
 	.string "Pokémon trainers!$"
