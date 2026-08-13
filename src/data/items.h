@@ -763,7 +763,7 @@ const struct Item gItems[] =
     {
         .name = _("PP Up"),
         .itemId = ITEM_PP_UP,
-        .price = 9800,
+        .price = 3600,
         .description = sPPUpDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,

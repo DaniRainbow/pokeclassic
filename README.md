@@ -7,7 +7,7 @@ This fork was created to address the unfixed issues with the original repository
 # Getting PokeClassic
 This repository builds the following ROM:
 
-* pokeClassic.gba `sha1: 62A4C319C853090E38154093762081EF7BA85085`
+* pokeClassic.gba `sha1: 151515425832A121EA35A9DB1A592417ADAF7FB4`
 
 **updated 8/13/2026**
 
