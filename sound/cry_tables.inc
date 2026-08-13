@@ -389,7 +389,7 @@ gCryTable::
 	cry Cry_Deoxys
 	cry Cry_Chimecho
 	cry Cry_PikachuPartner
-	cry Cry_Rival_Eevee
+	cry Cry_RivalEevee
 
 	.align 2
 gCryTable_Reverse::
@@ -782,4 +782,4 @@ gCryTable_Reverse::
 	cry_reverse Cry_Deoxys
 	cry_reverse Cry_Chimecho
 	cry_reverse Cry_PikachuPartner
-	cry_reverse Cry_Rival_Eevee
+	cry_reverse Cry_RivalEevee

@@ -1943,8 +1943,8 @@ Cry_PikachuPartner::
 	.incbin "sound/direct_sound_samples/cries/pikachu.bin"
 
 	.align 2
-Cry_Rival_Eevee::
-	.incbin "sound/direct_sound_samples/cries/eevee.bin"
+Cry_RivalEevee::
+	.incbin "sound/direct_sound_samples/cries/rivaleevee.bin"
 
 	.align 2
 Cry_VenusaurMega::
