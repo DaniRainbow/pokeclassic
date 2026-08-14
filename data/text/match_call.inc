@@ -1091,7 +1091,7 @@ MatchCall_PersonalizedText5::
 	.string "See you!$"
 
 MatchCall_PersonalizedText6::
-	.string "It's {STR_VAR_1}!\n"
+	.string "Hey, {PLAYER}!\n"
 	.string "It's {STR_VAR_1}!\p"
 	.string "{STR_VAR_2} is a very busy\n"
 	.string "thoroughfare, so I get challenged\l"
