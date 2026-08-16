@@ -6230,79 +6230,79 @@ static const struct TrainerMonNoItemDefaultMoves sParty_DojoMaster[] = {
     {
         .iv = 100,
         .lvl = 37,
-        .species = SPECIES_WIGGLYTUFF, // HP
+        .species = SPECIES_WIGGLYTUFF, //HP
     },
     {
         .iv = 100,
         .lvl = 37,
-        .species = SPECIES_MACHAMP, // ATTACK
+        .species = SPECIES_MACHAMP, //ATTACK
     },
     {
         .iv = 100,
         .lvl = 37,
-        .species = SPECIES_ALAKAZAM, // SPATTACK
+        .species = SPECIES_ALAKAZAM, //SPATTACK
     },
     {
         .iv = 100,
         .lvl = 37,
-        .species = SPECIES_GOLEM, // DEFENSE
+        .species = SPECIES_GOLEM, //DEFENSE
     },
     {
         .iv = 100,
         .lvl = 37,
-        .species = SPECIES_BLASTOISE,//SP DEFENSE
+        .species = SPECIES_BLASTOISE, //SPDEFENSE
     },
     {
         .iv = 100,
         .lvl = 37,
-        .species = SPECIES_RAICHU, // SPEED
+        .species = SPECIES_RAICHU, //SPEED
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_DojoHP[] = {
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_WIGGLYTUFF, // HP
+        .species = SPECIES_WIGGLYTUFF, //HP
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_WIGGLYTUFF, // HP
+        .species = SPECIES_WIGGLYTUFF, //HP
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_WIGGLYTUFF, // HP
+        .species = SPECIES_WIGGLYTUFF, //HP
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_WIGGLYTUFF, // HP
+        .species = SPECIES_WIGGLYTUFF, //HP
     },
 };
 static const struct TrainerMonNoItemCustomMoves sParty_DojoAttack[] = {
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_MACHAMP, // ATTACK
+        .species = SPECIES_MACHAMP, //ATTACK
         .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_MACHAMP, // ATTACK
+        .species = SPECIES_MACHAMP, //ATTACK
         .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_MACHAMP, // ATTACK
+        .species = SPECIES_MACHAMP, //ATTACK
         .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_MACHAMP, // ATTACK
+        .species = SPECIES_MACHAMP, //ATTACK
         .moves = {MOVE_FORESIGHT, MOVE_KARATE_CHOP, MOVE_VITAL_THROW, MOVE_LEER},
     },
 };
@@ -6310,88 +6310,88 @@ static const struct TrainerMonNoItemDefaultMoves sParty_DojoSPAttack[] = {
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_ALAKAZAM, // SPATTACK
+        .species = SPECIES_ALAKAZAM, //SPATTACK
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_ALAKAZAM, // SPATTACK
+        .species = SPECIES_ALAKAZAM, //SPATTACK
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_ALAKAZAM, // SPATTACK
+        .species = SPECIES_ALAKAZAM, //SPATTACK
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_ALAKAZAM, // SPATTACK
+        .species = SPECIES_ALAKAZAM, //SPATTACK
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_DojoDefense[] = {
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_GOLEM, // DEFENSE
+        .species = SPECIES_GOLEM, //DEFENSE
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_GOLEM, // DEFENSE
+        .species = SPECIES_GOLEM, //DEFENSE
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_GOLEM, // DEFENSE
+        .species = SPECIES_GOLEM, //DEFENSE
     },
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_GOLEM, // DEFENSE
+        .species = SPECIES_GOLEM, //DEFENSE
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_DojoSPDefense[] = {
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_BLASTOISE,//SP DEFENSE
+        .species = SPECIES_BLASTOISE, //SP DEFENSE
     },
    {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_BLASTOISE,//SP DEFENSE
+        .species = SPECIES_BLASTOISE, //SP DEFENSE
     },
    {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_BLASTOISE,//SP DEFENSE
+        .species = SPECIES_BLASTOISE, //SP DEFENSE
     },
    {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_BLASTOISE,//SP DEFENSE
+        .species = SPECIES_BLASTOISE, //SP DEFENSE
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_DojoSpeed[] = {
     {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_RAICHU, // SPEED
+        .species = SPECIES_RAICHU, //SPEED
     },
    {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_RAICHU, // SPEED
+        .species = SPECIES_RAICHU, //SPEED
     },
    {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_RAICHU, // SPEED
+        .species = SPECIES_RAICHU, //SPEED
     },
    {
         .iv = 100,
         .lvl = 35,
-        .species = SPECIES_RAICHU, // SPEED
+        .species = SPECIES_RAICHU, //SPEED
     },
 };
 //Saffron Gym
