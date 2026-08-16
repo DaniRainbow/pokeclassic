@@ -5015,7 +5015,6 @@ static bool32 TryKnockOffBattleScript(u32 battlerDef)
         else
         {
             u32 side = GetBattlerSide(battlerDef);
-
             gLastUsedItem = gBattleMons[battlerDef].item;
             gBattleMons[battlerDef].item = 0;
             gBattleStruct->choicedMove[battlerDef] = 0;
@@ -5221,6 +5220,7 @@ static void Cmd_moveend(void)
             {
             case MOVE_EFFECT_KNOCK_OFF:
                 effect = TryKnockOffBattleScript(gBattlerTarget);
+                //gBattleStruct->changedItems[gBattlerAttacker] = gLastUsedItem;
                 break;
             }
             gBattleStruct->moveEffect2 = 0;

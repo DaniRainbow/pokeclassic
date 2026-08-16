@@ -441,7 +441,5 @@ Text_HappyBirthdayLetter:
 	.string "recipe from a very kind woman when I\l"
 	.string "went hiking up by Lavaridge Town.$"
 	
-
 Text_NoTimeToRead:
 	.string "Not now, you have places to be!$"
-

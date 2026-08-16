@@ -48,4 +48,4 @@ LavenderTown_House1_EventScript_Cubone::
 	end
 
 LavenderTown_House1_Text_Cubone::
-    .string "CUBONE: Kyarugoo!$"
+    .string "Cubone: Kyarugoo!$"

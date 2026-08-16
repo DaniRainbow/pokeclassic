@@ -874,3 +874,44 @@ BattleTower_Entrance_Text_Technician:
 	.string "what went wrong here.\p"
 	.string "Clear off. The adults have\n"
 	.string "work to do, champ.$"
+
+BattleTower_Entrance_EventScript_LadyOfLostGoods::
+	lock
+	faceplayer
+	msgbox BattleTower_Entrance_Text_HaveYouLost, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq BattleTower_Entrance_EventScript_IsThatSo
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart BattleTower_Entrance_Items
+	msgbox gText_PleaseComeAgain
+	release
+	end
+
+BattleTower_Entrance_EventScript_IsThatSo::
+	msgbox BattleTower_Entrance_Text_BeGone, MSGBOX_DEFAULT
+	release
+	end
+
+BattleTower_Entrance_Text_HaveYouLost:
+	.string "Greetings, child.\n"
+	.string "Carry with you regrets?$"
+	
+BattleTower_Entrance_Text_BeGone:
+	.string "Be gone, then!\p"
+	.string "It is clear to all you aren't\n"
+	.string "victim of losing with Fling!$"
+
+.align 2
+BattleTower_Entrance_Items::
+	.2byte ITEM_CLEANSE_TAG
+	.2byte ITEM_AMULET_COIN
+	.2byte ITEM_DESTINY_KNOT
+	.2byte ITEM_BLACK_BELT
+	.2byte ITEM_MACHO_BRACE
+	.2byte ITEM_BIG_ROOT
+	.2byte ITEM_SMOOTH_ROCK
+	.2byte ITEM_HEAT_ROCK
+	.2byte ITEM_NONE
+	release
+	end

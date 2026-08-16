@@ -16,6 +16,7 @@ LavenderTown_VolunteerPokemonHouse_EventScript_MrFuji::
 	waitfanfare
 	additem ITEM_POKE_FLUTE, 1
 	setflag FLAG_RECEIVED_POKE_FLUTE
+	clearflag FLAG_HIDE_LAVENDER_TOWN_CUBONE
 	setvar VAR_POKEMON_TOWER_STATE, 4
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute
 	release
