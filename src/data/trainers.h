@@ -251,7 +251,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("{B_RIVAL_NAME}"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RivalOptionalBattle),
         .party = {.NoItemDefaultMoves = sParty_RivalOptionalBattle},
     },
@@ -265,7 +265,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("{B_RIVAL_NAME}"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RivalCeruleanCity),
         .party = {.NoItemDefaultMoves = sParty_RivalCeruleanCity},
     },
@@ -279,7 +279,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("{B_RIVAL_NAME}"),
         .items = {ITEM_POTION, ITEM_POTION, ITEM_POTION, ITEM_POTION},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RivalSSAnne),
         .party = {.ItemDefaultMoves = sParty_RivalSSAnne},
     },
@@ -955,7 +955,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Duo"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE || AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RocketDuo1),
         .party = {.NoItemDefaultMoves = sParty_RocketDuo1}
     },
@@ -1125,7 +1125,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Duo"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE || AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RocketDuoNuggetBridge),
         .party = {.NoItemDefaultMoves = sParty_RocketDuoNuggetBridge}
     },
@@ -1468,7 +1468,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Arthur"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_TRY_TO_FAINT,
         .partySize = ARRAY_COUNT(sParty_GentlemanArthur),
         .party = {.NoItemDefaultMoves = sParty_GentlemanArthur}
     },
@@ -2533,7 +2533,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Duo"),
         .items = {ITEM_FULL_RESTORE},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_PokemonTowerJessieJames),
         .party = {.NoItemDefaultMoves = sParty_PokemonTowerJessieJames}
     },
@@ -2727,7 +2727,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Duo"),
         .items = {ITEM_FULL_RESTORE},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RooftopJessieJames),
         .party = {.NoItemDefaultMoves = sParty_RooftopJessieJames}
     },
@@ -2961,7 +2961,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Jessie"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RocketHideoutJessie),
         .party = {.NoItemDefaultMoves = sParty_RocketHideoutJessie}
     },
@@ -2973,7 +2973,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("James"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_RocketHideoutJames),
         .party = {.NoItemDefaultMoves = sParty_RocketHideoutJames}
     },
@@ -4341,7 +4341,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Duo"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_HideoutJessieJames),
         .party = {.NoItemDefaultMoves = sParty_HideoutJessieJames}
     },
@@ -4353,7 +4353,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("Duo"),
         .items = {},
         .doubleBattle = TRUE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE| AI_FLAG_CHECK_VIABILITY| AI_FLAG_TRY_TO_FAINT| AI_FLAG_HP_AWARE| AI_FLAG_SMART_SWITCHING,
         .partySize = ARRAY_COUNT(sParty_SilphCoJessieJames),
         .party = {.NoItemDefaultMoves = sParty_SilphCoJessieJames}
     },
